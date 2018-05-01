@@ -1,0 +1,13 @@
+<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group 2.1">
+<g id="Ellipse">
+<circle cx="10" cy="10" r="10" transform="matrix(0 1 -1 0 20 0)" fill="#FF27A1"/>
+</g>
+<g id="Vector">
+<path d="M 1.31583 12.3077L 6.92308 6.16173L 1.31583 0L 0 1.44982L 4.27646 6.16173L 0 10.8579L 1.31583 12.3077Z" transform="matrix(0 1 -1 0 16.1538 6.92285)" fill="white"/>
+</g>
+</g>
+</g>
+</svg>
+
