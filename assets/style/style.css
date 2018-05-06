@@ -4,6 +4,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 #header { position: absolute; z-index: 2; top: 0; right: 0; left: 0; width: auto; height: auto; padding: 50px; }
 #header .logo { float: left; }
 #header .logo a { color: #000; }
+#header .mobile-nav { display: none; }
 #header .logo img { max-width: 160px; margin-top: -10px; }
 #header > nav { float: right; }
 #header > nav > ul { float: left; }
@@ -132,7 +133,8 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-partners .arrows .left { left: 0; margin-left: -50px; }
 .section-partners .arrows .right { right: 0; margin-right: -50px; }
 .section-partners ul {}
-.section-partners ul li { float: left; width: calc(25% - 26.6666px); height: 100px; background: #efefef; margin-right: 20px; }
+.section-partners ul li { float: left; width: calc(25% - 20px); height: 100px; background: #efefef; margin-right: 20px; }
+.section-partners ul li:nth-child(4n) { margin-right: 0; }
 .section-partners ul li a {}
 .section-partners ul li a img { width: inherit; }
 
@@ -155,7 +157,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-faq .faq-list ul li p { background: #F5F5F5; padding: 14px 18px; }
 
 
-.section-community {}
+.section-community { height: auto; }
 .section-community .title {}
 .section-community ul { width: 60%; margin-left: 20%; }
 .section-community ul li { float: left; width: 25%; text-align: center; }
