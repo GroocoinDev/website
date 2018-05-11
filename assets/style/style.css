@@ -18,7 +18,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 
 /* components */
-.btn { padding: 12px 18px; display: inline-block; font-size: 1em; box-sizing: border-box; font-weight: 600; border-radius: 24px; }
+.btn { padding: 12px 18px; display: inline-block; font-size: 1em; box-sizing: border-box; font-weight: 600; border-radius: 24px; cursor: pointer; }
 .btn.sm {}
 .btn.md {}
 .btn.lg { font-size: 1.3em; font-weight: 500; border-radius: 30px; padding: 14px 24px; }
@@ -74,7 +74,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-actions .actions-box .actions-icons ul li.icon a { background: #ececec; border-radius: 50%; width: 42px; height: 42px; display: inline-block; }
 
 
-.section-about { padding: 0; }
+.section-about { padding: 0; padding-top: 50px; }
 .section-about .title { margin-bottom: 30px; }
 .section-about .left { float: left; width: 60%; }
 .section-about .left h2 { margin-bottom: 10px; }
@@ -146,20 +146,22 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-faq .nav-hor ul li.active { background: #FF27A1; font-weight: 600; }
 .section-faq .nav-hor ul li:nth-child(1) { border-radius: 20px 0 0 20px; }
 .section-faq .nav-hor ul li:nth-last-child(1) { border-radius: 0 20px 20px 0; }
-.section-faq .faq-list { display: inline-block; padding: 50px 50px 0; }
+.section-faq .faq-list { display: inline-block; padding: 50px 50px 0; width: calc(100% - 100px); }
 .section-faq .faq-list ul {}
-.section-faq .faq-list ul li { margin-bottom: 26px; }
+.section-faq .faq-list ul li { margin-bottom: 26px; cursor: pointer; }
 .section-faq .faq-list ul li:nth-last-child(1) { margin-bottom: 0; }
 .section-faq .faq-list ul li h3 { font-size: 1.125em; margin-bottom: 16px; position: relative; margin-left: 34px; }
 .section-faq .faq-list ul li h3:before { content: ''; position: absolute; left: 0; width: 20px; height: 20px; background: url('../images/icon-desc-inactive.svg') no-repeat center center; margin-left: -30px; top: 0; margin-top: -2px; }
 .section-faq .faq-list ul li.active h3 { font-weight: 500; }
 .section-faq .faq-list ul li.active h3:before { content: ''; background: url('../images/icon-desc-active.svg') no-repeat center center; }
+.section-faq .faq-list ul li > p { display: none; width: 100%; }
+.section-faq .faq-list ul li.active > p { display: inline-block; }
 .section-faq .faq-list ul li p { background: #F5F5F5; padding: 14px 18px; }
 
 
-.section-community { height: auto; }
+.section-community { height: auto; display: inline-block; }
 .section-community .title {}
-.section-community ul { width: 60%; margin-left: 20%; }
+.section-community ul { width: 60%; margin-left: 20%; clear: both; display: inline-block; }
 .section-community ul li { float: left; width: 25%; text-align: center; }
 .section-community ul li a { color: #000; font-weight: 300; }
 .section-community ul li a .circle { width: 110px; height: 110px; background: #fff; border-radius: 50%; display: inline-block; }
@@ -167,7 +169,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 
 /* footer */
-#footer { position: absolute; width: 100%; background: #1F1F1F; max-height: 160px; height: 70px; padding: 30px 0; }
+#footer { width: 100%; background: #1F1F1F; max-height: 160px; height: 70px; padding: 30px 0; }
 #footer .left { float: left; }
 #footer .right { float: right; }
 #footer .logo-footer {}
