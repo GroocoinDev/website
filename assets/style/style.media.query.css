@@ -1,5 +1,26 @@
-@media (max-width: 1600px) {
-    .section-main { background-size: cover; }
+@media (max-width: 1500px) {
+    .section-main { background-size: cover; background-position: right center; }
+}
+
+@media (max-width: 1400px) {
+    .contents { max-width: 1200px; }
+}
+
+@media (max-width: 1200px) {
+    .contents { max-width: 1000px; }
+}
+
+@media (max-width: 1000px) {
+    .contents { max-width: 800px; }
+}
+
+@media (max-width: 800px) {
+    .contents { max-width: 600px; }
+}
+
+/* 모바일, 테블릿 이상 */
+@media (min-width: 800px) {
+    #header nav > ul > li > a:hover { border-bottom: 2px solid #1f1f1f; transition: all 0.2s;}
 }
 
 @media (max-width: 420px) {
@@ -116,6 +137,7 @@
 
 
     .section-faq {}
+    .section-faq .nav-hor ul { max-width: 100%; width: inherit; }
     .section-faq .faq-list { display: inline-block; padding: 50px 0 0; }
 
 

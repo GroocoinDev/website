@@ -91,7 +91,7 @@
                         <div id="canvas-days" class="clock-canvas"></div>
                         <div class="text">
                             <p class="val">0</p>
-                            <p class="type-days type-time">DAYS</p>
+                            <p class="type-days type-time">DAY</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             <div id="canvas-hours" class="clock-canvas"></div>
                             <div class="text">
                                 <p class="val">0</p>
-                                <p class="type-hours type-time">HOURS</p>
+                                <p class="type-hours type-time">HRS</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                             <div id="canvas-minutes" class="clock-canvas"></div>
                             <div class="text">
                                 <p class="val">0</p>
-                                <p class="type-minutes type-time">MINUTES</p>
+                                <p class="type-minutes type-time">MIN</p>
                             </div>
                         </div>
                     </div>
@@ -126,14 +126,14 @@
                             <div id="canvas-seconds" class="clock-canvas"></div>
                             <div class="text">
                                 <p class="val">0</p>
-                                <p class="type-seconds type-time">SECONDS</p>
+                                <p class="type-seconds type-time">SEC</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="btn lg bold custom">Pre-Sale starts on Jun 4th</div>
+            <div class="custom">Pre-Sale starts on Jun 4th</div>
 		</div>
     </section>
 
@@ -153,7 +153,7 @@
                         <path id="Vector_2" d="M0 4.5L2.5 0L5 4.5H0Z" transform="translate(223 15)" fill="#707070"/>
                     </svg>
                 </div>
-				<div class="sub-msg"><?=$fundETH?> ETH</div>
+				<div class="sub-msg sub-msg2"><?=$fundETH?> ETH</div>
             </div>
             <div class="box actions-box">
                 <span class="msg">Join with GROO</span>

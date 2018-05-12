@@ -65,15 +65,16 @@ $(function(){
     /* count down */
     var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
     var now = Math.floor(new Date().getTime() / 1000);
-    
+    var borderColor = '#D0107D';
+
 	$('#countdown').final_countdown({
         start: 0,
         end: end,
         now: now,
-        seconds: { borderColor: '#fff', borderWidth: '4' },
-        minutes: { borderColor: '#fff', borderWidth: '4' },
-        hours: { borderColor: '#fff', borderWidth: '4' },
-        days: { borderColor: '#fff', borderWidth: '4' },
+        seconds: { borderColor: borderColor, borderWidth: '4' },
+        minutes: { borderColor: borderColor, borderWidth: '4' },
+        hours: { borderColor: borderColor, borderWidth: '4' },
+        days: { borderColor: borderColor, borderWidth: '4' },
     });
 	
 });
