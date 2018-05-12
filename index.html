@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/style.media.query.css">
+	<link rel="stylesheet" href="assets/style/jquery.stepProgressBar.css">
 </head>
+<style>
+	#myGoal {
+		width:500px;
+		margin-right:150px;
+	}
+</style>
 <body>
     <header id="header" class="contents">
         <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="GROO Coin"></a></div>
@@ -36,14 +43,15 @@
         </nav>
     </header>
 
+	
 
-    <section class="section-main">
-            <div class="main-txt">
-                <h1>BEAUTY CONTENT<br/>SOCIAL NETWORK</h1>
-                <a href="#" class="btn lg black">Pre-Sale starts on Jun 4th</a>
-            </div>
+	<section class="section-main">
+		<div class="main-txt">
+			<h1>BEAUTY CONTENT<br/>SOCIAL NETWORK</h1>
+			<a href="#" class="btn lg black">Pre-Sale starts on Jun 4th</a>
+			<div id="myGoal"></div>
+		</div>
     </section>
-
 
     <section class="section-actions">
         <div class="contents">
@@ -148,24 +156,63 @@
             <li>
                 <h3 class="t1">2018 Q1</h3>
                 <ul class="road-map-detail">
-                    <li>private sale</li>
-                    <li>private sale</li>
-                    <li>private sale</li>
-                    <li>pre-sale</li>
+                    <li>Project development</li>
+                    <li>Project structure development</li>
                 </ul>
             </li>
             <li>
                 <h3 class="t1">2018 Q2</h3>
                 <ul class="road-map-detail">
-                    <li>private sale</li>
-                    <li>pre-sale</li>
+                    <li>Groocoin homepage</li>
+                    <li>Whitepaper Release</li>
+					<li>ICO stage</li>
                 </ul>
             </li>
             <li>
-                <h3 class="t1">2018 Q2</h3>
+                <h3 class="t1">2018 Q3</h3>
                 <ul class="road-map-detail">
-                    <li>private sale</li>
-                    <li>pre-sale</li>
+                    <li>Groo.io Platform Alpha Test</li>
+                    <li>Partnership development with Private contents creators</li>
+					<li>Listed on Exchange</li>
+                </ul>
+            </li>
+			<li>
+                <h3 class="t1">2018 Q4</h3>
+                <ul class="road-map-detail">
+                    <li>Groo webwallet Launch</li>
+                    <li>Groo.io Platform Beta Test</li>
+					<li>Groo.io Platform CBT(Closed Beta Test) </li>
+					<li>Multi language support</li>
+                </ul>
+            </li>
+			
+			<li>
+                <h3 class="t1">2019 Q1</h3>
+                <ul class="road-map-detail">
+                    <li>Groo.io Platform Official Launch</li>
+                    <li>Groocoin 1:1 swap (Ethereum Token to EOS Token)</li>
+					<li>Exchange Token update support</li>
+					<li>Ongoing Partnership & Sponsorship with Asia Cosmetic companies</li>
+                </ul>
+            </li>
+			<li>
+                <h3 class="t1">2019 Q2</h3>
+                <ul class="road-map-detail">
+                    <li>Groo.io Platform Mobile Application launch</li>
+                    <li>Groo.io Platform Payment Gateway API</li>
+                </ul>
+            </li>
+			<li>
+                <h3 class="t1">2019 Q3</h3>
+                <ul class="road-map-detail">
+                    <li>Groo Analytics CBT (Closed Beta Test)</li>
+                    <li>Expand partnership & sponsorship</li>
+                </ul>
+            </li>
+			<li>
+                <h3 class="t1">2019 Q4</h3>
+                <ul class="road-map-detail">
+                    <li>Groo Analytics Launch</li>
                 </ul>
             </li>
         </ul>
@@ -178,28 +225,129 @@
             <ul>
                 <li>
                     <div class="circle">
-                        <img src="https://specials-images.forbesimg.com/imageserve/59d5062131358e542c034eb7/416x416.jpg?background=000000&cropX1=419&cropX2=1409&cropY1=53&cropY2=1044" alt="">    
+                        <img src="http://uf.demoday.co.kr/company_member_images/phhaota4VSakVvowsCjLTbDZBK7iouCOlbJHYg66zYJfvWkxmt.jpg" alt="">    
                     </div>
-                    <h3 class="t2">Hong Gildong · CEO</h3>
+                    <h3 class="t2">심원문 · CEO</h3>
+					
+					<ul class="histories">
+						<li>비트레인 CEO</li>
+                        <li>크레이지 다이아몬드 개발이사</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5603AQGyQzFUCCl6Gw/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=pmnw-JqIPIJDK7MqmlOYi9AYv1ypPwjaFF0TNyC81Qs" alt="">    
+                    </div>
+                    <h3 class="t2">
+						Jungkyu Jang<br>
+						Core Developer
+					</h3>
+					
+					<ul class="histories">
+                        <li>Experienced Development for 10years</li>
+                        <li>System Engineer at eBay</li>
+                        <li>Software Developer at Samsung</li>
+                    </ul>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="" alt="">    
                     </div>
-                    <h3 class="t2">Hong Gildong · CEO</h3>
+                    <h3 class="t2">Seon</h3>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="" alt="">    
                     </div>
-                    <h3 class="t2">Hong Gildong · CEO</h3>
+                    <h3 class="t2">
+						김형철<br>
+						Smart Contract and Platform Development
+					</h3>
+					<ul class="histories">
+                        <li>Experienced Development for 10years</li>
+                        <li>Backend Developer</li>
+                    </ul>
+                </li>
+            </ul>
+			
+			<ul>
+                <li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5603AQFaGmy9Af3aaA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=briJ51vB1hOejsMj8c4vvm19ZtJ1-UIWpWvEMHekMm4" alt="">
+                    </div>
+                    <h3 class="t2">
+						Berenice Silva<br>
+						Financial Planning Analyst
+					</h3>
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/berenice-silva-brambila-9ba84363/">Linkedin</a></li>
+                    </ul>
+					
+                </li>
+                <li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5103AQEgQkes9e5mBA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=vGHOVYVbpU-uC7OyPdgguk6FGIzUlvQdFGY2anPGpNc" alt="">    
+                    </div>
+                    <h3 class="t2">
+						Junho Park<br>
+						Frontend Developer
+					</h3>
+					
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/cnaa97">Linkedin</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5603AQGryOicdrSa_w/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=1mU0jLRVBy1acvQzsmOkOVXXQ7MAl0FRlvT2YdiRXy8" alt="">
+                    </div>
+                    <h3 class="t2">Marcelo Barone</h3>
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/marcelobarone">Linkedin</a></li>
+                    </ul>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="" alt="">    
                     </div>
-                    <h3 class="t2">Hong Gildong · CEO</h3>
+                    <h3 class="t2">
+						Yoonhee Kong<br>
+						Service Planning and Operation
+					</h3>
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/marcelobarone">Linkedin</a></li>
+                    </ul>
                 </li>
+            </ul>
+			
+			<ul>
+                <li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
+                    </div>
+                    <h3 class="t2">
+						Francine Cunha<br>
+						Business Development
+					</h3>
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/francine-cunha-452814121/">Linkedin</a></li>
+                    </ul>
+				</li>
+				
+				<li>
+                    <div class="circle">
+                        <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
+                    </div>
+                    <h3 class="t2">
+						Francine Cunha<br>
+						Business Development
+					</h3>
+					<ul class="histories">
+                        <li><a href="https://www.linkedin.com/in/francine-cunha-452814121/">Linkedin</a></li>
+                    </ul>
+					
+                </li>
+                
             </ul>
         </div>
     </section>
@@ -228,6 +376,37 @@
             <div class="title t1 center">Advisers</div>
             <ul>
                 <li>
+                    <div class="circle">
+                        <img src="https://specials-images.forbesimg.com/imageserve/59d5062131358e542c034eb7/416x416.jpg?background=000000&cropX1=419&cropX2=1409&cropY1=53&cropY2=1044" alt="">    
+                    </div>
+                    <h3 class="t2">Hong Gildong</h3>
+                    <ul class="histories">
+                        <li>Kakao CEO</li>
+                    </ul>
+                </li>
+				<li>
+                    <div class="circle">
+                        <img src="https://specials-images.forbesimg.com/imageserve/59d5062131358e542c034eb7/416x416.jpg?background=000000&cropX1=419&cropX2=1409&cropY1=53&cropY2=1044" alt="">    
+                    </div>
+                    <h3 class="t2">Hong Gildong</h3>
+                    <ul class="histories">
+                        <li>Seoul of MBA</li>
+                        <li>Seoul of MBA</li>
+                        <li>Seoul of MBA</li>
+                    </ul>
+                </li>
+				<li>
+                    <div class="circle">
+                        <img src="https://specials-images.forbesimg.com/imageserve/59d5062131358e542c034eb7/416x416.jpg?background=000000&cropX1=419&cropX2=1409&cropY1=53&cropY2=1044" alt="">    
+                    </div>
+                    <h3 class="t2">Hong Gildong</h3>
+                    <ul class="histories">
+                        <li>Seoul of MBA</li>
+                        <li>Seoul of MBA</li>
+                        <li>Seoul of MBA</li>
+                    </ul>
+                </li>
+				<li>
                     <div class="circle">
                         <img src="https://specials-images.forbesimg.com/imageserve/59d5062131358e542c034eb7/416x416.jpg?background=000000&cropX1=419&cropX2=1409&cropY1=53&cropY2=1044" alt="">    
                     </div>
@@ -319,12 +498,12 @@
                 <li>
                     <a href="#">
                         <div class="circle"><img src="" alt=""></div>
-                        <h3>Blog</h3>
+                        <h3>Twitter</h3>
                     </a>
                 </li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Blog</h3></a></li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Blog</h3></a></li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Blog</h3></a></li>
+                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Discord</h3></a></li>
+                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Telegram</h3></a></li>
+                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Kakaotalk</h3></a></li>
             </ul>
         </div>
     </section>
@@ -334,7 +513,7 @@
         <div class="contents">
             <div class="left">
                 <div class="logo-footer"><a href="#"><img src="assets/images/logo-white.svg" alt="GROO Coin logo"></a></div>
-                <div class="copyright">Copyright © 2013 All Rights Reserved</div>
+                <div class="copyright">Copyright © 2018 All Rights Reserved</div>
             </div>
             <div class="right">
                 <ul class="footer-menu">
@@ -351,6 +530,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
     <script src="assets/js/main.js"></script>
+	<script src="assets/lib/jquery.final-countdown.js"></script>
+	<script src="assets/lib/jquery.stepProgressBar.js"></script>
 
 </body>
 </html>

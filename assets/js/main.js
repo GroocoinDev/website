@@ -37,7 +37,33 @@ $(function(){
         $(this).toggleClass('active');
     });
 
-
+	/* ICO 모금액 */
+	$('#myGoal').stepProgressBar({
+		currentValue: 200,
+		steps: [
+			{ value: 100 }, {
+			value: 500,
+			bottomLabel: '<i class="material-icons">프라이빗판매</i>'
+			}, {
+				value: 800,
+				bottomLabel: '<i class="material-icons">소프트캡</i>'
+			}, {  
+				value: 1000, 
+				bottomLabel: '<i class="material-icons">하드캡</i>',
+				mouseOver: function() { alert('mouseOver'); },
+				click: function() { alert('click'); }
+		}],
+		unit: 'ETH'
+	});
+	
+	/* ICO 시작일 */
+	$("#getting-started")
+		.countdown("2017/01/01", function(event) {
+		$(this).text(
+			event.strftime('%D days %H:%M:%S')
+		);
+	});
+	
     /* Chart */
     var ctx = $("#myChart");
     var myPieChart = new Chart(ctx,{
