@@ -60,7 +60,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section p { line-height: 1.5em; }
 .title { margin-bottom: 50px; }
 
-.section-main { padding-top: 130px; min-height: 570px; overflow: hidden; background-image: url("../images/main-bg.svg"); background-position: center center; background-size: cover; background-repeat: no-repeat; background-color: #fff; }
+.section-main { padding-top: 130px; min-height: 570px; overflow: hidden; background-image: url("../images/main-bg.svg"); background-position: top right; background-size: 100% auto; background-repeat: no-repeat; background-color: #fff; }
 .section-main .main-txt { text-align: center; transform: translateX(100px); }
 .section-main .main-txt:before { content:''; position: absolute; top: 0; background: url(../images/main-obj.png) no-repeat top left; width: 300px; height: 400px; background-size: 320px auto; margin-top: -24px; margin-left: -500px; }
 .section-main .main-txt h3 { font-size: 1em; color: #fff; margin-top: 20px; }

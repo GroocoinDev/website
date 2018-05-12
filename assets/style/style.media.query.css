@@ -1,3 +1,7 @@
+@media (max-width: 1600px) {
+    .section-main { background-size: cover; }
+}
+
 @media (max-width: 420px) {
 
     .contents { width: 100%; }
