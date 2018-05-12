@@ -71,7 +71,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-actions .actions-box { width: calc(33.3% - 13.3333px); margin-right: 20px; float: left; min-height: 280px; transform: translateY(-140px); text-align: center; }
 .section-actions .actions-box.end { margin-right: 0; }
 .section-actions .actions-box .msg { text-align: center; font-size: 1.25em; font-weight: 800; margin: 94px 0 20px; display: inline-block; }
-.section-actions .actions-box .msg.progress { margin: 64px 0 20px; }
+.section-actions .actions-box .msg.progress { margin: 34px 0 20px; }
 .section-actions .actions-box .sub-msg { font-size: 1em; font-weight: 300; display: inline-block; line-height: 1.4em; }
 .section-actions .actions-box .actions-icons { width: 100%; }
 .section-actions .actions-box .actions-icons ul { display: inline-block; text-align: center; }

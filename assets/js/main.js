@@ -1,7 +1,3 @@
-var ethAPIHost = "https://api.etherscan.io/api";
-var APIKey = "XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS";
-var GrooWallet = "0x1414786Ac5692859eE0647e8E420AA8AcE17d47B";
-
 $(function(){
     var $root = $('html, body');
     var $header = $('#header');
