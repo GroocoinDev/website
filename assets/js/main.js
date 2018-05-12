@@ -13,9 +13,8 @@ $(function(){
     // scroll event
     $(window).on('scroll', function(){
         var scrollTop = $root.scrollTop();
-        var aboutTop = $('.section-about').offset().top;
-
-        if (scrollTop && scrollTop > (aboutTop - 100) ) {
+        
+        if (scrollTop && scrollTop > 50 ) {
             $header.addClass('scroll');
         } else {
             $header.hasClass('scroll') && $header.removeClass('scroll');
