@@ -25,8 +25,8 @@
 
 @media (max-width: 420px) {
 
-    .contents { width: 100%; }
-    .section > .contents { width: 90%; margin: 0 5%; }
+    .contents { width: 100%; max-width: 100%; }
+    .section > .contents { width: 90%; margin: 0 5%; max-width: 90%; }
 
     /* header */
     #header { padding: 0; }
@@ -64,6 +64,7 @@
     /* .section-main .main-txt h1:before { content:''; position: absolute; } */
     
     #countdown { width: 90%; margin: 0 5%; height: 96px; }
+    #countdown .text { margin-top: 18px; }
     #countdown .clock-item { width: calc(25% - 9px); float: left; margin-right: 12px; }  
     #countdown .clock-item.clock-seconds { margin-right: 0; }  
 
