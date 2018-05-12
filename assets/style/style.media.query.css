@@ -59,11 +59,11 @@
     .section-main { padding-top: 100px; min-height: 100%; overflow: hidden; background-image: url("../images/main-bg.svg"); background-position: center center; background-size: cover; background-repeat: no-repeat; background-color: #fff; padding-bottom: 90px }
     .section-main .main-txt { text-align: center; transform: translateX(0); }
     .section-main .main-txt:before { content: none; }
-    .section-main .main-txt h1 { font-size: 3em; width: 60%; margin: 0 auto;}
+    .section-main .main-txt h1 { font-size: 2.4em; width: 80%; margin: 0 auto; text-align: left; }
     .section-main .main-txt h3 { display: none; }
     /* .section-main .main-txt h1:before { content:''; position: absolute; } */
     
-    #countdown { width: 90%; margin: 0 5%; height: 110px; }
+    #countdown { width: 90%; margin: 0 5%; height: 96px; }
     #countdown .clock-item { width: calc(25% - 9px); float: left; margin-right: 12px; }  
     #countdown .clock-item.clock-seconds { margin-right: 0; }  
 
@@ -106,8 +106,9 @@
     
     .section-members { padding: 40px 0 40px; }
     .section-members ul li { width: 50%; margin-bottom: 30px; min-height: auto; }
+    .section-members:not(.section-advisers) ul li { min-height: 200px; }
     .section-members ul li:nth-child(n+3) { margin-bottom: 30px; }
-    .section-members ul li .circle { width: 120px; height: 120px; }
+    .section-members ul li .circle { width: 110px; height: 110px; }
     .section-members ul li h3 { text-align: center; margin-top: 20px; margin-bottom: 10px; }
     /* .section-members ul.histories { margin-top: 20px; width: 80%; margin-left: 10%; } */
     
@@ -127,7 +128,7 @@
 
 
     .section-coin-sale {}
-    .section-coin-sale .img-wrap { width: 100%; float: none; }
+    .section-coin-sale .img-wrap { width: 100%; float: none; margin-left: 0; }
     .section-coin-sale .img-wrap img { max-width: 90%; width: 90% }
     .section-coin-sale .table-wrap { width: 100%; float: none; margin: 20px 0; }
     .section-coin-sale .table-wrap table { width: 100%; }

@@ -23,7 +23,7 @@ $(function(){
 
     /* scroll event */
     $('.section').Oppear({
-        transition : '1.2s',
+        transition : '1s',
     });
 
     /* init tab menu content */
