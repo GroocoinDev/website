@@ -47,22 +47,77 @@
 
 	<section class="section-main">
 		<div class="main-txt">
-			<h1>BEAUTY CONTENT<br/>SOCIAL NETWORK</h1>
-			<a href="#" class="btn lg black">Pre-Sale starts on Jun 4th</a>
-			<div id="myGoal"></div>
+            <h1>BEAUTY CONTENT<br/>SOCIAL NETWORK</h1>
+            
+            <!-- count down -->
+            <div id="countdown" class="countdown countdown-container container">
+                <div class="clock row">
+                    <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-days" class="clock-canvas"></div>
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-days type-time">DAYS</p>
+                                </div><!-- /.text -->
+                            </div><!-- /.inner -->
+                        </div><!-- /.wrap -->
+                    </div><!-- /.clock-item -->
+            
+                    <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-hours" class="clock-canvas"></div>
+            
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-hours type-time">HOURS</p>
+                                </div><!-- /.text -->
+                            </div><!-- /.inner -->
+                        </div><!-- /.wrap -->
+                    </div><!-- /.clock-item -->
+            
+                    <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-minutes" class="clock-canvas"></div>
+            
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-minutes type-time">MINUTES</p>
+                                </div><!-- /.text -->
+                            </div><!-- /.inner -->
+                        </div><!-- /.wrap -->
+                    </div><!-- /.clock-item -->
+            
+                    <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-seconds" class="clock-canvas"></div>
+            
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-seconds type-time">SECONDS</p>
+                                </div><!-- /.text -->
+                            </div><!-- /.inner -->
+                        </div><!-- /.wrap -->
+                    </div><!-- /.clock-item -->
+                </div><!-- /.clock -->
+            </div><!-- /.countdown-wrapper -->
+
+
+            <a href="#" class="btn lg black">Pre-Sale starts on Jun 4th</a>
 		</div>
     </section>
 
     <section class="section-actions">
         <div class="contents">
             <div class="box actions-box">
-                <span class="msg">Join Chat</span>
-                <div class="actions-icons">
-                    <ul>
-                        <li class="icon"><a href="#"></a></li>
-                        <li class="icon"><a href="#"></a></li>
-                        <li class="icon"><a href="#"></a></li>
-                    </ul>
+                <span class="msg progress">Token Sale Live</span>
+                <div class="sub-msg">Initial Price : 3000 GROO = 1 ETH</div>
+                <div class="sub-msg">Currency Accepted : ETH</div>
+                <div class="sale-progress">
+
                 </div>
             </div>
             <div class="box actions-box">
@@ -185,7 +240,9 @@
 					<li>Multi language support</li>
                 </ul>
             </li>
-			
+        </ul>
+
+        <ul class="road-map-wrapper">
 			<li>
                 <h3 class="t1">2019 Q1</h3>
                 <ul class="road-map-detail">
@@ -227,27 +284,17 @@
                     <div class="circle">
                         <img src="http://uf.demoday.co.kr/company_member_images/phhaota4VSakVvowsCjLTbDZBK7iouCOlbJHYg66zYJfvWkxmt.jpg" alt="">    
                     </div>
-                    <h3 class="t2">심원문 · CEO</h3>
-					
-					<ul class="histories">
-						<li>비트레인 CEO</li>
-                        <li>크레이지 다이아몬드 개발이사</li>
-                    </ul>
+                    <h3 class="t2 move-left">심원문
+                        <a class="linkedin" href="#" target="_blank"></a>
+                    </h3>
+                    <h4>CEO</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQGyQzFUCCl6Gw/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=pmnw-JqIPIJDK7MqmlOYi9AYv1ypPwjaFF0TNyC81Qs" alt="">    
                     </div>
-                    <h3 class="t2">
-						Jungkyu Jang<br>
-						Core Developer
-					</h3>
-					
-					<ul class="histories">
-                        <li>Experienced Development for 10years</li>
-                        <li>System Engineer at eBay</li>
-                        <li>Software Developer at Samsung</li>
-                    </ul>
+                    <h3 class="t2">Jungkyu Jang</h3>
+                    <h4>Core Developer</h4>
                 </li>
                 <li>
                     <div class="circle">
@@ -259,14 +306,8 @@
                     <div class="circle">
                         <img src="" alt="">    
                     </div>
-                    <h3 class="t2">
-						김형철<br>
-						Smart Contract and Platform Development
-					</h3>
-					<ul class="histories">
-                        <li>Experienced Development for 10years</li>
-                        <li>Backend Developer</li>
-                    </ul>
+                    <h3 class="t2">김형철</h3>
+                    <h4>Smart Contract and Platform Development</h4>
                 </li>
             </ul>
 			
@@ -275,48 +316,28 @@
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQFaGmy9Af3aaA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=briJ51vB1hOejsMj8c4vvm19ZtJ1-UIWpWvEMHekMm4" alt="">
                     </div>
-                    <h3 class="t2">
-						Berenice Silva<br>
-						Financial Planning Analyst
-					</h3>
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/berenice-silva-brambila-9ba84363/">Linkedin</a></li>
-                    </ul>
-					
+                    <h3 class="t2">Berenice Silva</h3>
+                    <h4>Financial Planning Analyst</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQEgQkes9e5mBA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=vGHOVYVbpU-uC7OyPdgguk6FGIzUlvQdFGY2anPGpNc" alt="">    
                     </div>
-                    <h3 class="t2">
-						Junho Park<br>
-						Frontend Developer
-					</h3>
-					
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/cnaa97">Linkedin</a></li>
-                    </ul>
+                    <h3 class="t2">Junho Park</h3>
+					<h4>Frontend Developer</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQGryOicdrSa_w/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=1mU0jLRVBy1acvQzsmOkOVXXQ7MAl0FRlvT2YdiRXy8" alt="">
                     </div>
                     <h3 class="t2">Marcelo Barone</h3>
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/marcelobarone">Linkedin</a></li>
-                    </ul>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="" alt="">    
                     </div>
-                    <h3 class="t2">
-						Yoonhee Kong<br>
-						Service Planning and Operation
-					</h3>
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/marcelobarone">Linkedin</a></li>
-                    </ul>
+                    <h3 class="t2">Yoonhee Kong</h3>
+                    <h4>Service Planning and Operation</h4>
                 </li>
             </ul>
 			
@@ -325,29 +346,17 @@
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
                     </div>
-                    <h3 class="t2">
-						Francine Cunha<br>
-						Business Development
-					</h3>
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/francine-cunha-452814121/">Linkedin</a></li>
-                    </ul>
+                    <h3 class="t2">Francine Cunha</h3>
+                    <h4>Business Development</h4>
 				</li>
 				
 				<li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
                     </div>
-                    <h3 class="t2">
-						Francine Cunha<br>
-						Business Development
-					</h3>
-					<ul class="histories">
-                        <li><a href="https://www.linkedin.com/in/francine-cunha-452814121/">Linkedin</a></li>
-                    </ul>
-					
+                    <h3 class="t2">Francine Cunha</h3>
+                    <h4>Business Development</h4>
                 </li>
-                
             </ul>
         </div>
     </section>
@@ -529,9 +538,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
-    <script src="assets/js/main.js"></script>
 	<script src="assets/lib/jquery.final-countdown.js"></script>
+	<script src="assets/lib/kinetic.js"></script>
 	<script src="assets/lib/jquery.stepProgressBar.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
