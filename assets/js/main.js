@@ -64,18 +64,11 @@ $(function(){
 	// 	);
     // });
     
-    var d = new Date();
-
-    var start = Math.floor(new Date('1/1/2018').getTime() / 1000);
-    var end = Math.floor(new Date('2/1/2018').getTime() / 1000);
-    var now = Math.floor(new Date().getTime() / 1000); 
-
-    console.log(start, end, now);
-
-    $('#countdown').final_countdown({
-        // start: 1162139200,
-        // now: 1287461319,
-        // end: 1388461320,
+	var start = 0;
+    var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
+    var now = Math.floor(new Date().getTime() / 1000);
+    
+	$('#countdown').final_countdown({
         start: start,
         end: end,
         now: now,
