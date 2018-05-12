@@ -1,14 +1,8 @@
+var ethAPIHost = "https://api.etherscan.io/api";
+var APIKey = "XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS";
+var GrooWallet = "0x1414786Ac5692859eE0647e8E420AA8AcE17d47B";
+
 $(function(){
-
-    /* progress */
-    setTimeout(function(){
-        var totalValue = parseInt($('#val-total').attr('width'));
-        var percent = 0.5;
-        var currentWidth = totalValue * percent;
-        $('#val-current').animate({'width': currentWidth});
-    }, 700)
-    
-
     var $root = $('html, body');
     /* smooth scroll */ 
     var $navLinks = $('#header nav li a');
@@ -47,6 +41,22 @@ $(function(){
     });
 
 	/* ICO 모금액 */
+	$.post(ethAPIHost,
+		  {"module":"account", "action":"balance", "address":GrooWallet, "tag":"latest", "apikey":APIKey},
+		  function(data){
+		$('#title').html(data);
+		//var walletJson = jQuery.parseJSON(data);
+		//alert(walletJson.result);
+		
+	});*/
+	/* progress */
+    setTimeout(function(){
+        var totalValue = parseInt($('#val-total').attr('width'));
+        var percent = 0;
+        var currentWidth = totalValue * percent;
+        $('#val-current').animate({'width': currentWidth});
+    }, 700)
+	
 	// $('#myGoal').stepProgressBar({
 	// 	currentValue: 200,
 	// 	steps: [
@@ -65,15 +75,6 @@ $(function(){
 	// 	unit: 'ETH'
 	// });
 	
-	/* ICO 시작일 */
-	// $("#getting-started")
-	// 	.countdown("2017/01/01", function(event) {
-	// 	$(this).text(
-	// 		event.strftime('%D days %H:%M:%S')
-	// 	);
-    // });
-    
-
 	var start = 0;
     var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
     var now = Math.floor(new Date().getTime() / 1000);
