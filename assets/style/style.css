@@ -69,7 +69,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-actions .actions-box { width: calc(33.3% - 13.3333px); margin-right: 20px; float: left; min-height: 280px; transform: translateY(-140px); text-align: center; }
 .section-actions .actions-box.end { margin-right: 0; }
 .section-actions .actions-box .msg { text-align: center; font-size: 1.25em; font-weight: 800; margin: 94px 0 20px; display: inline-block; }
-.section-actions .actions-box .msg.progress { margin: 60px 0 20px; }
+.section-actions .actions-box .msg.progress { margin: 64px 0 20px; }
 .section-actions .actions-box .sub-msg { font-size: 1em; font-weight: 300; display: inline-block; line-height: 1.4em; }
 .section-actions .actions-box .actions-icons { width: 100%; }
 .section-actions .actions-box .actions-icons ul { display: inline-block; text-align: center; }
@@ -184,13 +184,21 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 #footer .footer-menu li { float: left; margin-right: 20px; }
 #footer .footer-menu li a { color: #fff; font-weight: 100; }
 
-
-#countdown  { width: 380px; display: block;
-    height: 120px;
-    padding-top: 24px;
-    margin: 0 auto; } 
+/* count-down */
+#countdown  { width: 380px; display: block; height: 120px; padding-top: 24px; margin: 0 auto; } 
 #countdown .clock-item { width: calc(25% - 12px); float: left; margin-right: 12px; } 
 #countdown .inner { position: relative; }
 #countdown .text { position: absolute; top: 0; margin-top: 22px; text-align: center; color: #fff; width: 100%; }
 #countdown .text .val { font-size: 1.4em; font-weight: 600; }
 #countdown .type-time { font-size: 0.65em; margin-top: 6px;}
+
+/* token-sale */
+.sale-progress { margin-top: 30px; }
+.sale-progress svg { 
+    -webkit-transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+    transition: all 900ms ease; 
+}
+.sale-progress #sale-progress-svg {}

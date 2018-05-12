@@ -1,5 +1,14 @@
 $(function(){
 
+    /* progress */
+    setTimeout(function(){
+        var totalValue = parseInt($('#val-total').attr('width'));
+        var percent = 0.5;
+        var currentWidth = totalValue * percent;
+        $('#val-current').animate({'width': currentWidth});
+    }, 700)
+    
+
     var $root = $('html, body');
     /* smooth scroll */ 
     var $navLinks = $('#header nav li a');
@@ -70,7 +79,7 @@ $(function(){
     var end = Math.floor(new Date('2/1/2018').getTime() / 1000);
     var now = Math.floor(new Date().getTime() / 1000); 
 
-    console.log(start, end, now);
+    // console.log(start, end, now);
 
     $('#countdown').final_countdown({
         // start: 1162139200,
