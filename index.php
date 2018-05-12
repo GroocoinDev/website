@@ -15,6 +15,9 @@
 	}
 	$ethUSD = $json->data->quotes->USD->price;
 	$ethKRW = $json->data->quotes->KRW->price;
+	
+	// 1차 : 75000
+	// 2차 : 48000
 	$grooCoinUSD = $ethUSD/75000;
 	$grooCoinKRW = $ethKRW/75000;
 
@@ -133,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="btn lg bold custom">Pre-Sale starts on Jun 4th</div>
+            <div class="btn lg bold custom">1st Pre-Sale starts on Jun 4th</div>
 		</div>
     </section>
 
@@ -166,6 +169,7 @@
             </div>
             <div class="box actions-box end">
                 <span class="msg">Subsctibe Now</span>
+				<div class="sub-msg">Subscribe and get 50 Groopoint now!</div>
                 <div class="actions-icons">
                     <ul>
                         <li><a class="btn default">subscribe</a></li>
@@ -553,9 +557,9 @@
             <div class="title t1 center">Community</div>
             <ul>
                 <li><a href="https://twitter.com/Groocoinio" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-twitter.svg" alt="Twitter"></div><h3>Twitter</h3></a></li>
-                <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
+                <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
                 <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-telegram.svg" alt="telegram"></div><h3>Telegram</h3></a></li>
-                <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-kakaotalk.svg" alt="KakaoTalk"></div><h3>KakaoTalk</h3></a></li>
+                <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-kakaotalk.svg" alt="KakaoTalk"></div><h3>KakaoTalk</h3></a></li>
             </ul>
         </div>
     </section>
