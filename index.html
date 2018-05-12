@@ -10,110 +10,99 @@
     <link rel="stylesheet" href="assets/style/style.media.query.css">
 	<link rel="stylesheet" href="assets/style/jquery.stepProgressBar.css">
 </head>
-<style>
-	#myGoal {
-		width:500px;
-		margin-right:150px;
-	}
-</style>
+
 <body>
-    <header id="header" class="contents">
-        <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="GROO Coin"></a></div>
-        <div class="mobile-nav">
-            <img src="assets/images/icon-menu.svg" alt="menu">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#section-about">About</a></li>
-                <li><a href="#section-road-map">RoadMap</a></li>
-                <li><a href="#section-members">Member</a></li>
-                <li><a href="#section-press">Press</a></li>
-                <li><a href="#section-partners">Partners</a></li>
-                <li><a href="#section-coin-sale">Sale Plan</a></li>
-                <li><a href="#section-faq">FAQ</a></li>
-                <li><a href="#section-community">Community</a></li>
-            </ul>
-            <div class="lang">
-                <a href="#">en</a>
-                <ul>
-                    <li><a href="#">ko</a></li>
-                    <li><a href="#">zh</a></li>
-                </ul>
+    <header id="header">
+        <div class="contents">
+            <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="GROO Coin"></a></div>
+            <div class="mobile-nav">
+                <img src="assets/images/icon-menu.svg" alt="menu">
             </div>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-road-map">RoadMap</a></li>
+                    <li><a href="#section-members">Member</a></li>
+                    <li><a href="#section-press">Press</a></li>
+                    <li><a href="#section-partners">Partners</a></li>
+                    <li><a href="#section-coin-sale">Sale Plan</a></li>
+                    <li><a href="#section-faq">FAQ</a></li>
+                    <li><a href="#section-community">Community</a></li>
+                </ul>
+                <div class="lang">
+                    <a href="#">en</a>
+                    <ul>
+                        <li><a href="#">ko</a></li>
+                        <li><a href="#">zh</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
 	
 
 	<section class="section-main">
 		<div class="main-txt">
-            <h1 id="title">BEAUTY CONTENT<br/>SOCIAL MEDIA</h1>
-			<h3>Connect & Share your Billions of Grooming knowledge </h3>
+            <h3>Connect & Share your Billions of Grooming knowledge </h3>
+            <h1>BEAUTY CONTENT<br/>SOCIAL MEDIA</h1>
             
             <!-- count down -->
-            <div id="countdown" class="countdown countdown-container container">
-                <div class="clock row">
-                    <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
-                        <div class="wrap">
-                            <div class="inner">
-                                <div id="canvas-days" class="clock-canvas"></div>
-                                <div class="text">
-                                    <p class="val">0</p>
-                                    <p class="type-days type-time">DAYS</p>
-                                </div><!-- /.text -->
-                            </div><!-- /.inner -->
-                        </div><!-- /.wrap -->
-                    </div><!-- /.clock-item -->
+            <div id="countdown">
+                <div class="clock-item clock-days">
+                    <div class="inner">
+                        <div id="canvas-days" class="clock-canvas"></div>
+                        <div class="text">
+                            <p class="val">0</p>
+                            <p class="type-days type-time">DAYS</p>
+                        </div>
+                    </div>
+                </div>
             
-                    <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
-                        <div class="wrap">
-                            <div class="inner">
-                                <div id="canvas-hours" class="clock-canvas"></div>
+                <div class="clock-item clock-hours">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-hours" class="clock-canvas"></div>
+                            <div class="text">
+                                <p class="val">0</p>
+                                <p class="type-hours type-time">HOURS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             
-                                <div class="text">
-                                    <p class="val">0</p>
-                                    <p class="type-hours type-time">HOURS</p>
-                                </div><!-- /.text -->
-                            </div><!-- /.inner -->
-                        </div><!-- /.wrap -->
-                    </div><!-- /.clock-item -->
+                <div class="clock-item clock-minutes">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-minutes" class="clock-canvas"></div>
+                            <div class="text">
+                                <p class="val">0</p>
+                                <p class="type-minutes type-time">MINUTES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             
-                    <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
-                        <div class="wrap">
-                            <div class="inner">
-                                <div id="canvas-minutes" class="clock-canvas"></div>
-            
-                                <div class="text">
-                                    <p class="val">0</p>
-                                    <p class="type-minutes type-time">MINUTES</p>
-                                </div><!-- /.text -->
-                            </div><!-- /.inner -->
-                        </div><!-- /.wrap -->
-                    </div><!-- /.clock-item -->
-            
-                    <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
-                        <div class="wrap">
-                            <div class="inner">
-                                <div id="canvas-seconds" class="clock-canvas"></div>
-            
-                                <div class="text">
-                                    <p class="val">0</p>
-                                    <p class="type-seconds type-time">SECONDS</p>
-                                </div><!-- /.text -->
-                            </div><!-- /.inner -->
-                        </div><!-- /.wrap -->
-                    </div><!-- /.clock-item -->
-                </div><!-- /.clock -->
-            </div><!-- /.countdown-wrapper -->
+                <div class="clock-item clock-seconds">
+                    <div class="wrap">
+                        <div class="inner">
+                            <div id="canvas-seconds" class="clock-canvas"></div>
+                            <div class="text">
+                                <p class="val">0</p>
+                                <p class="type-seconds type-time">SECONDS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-            <a href="#" class="btn lg black">Pre-Sale starts on Jun 4th</a>
+            <div class="btn lg bold custom">Pre-Sale starts on Jun 4th</div>
 		</div>
     </section>
 
     <section class="section-actions">
         <div class="contents">
-            <div class="box actions-box">
+            <div class="box actions-box progress">
                 <span class="msg progress">Token Sale Live</span>
                 <div class="sub-msg">Initial Price : 3000 GROO = 1 ETH</div>
                 <div class="sub-msg">Currency Accepted : ETH</div>
@@ -198,7 +187,7 @@
         <div class="contents">
             <div class="title t1 center">Components Flow</div>
             <div class="center">
-                <img src="assets/images/arch1.png" style="max-width: 100%; width: 90%;"/>
+                <img class="arch1" src="assets/images/arch1.png" />
             </div>
         </div>
     </section>
@@ -207,7 +196,7 @@
         <div class="contents">
             <div class="title t1 center">Technical Structure</div>
             <div class="center">
-                <img src="assets/images/arch2.png" style="max-width: 100%; width: 75%;"/>
+                <img class="arch2" src="assets/images/arch2.png" />
             </div>
         </div>
     </section>
@@ -317,9 +306,6 @@
                     <h3 class="t2">김형철</h3>
                     <h4>Smart Contract and Platform Development</h4>
                 </li>
-            </ul>
-			
-			<ul>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQFaGmy9Af3aaA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=briJ51vB1hOejsMj8c4vvm19ZtJ1-UIWpWvEMHekMm4" alt="">
@@ -347,9 +333,6 @@
                     <h3 class="t2">Yoonhee Kong</h3>
                     <h4>Service Planning and Operation</h4>
                 </li>
-            </ul>
-			
-			<ul>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
@@ -357,7 +340,6 @@
                     <h3 class="t2">Francine Cunha</h3>
                     <h4>Business Development</h4>
 				</li>
-				
 				<li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
@@ -459,8 +441,28 @@
     <section class="section section-coin-sale" id="section-coin-sale">
         <div class="contents">
             <div class="title t1 center">Coin Sale</div>
-            <div>
-                <canvas id="myChart" width="400" height="200"></canvas>
+            <div class="img-wrap">
+                <img src="assets/images/arch3.png" alt="coin sale">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Token Initial</th>
+                        <td>GROO</td>
+                    </tr>
+                    <tr>
+                        <th>Total supply</th>
+                        <td>900,000,000 EA</td>
+                    </tr>
+                    <tr>
+                        <th>Circulating supply</th>
+                        <td>720,000,000 EA</td>
+                    </tr>
+                    <tr>
+                        <th>ICO Token Sales</th>
+                        <td>270,000,000 EA</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
@@ -512,15 +514,10 @@
         <div class="contents">
             <div class="title t1 center">Community</div>
             <ul>
-                <li>
-                    <a href="#">
-                        <div class="circle"><img src="" alt=""></div>
-                        <h3>Twitter</h3>
-                    </a>
-                </li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Discord</h3></a></li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Telegram</h3></a></li>
-                <li><a href="#"><div class="circle"><img src="" alt=""></div><h3>Kakaotalk</h3></a></li>
+                <li><a href="https://twitter.com/Groocoinio" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-twitter.svg" alt="Twitter"></div><h3>Twitter</h3></a></li>
+                <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
+                <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-telegram.svg" alt="telegram"></div><h3>Telegram</h3></a></li>
+                <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-kakaotalk.svg" alt="KakaoTalk"></div><h3>KakaoTalk</h3></a></li>
             </ul>
         </div>
     </section>
@@ -544,7 +541,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
 	<script src="assets/lib/jquery.final-countdown.js"></script>
 	<script src="assets/lib/kinetic.js"></script>
