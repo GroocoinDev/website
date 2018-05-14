@@ -8,6 +8,10 @@ $(function(){
         $root.animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 450);
+
+        $('.mobile-nav').removeClass('active');
+        $('#header .logo').removeClass('active');
+        $('#header nav').removeClass('active');
     })
 
     // scroll event

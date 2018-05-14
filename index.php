@@ -53,7 +53,7 @@
 
 <body>
     <header id="header">
-        <div class="contents">
+        <div class="contents no-select">
             <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="GROO Coin"></a></div>
             <div class="mobile-nav">
                 <img src="assets/images/icon-menu.svg" alt="menu">
@@ -513,39 +513,61 @@
     <section class="section section-faq white" id="section-faq">
         <div class="contents">
             <div class="title t1 center">FAQ</div>
-            <div class="nav-hor">
+            <!-- <div class="nav-hor">
                 <ul>
                     <li data-index="1" class="active">Coin Sale</li>
                     <li data-index="2">Services</li>
                     <li data-index="3">Technology</li>
                 </ul>
-            </div>
+            </div> -->
             <div class="faq-list">
                 <ul data-index="1">
-                    <li>
-                        <h3>What is GROO COIN?</h3>
-                        <p>GROO COIN is blockchain toke GROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain token</p>
+                    <li class="active">
+                        <h3 class="no-select">최소 투자금액은 어떻게 되나요?</h3>
+                        <p>0.05 ETH 입니다. 그 이하로는 참여할 수 없으며 환불이 불가능 합니다.</p>
                     </li>
                     <li>
-                        <h3>What is GROO COIN?</h3>
-                        <p>GROO COIN is blockchain toke GROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain token</p>
+                        <h3 class="no-select">거래소 지갑에서 ETH를 보내도 되나요?</h3>
+                        <p>반드시 My Ether Wallet에서 전송해 주십시오, 거래소 지갑에서 ETH 전송시 Groocoin을 수령 받지 못할 수도 있으며 저희는 이에 관한 책임을 지지 않습니다.</p>
                     </li>
                     <li>
-                        <h3>What is GROO COIN?</h3>
-                        <p>GROO COIN is blockchain toke GROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain token</p>
+                        <h3 class="no-select">토큰 수량</h3>
+                        <p>총 발행 량 9억 개이며 이 중 2.7억개는ICO 참여자들에게 판매합니다.</p>
                     </li>
                     <li>
-                        <h3>What is GROO COIN?</h3>
-                        <p>GROO COIN is blockchain toke GROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain tokenGROO COIN is blockchain token</p>
+                        <h3 class="no-select">토큰 세일에 참여가능한 암호 화폐는 무엇인가요?</h3>
+                        <p>ETH</p>
                     </li>
-                </ul>
-                <ul data-index="2">
-                    <li><h3>Services</h3><p>Services</p></li>
-                    <li><h3>Services</h3><p>Services</p></li>
-                </ul>
-                <ul data-index="3">
-                    <li><h3>Technology</h3><p>Technology</p></li>
-                    <li><h3>Technology</h3><p>Technology</p></li>
+                    <li>
+                        <h3 class="no-select">거래소에 상장될 예정인가요?</h3>
+                        <p>ICO 종료 후 상장 예정입니다, 거래소들과의 조율 후 최종적으로 공지하겠습니다.</p>
+                    </li>
+                    <li>
+                        <h3 class="no-select">투자자들을 위한 보너스 포인트가 있나요?</h3>
+                        <p>
+                        투자금액에 비례해 아래 보너스 코인을 지급받을 수 있습니다.<br/>
+                        • 10-50 ETH: 보너스 1%<br/>
+                        • 51-300ETH: 보너스 2%<br/>
+                        • 301-1000 ETH: 보너스 5%<br/>
+                        • 1001 ETH 이상: 보너스 10%
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="no-select">판매하지 못한 토큰들은 어떻게 되나요?</h3>
+                        <p>판매하지 못한 토큰들은 없으며, Smart contact에 의해 구매자들에 한해 지급예정입니다.  </p>
+                    </li>
+                    <li>
+                        <h3 class="no-select">Groo.io 플랫폼이란?</h3>
+                        <p>Groo.io 플랫폼은 전세계 Makeup cosmetic 시장을 포용하는 단일 플랫폼의 구축, 각 시장에서 선호하는 Makeup cosmetic 컨텐츠를 유저들이 TV채널을 검색하듯이 손쉽게 찾고 참조할 수 있으며 이를 통해 플랫폼 활동만으로도 보상을 획득할 수 있는 EOS Blockchain을 활용한 Social media platform입니다. 기업은 Groo.io 플랫폼을 통해 소비자 개인이 선호하는 취향을 손쉽게 분석할 수 있으며 효과적인 Target marketing을 기획할 수 있습니다.</p>
+                    </li>
+                    <li>
+                        <h3 class="no-select">Groopoint와 Groocoin의 차이점</h3>
+                        <p>Groopoint은 Groo.io 플랫폼에서 사용이 가능한 Reward point 입니다, 소비자는 특정 컨텐츠의 제작 혹은 해당 컨텐츠의 투표 및 reply를 통해 Groopoint를 발급 받을 수 있습니다. 일정량의 Groopoint는 각 암호화폐 거래소에서 구매/판매가 가능한 Groocoin으로 변환할 수가 있습니다. Groo.io 플랫폼은 EOS의 DApp을 활용한 플랫폼입니다</p>
+                    </li>
+                    <li>
+                        <h3 class="no-select">EOS Blockchain</h3>
+                        <p>Groo.io 플랫폼은 이용자의 트랜잭션 수수료를 제거하고 보다 빠른 트랜잭션 처리를 위해 EOS 블록체인을 사용합니다. EOS는 분산형 Application(DApp) 서비스를 위한 스마트 컨트랙트 플랫폼으로서 블록체인 서비스의 사용성 문제인 트랜잭션 수수료와 처리 지연의 문제를 해결합니다. EOS블록체인은 DApp 이용자에게 수수료를 부과하지 않습니다. </p>
+                    </li>
                 </ul>
             </div>
         </div>

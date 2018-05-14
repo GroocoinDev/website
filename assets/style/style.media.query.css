@@ -72,6 +72,8 @@
     .section-actions .actions-box { width: 100%; margin-right: 0; float: left; min-height: 160px; margin-bottom: 20px; transform: translateY(-50px) }
     .section-actions .actions-box.progress { min-height: 240px; }
     .section-actions .actions-box .msg { text-align: center; font-size: 1.25em; line-height: 1.4em; margin: 34px 0 6px; }
+    .section-actions .actions-box.end { min-height: 180px; }
+    .section-actions .actions-box.end .msg { margin-top: 30px; }
     .section-actions .actions-box .msg.progress { margin-top: 40px; }
     .section-actions .actions-box .actions-icons { width: 100%; }
     .section-actions .actions-box .actions-icons ul li { margin-right: 4px; }
@@ -140,7 +142,8 @@
 
     .section-faq {}
     .section-faq .nav-hor ul { max-width: 100%; width: inherit; }
-    .section-faq .faq-list { display: inline-block; padding: 50px 0 0; }
+    .section-faq .faq-list { display: inline-block; width: 100%; padding: 10px 0 0; }
+    .section-faq .faq-list ul li.active p { display: block; width: auto; }
 
 
     .section-community { display: inline-block; }
