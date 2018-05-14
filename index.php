@@ -81,65 +81,66 @@
         </div>
     </header>
 
-	
+    <div id="app">
+        <section class="section-main">
+            <div class="main-txt">
+                <h3>Connect & Share your Billions of Grooming knowledge </h3>
+                <h1>BEAUTY CONTENT<br/>SOCIAL MEDIA</h1>
+                
+                <!-- count down -->
+                <div id="countdown">
+                    <div class="clock-item clock-days">
+                        <div class="inner">
+                            <div id="canvas-days" class="clock-canvas"></div>
+                            <div class="text">
+                                <p class="val">0</p>
+                                <p class="type-days type-time">DAY</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="clock-item clock-hours">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-hours" class="clock-canvas"></div>
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-hours type-time">HRS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="clock-item clock-minutes">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-minutes" class="clock-canvas"></div>
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-minutes type-time">MIN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="clock-item clock-seconds">
+                        <div class="wrap">
+                            <div class="inner">
+                                <div id="canvas-seconds" class="clock-canvas"></div>
+                                <div class="text">
+                                    <p class="val">0</p>
+                                    <p class="type-seconds type-time">SEC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	<section class="section-main">
-		<div class="main-txt">
-            <h3>Connect & Share your Billions of Grooming knowledge </h3>
-            <h1>BEAUTY CONTENT<br/>SOCIAL MEDIA</h1>
-            
-            <!-- count down -->
-            <div id="countdown">
-                <div class="clock-item clock-days">
-                    <div class="inner">
-                        <div id="canvas-days" class="clock-canvas"></div>
-                        <div class="text">
-                            <p class="val">0</p>
-                            <p class="type-days type-time">DAY</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="clock-item clock-hours">
-                    <div class="wrap">
-                        <div class="inner">
-                            <div id="canvas-hours" class="clock-canvas"></div>
-                            <div class="text">
-                                <p class="val">0</p>
-                                <p class="type-hours type-time">HRS</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="clock-item clock-minutes">
-                    <div class="wrap">
-                        <div class="inner">
-                            <div id="canvas-minutes" class="clock-canvas"></div>
-                            <div class="text">
-                                <p class="val">0</p>
-                                <p class="type-minutes type-time">MIN</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="clock-item clock-seconds">
-                    <div class="wrap">
-                        <div class="inner">
-                            <div id="canvas-seconds" class="clock-canvas"></div>
-                            <div class="text">
-                                <p class="val">0</p>
-                                <p class="type-seconds type-time">SEC</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="custom">1st Pre-Sale starts on Jun 4th</div>
             </div>
+        </section>
 
-            <div class="custom">1st Pre-Sale starts on Jun 4th</div>
-		</div>
-    </section>
+        <modal v-bind="{type, loginFunc, joinFunc, isShowModal}" v-if="isShowModal" @close="hideModal"></modal>
 
     <section class="section-actions">
         <div class="contents">
@@ -159,27 +160,30 @@
                 </div>
 				<div class="sub-msg sub-msg2"><?=$fundETH?> ETH</div>
             </div>
+
+
             <div class="box actions-box">
-                <span class="msg">Join with GROO</span>
-                <div class="actions-icons">
-                    <ul>
-                        <li><a class="btn black">sign up</a></li>
-                        <li><a class="btn white">sign in</a></li>
-                    </ul>
+                <div>
+                    <box-logged-in v-if="isLoggedIn" v-bind="{showModal, logoutFunc, user}" />
+                </div>
+                <div>
+                    <box-logged-out v-if="!isLoggedIn" v-bind="{showModal}" />
                 </div>
             </div>
+
             <div class="box actions-box end">
                 <span class="msg">Subsctibe Now</span>
 				<div class="sub-msg">Subscribe and get 50 Groopoint now!</div>
                 <div class="actions-icons">
                     <ul>
-                        <li><a class="btn default">subscribe</a></li>
+                        <li><a class="btn default" @click="showModal('__SUBSCRIBE__')">subscribe</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    </div>
 
     <section class="section section-about" id="section-about">
         <div class="contents">
@@ -605,11 +609,14 @@
         </div>
     </footer>
 
+    <!-- vue development mode -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- vue production mode -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
-	<script src="assets/lib/jquery.final-countdown.js"></script>
+	<script src="assets/lib/jquery.final-countdown.min.js"></script>
 	<script src="assets/lib/kinetic.js"></script>
-	<script src="assets/lib/jquery.stepProgressBar.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
