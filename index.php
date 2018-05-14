@@ -189,7 +189,7 @@
         <div class="contents">
             <div class="left">
                 <div class="title t1">About</div>
-                <p>The Project Groocoin is the cryptocurrency based on the Blockchain network which is used in the new social media platform (referred to as the ‘Groo.io Platform’ hereinafter) which allows the easy and rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people.<br><br>
+                <p>The Project Groocoin is the cryptocurrency based on the Blockchain network which is used in the new social media platform ‘Groo.io Platform’ which allows the easy and rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people.<br><br>
 				The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.</p>
                 <button class="btn default">white paper</button>
             </div>
@@ -337,45 +337,57 @@
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQGyQzFUCCl6Gw/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=pmnw-JqIPIJDK7MqmlOYi9AYv1ypPwjaFF0TNyC81Qs" alt="">    
                     </div>
-                    <h3 class="t2">Jungkyu Jang</h3>
+                    <h3 class="t2">Jungkyu Jang
+						<a class="linkedin" href="https://www.linkedin.com/in/jangjungkyu/" target="_blank"></a>
+					</h3>
                     <h4>Core Developer</h4>
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="" alt="">    
+                        <img src="assets/images/profile_seon.JPG" alt="">    
                     </div>
                     <h3 class="t2">Seon</h3>
+					<h4>Marketing Manager</h4>
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="" alt="">    
+                        <img src="assets/images/profile_kim.jpg" alt="">
                     </div>
-                    <h3 class="t2">김형철</h3>
+                    <h3 class="t2">김형철
+						<a class="linkedin" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112" target="_blank"></a>
+					</h3>
                     <h4>Smart Contract and Platform Development</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQFaGmy9Af3aaA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=briJ51vB1hOejsMj8c4vvm19ZtJ1-UIWpWvEMHekMm4" alt="">
                     </div>
-                    <h3 class="t2">Berenice Silva</h3>
+                    <h3 class="t2">Berenice Silva
+						<a class="linkedin" href="https://www.linkedin.com/in/berenice-silva-brambila-9ba84363" target="_blank"></a>
+					</h3>
                     <h4>Financial Planning Analyst</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQEgQkes9e5mBA/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=vGHOVYVbpU-uC7OyPdgguk6FGIzUlvQdFGY2anPGpNc" alt="">    
                     </div>
-                    <h3 class="t2">Junho Park</h3>
+                    <h3 class="t2">Junho Park
+						<a class="linkedin" href="https://www.linkedin.com/in/cnaa97" target="_blank"></a>
+					</h3>
 					<h4>Frontend Developer</h4>
                 </li>
                 <li>
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5603AQGryOicdrSa_w/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=1mU0jLRVBy1acvQzsmOkOVXXQ7MAl0FRlvT2YdiRXy8" alt="">
                     </div>
-                    <h3 class="t2">Marcelo Barone</h3>
+                    <h3 class="t2">Marcelo Barone
+						<a class="linkedin" href="#" target="_blank"></a>
+					</h3>
+					<h4>Backend Developer</h4>
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="" alt="">    
+                        <img src="assets/images/profile_yoon.png" alt="">    
                     </div>
                     <h3 class="t2">Yoonhee Kong</h3>
                     <h4>Service Planning and Operation</h4>
@@ -384,15 +396,17 @@
                     <div class="circle">
                         <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
                     </div>
-                    <h3 class="t2">Francine Cunha</h3>
+                    <h3 class="t2">Francine Cunha
+						<a class="linkedin" href="https://www.linkedin.com/in/francine-cunha-452814121" target="_blank"></a>
+					</h3>
                     <h4>Business Development</h4>
 				</li>
 				<li>
                     <div class="circle">
-                        <img src="https://media.licdn.com/dms/image/C5103AQHnN6AI_Xezww/profile-displayphoto-shrink_800_800/0?e=1531353600&v=beta&t=4qXq9g9i9a851go2WLZHKIPLt7TtouEl3Hc6ZhOE7hs" alt="">
+                        <img src="" alt="">
                     </div>
-                    <h3 class="t2">Francine Cunha</h3>
-                    <h4>Business Development</h4>
+                    <h3 class="t2">Hidden</h3>
+                    <h4>Backend Architect</h4>
                 </li>
             </ul>
         </div>
