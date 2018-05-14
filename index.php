@@ -1,4 +1,4 @@
-<?php
+<?php/*
 	$ethAPIHost = "https://api.etherscan.io/api";
 	$GrooWallet = "0x1414786Ac5692859eE0647e8E420AA8AcE17d47B";
 	$APIKey = "XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS";
@@ -35,7 +35,7 @@
 	// Calculation
 	$fundETH = $json->result;
 	$hardCap = 4320;	// 4320ETH
-	$softCap = 2160;	// 2160ETH
+	$softCap = 2160;	// 2160ETH*/
 ?>
 
 <!DOCTYPE html>
