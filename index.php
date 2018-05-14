@@ -48,7 +48,8 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/style.media.query.css">
-	<link rel="stylesheet" href="assets/style/jquery.stepProgressBar.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 </head>
 
 <body>
