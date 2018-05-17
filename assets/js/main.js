@@ -52,6 +52,10 @@ $(function(){
     $faqTabContentList.click(function(){
         $(this).toggleClass('active');
     });
+	
+	$("#download_whitepaper_btn").click(function(){
+		window.open("/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf");
+	});
 
     /* mobile menu */
     $('.mobile-nav').click(function(){

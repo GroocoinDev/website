@@ -196,7 +196,7 @@
                 <div class="title t1">About</div>
                 <p>The Project Groocoin is the cryptocurrency based on the Blockchain network which is used in the new social media platform ‘Groo.io Platform’ which allows the easy and rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people.<br><br>
 				The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.</p>
-                <button class="btn default">white paper</button>
+                <button class="btn default" id="download_whitepaper_btn">Whitepaper</button>
             </div>
             <div class="right">
                 <div class="about-box box">
@@ -213,22 +213,22 @@
                 <li>
                     <div class="circle"></div>
                     <div class="txt">
-                        <h3 class="t2">Pursuit of the general acceptability of cryptocurrency</h3>
-                        <p>The Ownership is on the individual. The social Value of Personal Credit is immense. GROO COIN ensures each person's personal information to be his/her own assets. Each person can sell their contents and add value to it in GROO COIN.</p>
+                        <h3 class="t2">Mobile Ecosystem</h3>
+                        <p>Groo.io is net social media platform which allows the easy and rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people.</p>
                     </div>
                 </li>
                 <li>
                     <div class="circle"></div>
                     <div class="txt">
-                        <h3 class="t2">User-friendly UI and the excellent accessibility.</h3>
-                        <p>The Ownership is on the individual. The social Value of Personal Credit is immense. GROO COIN ensures each person's personal information to be his/her own assets. Each person can sell their contents and add value to it in GROO COIN.</p>
+                        <h3 class="t2">EOS Blockchain</h3>
+                        <p>The Groo.io Platform waives the transcation fees charged to the users and utilizes the EOS Blockchain for faster processing of the transactions.</p>
                     </div>
                 </li>
                 <li>
                     <div class="circle"></div>
                     <div class="txt">
-                        <h3 class="t2">Based on the innovational EOS Blockchain.</h3>
-                        <p>The Ownership is on the individual. The social Value of Personal Credit is immense. GROO COIN ensures each person's personal information to be his/her own assets. Each person can sell their contents and add value to it in GROO COIN.</p>
+                        <h3 class="t2">True Decentralized</h3>
+                        <p>The contents uploaded by the users are recorded only in the Decentralized Core (EOS Blockchain, IPFS) but not stored in the Groo.io servers.</p>
                     </div>
                 </li>
             </ul>
@@ -419,6 +419,7 @@
 
 
 
+<!--
     <section class="section section-press white" id="section-press">
         <div class="contents">
             <div class="title t1">Press Release</div>
@@ -502,6 +503,7 @@
             </ul>
         </div>
     </section>
+-->
 
 
     <section class="section section-coin-sale" id="section-coin-sale">
