@@ -16,7 +16,7 @@ $(function(){
 
     // scroll event
     $(window).on('scroll', function(){
-        var scrollTop = $root.scrollTop();
+        const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
         
         if (scrollTop && scrollTop > 50 ) {
             $header.addClass('scroll');
@@ -26,8 +26,15 @@ $(function(){
     })
 
     /* scroll event */
-    $('.section').Oppear({
-        transition : '1s',
+    // $('.section').Oppear({
+    //     transition : '1s',
+    // });
+
+    /* typing effect */
+    // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
+    $('#typing-main').typeIt({
+        whatToType: ["1st Pre-Sale starts on Jun 4th", "1st Pre-Sale starts on Jun 4th"],
+        typeSpeed: 80
     });
 
     /* init tab menu content */
@@ -73,17 +80,24 @@ $(function(){
     /* count down */
     var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
     var now = Math.floor(new Date().getTime() / 1000);
-    var borderColor = '#D0107D';
+    var borderOption = {
+        borderColor: '#F54782',
+        borderWidth: '10',
+    }
 
-	$('#countdown').final_countdown({
+    $('#countdown').final_countdown({
         start: 0,
         end: end,
         now: now,
-        seconds: { borderColor: borderColor, borderWidth: '4' },
-        minutes: { borderColor: borderColor, borderWidth: '4' },
-        hours: { borderColor: borderColor, borderWidth: '4' },
-        days: { borderColor: borderColor, borderWidth: '4' },
+        seconds: borderOption,
+        minutes: borderOption,
+        hours: borderOption,
+        days: borderOption,
     });
+
+    setTimeout(function(){
+        $('#countdown').animate({'opacity': 1}, 1000);
+    }, 500);
 
 
     // Vue
