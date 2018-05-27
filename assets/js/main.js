@@ -1,6 +1,14 @@
+const isMobile = detectMobile();
+const IMAGE_PATH = '../images/';
+
+
+
 $(function(){
+    
+    // 헤더 부분은 vue의 인스턴스에 포함되지 않으므로, jquery ready에서 실행됨
     var $root = $('html, body');
     var $header = $('#header');
+    
 
     /* smooth scroll */ 
     var $navLinks = $('#header nav li a');
@@ -17,52 +25,13 @@ $(function(){
     // scroll event
     $(window).on('scroll', function(){
         const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop)
-        
+      
         if (scrollTop && scrollTop > 50 ) {
             $header.addClass('scroll');
         } else {
             $header.hasClass('scroll') && $header.removeClass('scroll');
         }
     })
-
-    /* scroll event */
-    // $('.section').Oppear({
-    //     transition : '1s',
-    // });
-
-    /* typing effect */
-    // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
-    $('#typing-main').typeIt({
-        whatToType: ["1st Pre-Sale starts on Jun 4th", "1st Pre-Sale starts on Jun 4th"],
-        typeSpeed: 80
-    });
-
-    /* init tab menu content */
-    var faqList = $('.faq-list');
-    var faqListContentWrap = $('.faq-list > ul');
-    faqListContentWrap.hide();
-    faqListContentWrap.first().show();
-
-
-    /* Tab Menu */
-    var $faqTabItems = $('.nav-hor > ul > li');
-    var $faqTabContentList = $('.faq-list > ul > li');
-
-    $faqTabItems.click(function(){
-        $faqTabItems.removeClass('active');
-        $(this).addClass('active');
-        var currentIndex = $(this).data('index');
-        faqListContentWrap.hide();
-        faqList.find('ul[data-index='+currentIndex+']').show();
-    });
-
-    $faqTabContentList.click(function(){
-        $(this).toggleClass('active');
-    });
-	
-	$("#download_whitepaper_btn").click(function(){
-		window.open("/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf");
-	});
 
     /* mobile menu */
     $('.mobile-nav').click(function(){
@@ -76,32 +45,37 @@ $(function(){
         $('#header .logo').removeClass('active');
         $('#header nav').removeClass('active');
     })
-	
-    /* count down */
-    var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
-    var now = Math.floor(new Date().getTime() / 1000);
-    var borderOption = {
-        borderColor: '#F54782',
-        borderWidth: '10',
+
+
+    function countDownInit(){
+        /* count down */
+        var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
+        var now = Math.floor(new Date().getTime() / 1000);
+        var borderOption = {
+            borderColor: '#F54782',
+            borderWidth: isMobile ? '4' : '10',
+        }
+
+        $('#countdown').final_countdown({
+            start: 0,
+            end: end,
+            now: now,
+            seconds: borderOption,
+            minutes: borderOption,
+            hours: borderOption,
+            days: borderOption,
+        });
+
+        setTimeout(function(){
+            $('#countdown').animate({'opacity': 1}, 1000);
+        }, 500);
     }
 
-    $('#countdown').final_countdown({
-        start: 0,
-        end: end,
-        now: now,
-        seconds: borderOption,
-        minutes: borderOption,
-        hours: borderOption,
-        days: borderOption,
-    });
 
-    setTimeout(function(){
-        $('#countdown').animate({'opacity': 1}, 1000);
-    }, 500);
+
 
 
     // Vue
-
     Vue.component('modal-inner-login', {
         props: ['hideModal', 'loginFunc'],
         template: `
@@ -198,27 +172,46 @@ $(function(){
         props: ['type', 'loginFunc', 'joinFunc'],
         template: `
             <transition name="modal">
-                <div class="modal-mask" v-bind:class="type || ''">
+                <div class="modal-mask" id="modalMask" v-bind:class="type || ''" @click="clickMask">
                     <div class="modal-wrapper">
                         <div class="modal-container">
 
-                        <div class="modal-body">
-                            <modal-inner-login v-bind="{loginFunc}" v-if="type == '__LOGIN__'"></modal-inner-login>
-                            <modal-inner-join v-bind="{joinFunc}" v-if="type == '__JOIN__'"></modal-inner-join>
-                            <subscribe v-if="type == '__SUBSCRIBE__'"></subscribe>
-                        </div>
+                            <div class='modal-close' @click="$emit('close')">
+                                <img src='assets/images/icon-btn-close.svg' alt='close modal'/>
+                            </div>
 
-                        <div class="modal-footer">
-                            <slot name="footer">
-                            default footer
-                            <button class="modal-default-button" @click="$emit('close')">Close</button>
-                            </slot>
-                        </div>
+                            <div class="modal-body">
+                                <modal-inner-login v-bind="{loginFunc}" v-if="type == '__LOGIN__'"></modal-inner-login>
+                                <modal-inner-join v-bind="{joinFunc}" v-if="type == '__JOIN__'"></modal-inner-join>
+                                <subscribe v-if="type == '__SUBSCRIBE__'"></subscribe>
+                                
+                                <div v-if="type == '__IMG_ABOUT__'" class="modal-body-image center">
+                                    <div class="title">About Project Groo</div>
+                                    <img class="desktop-only" src='assets/images/arch02.png' alt=''/>
+                                    <img class="mobile-only" src='assets/images/arch02-m.png' alt=''/>
+                                </div>
+                                <div v-if="type == '__IMG_ARCH__'" class="modal-body-image center">
+                                    <div class="title">Groo Architecture</div>
+                                    <img class="desktop-only" src='assets/images/arch05.png' alt=''/>
+                                    <img class="mobile-only" src='assets/images/arch05-m.png' alt=''/>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <slot name="footer">
+                                
+                                </slot>
+                            </div>
                         </div>
                     </div>
                 </div>
             </transition>
         `,
+        methods: {
+            clickMask: function (e) {
+                e.target.className === 'modal-wrapper' && this.$emit('close');
+            }
+        }
     })
 
     Vue.component('box-logged-out', {
@@ -287,6 +280,9 @@ $(function(){
                 this.isLoggedIn = false;
                 this.hideModal();
                 this.user = {};
+            },
+            downloadWhitePaper: function(){
+                window.open("/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf");
             }
         },
         mounted: function () {
@@ -300,8 +296,150 @@ $(function(){
                         vm.hideModal();
                     }
                 })
-            })
+            });
+
+            /* scroll event */
+            // $('.section').Oppear({
+            //     transition : '1s',
+            // });
+
+            /* typing effect */
+            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
+            $('#typing-main').typeIt({
+                whatToType: ["1st Pre-Sale starts on Jun 4th", "1st Pre-Sale starts on Jun 4th"],
+                typeSpeed: 80
+            });
+
+            /* 카운트 다운 이벤트 */
+            countDownInit();
+
+            /* init tab menu content */
+            var faqList = $('.faq-list');
+            var faqListContentWrap = $('.faq-list > ul');
+            faqListContentWrap.hide();
+            faqListContentWrap.first().show();
+
+
+            /* Tab Menu */
+            var $faqTabItems = $('.nav-hor > ul > li');
+            var $faqTabContentList = $('.faq-list > ul > li');
+
+            $faqTabItems.click(function(){
+                $faqTabItems.removeClass('active');
+                $(this).addClass('active');
+                var currentIndex = $(this).data('index');
+                faqListContentWrap.hide();
+                faqList.find('ul[data-index='+currentIndex+']').show();
+            });
+
+            $faqTabContentList.click(function(){
+                $(this).toggleClass('active');
+            });
+            
+            /* draw chart */
+            initChart();
         }
     })
+
+    
 	
 });
+
+
+function initChart() {
+    const ctx = document.getElementById("chartArea").getContext('2d');
+
+    const myChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						40,
+						30,
+						20,
+						10,
+					],
+					backgroundColor: [
+                        '#F54782',
+                        '#FA9BB8',
+                        '#FF8C92',
+                        '#E5B0C3',
+                        '#FFB0DA',
+					],
+                    borderWidth: 0,
+				}],
+				labels: [
+					'Public Sale',
+					'ICO participants',
+					'Reserved by the company',
+					'Initial investors and advisers',
+				]
+			},
+			options: {
+                tooltips: {
+                    enabled: false,
+                },
+                maintainAspectRatio: false,
+                responsive: true,
+				legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        fontColor: '#000',
+                        fontSize: 14,
+                        fontFamily: "'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                        padding: 16,
+                        usePointStyle: true,
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    }
+                },
+				animation: {
+					animateScale: true,
+					animateRotate: true
+                },
+                plugins: {
+                    datalabels: {
+                        color: 'rgba(255, 255, 255, 1)',
+                        font: {
+                            size: 14,
+                            lineHeight: 1.5,
+                        },
+                        textAlign: 'center',
+                        formatter: function(value, context) {
+                            let label = context.chart.data.labels[context.dataIndex];
+                            let labelChars = label.split(' ');
+                            // 가독성 위해 \n 추가
+                            if (labelChars.length > 3) {
+                                labelChars[Math.floor(labelChars.length/2) - 1] += '\n';
+                                label = labelChars.join(' ');
+                            }
+                            return label + '\n' + value + '%'
+                        }
+                    }
+                }
+			}
+		});
+}
+
+
+function detectMobile() {
+    if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}
