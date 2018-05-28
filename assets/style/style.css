@@ -40,6 +40,9 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .Aligner-item { max-width: 50%; }
 .Aligner-item--top { align-self: flex-start; }
 .Aligner-item--bottom { align-self: flex-end; }
+.Aligner-item--left { justify-content: flex-start; }
+.Aligner-item--right { justify-content: flex-end; }
+.Aligner-item--between { justify-content : space-between; }
 .center { text-align: center; }
 .clear {clear: both;}
 .clear:after { content: ''; clear: both; }
@@ -48,6 +51,8 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .linkedin:after { content: ''; position: absolute; width: 20px; height: 20px; background: url('../images/icon-social-linkedin.svg') no-repeat; margin-left: 6px; margin-top: -3px;}
 .desktop-only { display: block !important;}
 .mobile-only { display: none !important;}
+.modal-open { overflow: hidden; }
+.modal-open-fix { overflow: hidden; position: fixed; }
 
 
 /* common */
@@ -179,9 +184,9 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-members ul li .circle .background p { position: absolute; bottom: 0; left: 0; text-align: left; padding-left: 20px; padding-bottom: 20px; line-height: 1.7em; font-size: 0.85em; }
 
 .section-members ul li .circle:hover .background { display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, .8); }
-.section-members ul li h3 { text-align: center; margin-top: 20px; font-size: 1.2em; }
+.section-members ul li h3 { text-align: center; margin-top: 20px; font-size: 1.2em; font-weight: bold; }
 .section-members ul li h3.move-left { margin-left: -24px; }
-.section-members ul li h4 { text-align: center; margin-top: 6px; line-height: 1.4em; font-size: 0.9em; margin-bottom: 18px; }
+.section-members ul li h4 { text-align: center; margin-top: 6px; line-height: 1.4em; font-size: 0.9em; margin-bottom: 18px; color: #222; }
 .section-members ul.histories { margin-top: 20px; width: 80%; margin-left: 10%; }
 .section-members ul.histories li { float: none; width: 100%; list-style: square; line-height: 2em; margin-bottom: 0; }
 
@@ -275,7 +280,16 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 .modal-body {margin: 20px 0;}
 .modal-body .title { position: absolute; top: 24px; font-size: 1.5em; color: #F54782; }
-.modal-body-image img { max-width: 60%; margin-top: 30px; margin: 0 auto; }
+.modal-body-image img { max-width: 100%; margin: 0 auto; }
+
+
+.modal-body-image .desc { display: flex; align-items: center; justify-content : space-between; }
+
+.modal-body-image .left { text-align: left; line-height: 1.5em; width: 40%; }
+.modal-body-image .right { width: 60%; }
+
+.modal-body-image .left2 { width: 40%; }
+.modal-body-image .right2 { width: 50%; }
   
 .modal-enter { opacity: 0; }
 .modal-leave-active { opacity: 0; }

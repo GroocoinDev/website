@@ -49,7 +49,7 @@ $(function(){
 
     function countDownInit(){
         /* count down */
-        var end = Math.floor(new Date('6/4/2018').getTime() / 1000);
+        var end = Math.floor(new Date('6/30/2018').getTime() / 1000);
         var now = Math.floor(new Date().getTime() / 1000);
         var borderOption = {
             borderColor: '#F54782',
@@ -187,13 +187,29 @@ $(function(){
                                 
                                 <div v-if="type == '__IMG_ABOUT__'" class="modal-body-image center">
                                     <div class="title">About Project Groo</div>
-                                    <img class="desktop-only" src='assets/images/arch02.png' alt=''/>
-                                    <img class="mobile-only" src='assets/images/arch02-m.png' alt=''/>
+                                    <div class='desc'>
+                                        <div class='left desktop-only'>
+                                            The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>
+                                            The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal
+                                            cost based on the extensive Big Data offered at the Groo.io Platform.                                    
+                                        </div>
+                                        <div class='right'>
+                                            <img class="desktop-only" src='assets/images/arch02.png' alt=''/>
+                                            <img class="mobile-only" src='assets/images/arch02-m.png' alt=''/>
+                                            <p class="mobile-only">Please check more detail on Desktop version</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div v-if="type == '__IMG_ARCH__'" class="modal-body-image center">
                                     <div class="title">Groo Architecture</div>
-                                    <img class="desktop-only" src='assets/images/arch05.png' alt=''/>
-                                    <img class="mobile-only" src='assets/images/arch05-m.png' alt=''/>
+                                    <div class='desc'>
+                                        <div class='left left2 desktop-only'>
+                                            Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.                                        
+                                        </div>
+                                        <div class='right right2'>
+                                            <img src='assets/images/arch05-m.png' alt=''/>
+                                            <p class="mobile-only">Please check more detail on Desktop version</p>
+                                        </div>
                                 </div>
                             </div>
 
@@ -258,10 +274,12 @@ $(function(){
         methods: {
             showModal: function (type) {
                 this.isShowModal = true;
+                $('body').addClass('modal-open');
                 if (type) this.type = type;
             },
             hideModal: function (type) {
                 this.isShowModal = false;
+                $('body').removeClass('modal-open');
                 this.type = null;
             },
             joinFunc: function () {
@@ -306,7 +324,7 @@ $(function(){
             /* typing effect */
             // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
             $('#typing-main').typeIt({
-                whatToType: ["1st Pre-Sale starts on Jun 4th", "1st Pre-Sale starts on Jun 4th"],
+                whatToType: ["1st Pre-Sale starts on June", "1st Pre-Sale starts on June"],
                 typeSpeed: 80
             });
 

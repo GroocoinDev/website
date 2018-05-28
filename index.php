@@ -93,7 +93,7 @@
                 </figure>
             </div>
             <div class="main-txt">
-                <h3 id="typing-main">1st Pre-Sale starts on Jun 4th</h3>
+                <h3 id="typing-main">1st Pre-Sale starts on June</h3>
                 
                 <div id="countdown" style="opacity: 0;">
                     <div class="clock-item clock-days">
@@ -144,7 +144,7 @@
                 </div>
                 
                 <div class="purchase">
-                    <a class="btn default">Purchase now</a>
+                    <a class="btn default">Upcoming!</a>
                 </div>
             </div>
         </section>
@@ -189,12 +189,12 @@
             <div class="contents">
                 <div class="title t1 center">About Project <span>Groo</span></div>
                 <div class="sub-title">Rapid sharing of the Makeup and Cosmetic information</div>
-                
+
                 <div class="center">
                     <img class="arch w-90" src="assets/images/arch01.png" />
                     <button @click="showModal('__IMG_ABOUT__')" class="btn black">Read More</button>
                 </div>
-                
+
             </div>
         </section>
 
@@ -281,7 +281,7 @@
                 <ul>
                     <li>
                         <div class="circle">
-                            <img src="assets/images/p1.png" alt="CEO, 심원문">
+                            <img src="assets/images/p1.png" alt="CEO">
                             <div class="background">
                                 <p>
                                     Dev Director, NURIDA (present)<br>
@@ -293,10 +293,10 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="move-left">Wonmoon Sim
+                        <h3 class="move-left">W.M Sim
                             <a class="linkedin" href="#" target="_blank"></a>
                         </h3>
-                        <h4>CEO</h4>
+                        <h4>CEO, Co-founder</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -311,14 +311,14 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="move-left">Jungkyu Jang
+                        <h3 class="move-left">J.K Jang
                             <a class="linkedin" href="https://www.linkedin.com/in/jangjungkyu/" target="_blank"></a>
                         </h3>
-                        <h4>Core Developer</h4>
+                        <h4>CTO, Co-founder</h4>
                     </li>
                     <li>
                         <div class="circle">
-                            <img src="assets/images/profile_seon.JPG" alt="">
+                            <img src="assets/images/p3.png" alt="">
                             <div class="background">
                                 <p>
                                     CSO, HSM (present)<br>
@@ -328,8 +328,10 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="move-left">Seon Jo</h3>
-                        <h4>Marketing Manager</h4>
+                        <h3 class="move-left">Sean Jo
+                            <a class="linkedin" href="https://www.linkedin.com/in/sean-jo-18156a6a/" target="_blank"></a>
+                        </h3>
+                        <h4>COO, Co-founder</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -343,10 +345,10 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="move-left">Hyungcheol Kim
+                        <h3 class="move-left">H.C Kim
                             <a class="linkedin" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112" target="_blank"></a>
                         </h3>
-                        <h4>Smart Contract and Platform Development</h4>
+                        <h4>CTO, Co-founder</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -355,7 +357,7 @@
                         <h3 class="move-left">Berenice Silva
                             <a class="linkedin" href="https://www.linkedin.com/in/berenice-silva-brambila-9ba84363" target="_blank"></a>
                         </h3>
-                        <h4>Financial Planning Analyst</h4>
+                        <h4>Financial Export</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -368,7 +370,7 @@
                                 </p>
                             </div>
                         </div>
-                        <h3 class="move-left">Junho Park
+                        <h3 class="move-left">J.H Park
                             <a class="linkedin" href="https://www.linkedin.com/in/cnaa97" target="_blank"></a>
                         </h3>
                         <h4>Frontend Developer</h4>
@@ -377,8 +379,7 @@
                         <div class="circle">
                             <img src="assets/images/p7.png" alt="">
                         </div>
-                        <h3 class="move-left">Marcelo Barone
-                            <a class="linkedin" href="#" target="_blank"></a>
+                        <h3 class="">Marcelo Barone
                         </h3>
                         <h4>Backend Developer</h4>
                     </li>
@@ -386,8 +387,8 @@
                         <div class="circle">
                             <img src="assets/images/p8.png" alt="">
                         </div>
-                        <h3 class="">Yoonhee Kong</h3>
-                        <h4>Service Planning and Operation</h4>
+                        <h3 class="">Y.H Kong</h3>
+                        <h4>Matketing Strategy</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -396,7 +397,7 @@
                         <h3 class="move-left">Francine Cunha
                             <a class="linkedin" href="https://www.linkedin.com/in/francine-cunha-452814121" target="_blank"></a>
                         </h3>
-                        <h4>Business Development</h4>
+                        <h4>Business Strategy</h4>
                     </li>
                 </ul>
             </div>
