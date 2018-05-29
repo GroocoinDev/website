@@ -266,7 +266,7 @@ $(function(){
                                 <div v-if="type == '__IMG_ABOUT__'" class="modal-body-image center">
                                     <div class="title">About Project Groo</div>
                                     <div class='desc'>
-                                        <div class='left desktop-only'>{{aboutMoreText}}</div>
+                                        <div class='left desktop-only' v-html="aboutMoreText"></div>
                                         <div class='right'>
                                             <img class="desktop-only" src='assets/images/arch02.png' alt=''/>
                                             <img class="mobile-only" src='assets/images/arch02-m.png' alt=''/>
@@ -277,7 +277,7 @@ $(function(){
                                 <div v-if="type == '__IMG_ARCH__'" class="modal-body-image center">
                                     <div class="title">Groo Architecture</div>
                                     <div class='desc'>
-                                        <div class='left left2 desktop-only'>{{archMoreText}}</div>
+                                        <div class='left left2 desktop-only' v-html="archMoreText"></div>
                                         <div class='right right2'>
                                             <img src='assets/images/arch05-m.png' alt=''/>
                                             <p class="mobile-only">Please check more detail on Desktop version</p>
