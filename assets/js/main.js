@@ -2,6 +2,7 @@ $(function(){
 
     const isMobile = detectMobile();
     const IMAGE_PATH = '../images/';
+    const lang = document.documentElement.lang;
 
 
     // 헤더 부분은 vue의 인스턴스에 포함되지 않으므로, jquery ready에서 실행됨
@@ -10,7 +11,7 @@ $(function(){
     
 
     /* smooth scroll */ 
-    var $navLinks = $('#header nav li a');
+    var $navLinks = $('#header nav .nav-ul li a');
     $navLinks.click(function(){
         $root.animate({
             scrollTop: $($(this).attr('href')).offset().top
@@ -44,8 +45,7 @@ $(function(){
         $('#header .logo').removeClass('active');
         $('#header nav').removeClass('active');
     })
-
-
+    
     function countDownInit(){
         /* count down */
         var end = Math.floor(new Date('6/30/2018').getTime() / 1000);
@@ -301,10 +301,19 @@ $(function(){
             }
         },
         data: function(){
+            // 국제화 처리
+            let aboutMoreText = 'The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal cost based on the extensive Big Data offered at the Groo.io Platform.';
+            let archMoreText = 'Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.';
+
+            switch (lang) {
+                case 'ko':
+                    aboutMoreText = 'Groocoin 프로젝트는 여러 Social media 와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 Beauty Contents Social media 플랫폼의 제작을 목표로 하고 있습니다. 기업은 Groo.io 플랫폼의 방대한 Big data를 기반으로 최소한의 비용 그러나 최대의 효율을 가지는 Target marketing을 기획할 수 있습니다.';    
+                    archMoreText = 'Groo.io 플랫폼은 탈 중앙화된 아키텍처를 목표로 합니다. 사용자가 업로드한 컨텐츠는 Decentralized Core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다. 이를 위해 Groocoin팀은 Blockchain Network와 IPFS(InterPlanetary File System)를 활용한 플랫폼과, 공정한 보상 시스템을 운영 하기 위한 스마트 컨트랙트를 만들고 누구나 열람 가능한 정보의 투명성을 지향합니다.';
+                    break;
+            }
             return {
-                // 국제화 문제로 인해 _aboutMoreTextFromDoc, _archMoreTextFromDoc 는 부득이하게 document 하단 script 부분에서 전역변수로 정의
-                archMoreText: window._aboutMoreTextFromDoc || 'The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal cost based on the extensive Big Data offered at the Groo.io Platform.',
-                aboutMoreText: window._archMoreTextFromDoc || 'Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.',
+                aboutMoreText: aboutMoreText,
+                archMoreText: archMoreText,
             }
         },
     })
@@ -396,9 +405,9 @@ $(function(){
             });
 
             /* scroll event */
-            // $('.section').Oppear({
-            //     transition : '1s',
-            // });
+            $('.section').Oppear({
+                transition : '1s',
+            });
 
             /* typing effect */
             // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/

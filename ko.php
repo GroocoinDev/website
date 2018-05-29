@@ -1,44 +1,5 @@
 <?php
-	$ethAPIHost = "https://api.etherscan.io/api";
-	$GrooWallet = "0x1414786Ac5692859eE0647e8E420AA8AcE17d47B";
-	$APIKey = "XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS";
-
-	// ETH 가격 조회
-	// https://api.coinmarketcap.com/v2/ticker/1027/?convert=KRW
-	if ($fp = fopen("https://api.coinmarketcap.com/v2/ticker/1027/?convert=KRW", 'r')) {
-	   $content = '';
-	   while ($line = fread($fp, 1024)) {
-		   $content .= $line;
-	   }
-
-	   $json = json_decode($content);
-	}
-	$ethUSD = $json->data->quotes->USD->price;
-	$ethKRW = $json->data->quotes->KRW->price;
-	
-	// 1차 : 75000
-	// 2차 : 48000
-	$grooCoinUSD = $ethUSD/75000;
-	$grooCoinKRW = $ethKRW/75000;
-
-	// ETH 지갑 조회
-	// https://api.etherscan.io/api?module=account&action=balance&address=0x1414786Ac5692859eE0647e8E420AA8AcE17d47B&tag=latest&apikey=XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS
-	if ($fp = fopen("https://api.etherscan.io/api?module=account&action=balance&address=0x1414786Ac5692859eE0647e8E420AA8AcE17d47B&tag=latest&apikey=XGPHVECAF8B5KQ3QYRNU3Q94MXFW8W9FMS", 'r')) {
-	   $content = '';
-	   while ($line = fread($fp, 1024)) {
-		   $content .= $line;
-	   }
-
-	   $json = json_decode($content);
-	}
-
-	// Calculation
-	$fundETH = $json->result;
-	$hardCap = 4320;	// 4320ETH
-	$softCap = 2160;	// 2160ETH
-
-	//$grooCoinUSD = 75/75000;
-	//$grooCoinKRW = 0.0;
+    include 'src/calcCoin.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +12,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/style.media.query.css">
+    <link rel="stylesheet" href="assets/style/font.ko.css">
     
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 </head>
@@ -63,7 +25,7 @@
                 <img src="assets/images/icon-menu.svg" alt="menu">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-ul">
                     <li><a href="#section-about">About</a></li>
                     <li><a href="#section-members">Our Team</a></li>
                     <li><a href="#section-architecture">Architecture</a></li>
@@ -73,10 +35,9 @@
                     <li><a href="#section-community">Community</a></li>
                 </ul>
                 <div class="lang">
-                    <a href="#">en</a>
-                    <ul>
-                        <li><a href="#">ko</a></li>
-                        <li><a href="#">zh</a></li>
+                    <a href="javascript://">ko</a>
+                    <ul class="lang-other">
+                        <li><a href="index.php">en</a></li>
                     </ul>
                 </div>
             </nav>
@@ -537,11 +498,6 @@
     <script src="assets/lib/typeit.min.js"></script>
     <script src="assets/lib/chart.min.js"></script>
     <script src="assets/lib/chartjs-plugin-datalabels.js"></script>
-    <script>
-        // 상세보기 모달창의 영문은 main.js에 디폴트값으로 정의됨
-        window._aboutMoreTextFromDoc = 'Groocoin 프로젝트는 여러 Social media 와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 Beauty Contents Social media 플랫폼의 제작을 목표로 하고 있습니다. 기업은 Groo.io 플랫폼의 방대한 Big data를 기반으로 최소한의 비용 그러나 최대의 효율을 가지는 Target marketing을 기획할 수 있습니다.';
-        window._archMoreTextFromDoc = 'Groo.io 플랫폼은 탈 중앙화된 아키텍처를 목표로 합니다. 사용자가 업로드한 컨텐츠는 Decentralized Core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다. 이를 위해 Groocoin팀은 Blockchain Network와 IPFS(InterPlanetary File System)를 활용한 플랫폼과, 공정한 보상 시스템을 운영 하기 위한 스마트 컨트랙트를 만들고 누구나 열람 가능한 정보의 투명성을 지향합니다.';
-    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -24,6 +24,9 @@
 
     .section-architecture2 .arch-bg { transition: all 0.5s; }
     .section-architecture2 .arch-bg:hover { transform: scale(1.04); }
+
+    #header nav > .lang:hover > ul.lang-other { display: block; }
+    #header nav > .lang > ul.lang-other > li > a:hover { background: #F9739B; }
 }
 
 
@@ -39,8 +42,9 @@
     /* header */
     #header { padding: 0; }
     #header .logo { margin-top: 40px; margin-left: 22px; width: 34%; }
-    #header.scroll .mobile-nav { margin-top: 10px; }
-    #header.scroll .logo { margin-top: 0; }
+    #header.scroll { padding: 20px 0 12px;}
+    #header.scroll .mobile-nav { margin-top: 6px; }
+    #header.scroll .logo { margin-top: 6px; }
     #header.scroll .logo img { position: static; }
     
     #header .mobile-nav { display: inline-block; position: absolute; right: 0; top: 0; margin-top: 16px; margin-right: 16px; cursor: pointer; z-index: 2; }
@@ -51,8 +55,13 @@
     #header nav > ul { float: none; width: 100%; text-align: center; margin-top: 140px; }
     #header nav > ul > li { float: none; margin-right: 0; margin-bottom: 20px; }
     #header nav > ul > li > a { font-size: 1.4em; color: #1f1f1f; }
-    #header nav > .lang { float: none; display: block; width: 30px; margin: 0 auto; text-align: center; font-size: 1.2em; }
-    #header nav > .lang > ul { display: none; }
+    
+    #header nav > .lang { float: none; display: block; margin: 10px auto 0; font-size: 1.2em; }
+    #header nav > .lang > a { display: none; }
+    #header nav > .lang > ul.lang-other { display: inline-block; margin-top: 10px; }
+    #header nav > .lang > ul.lang-other > li { margin-bottom: 0; }
+    /* #header nav > .lang > ul.lang-other > li > a { color: #fff; background: #1f1f1f; padding: 6px 10px; border-radius: 18px; }
+    #header nav > .lang > ul.lang-other > li > a:hover { background: #F54782; } */
 
 
     /* setion */
