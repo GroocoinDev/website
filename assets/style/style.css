@@ -1,7 +1,7 @@
 html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color: #F6F6F6;}
 
 /* header */
-#header { position: fixed; z-index: 2; top: 0; right: 0; left: 0; width: auto; height: auto; padding: 50px; transition: background-color 0.5s; }
+#header { position: fixed; z-index: 2; top: 0; right: 0; left: 0; width: auto; height: 18px; padding: 50px; transition: background-color 0.5s; }
 #header.scroll { background-color: #fff; padding: 28px 50px; border-bottom: 1px solid #efefef; }
 #header.scroll nav { margin-top: 4px; }
 #header.scroll nav > ul > li > a { color: #000; }

@@ -40,7 +40,7 @@
     .mobile-only { display: block !important;}
 
     /* header */
-    #header { padding: 0; }
+    #header { padding: 0; height: auto; }
     #header .logo { margin-top: 40px; margin-left: 22px; width: 34%; }
     #header.scroll { padding: 20px 0 12px;}
     #header.scroll .mobile-nav { margin-top: 6px; }
