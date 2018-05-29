@@ -1,10 +1,9 @@
-const isMobile = detectMobile();
-const IMAGE_PATH = '../images/';
-
-
-
 $(function(){
-    
+
+    const isMobile = detectMobile();
+    const IMAGE_PATH = '../images/';
+
+
     // 헤더 부분은 vue의 인스턴스에 포함되지 않으므로, jquery ready에서 실행됨
     var $root = $('html, body');
     var $header = $('#header');
@@ -71,7 +70,86 @@ $(function(){
         }, 500);
     }
 
-
+    function initChart() {
+        const ctx = document.getElementById("chartArea").getContext('2d');
+        const myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [40, 30, 20, 10],
+                        backgroundColor: [ '#F54782', '#FA9BB8', '#FF8C92', '#E5B0C3', '#FFB0DA'],
+                        borderWidth: 0,
+                    }],
+                    labels: [ 'Public Sale', 'ICO participants', 'Reserved by the company', 'Initial investors and advisers']
+                },
+                options: {
+                    tooltips: {
+                        enabled: false,
+                    },
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            fontColor: '#000',
+                            fontSize: 14,
+                            fontFamily: "'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                            padding: 16,
+                            usePointStyle: true,
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    },
+                    plugins: {
+                        datalabels: {
+                            color: 'rgba(255, 255, 255, 1)',
+                            font: {
+                                size: 14,
+                                lineHeight: 1.5,
+                            },
+                            textAlign: 'center',
+                            formatter: function(value, context) {
+                                let label = context.chart.data.labels[context.dataIndex];
+                                let labelChars = label.split(' ');
+                                // 가독성 위해 \n 추가
+                                if (labelChars.length > 3) {
+                                    labelChars[Math.floor(labelChars.length/2) - 1] += '\n';
+                                    label = labelChars.join(' ');
+                                }
+                                return label + '\n' + value + '%'
+                            }
+                        }
+                    }
+                }
+            });
+    }
+    
+    function detectMobile() {
+        if (navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 
 
 
@@ -188,11 +266,7 @@ $(function(){
                                 <div v-if="type == '__IMG_ABOUT__'" class="modal-body-image center">
                                     <div class="title">About Project Groo</div>
                                     <div class='desc'>
-                                        <div class='left desktop-only'>
-                                            The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>
-                                            The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal
-                                            cost based on the extensive Big Data offered at the Groo.io Platform.                                    
-                                        </div>
+                                        <div class='left desktop-only'>{{aboutMoreText}}</div>
                                         <div class='right'>
                                             <img class="desktop-only" src='assets/images/arch02.png' alt=''/>
                                             <img class="mobile-only" src='assets/images/arch02-m.png' alt=''/>
@@ -203,9 +277,7 @@ $(function(){
                                 <div v-if="type == '__IMG_ARCH__'" class="modal-body-image center">
                                     <div class="title">Groo Architecture</div>
                                     <div class='desc'>
-                                        <div class='left left2 desktop-only'>
-                                            Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.                                        
-                                        </div>
+                                        <div class='left left2 desktop-only'>{{archMoreText}}</div>
                                         <div class='right right2'>
                                             <img src='assets/images/arch05-m.png' alt=''/>
                                             <p class="mobile-only">Please check more detail on Desktop version</p>
@@ -227,7 +299,14 @@ $(function(){
             clickMask: function (e) {
                 e.target.className === 'modal-wrapper' && this.$emit('close');
             }
-        }
+        },
+        data: function(){
+            return {
+                // 국제화 문제로 인해 _aboutMoreTextFromDoc, _archMoreTextFromDoc 는 부득이하게 document 하단 script 부분에서 전역변수로 정의
+                archMoreText: window._aboutMoreTextFromDoc || 'The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal cost based on the extensive Big Data offered at the Groo.io Platform.',
+                aboutMoreText: window._archMoreTextFromDoc || 'Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.',
+            }
+        },
     })
 
     Vue.component('box-logged-out', {
@@ -359,105 +438,4 @@ $(function(){
         }
     })
 
-    
-	
 });
-
-
-function initChart() {
-    const ctx = document.getElementById("chartArea").getContext('2d');
-
-    const myChart = new Chart(ctx, {
-			type: 'doughnut',
-			data: {
-				datasets: [{
-					data: [
-						40,
-						30,
-						20,
-						10,
-					],
-					backgroundColor: [
-                        '#F54782',
-                        '#FA9BB8',
-                        '#FF8C92',
-                        '#E5B0C3',
-                        '#FFB0DA',
-					],
-                    borderWidth: 0,
-				}],
-				labels: [
-					'Public Sale',
-					'ICO participants',
-					'Reserved by the company',
-					'Initial investors and advisers',
-				]
-			},
-			options: {
-                tooltips: {
-                    enabled: false,
-                },
-                maintainAspectRatio: false,
-                responsive: true,
-				legend: {
-                    display: true,
-                    position: 'bottom',
-                    labels: {
-                        fontColor: '#000',
-                        fontSize: 14,
-                        fontFamily: "'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-                        padding: 16,
-                        usePointStyle: true,
-                    }
-                },
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0
-                    }
-                },
-				animation: {
-					animateScale: true,
-					animateRotate: true
-                },
-                plugins: {
-                    datalabels: {
-                        color: 'rgba(255, 255, 255, 1)',
-                        font: {
-                            size: 14,
-                            lineHeight: 1.5,
-                        },
-                        textAlign: 'center',
-                        formatter: function(value, context) {
-                            let label = context.chart.data.labels[context.dataIndex];
-                            let labelChars = label.split(' ');
-                            // 가독성 위해 \n 추가
-                            if (labelChars.length > 3) {
-                                labelChars[Math.floor(labelChars.length/2) - 1] += '\n';
-                                label = labelChars.join(' ');
-                            }
-                            return label + '\n' + value + '%'
-                        }
-                    }
-                }
-			}
-		});
-}
-
-
-function detectMobile() {
-    if (navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)
-    ) {
-        return true;
-    } else {
-        return false;
-    }
-}

@@ -42,7 +42,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -154,9 +154,9 @@
             <div class="contents">
                 <div class="two-wrapper">
                     <div class="col left">
-                        <h1>Beauty Content<br>Social Media</h1>
+                        <h1>뷰티 콘텐츠<br>소셜 미디어</h1>
                         <p>Connect & Share your Billions of Grooming knowledge</p>
-                        <button class="btn default" @click="downloadWhitePaper">Whitepaper</button>
+                        <button class="btn default" @click="downloadWhitePaper">코인 백서</button>
                     </div>
                     
                     <div class="col center">
@@ -188,11 +188,11 @@
         <section class="section section-about" id="section-about">
             <div class="contents">
                 <div class="title t1 center">About Project <span>Groo</span></div>
-                <div class="sub-title">Rapid sharing of the Makeup and Cosmetic information</div>
+                <div class="sub-title">나에게 맞는 메이크업 & 화장품 정보의 쉽고 빠른 공유</div>
 
                 <div class="center">
                     <img class="arch w-90" src="assets/images/arch01.png" />
-                    <button @click="showModal('__IMG_ABOUT__')" class="btn black">Read More</button>
+                    <button @click="showModal('__IMG_ABOUT__')" class="btn black">자세히 보기</button>
                 </div>
 
             </div>
@@ -207,8 +207,8 @@
                             <img src="assets/images/icon-desc1.svg" />
                         </div>
                         <div class="txt">
-                            <h3 class="t2">Mobile Ecosystem</h3>
-                            <p>Groo.io is new social media platform which allows the easy and rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people.</p>
+                            <h3 class="t2">모바일 에코시스템</h3>
+                            <p>Groo.io 플랫폼은 다양한 사람들이 각자 보유하고 있는 메이크업 방법 및 화장품 정보를 쉽고 빠르게 공유할 수 있는 새로운 모바일 소셜 미디어 플랫폼 입니다.</p>
                         </div>
                     </li>
                     <li>
@@ -216,8 +216,8 @@
                             <img src="assets/images/icon-desc2.svg" />
                         </div>
                         <div class="txt">
-                            <h3 class="t2">Activity Rewards</h3>
-                            <p>The Activity Point is determined on the basis of the activities for posting of the contents, comments, up/down votes, participation in reporting, follow and others in the Groo.io Platform.</p>
+                            <h3 class="t2">플랫폼 활동 보상</h3>
+                            <p>플랫폼 활동 점수는Groo.io Platform에서 컨텐츠 작성, 댓글, Up/down 투표, 신고, 참여, 팔로우 등의 활동을 바탕으로 산출 및 지급합니다.</p>
                         </div>
                     </li>
                     <li>
@@ -225,8 +225,8 @@
                             <img src="assets/images/icon-desc3.svg" />
                         </div>
                         <div class="txt">
-                            <h3 class="t2">Enhanced Blockchain</h3>
-                            <p>The Groo.io Platform waives the transaction fees charged to the users and utilizes the EOS Blockchain for faster processing of the transactions.</p>
+                            <h3 class="t2">향상된 블록체인</h3>
+                            <p>Groo.io 플랫폼은 사용자의 트랜잭션 수수료를 없애고 빠른 트랜잭션 처리를 위해 EOS 블록체인을 사용합니다.</p>
                         </div>
                     </li>
                 </ul>
@@ -236,8 +236,8 @@
                             <img src="assets/images/icon-desc4.svg" />
                         </div>
                         <div class="txt">
-                            <h3 class="t2">True Decentralized</h3>
-                            <p>The contents uploaded by the users are recorded only in the Decentralized Core (EOS Blockchain, IPFS) but not stored in the Groo.io server.</p>
+                            <h3 class="t2">완벽한 분산 네트워크</h3>
+                            <p>사용자가 업로드한 컨텐츠는 Decentralized core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다.</p>
                         </div>
                     </li>
                     <li>
@@ -245,8 +245,8 @@
                             <img src="assets/images/icon-desc5.svg" />
                         </div>
                         <div class="txt">
-                            <h3 class="t2">Secured</h3>
-                            <p>The contents are recorded in the EOS Blockchain in the structure defined in the smart contract and the malign users cannot modify the data at discretion.</p>
+                            <h3 class="t2">보안성</h3>
+                            <p>사용자가 업로드한 컨텐츠는 스마트 컨트랙트가 정의한 구조로 EOS 블록체인에 기록되며, 이는 악의적인 사용자에 의한 데이터 변조를 차단합니다.</p>
                         </div>
                     </li>
                 </ul>
@@ -257,11 +257,11 @@
 	    <section class="section section-architecture white" id="section-architecture">
         <div class="contents">
             <div class="title t1 center"><span>Groo</span> Architecture</div>
-            <div class="sub-title">Decentralized EOS BlockChain & IPFS(Inter Planetary) File System</div>
+            <div class="sub-title">EOS 블록체인 & IPFS(Inter Planetary) 파일 시스템</div>
 
             <div class="center">
                 <img class="arch w-40" src="assets/images/arch04.png" />
-                <button @click="showModal('__IMG_ARCH__')" class="btn black">Read More</button>
+                <button @click="showModal('__IMG_ARCH__')" class="btn black">자세히 보기</button>
             </div>
         </section>
 
@@ -537,6 +537,11 @@
     <script src="assets/lib/typeit.min.js"></script>
     <script src="assets/lib/chart.min.js"></script>
     <script src="assets/lib/chartjs-plugin-datalabels.js"></script>
+    <script>
+        // 상세보기 모달창의 영문은 main.js에 디폴트값으로 정의됨
+        window._aboutMoreTextFromDoc = 'Groocoin 프로젝트는 여러 Social media 와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 Beauty Contents Social media 플랫폼의 제작을 목표로 하고 있습니다. 기업은 Groo.io 플랫폼의 방대한 Big data를 기반으로 최소한의 비용 그러나 최대의 효율을 가지는 Target marketing을 기획할 수 있습니다.';
+        window._archMoreTextFromDoc = 'Groo.io 플랫폼은 탈 중앙화된 아키텍처를 목표로 합니다. 사용자가 업로드한 컨텐츠는 Decentralized Core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다. 이를 위해 Groocoin팀은 Blockchain Network와 IPFS(InterPlanetary File System)를 활용한 플랫폼과, 공정한 보상 시스템을 운영 하기 위한 스마트 컨트랙트를 만들고 누구나 열람 가능한 정보의 투명성을 지향합니다.';
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
