@@ -36,7 +36,6 @@
                 <div class="lang">
                     <a href="javascript://">en</a>
                     <ul class="lang-other">
-                        <li><a href="javascript://">ko</a></li>
                         <li><a href="ko.php">ko</a></li>
                         <!-- <li><a href="#">zh</a></li> -->
                     </ul>
