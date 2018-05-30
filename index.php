@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GROO Coin</title>
-    <link rel="stylesheet" href="assets/style/reset.css">
-    <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/style.media.query.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/style.media.query.css">
     
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 </head>
@@ -34,10 +34,9 @@
                     <li><a href="#section-community">Community</a></li>
                 </ul>
                 <div class="lang">
-                    <a href="javascript://">en</a>
+                    <a href="javascript://">English</a>
                     <ul class="lang-other">
-                        <li><a href="ko.php">ko</a></li>
-                        <!-- <li><a href="#">zh</a></li> -->
+                        <li><a href="ko.php">Korean</a></li>
                     </ul>
                 </div>
             </nav>
@@ -318,7 +317,7 @@
                         <h3 class="move-left">Berenice Silva
                             <a class="linkedin" href="https://www.linkedin.com/in/berenice-silva-brambila-9ba84363" target="_blank"></a>
                         </h3>
-                        <h4>Financial Export</h4>
+                        <h4>Financial Expert</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -349,7 +348,7 @@
                             <img src="assets/images/p8.png" alt="">
                         </div>
                         <h3 class="">Y.H Kong</h3>
-                        <h4>Matketing Strategy</h4>
+                        <h4>Marketing Strategy</h4>
                     </li>
                     <li>
                         <div class="circle">
@@ -487,17 +486,22 @@
         </div>
     </footer>
     
+    <!-- 모달에서 뜨는 이미지 속도 개선을 위한 프리 로드 -->
+    <div id="preloadedImages"></div>
+
     <!-- vue development mode -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <!-- vue production mode -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    
+    <script src="assets/lib/vue-2.5.16.min.js"></script>
+    <script src="assets/lib/jquery-1.12.4.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
 	<script src="assets/lib/jquery.final-countdown.min.js"></script>
 	<script src="assets/lib/kinetic.js"></script>
     <script src="assets/lib/typeit.min.js"></script>
     <script src="assets/lib/chart.min.js"></script>
     <script src="assets/lib/chartjs-plugin-datalabels.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="dist/main.js"></script>
 </body>
 </html>

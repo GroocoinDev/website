@@ -15,10 +15,10 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 #header nav > ul > li { float: left; margin-right: 20px; }
 #header nav > ul > li > a { color: #1f1f1f; font-weight: 500; font-size: 1em; }
 #header nav > .lang { float: right; font-weight: 500; text-align: center; }
-#header nav > .lang > a { color: #fff; background: #1f1f1f; padding: 6px 10px; border-radius: 18px; }
-#header nav > .lang > ul.lang-other { display: none; margin-top: 24px; }
-#header nav > .lang > ul.lang-other > li { margin-bottom: 24px; }
-#header nav > .lang > ul.lang-other > li > a { color: #fff; background: #F54782; padding: 6px 10px; border-radius: 18px; }
+#header nav > .lang > a { color: #fff; background: #1f1f1f; padding: 6px 10px; border-radius: 18px; font-size: 0.85em; }
+#header nav > .lang > ul.lang-other { display: none; margin-top: 20px; }
+#header nav > .lang > ul.lang-other > li { margin-bottom: 20px; }
+#header nav > .lang > ul.lang-other > li > a { color: #fff; background: #F54782; padding: 6px 10px; border-radius: 18px; font-size: 0.85em; }
 
 
 /* animation */
@@ -51,12 +51,21 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .clear:after { content: ''; clear: both; }
 .hover-scale:hover {transform: scale(1.1); transition: all 0.3s;}
 .no-select { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
-.linkedin:after { content: ''; position: absolute; width: 20px; height: 20px; background: url('../images/icon-social-linkedin.svg') no-repeat; margin-left: 6px; margin-top: -3px;}
+.linkedin:after { content: ''; position: absolute; width: 20px; height: 20px; background: url('../assets/images/icon-social-linkedin.svg') no-repeat; margin-left: 6px; margin-top: -3px;}
 .desktop-only { display: block !important;}
 .mobile-only { display: none !important;}
 .modal-open { overflow: hidden; }
 .modal-open-fix { overflow: hidden; position: fixed; }
 
+
+#preloadedImages {
+    width: 0px;
+    height: 0px;
+    background-image: url('../assets/images/arch02.png');
+    background-image: url('../assets/images/arch02-m.png');
+    background-image: url('../assets/images/arch05-m.png');
+    background-image: url();
+}
 
 /* common */
 .box { background: #fff; position: relative; }
@@ -83,7 +92,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 /* section main */
 .section-main { position: relative; min-height: calc(100vh - 25vh); overflow: hidden; text-align: center; z-index: 1; }
-.section-main:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: cover; background-image: url("../images/bg1.jpg"); background-position: center; background-repeat: no-repeat; z-index: -2; animation: scaling 35s infinite alternate;-webkit-animation: scaling 35s infinite alternate;}
+.section-main:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: cover; background-image: url("../assets/images/bg1.jpg"); background-position: center; background-repeat: no-repeat; z-index: -2; animation: scaling 35s infinite alternate;-webkit-animation: scaling 35s infinite alternate;}
 .section-main:after { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)); z-index: -1;}
 .section-main .main-txt { margin: 0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); }
 .section-main .main-txt h3 { font-size: 2.6em; color: #F54782; margin-top: 20px; position: relative; font-weight: 600; }
@@ -140,7 +149,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 .section-architecture2 { padding: 90px 0 0; }
 .section-architecture2 .arch-bg { position: relative; height: 650px; }
-.section-architecture2 .arch-bg:after { content: ''; position: absolute; right: 0; bottom: 0; top: 0; left: 0; background: url('../images/arch03.png') no-repeat; background-position: bottom center; background-size: auto 100%; }
+.section-architecture2 .arch-bg:after { content: ''; position: absolute; right: 0; bottom: 0; top: 0; left: 0; background: url('../assets/images/arch03.png') no-repeat; background-position: bottom center; background-size: auto 100%; }
 
 
 .section-about {}
@@ -237,9 +246,9 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-faq .faq-list ul li { margin-bottom: 26px; cursor: pointer; }
 .section-faq .faq-list ul li:nth-last-child(1) { margin-bottom: 0; }
 .section-faq .faq-list ul li h3 { font-size: 1.125em; margin-bottom: 16px; position: relative; margin-left: 34px; font-weight: 500; line-height: 1.2em; }
-.section-faq .faq-list ul li h3:before { content: ''; position: absolute; left: 0; width: 20px; height: 20px; background: url('../images/icon-desc-inactive.svg') no-repeat center center; margin-left: -30px; top: 0; margin-top: -2px; }
+.section-faq .faq-list ul li h3:before { content: ''; position: absolute; left: 0; width: 20px; height: 20px; background: url('../assets/images/icon-desc-inactive.svg') no-repeat center center; margin-left: -30px; top: 0; margin-top: -2px; }
 .section-faq .faq-list ul li h3:hover { color: #F54782; }
-.section-faq .faq-list ul li.active h3:before { content: ''; background: url('../images/icon-desc-active.svg') no-repeat center center; }
+.section-faq .faq-list ul li.active h3:before { content: ''; background: url('../assets/images/icon-desc-active.svg') no-repeat center center; }
 .section-faq .faq-list ul li p { display: none; font-size: 0.9em; background: #F5F5F5; padding: 14px 18px; line-height: 1.8em; width: 100%; }
 .section-faq .faq-list ul li.active > p { display: inline-block; }
 

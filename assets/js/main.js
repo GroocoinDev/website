@@ -253,7 +253,6 @@ $(function(){
                 <div class="modal-mask" id="modalMask" v-bind:class="type || ''" @click="clickMask">
                     <div class="modal-wrapper">
                         <div class="modal-container">
-
                             <div class='modal-close' @click="$emit('close')">
                                 <img src='assets/images/icon-btn-close.svg' alt='close modal'/>
                             </div>
@@ -286,9 +285,7 @@ $(function(){
                             </div>
 
                             <div class="modal-footer">
-                                <slot name="footer">
-                                
-                                </slot>
+                                <slot name="footer"></slot>
                             </div>
                         </div>
                     </div>
@@ -302,13 +299,13 @@ $(function(){
         },
         data: function(){
             // 국제화 처리
-            let aboutMoreText = 'The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal cost based on the extensive Big Data offered at the Groo.io Platform.';
-            let archMoreText = 'Since the Blockchain has not been commercialized to the level to allow the inclusion of all data comprising the platform at present, the Blockchain records the contents except for the large volume data in the first instance. The large volume data is stored in a distributed pattern by utilizing the IPFS (Inter-Planetary File System) and, before the launch of EOS IPFS Library, the large volume data is stored by using the AWS Storage Service (S3) with only the path to the files recorded in the EOS Blockchain.';
+            let aboutMoreText = 'The Groocoin Project aims the creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world by promoting and accumulating the contents of superb quality through the aggressive partnership with the Private Makeup Creators engaged in their activities in different types of social media and blogs.<br><br>The companies can plan the Target Marketing to achieve the maximum efficiency yet at the minimal cost based on the extensive Big Data offered at the Groo.io Platform.<br><br>The users of the Groo.io Platform will be provided with the individual wallets simply by subscribing to the platform and they don’t need to transmit the cryptocurrency to the exchange in order to use the platform contents. After creation of the contents, the users are assigned the Groopoint reward, which is awarded by the company, automatically after completion of the evaluation period of the corresponding contents based on the voting system participated by the individual users.';
+            let archMoreText = 'The Blockchain imposes a fee for each of transactions recorded in the Blockchain for compensation of the creator of the Blockchain. With the services offered to the general public such as the Groo.io Platform, more than tens of thousands of transactions should be processed per second in the Blockchain and the transaction fees and the delay in the processing speed incurred at this time pose a very serious impediment to the expansion of the service. <br><br>The Groo.io Platform waives the transaction fees charged to the users and utilizes the EOS Blockchain for faster processing of the transactions.<br><br>The Groo.io Platform intends to achieve the decentralized architecture. The contents uploaded by the users are recorded only in the Decentralized Core (EOS blockchain, IPFS) but not stored in the Groo.io server. To this end, the Groocoin Team makes the platform based on the blockchain network and IPFS (Inter-Planetary File System) and the Smart Contract for implementation of the fair reward system and aims to ensure the transparency of information which can be referred to by everybody.';
 
             switch (lang) {
                 case 'ko':
-                    aboutMoreText = 'Groocoin 프로젝트는 여러 Social media 와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 Beauty Contents Social media 플랫폼의 제작을 목표로 하고 있습니다. 기업은 Groo.io 플랫폼의 방대한 Big data를 기반으로 최소한의 비용 그러나 최대의 효율을 가지는 Target marketing을 기획할 수 있습니다.';    
-                    archMoreText = 'Groo.io 플랫폼은 탈 중앙화된 아키텍처를 목표로 합니다. 사용자가 업로드한 컨텐츠는 Decentralized Core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다. 이를 위해 Groocoin팀은 Blockchain Network와 IPFS(InterPlanetary File System)를 활용한 플랫폼과, 공정한 보상 시스템을 운영 하기 위한 스마트 컨트랙트를 만들고 누구나 열람 가능한 정보의 투명성을 지향합니다.';
+                    aboutMoreText = 'Groocoin 프로젝트는 여러 Social media 와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 뷰티 컨텐츠 소셜 미디어 플랫폼 제작을 하고 있습니다. <br><br>기업은 Groo.io 플랫폼의 방대한 Big data를 기반으로 최소한의 비용 그러나 최대의 효율을 가지는 Target marketing을 기획할 수 있습니다.<br><br>Groo.io 플랫폼 이용자는 플랫폼의 가입만으로 개인지갑이 지급 되며 플랫폼 컨텐츠를 이용하기 위한 암호화폐를 거래소에서 전송할 필요가 없습니다. 사용자는 컨텐츠 작성, 사용자들 개개인에 의한 Voting system에 의해 해당 컨텐츠의 심사기간 종료 후 자동으로 Groopoint 리워드를 획득하게 되며 이는 회사에서 지급합니다.';    
+                    archMoreText = '블록체인은 블록 생산자 보상을 위해 블록체인에 기록되는 모든 트랜잭션에 수수료를 부과합니다. Groo.io 플랫폼 같이 일반인을 대상으로 하는 서비스는 초당 수만 건 이상의 트랜잭션이 블록체인에서 처리 되야 하는데 이 경우 발생되는 트랜잭션 수수료와 처리 속도의 지연은 서비스의 확장에 매우 큰 장벽을 만듭니다. <br><br>Groo.io 플랫폼은 이용자의 트랜잭션 수수료를 제거하고 보다 빠른 트랜잭션 처리를 위해 EOS 블록체인을 사용합니다.<br><br>Groo.io 플랫폼은 탈 중앙화된 아키텍처를 목표로 합니다. 사용자가 업로드한 컨텐츠는 Decentralized Core(EOS 블록체인, IPFS)에만 기록되며 Groo.io 서버에는 보관되지 않습니다. 이를 위해 Groocoin팀은 Blockchain Network와 IPFS(InterPlanetary File System)를 활용한 플랫폼과, 공정한 보상 시스템을 운영 하기 위한 스마트 컨트랙트를 만들고 누구나 열람 가능한 정보의 투명성을 지향합니다.';
                     break;
             }
             return {
@@ -351,13 +348,25 @@ $(function(){
     // start app
     new Vue({
         el: '#app',
-        data: {
-            user: {
-                email: 'email@groo.io',
-            },
-            isLoggedIn: false,
-            isShowModal: false,
-            type: null,
+        data: function(){
+
+            // 언어별 whitepaper 처리
+            let whitePaperUrl = '/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf';
+            // switch (lang) {
+            //     case 'ko':
+            //         whitePaperUrl = '/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf';
+            //         break;
+            // }
+
+            return {
+                user: {
+                    email: 'email@groo.io',
+                },
+                isLoggedIn: false,
+                isShowModal: false,
+                type: null,
+                whitePaperUrl: whitePaperUrl,
+            }
         },
         methods: {
             showModal: function (type) {
@@ -388,7 +397,7 @@ $(function(){
                 this.user = {};
             },
             downloadWhitePaper: function(){
-                window.open("/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf");
+                window.open(this.whitePaperUrl);
             }
         },
         mounted: function () {
