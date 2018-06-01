@@ -81,6 +81,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; backgr
 .section.pink { background: #FFE3D7; }
 .section p { line-height: 1.5em; font-size: 1.2em; }
 .section .arch { margin: 30px auto 40px; display: block; max-width: 100%; }
+.section .arch.w-30 { max-width: 30%; }
 .section .arch.w-40 { max-width: 40%; }
 .section .arch.w-50 { max-width: 50%; }
 .section .arch.w-60 { max-width: 60%; }
@@ -170,7 +171,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; backgr
 .section-chars ul li .circle { width: 80px; height: 80px; margin: 0 auto; }
 .section-chars ul li .circle img { width: inherit; height: inherit; }
 .section-chars ul li h3 { font-size: 1.5em; margin: 20px 0 12px; }
-.section-chars ul li p { font-size: 1.05em; padding: 0 40px; }
+.section-chars ul li p { font-size: 1.05em; padding: 0 40px; font-weight: 200; }
 
 
 .section-road-map { padding-bottom: 80px; border-top: 1px solid #eee; }

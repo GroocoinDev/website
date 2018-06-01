@@ -227,7 +227,7 @@
             <div class="sub-title">Decentralized EOS BlockChain & IPFS(Inter Planetary) File System</div>
 
             <div class="center">
-                <img class="arch w-40" src="assets/images/arch04.png" />
+                <img class="arch w-30" src="assets/images/arch04.png" />
                 <button @click="showModal('__IMG_ARCH__')" class="btn black">Read More</button>
             </div>
         </section>
