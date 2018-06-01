@@ -112,7 +112,7 @@
                 </div>
                 
                 <div class="purchase">
-                    <a class="btn default">Upcoming!</a>
+                    <a class="btn default">곧 출시!</a>
                 </div>
             </div>
         </section>
@@ -123,14 +123,14 @@
                 <div class="two-wrapper">
                     <div class="col left">
                         <h1>뷰티 콘텐츠<br>소셜 미디어</h1>
-                        <p>Connect & Share your Billions of Grooming knowledge</p>
+                        <p>수백만의 메이크업 & 화장품 정보를 공유하세요</p>
                         <button class="btn default" @click="downloadWhitePaper">코인 백서</button>
                     </div>
                     
                     <div class="col center">
-                        <span class="msg progress">Token Sale Live</span>
+                        <span class="msg progress">실시간 코인 판매</span>
                         <div class="sub-msg">1 GROO = $<?= round($grooCoinUSD, 3)?> (<?= round($grooCoinKRW, 1)?>원)</div>
-                        <div class="sub-msg">Currency Accepted : ETH</div>
+                        <div class="sub-msg">투자 가능 코인 : ETH</div>
                         <div class="sale-progress">
                             <svg id="sale-progress-svg" width="261" height="34" viewBox="0 0 261 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path id="SOFT CAP" d="M1.344 10.224C1.552 10.536 1.816 10.768 2.136 10.92C2.464 11.064 2.8 11.136 3.144 11.136C3.336 11.136 3.532 11.108 3.732 11.052C3.932 10.988 4.112 10.896 4.272 10.776C4.44 10.656 4.576 10.508 4.68 10.332C4.784 10.156 4.836 9.952 4.836 9.72C4.836 9.392 4.732 9.144 4.524 8.976C4.316 8.8 4.056 8.656 3.744 8.544C3.44 8.424 3.104 8.312 2.736 8.208C2.376 8.096 2.04 7.944 1.728 7.752C1.424 7.56 1.168 7.304 0.96 6.984C0.752 6.656 0.648 6.216 0.648 5.664C0.648 5.416 0.7 5.152 0.804 4.872C0.916 4.592 1.088 4.336 1.32 4.104C1.552 3.872 1.848 3.68 2.208 3.528C2.576 3.368 3.016 3.288 3.528 3.288C3.992 3.288 4.436 3.352 4.86 3.48C5.284 3.608 5.656 3.868 5.976 4.26L5.04 5.112C4.896 4.888 4.692 4.708 4.428 4.572C4.164 4.436 3.864 4.368 3.528 4.368C3.208 4.368 2.94 4.412 2.724 4.5C2.516 4.58 2.348 4.688 2.22 4.824C2.092 4.952 2 5.092 1.944 5.244C1.896 5.396 1.872 5.536 1.872 5.664C1.872 6.024 1.976 6.3 2.184 6.492C2.392 6.684 2.648 6.84 2.952 6.96C3.264 7.08 3.6 7.188 3.96 7.284C4.328 7.38 4.664 7.516 4.968 7.692C5.28 7.86 5.54 8.092 5.748 8.388C5.956 8.676 6.06 9.076 6.06 9.588C6.06 9.996 5.98 10.364 5.82 10.692C5.668 11.02 5.46 11.296 5.196 11.52C4.932 11.744 4.62 11.916 4.26 12.036C3.9 12.156 3.516 12.216 3.108 12.216C2.564 12.216 2.048 12.12 1.56 11.928C1.072 11.736 0.684 11.44 0.396 11.04L1.344 10.224ZM11.66 12.216C11.012 12.216 10.416 12.104 9.87197 11.88C9.32797 11.648 8.85997 11.332 8.46797 10.932C8.08397 10.532 7.77997 10.06 7.55597 9.516C7.33997 8.972 7.23197 8.384 7.23197 7.752C7.23197 7.12 7.33997 6.532 7.55597 5.988C7.77997 5.444 8.08397 4.972 8.46797 4.572C8.85997 4.172 9.32797 3.86 9.87197 3.636C10.416 3.404 11.012 3.288 11.66 3.288C12.308 3.288 12.904 3.404 13.448 3.636C13.992 3.86 14.456 4.172 14.84 4.572C15.232 4.972 15.536 5.444 15.752 5.988C15.976 6.532 16.088 7.12 16.088 7.752C16.088 8.384 15.976 8.972 15.752 9.516C15.536 10.06 15.232 10.532 14.84 10.932C14.456 11.332 13.992 11.648 13.448 11.88C12.904 12.104 12.308 12.216 11.66 12.216ZM11.66 11.136C12.148 11.136 12.588 11.048 12.98 10.872C13.372 10.688 13.708 10.444 13.988 10.14C14.268 9.836 14.484 9.48 14.636 9.072C14.788 8.656 14.864 8.216 14.864 7.752C14.864 7.288 14.788 6.852 14.636 6.444C14.484 6.028 14.268 5.668 13.988 5.364C13.708 5.06 13.372 4.82 12.98 4.644C12.588 4.46 12.148 4.368 11.66 4.368C11.172 4.368 10.732 4.46 10.34 4.644C9.94797 4.82 9.61197 5.06 9.33197 5.364C9.05197 5.668 8.83597 6.028 8.68397 6.444C8.53197 6.852 8.45597 7.288 8.45597 7.752C8.45597 8.216 8.53197 8.656 8.68397 9.072C8.83597 9.48 9.05197 9.836 9.33197 10.14C9.61197 10.444 9.94797 10.688 10.34 10.872C10.732 11.048 11.172 11.136 11.66 11.136ZM17.7443 3.504H23.0843V4.584H18.8963V7.248H22.7963V8.328H18.8963V12H17.7443V3.504ZM26.411 4.584H23.675V3.504H30.299V4.584H27.563V12H26.411V4.584ZM40.7814 5.34C40.5414 5.028 40.2374 4.788 39.8694 4.62C39.5014 4.452 39.1214 4.368 38.7294 4.368C38.2494 4.368 37.8134 4.46 37.4214 4.644C37.0374 4.82 36.7054 5.064 36.4254 5.376C36.1534 5.688 35.9414 6.056 35.7894 6.48C35.6374 6.896 35.5614 7.344 35.5614 7.824C35.5614 8.272 35.6334 8.696 35.7774 9.096C35.9214 9.496 36.1294 9.848 36.4014 10.152C36.6734 10.456 37.0054 10.696 37.3974 10.872C37.7894 11.048 38.2334 11.136 38.7294 11.136C39.2174 11.136 39.6454 11.036 40.0134 10.836C40.3814 10.636 40.6934 10.356 40.9494 9.996L41.9214 10.728C41.8574 10.816 41.7454 10.944 41.5854 11.112C41.4254 11.272 41.2134 11.436 40.9494 11.604C40.6854 11.764 40.3654 11.904 39.9894 12.024C39.6214 12.152 39.1934 12.216 38.7054 12.216C38.0334 12.216 37.4254 12.088 36.8814 11.832C36.3454 11.576 35.8854 11.24 35.5014 10.824C35.1254 10.408 34.8374 9.94 34.6374 9.42C34.4374 8.892 34.3374 8.36 34.3374 7.824C34.3374 7.168 34.4454 6.564 34.6614 6.012C34.8774 5.452 35.1774 4.972 35.5614 4.572C35.9534 4.164 36.4214 3.848 36.9654 3.624C37.5094 3.4 38.1094 3.288 38.7654 3.288C39.3254 3.288 39.8734 3.396 40.4094 3.612C40.9534 3.828 41.3974 4.16 41.7414 4.608L40.7814 5.34ZM45.9787 3.504H47.0227L50.6587 12H49.3147L48.4627 9.9H44.4187L43.5787 12H42.2347L45.9787 3.504ZM48.0427 8.892L46.4587 4.992H46.4347L44.8267 8.892H48.0427ZM51.7639 3.504H54.7519C55.2959 3.504 55.7439 3.58 56.0959 3.732C56.4479 3.876 56.7239 4.064 56.9239 4.296C57.1319 4.52 57.2759 4.776 57.3559 5.064C57.4359 5.344 57.4759 5.616 57.4759 5.88C57.4759 6.144 57.4359 6.42 57.3559 6.708C57.2759 6.988 57.1319 7.244 56.9239 7.476C56.7239 7.7 56.4479 7.888 56.0959 8.04C55.7439 8.184 55.2959 8.256 54.7519 8.256H52.9159V12H51.7639V3.504ZM52.9159 7.248H54.4279C54.6519 7.248 54.8719 7.232 55.0879 7.2C55.3119 7.16 55.5079 7.092 55.6759 6.996C55.8519 6.9 55.9919 6.764 56.0959 6.588C56.1999 6.404 56.2519 6.168 56.2519 5.88C56.2519 5.592 56.1999 5.36 56.0959 5.184C55.9919 5 55.8519 4.86 55.6759 4.764C55.5079 4.668 55.3119 4.604 55.0879 4.572C54.8719 4.532 54.6519 4.512 54.4279 4.512H52.9159V7.248Z" transform="translate(45 21)" fill="black"/>
@@ -155,7 +155,7 @@
 
         <section class="section section-about" id="section-about">
             <div class="contents">
-                <div class="title t1 center">About Project <span>Groo</span></div>
+                <div class="title t1 center"><span>Groo</span> 프로젝트란?</div>
                 <div class="sub-title">나에게 맞는 메이크업 & 화장품 정보의 쉽고 빠른 공유</div>
 
                 <div class="center">
@@ -224,7 +224,7 @@
     
 	    <section class="section section-architecture white" id="section-architecture">
         <div class="contents">
-            <div class="title t1 center"><span>Groo</span> Architecture</div>
+            <div class="title t1 center"><span>Groo</span> 아키텍쳐</div>
             <div class="sub-title">EOS 블록체인 & IPFS(Inter Planetary) 파일 시스템</div>
 
             <div class="center">
@@ -236,8 +236,8 @@
 
         <section class="section section-architecture2 pink">
             <div class="contents">
-                <div class="title t1 center"><span>Groo</span> Mobile Application</div>
-                <div class="sub-title">For 1 Billion of Makeup & Cosmetic Customers</div>
+                <div class="title t1 center"><span>Groo</span> 모바일 애플리케이션</div>
+                <div class="sub-title">수백만의 메이크업 & 화장품 정보</div>
             </div>
             <div class="arch-bg"></div>
         </section>
@@ -250,7 +250,7 @@
 
 
         <section class="section section-road-map white" id="section-road-map">
-            <div class="title t1 center"><span>Groo</span> Roadmap</div>
+            <div class="title t1 center"><span>Groo</span> 로드맵</div>
             <div class="center">
                 <img class="arch w-60 desktop-only" src="assets/images/roadmap.png" />
                 <img class="arch w-90 mobile-only" src="assets/images/roadmap-m.png" />
@@ -261,27 +261,27 @@
 
         <section class="section section-coin-sale" id="section-coin-sale">
             <div class="contents">
-                <div class="title t1 center"><span>Groocoin</span> Distribution</div>
+                <div class="title t1 center"><span>Groocoin</span> 분배</div>
                 <div class="img-wrap no-select">
                     <canvas id="chartArea"></canvas>
                 </div>
                 <div class="table-wrap">
                     <table>
                         <tr>
-                            <th>Token Initial</th>
+                            <th>코인 명칭</th>
                             <td>GROO</td>
                         </tr>
                         <tr>
-                            <th>Total supply</th>
-                            <td>900,000,000 EA</td>
+                            <th>총 발행량</th>
+                            <td>900,000,000 개</td>
                         </tr>
                         <tr>
-                            <th>Circulating supply</th>
-                            <td>720,000,000 EA</td>
+                            <th>공급 수량</th>
+                            <td>720,000,000 개</td>
                         </tr>
                         <tr>
-                            <th>ICO Token Sales</th>
-                            <td>270,000,000 EA</td>
+                            <th>ICO 판매수량</th>
+                            <td>270,000,000 개</td>
                         </tr>
                     </table>
                 </div>
@@ -338,7 +338,7 @@
                             <p>Groopoint은 Groo.io 플랫폼에서 사용이 가능한 Reward point 입니다, 소비자는 특정 컨텐츠의 제작 혹은 해당 컨텐츠의 투표 및 reply를 통해 Groopoint를 발급 받을 수 있습니다. 일정량의 Groopoint는 각 암호화폐 거래소에서 구매/판매가 가능한 Groocoin으로 변환할 수가 있습니다. Groo.io 플랫폼은 EOS의 DApp을 활용한 플랫폼입니다</p>
                         </li>
                         <li>
-                            <h3 class="no-select">EOS Blockchain</h3>
+                            <h3 class="no-select">EOS 블록체인</h3>
                             <p>Groo.io 플랫폼은 이용자의 트랜잭션 수수료를 제거하고 보다 빠른 트랜잭션 처리를 위해 EOS 블록체인을 사용합니다. EOS는 분산형 Application(DApp) 서비스를 위한 스마트 컨트랙트 플랫폼으로서 블록체인 서비스의 사용성 문제인 트랜잭션 수수료와 처리 지연의 문제를 해결합니다. EOS블록체인은 DApp 이용자에게 수수료를 부과하지 않습니다. </p>
                         </li>
                     </ul>
@@ -349,7 +349,7 @@
 
         <section class="section section-community" id="section-community">
             <div class="contents">
-                <div class="title t1 center">Community</div>
+                <div class="title t1 center">커뮤니티</div>
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-twitter.svg" alt="Twitter"></div><h3>Twitter</h3></a></li>
                     <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
