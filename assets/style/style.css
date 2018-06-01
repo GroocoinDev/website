@@ -1,4 +1,5 @@
-html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color: #F6F6F6;}
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; background-color: #F6F6F6;}
 
 /* header */
 #header { position: fixed; z-index: 2; top: 0; right: 0; left: 0; width: auto; height: 18px; padding: 50px; transition: background-color 0.5s; }
@@ -113,7 +114,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 #countdown .inner { position: relative; }
 #countdown .text { position: absolute; top: 0; margin-top: 30px; text-align: center; color: #fff; width: 100%; }
 #countdown .text .val { font-size: 2.4em; font-weight: 800; color: #1f1f1f; }
-#countdown .type-time { font-size: 1.1em; margin-top: 6px; color: #1f1f1f; font-weight: 800; letter-spacing: -1px; }
+#countdown .type-time { font-size: 1.05em; margin-top: 7px; color: #1f1f1f; font-weight: 300; letter-spacing: -1px; }
 
 
 /* section-two */
@@ -186,7 +187,7 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 
 .section-members { padding: 90px 0 30px; display: inline-block; }
 .section-members .title { margin-bottom: 60px; }
-.section-members ul { width: inherit; margin: 0 auto; display: inline-block;}
+.section-members ul { width: 100%; margin: 0 auto; display: inline-block;}
 .section-members ul li { float: left; width: calc(25% - 15px); margin-right: 20px; }
 .section-members ul li:nth-child(4n) { margin-right: 0; }
 .section-members ul li .circle { width: 100%; padding-top: 100%; position: relative; overflow: hidden; }
@@ -225,13 +226,13 @@ html, body { font-family: Avenir, Arial, Helvetica, sans-serif; background-color
 .section-partners ul li a img { width: inherit; }
 
 
-.section-coin-sale {}
+.section-coin-sale { background-color: #FFE3D7; }
 .section-coin-sale .img-wrap { width: 70%; margin: 40px auto 50px; height: 400px; }
-.section-coin-sale .table-wrap { width: 40%; margin: 0 auto; }
+.section-coin-sale .table-wrap { width: 36%; margin: 0 auto; }
 .section-coin-sale .table-wrap table { width: 100%; }
-.section-coin-sale .table-wrap table tr { height: 40px; line-height: 40px; font-size: 1.3em; }
-.section-coin-sale .table-wrap table tr th { padding-left: 10px; font-weight: 600; text-align: left; }
-.section-coin-sale .table-wrap table tr th:before { content: '•'; margin-right: 14px;}
+.section-coin-sale .table-wrap table tr { height: 40px; line-height: 40px; font-size: 1.2em; text-align: left; }
+.section-coin-sale .table-wrap table tr th { font-weight: 500; }
+.section-coin-sale .table-wrap table tr td { font-weight: 300; }
 
 
 .section-faq {}
