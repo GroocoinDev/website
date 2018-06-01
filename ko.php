@@ -228,7 +228,7 @@
             <div class="sub-title">EOS 블록체인 & IPFS(Inter Planetary) 파일 시스템</div>
 
             <div class="center">
-                <img class="arch w-40" src="assets/images/arch04.png" />
+                <img class="arch w-30" src="assets/images/arch04.png" />
                 <button @click="showModal('__IMG_ARCH__')" class="btn black">자세히 보기</button>
             </div>
         </section>
