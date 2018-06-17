@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
+    <link rel="stylesheet" href="assets/style/main.css">
+</head>
+<body>
+
+
+    
+    <header class="header">
+        <div class="contents no-select">
+            <div class="header--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin Logo"></a></div>
+            <div class="header--mobile-menu pointer">
+                <img src="assets/img/icon-menu.svg" alt="menu open">
+            </div>
+            <nav class="header--nav">
+                <ul class="header--nav--ul">
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-members">Our Team</a></li>
+                    <li><a href="#section-architecture">Architecture</a></li>
+                    <li><a href="#section-road-map">RoadMap</a></li>
+                    <li><a href="#section-coin-sale">Distribution</a></li>
+                    <li><a href="#section-faq">FAQ</a></li>
+                    <li><a href="#section-community">Community</a></li>
+                </ul>
+                <div class="header--nav--lang">
+                    <a href="#">en</a>
+                    <ul>
+                        <li><a href="#">ko</a></li>
+                        <li><a href="#">zh</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="section section-main">
+        <div class="section-main--title-wrap Aligner-item--top">
+            <h1 class="section-main--title center">1st Pre-Sale starts on Jun 4th</h1>    
+        </div>
+        <div id="clock" class="clock"></div>
+        <div class="center">
+            <div class="btn btn--white">Upcoming!</div>
+        </div>
+    </section>
+
+
+    <section class="section section-two">
+        <div class="section-two--left d-w-50 m-w-100">
+            <h3 class="section-two--label">Connect & Share<br/>Your Billion of Grooming<br/>Knowledge</h3>
+            <a class="btn btn--black">White Paper</a>
+        </div>
+        <div class="section-two--right d-w-50 m-w-100">
+            <h3 class="section-two--label center">Join Our Mailing List</h3>
+            <div class="input-btn">
+                <input type="text" placeholder="Your Email Address" class="input-btn--input" />
+                <a class="btn btn--black input-btn--btn">Subscribe</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section section-about">
+        <div class="section-about--item">
+            <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
+            <h1 class="title section-about--title">What is Groo?</h1>
+            <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
+        </div>
+        <div class="section-about--item">
+            <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
+            <h1 class="title section-about--title">Why Groo?</h1>
+            <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
+        </div>
+        <div class="section-about--item">
+            <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
+            <h1 class="title section-about--title">How Groo?</h1>
+            <p class="section-about--cont">The Groo.io Platform is allow to the consumers to autonomously create and share the contents to have the diversified evaluation feedback from different consumers</p>
+        </div>
+    </section>
+
+
+
+    <section class="section section-slide">
+        <h1 class="title center">What We Can Do?</h1>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="assets/lib/jquery.countdown.min.js"></script>
+    <script>
+        $('#clock').countdown('2018/07/01 12:34:56', function(event) {
+        var $this = $(this).html(event.strftime(''
+            + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
+            + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
+            + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
+            + '<span>%S</span>'));
+        });
+    </script>
+
+
+</body>
+</html>
