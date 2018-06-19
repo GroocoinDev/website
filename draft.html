@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="assets/lib/jquery.bxslider.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
     <link rel="stylesheet" href="assets/style/main.css">
 </head>
@@ -29,11 +30,10 @@
                     <li><a href="#section-faq">FAQ</a></li>
                     <li><a href="#section-community">Community</a></li>
                 </ul>
-                <div class="header--nav--lang">
-                    <a href="#">en</a>
-                    <ul>
-                        <li><a href="#">ko</a></li>
-                        <li><a href="#">zh</a></li>
+                <div class="header--lang">
+                    <a class="lang--current" href="#">English</a>
+                    <ul class="lang--ul">
+                        <li><a href="#">Korean</a></li>
                     </ul>
                 </div>
             </nav>
@@ -52,7 +52,7 @@
     </section>
 
 
-    <section class="section section-two">
+    <section class="section-two row">
         <div class="section-two--left d-w-50 m-w-100">
             <h3 class="section-two--label">Connect & Share<br/>Your Billion of Grooming<br/>Knowledge</h3>
             <a class="btn btn--black">White Paper</a>
@@ -68,20 +68,28 @@
 
     
     <section class="section section-about">
-        <div class="section-about--item">
-            <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
-            <h1 class="title section-about--title">What is Groo?</h1>
-            <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
-        </div>
-        <div class="section-about--item">
-            <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
-            <h1 class="title section-about--title">Why Groo?</h1>
-            <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
-        </div>
-        <div class="section-about--item">
-            <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
-            <h1 class="title section-about--title">How Groo?</h1>
-            <p class="section-about--cont">The Groo.io Platform is allow to the consumers to autonomously create and share the contents to have the diversified evaluation feedback from different consumers</p>
+        <div class="contents">
+            <div class="section-about--item">
+                <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
+                <div class="section-about--text">
+                    <h1 class="title section-about--title">What is Groo?</h1>
+                    <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
+                </div>
+            </div>
+            <div class="section-about--item">
+                <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
+                <div class="section-about--text">
+                    <h1 class="title section-about--title">Why Groo?</h1>
+                    <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
+                </div>
+            </div>
+            <div class="section-about--item">
+                <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
+                <div class="section-about--text">
+                    <h1 class="title section-about--title">How Groo?</h1>
+                    <p class="section-about--cont">The Groo.io Platform is allow to the consumers to autonomously create and share the contents to have the diversified evaluation feedback from different consumers</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -89,20 +97,199 @@
 
     <section class="section section-slide">
         <h1 class="title center">What We Can Do?</h1>
+        <ul class="bxslider">
+            <li class="bxslider--li">
+                <h3 class="bxslider--h3">Mobile Ecosystem</h3>
+                <p class="bxslider--p">Easy and Rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people. </p>
+                <img class="bxslider--img" src="assets/img/section_slide_1.png" alt="">
+            </li>
+            <li class="bxslider--li">
+                <h3 class="bxslider--h3">Activity Rewards</h3>
+                <p class="bxslider--p">The Activity Point is determined on the basis of the activities for posting of the contents, comments, up/down votes, participation in reporting, follow and others</p>
+                <img class="bxslider--img" src="assets/img/section_slide_2.png" alt="">
+            </li>
+            <li class="bxslider--li">
+                <h3 class="bxslider--h3">Marketing Analytics</h3>
+                <p class="bxslider--p">The data which can be utilized is planned to be extracted and supplied to the partnership companies in a safe way through the Private API based on the analysis of big data for user preferences</p>
+                <img class="bxslider--img" src="assets/img/section_slide_3.png" alt="">
+            </li>
+        </ul>
+
+
+        <div class="section-roadmap">
+            <h1 class="title center white">Roadmap</h1>
+            
+            <ul class="roadmap-ul">
+                <li class="roadmap-li year">
+                    <h3 class="roadmap-title">2018 1Q</h3>
+                    <p class="roadmap-body">Project development</p>
+                </li>
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">2Q</h3>
+                    <p class="roadmap-body">ICO stage</p>
+                </li>
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">3Q</h3>
+                    <p class="roadmap-body">Groo.io Platform Alpha Test</p>
+                </li>
+                <li class="roadmap-li last">
+                    <h3 class="roadmap-title">4Q</h3>
+                    <p class="roadmap-body">Groo.io Platform Beta Test</p>
+                </li>
+
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">2019 1Q</h3>
+                    <p class="roadmap-body">Groo.io Platform Officlal Launch</p>
+                </li>
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">2Q</h3>
+                    <p class="roadmap-body">Groo.io Platform Mobile Application Launch</p>
+                </li>
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">3Q</h3>
+                    <p class="roadmap-body">Groo Analytics CBT (Clost Beta Test)</p>
+                </li>
+                <li class="roadmap-li">
+                    <h3 class="roadmap-title">4Q</h3>
+                    <p class="roadmap-body">Groo Analytics Launch</p>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="section-dist">
+            <h1 class="title center white">Token Distribution</h1>
+            <div class="row">
+                <div class="section-dist--left d-w-50 m-w-100">
+                    <img src="assets/img/section_dist_graph.png" alt="Token Distribution Graph">
+                </div>
+                <div class="section-dist--right d-w-50 m-w-100">
+                    <div class="section-dist--values">
+                        <span class="section-dist--value"><span class="section-dist--total">Total</span>1,000,000</span>
+                        <span class="section-dist--unit">GROO</span>
+                    </div>
+                    <div class="section-dist--dist">
+                        <table class="section-dist--dist-table">
+                            <tbody>
+                                <tr>
+                                    <td>Supporters</td>
+                                    <td>50%</td>
+                                </tr>
+                                <tr>
+                                    <td>Supporters</td>
+                                    <td>50%</td>
+                                </tr>
+                                <tr>
+                                    <td>Supporters</td>
+                                    <td>50%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+
+    <section class="section section-partners">
+        <h1 class="title center add-mg-b">Strategic Partners</h1>
+    </section>
+    
+    
+    <section class="section section-team bg-gray">
+        <h1 class="title center add-mg-b">Team Members</h1>
+        <ul class="team--ul contents">
+            <li class="team--li">
+                <div class="team--profile">
+                    <img src="" alt="">
+                </div>
+                <div class="team--name">J.H Park</div>
+                <div class="team--roll">CEO</div>
+                <div class="team--desc">
+                    BackWareGlobal Inc.<br>Kookmin Univ.<br>Kookmin Univ.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <section class="section section-adviser">
+        <h1 class="title center white add-mg-b">Advisers</h1>
+        <div class="adviser--outer center">
+            <div class="adviser--inner"></div>
+        </div>
+    </section>
+
+
+
+    <!-- <section class="section section-creators bg-gray">
+        <h1 class="title center add-mg-b">Beauty Contents Creators</h1>
+    </section> -->
+    
+    
+    
+    <section class="section section-community bg-gray">
+        <div class="contents">
+            <h1 class="title">Community</h1>
+            <div class="community--wrapper">
+                <ul>
+                    <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
+                    <li><a href="#" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
+                    <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="contents">
+            <div class="footer--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin logo"></a></div>
+            <div class="footer--copyright">Copyright © 2018 All Rights Reserved</div>
+        </div>
+    </footer>    
 
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="assets/lib/jquery.countdown.min.js"></script>
+    <script src="assets/lib/jquery.bxslider.min.js"></script>
     <script>
-        $('#clock').countdown('2018/07/01 12:34:56', function(event) {
-        var $this = $(this).html(event.strftime(''
-            + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
-            + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
-            + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
-            + '<span>%S</span>'));
+
+        $(document).ready(function () {
+
+            $('#clock').countdown('2018/07/01 12:34:56', function (event) {
+                var $this = $(this).html(event.strftime(''
+                    + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
+                    + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
+                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
+                    + '<span>%S</span>'));
+            });
+
+            $('.bxslider').bxSlider({
+                
+            });
+            
+            
+            
+            // 임시 엘리먼트 카피 함수
+            cloneChild('.team--ul', '.team--li', 7);
         });
+
+        function cloneChild(appendTarget, child, count) {
+            var target = $(appendTarget);
+            var clone = $(child).prop('outerHTML');
+            for (var i=0; i<count; i++) {
+                target.append(clone);
+            }
+        }
+        
     </script>
 
 
