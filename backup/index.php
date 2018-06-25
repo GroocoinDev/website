@@ -16,19 +16,19 @@
     <meta property="og:description" content="Beauty Content Social Media. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="en_GB" />
 
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/style.media.query.css">
+    <link rel="stylesheet" href="../assets/style/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.media.query.css">
     
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3"> -->
 </head>
 
 <body>
     <header id="header">
         <div class="contents no-select">
-            <div class="logo"><a href="#"><img src="assets/images/logo.svg" alt="GROO Coin"></a></div>
+            <div class="logo"><a href="#"><img src="images/logo.svg" alt="GROO Coin"></a></div>
             <div class="mobile-nav">
-                <img src="assets/images/icon-menu.svg" alt="menu">
+                <img src="images/icon-menu.svg" alt="menu">
             </div>
             <nav>
                 <ul class="nav-ul">
@@ -56,7 +56,7 @@
         <section class="section-main">
             <div class="contents">
                 <figure>
-                    <img src="assets/images/papers.png" alt="">
+                    <img src="images/papers.png" alt="">
                 </figure>
             </div>
             <div class="main-txt">
@@ -158,7 +158,7 @@
                 <div class="sub-title">Rapid sharing of the Makeup and Cosmetic information</div>
 
                 <div class="center">
-                    <img class="arch w-90" src="assets/images/arch01.png" />
+                    <img class="arch w-90" src="images/arch01.png" />
                     <button @click="showModal('__IMG_ABOUT__')" class="btn black">Read More</button>
                 </div>
 
@@ -171,7 +171,7 @@
                 <ul class="col-3">
                     <li>
                         <div class="circle">
-                            <img src="assets/images/icon-desc1.svg" />
+                            <img src="images/icon-desc1.svg" />
                         </div>
                         <div class="txt">
                             <h3 class="t2">Mobile Ecosystem</h3>
@@ -180,7 +180,7 @@
                     </li>
                     <li>
                         <div class="circle">
-                            <img src="assets/images/icon-desc2.svg" />
+                            <img src="images/icon-desc2.svg" />
                         </div>
                         <div class="txt">
                             <h3 class="t2">Activity Rewards</h3>
@@ -189,7 +189,7 @@
                     </li>
                     <li>
                         <div class="circle">
-                            <img src="assets/images/icon-desc3.svg" />
+                            <img src="images/icon-desc3.svg" />
                         </div>
                         <div class="txt">
                             <h3 class="t2">Enhanced Blockchain</h3>
@@ -200,7 +200,7 @@
                 <ul class="col-2">
                     <li>
                         <div class="circle">
-                            <img src="assets/images/icon-desc4.svg" />
+                            <img src="images/icon-desc4.svg" />
                         </div>
                         <div class="txt">
                             <h3 class="t2">True Decentralized</h3>
@@ -209,7 +209,7 @@
                     </li>
                     <li>
                         <div class="circle">
-                            <img src="assets/images/icon-desc5.svg" />
+                            <img src="images/icon-desc5.svg" />
                         </div>
                         <div class="txt">
                             <h3 class="t2">Secured</h3>
@@ -227,7 +227,7 @@
             <div class="sub-title">Decentralized EOS BlockChain & IPFS(Inter Planetary) File System</div>
 
             <div class="center">
-                <img class="arch w-30" src="assets/images/arch04.png" />
+                <img class="arch w-30" src="images/arch04.png" />
                 <button @click="showModal('__IMG_ARCH__')" class="btn black">Read More</button>
             </div>
         </section>
@@ -251,8 +251,8 @@
         <section class="section section-road-map white" id="section-road-map">
             <div class="title t1 center"><span>Groo</span> Roadmap</div>
             <div class="center">
-                <img class="arch w-60 desktop-only" src="assets/images/roadmap.png" />
-                <img class="arch w-90 mobile-only" src="assets/images/roadmap-m.png" />
+                <img class="arch w-60 desktop-only" src="images/roadmap.png" />
+                <img class="arch w-90 mobile-only" src="images/roadmap-m.png" />
             </div>
         </section>
 
@@ -350,10 +350,10 @@
             <div class="contents">
                 <div class="title t1 center">Community</div>
                 <ul>
-                    <li><a href="https://twitter.com/Groocoinio" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-twitter.svg" alt="Twitter"></div><h3>Twitter</h3></a></li>
-                    <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
-                    <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-telegram.svg" alt="telegram"></div><h3>Telegram</h3></a></li>
-                    <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><div class="circle"><img class="hover-scale" src="assets/images/icon-kakaotalk.svg" alt="KakaoTalk"></div><h3>KakaoTalk</h3></a></li>
+                    <li><a href="https://twitter.com/Groocoinio" target="_blank"><div class="circle"><img class="hover-scale" src="images/icon-twitter.svg" alt="Twitter"></div><h3>Twitter</h3></a></li>
+                    <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><div class="circle"><img class="hover-scale" src="images/icon-discord.svg" alt="discord"></div><h3>Discord</h3></a></li>
+                    <li><a href="#" target="_blank"><div class="circle"><img class="hover-scale" src="images/icon-telegram.svg" alt="telegram"></div><h3>Telegram</h3></a></li>
+                    <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><div class="circle"><img class="hover-scale" src="images/icon-kakaotalk.svg" alt="KakaoTalk"></div><h3>KakaoTalk</h3></a></li>
                 </ul>
             </div>
         </section>
@@ -364,7 +364,7 @@
     <footer id="footer">
         <div class="contents">
             <div class="left">
-                <div class="logo-footer"><a href="#"><img src="assets/images/logo-white.svg" alt="GROO Coin logo"></a></div>
+                <div class="logo-footer"><a href="#"><img src="images/logo-white.svg" alt="GROO Coin logo"></a></div>
                 <div class="copyright">Copyright © 2018 All Rights Reserved</div>
             </div>
         </div>
@@ -378,14 +378,14 @@
     <!-- vue production mode -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     
-    <script src="assets/lib/vue-2.5.16.min.js"></script>
-    <script src="assets/lib/jquery-1.12.4.min.js"></script>
-    <script src="assets/lib/Oppear_1.1.2.min.js"></script>
-	<script src="assets/lib/jquery.final-countdown.min.js"></script>
-	<script src="assets/lib/kinetic.js"></script>
-    <script src="assets/lib/typeit.min.js"></script>
-    <script src="assets/lib/chart.min.js"></script>
-    <script src="assets/lib/chartjs-plugin-datalabels.js"></script>
-    <script src="dist/main.js"></script>
+    <script src="../assets/lib/vue-2.5.16.min.js"></script>
+    <script src="../assets/lib/jquery-1.12.4.min.js"></script>
+    <script src="../assets/lib/Oppear_1.1.2.min.js"></script>
+	<script src="../assets/lib/jquery.final-countdown.min.js"></script>
+	<script src="../assets/lib/kinetic.js"></script>
+    <script src="../assets/lib/typeit.min.js"></script>
+    <script src="../assets/lib/chart.min.js"></script>
+    <script src="../assets/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

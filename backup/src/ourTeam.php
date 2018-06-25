@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p1.png" alt="CEO">
+                        <img src="images/p1.png" alt="CEO">
                         <div class="background">
                             <p>
                                 Dev Director, NURIDA (present)<br>
@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p2.png" alt="">
+                        <img src="images/p2.png" alt="">
                         <div class="background">
                             <p>
                                 System Engineer, eBay Korea (present)<br>
@@ -41,7 +41,7 @@
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p3.png" alt="">
+                        <img src="images/p3.png" alt="">
                         <div class="background">
                             <p>
                                 CSO, HSM (present)<br>
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p4.png" alt="">
+                        <img src="images/p4.png" alt="">
                         <div class="background">
                             <p>
                                 Web Developer, ANYFIVE (present)<br>
@@ -75,7 +75,7 @@
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p6.png" alt="">    
+                        <img src="images/p6.png" alt="">    
                         <div class="background">
                             <p>
                                 Frontend Developer, Bankware Global<br>
@@ -91,7 +91,7 @@
                 </li>
                 <li>
                     <div class="circle">
-                        <img src="assets/images/p8.png" alt="">
+                        <img src="images/p8.png" alt="">
                     </div>
                     <h3 class="">Y.H Kong</h3>
                     <h4>Marketing Strategy</h4>
