@@ -242,6 +242,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
     .header--lang { float: right; margin-left: 18px; font-size: 0.85em; margin-top: 2px; }
     .header--lang:hover .lang--ul { display: block; }
     .lang--current { background: #000; color: #fff; border-radius: 20px; padding: 8px 12px; }
+    .header.scroll .lang--current { background: rgba(255, 255, 255, 1); color: #1C1C1C; font-weight: 500; }
     .lang--ul { display: none; margin-top: 26px; }
     .lang--ul > li { height: 40px; }
     .lang--ul > li > a { background: #FF4786; color: #fff; border-radius: 20px; padding: 8px 12px; }
