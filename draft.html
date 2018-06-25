@@ -53,7 +53,7 @@
 
     <section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center">1st Pre-Sale starts on Jun 4th</h1>    
+            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="1st Pre-Sale starts on Jun 4th">1st Pre-Sale starts on Jun 4th</h1>
         </div>
         <div id="clock" class="clock"></div>
         <div class="center">
@@ -61,14 +61,16 @@
         </div>
     </section>
 
+    <img src="assets/img/main_bg_1.jpg" alt="" style="display: none;">
     <img src="assets/img/main_bg_2.jpg" alt="" style="display: none;">
     <img src="assets/img/main_bg_3.jpg" alt="" style="display: none;">
     <img src="assets/img/main_bg_4.jpg" alt="" style="display: none;">
+    <img src="assets/img/main_bg_5.jpg" alt="" style="display: none;">
 
     <section class="section-two row">
         <div class="section-two--left d-w-50 m-w-100">
             <h3 class="section-two--label">Connect & Share<br/>Your Billion of Grooming<br/>Knowledge</h3>
-            <a class="btn btn--black">White Paper</a>
+            <a class="btn btn--black" id="downloadPaper">White Paper</a>
         </div>
         <div class="section-two--right d-w-50 m-w-100">
             <h3 class="section-two--label center">Join Our Mailing List</h3>
@@ -82,21 +84,21 @@
     
     <section class="section section-about" id="section-about">
         <div class="contents">
-            <div class="section-about--item">
+            <div class="section-about--item appear">
                 <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">What is Groo?</h1>
                     <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
                 </div>
             </div>
-            <div class="section-about--item">
+            <div class="section-about--item appear">
                 <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">Why Groo?</h1>
                     <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
                 </div>
             </div>
-            <div class="section-about--item">
+            <div class="section-about--item appear">
                 <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">How Groo?</h1>
@@ -108,7 +110,7 @@
 
 
 
-    <section class="section section-slide">
+    <section class="section section-slide appear">
         <h1 class="title center">What We Can Do?</h1>
         <ul class="bxslider">
             <li class="bxslider--li">
@@ -134,7 +136,7 @@
         </ul>
 
 
-        <div class="section-roadmap" id="section-roadmap">
+        <div class="section-roadmap appear" id="section-roadmap">
             <h1 class="title center white">Roadmap</h1>
             
             <ul class="roadmap-ul">
@@ -176,7 +178,7 @@
 
 
 
-        <div class="section-dist" id="section-dist">
+        <div class="section-dist appear" id="section-dist">
             <h1 class="title center white">Token Distribution</h1>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
@@ -184,23 +186,31 @@
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
-                        <span class="section-dist--value"><span class="section-dist--total">Total</span>1,000,000</span>
+                        <span class="section-dist--value"><span class="section-dist--total">Total</span>900,000,000</span>
                         <span class="section-dist--unit">GROO</span>
                     </div>
                     <div class="section-dist--dist">
                         <table class="section-dist--dist-table">
                             <tbody>
                                 <tr>
-                                    <td>Supporters</td>
-                                    <td>50%</td>
+                                    <td>Token sale</td>
+                                    <td>60%</td>
                                 </tr>
                                 <tr>
-                                    <td>Supporters</td>
-                                    <td>50%</td>
+                                    <td>Marketing</td>
+                                    <td>10%</td>
                                 </tr>
                                 <tr>
-                                    <td>Supporters</td>
-                                    <td>50%</td>
+                                    <td>Platform Rewards</td>
+                                    <td>10%</td>
+                                </tr>
+                                <tr>
+                                    <td>Team</td>
+                                    <td>15%</td>
+                                </tr>
+                                <tr>
+                                    <td>Advisors</td>
+                                    <td>5%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -217,9 +227,11 @@
             <img class="joy--img joy--img-top" src="assets/img/section_evolving_1.png" alt="">
             <img class="joy--img joy--img-bottom" src="assets/img/section_evolving_2.png" alt="">
         </div>
-        <h1 class="title add-mg-b white joy--title">The Joy of Activity</h1>
-        <p class="joy--desc joy--desc-top">Groo.io is a Multi Entertainment Platform that includes plenty of joyful contents for go beyond traditional social media platform activities that focused on creating and sharing content only, and that improve platform activity experience with pleasure.</p>
-        <p class="joy--desc">The main customers of the Groo.io platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
+        <div class="appear">
+            <h1 class="title add-mg-b white joy--title">The Joy of Activity</h1>
+            <p class="joy--desc joy--desc-top">Groo.io is a Multi Entertainment Platform that includes plenty of joyful contents for go beyond traditional social media platform activities that focused on creating and sharing content only, and that improve platform activity experience with pleasure.</p>
+            <p class="joy--desc">The main customers of the Groo.io platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
+        </div>
     </section>
 
 
@@ -229,14 +241,14 @@
     </section> -->
     
     
-    <section class="section section-team bg-gray" id="section-team">
+    <section class="section section-team bg-gray appear" id="section-team">
         <h1 class="title center add-mg-b">Team Members</h1>
         <ul class="team--ul contents">
             <li class="team--li">
                 <div class="team--profile">
                     <img src="assets/img/p1.png" alt="W.M Sim">
                 </div>
-                <a class="team--name linkedin" href="#">W.M Sim</a>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/wonmoon-sim-5637875a/">W.M Sim</a>
                 <div class="team--roll">CEO</div>
                 <div class="team--desc">
                     Dev Director, NURIDA (present)<br>
@@ -251,7 +263,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p2.png" alt="J.K Jang">
                 </div>
-                <a class="team--name linkedin" href="https://www.linkedin.com/in/jangjungkyu">J.K Jang</a>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/jangjungkyu">J.K Jang</a>
                 <div class="team--roll">CTO, Co-founder</div>
                 <div class="team--desc">
                     System Engineer, eBay Korea (present)<br>
@@ -265,7 +277,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p3.png" alt="Sean Jo">
                 </div>
-                <a class="team--name linkedin" href="https://www.linkedin.com/in/sean-jo-18156a6a">Sean Jo</a>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/sean-jo-18156a6a">Sean Jo</a>
                 <div class="team--roll">COO, Co-founder</div>
                 <div class="team--desc">
                     CSO, HSM (present)<br>
@@ -278,7 +290,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p4.png" alt="H.C Kim">
                 </div>
-                <a class="team--name linkedin" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112">Sean Jo</a>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112">Sean Jo</a>
                 <div class="team--roll">CTO, Co-founder</div>
                 <div class="team--desc">
                     Web Developer, ANYFIVE (present)<br>
@@ -291,7 +303,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p6.png" alt="J.H Park">
                 </div>
-                <a class="team--name linkedin" href="https://www.linkedin.com/in/cnaa97">J.H Park</a>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/cnaa97">J.H Park</a>
                 <div class="team--roll">Frontend Developer</div>
                 <div class="team--desc">
                     Frontend Developer, Bankware Global<br>
@@ -308,12 +320,21 @@
                 <div class="team--desc">
                 </div>
             </li>
+            <li class="team--li">
+                <div class="team--profile">
+                    <img src="" alt="Y.H Kong">
+                </div>
+                <div class="team--name">Y.H Kong</div>
+                <div class="team--roll">Marketing Strategy</div>
+                <div class="team--desc">
+                </div>
+            </li>
         </ul>
     </section>
 
 
 
-    <section class="section section-adviser">
+    <section class="section section-adviser appear">
         <h1 class="title center white add-mg-b">Advisers</h1>
         <div class="adviser--outer center">
             <div class="adviser--inner"></div>
@@ -357,6 +378,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="assets/lib/jquery.countdown.min.js"></script>
     <script src="assets/lib/jquery.bxslider.min.js"></script>
+    <script src="assets/lib/typeit.min.js"></script>
+    <script src="assets/lib/Oppear_1.1.2.min.js"></script>
     <script>
 
         $(document).ready(function () {
@@ -368,13 +391,15 @@
             var currentBg = [1, 2, 3];
             var currentBgIndex = 0;
             setInterval(function(){
-                $('.section-main').removeClass('bg' + currentBg[currentBgIndex]);
-                currentBgIndex += 1;
-                if (!currentBg[currentBgIndex]) {
-                    currentBgIndex = 0;
-                }
-                $('.section-main').addClass('bg' + currentBg[currentBgIndex]);
-            }, 6000);
+                $('.section-main').fadeTo(2000, 0.8, function() {
+                    $('.section-main').removeClass('bg' + currentBg[currentBgIndex]);
+                    currentBgIndex += 1;
+                    if (!currentBg[currentBgIndex]) {
+                        currentBgIndex = 0;
+                    }
+                    $('.section-main').addClass('bg' + currentBg[currentBgIndex]);
+                }).fadeTo(2000, 1);
+            }, 10000);
 
 
             /* 메인 상단 타이머 */
@@ -386,6 +411,17 @@
                     + '<span>%S</span>'));
             });
 
+
+            /* typing effect */
+            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
+            $('#typingEffect').typeIt({
+                typeSpeed: 80
+            });
+
+            /* oppear effect */
+            $('.appear').Oppear({
+                transition : '1s',
+            });
             
             /* 슬라이더 */
             $('.bxslider').bxSlider({
@@ -415,11 +451,17 @@
                 $('.header').removeClass('header--nav-show');
             });
             
+            /* 구독 버튼 */
             $('#btnSubscribe').click(function(){
                 var inputValue = $('#subscribeValue').val();
                 alert(inputValue);
                 $('#subscribeValue').val('');
-            })
+            });
+
+            /* 화이트페이퍼 다운 */
+            $('#downloadPaper').click(function(){
+                window.open('/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf');
+            });
             
         });
 
