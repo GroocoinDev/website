@@ -153,6 +153,8 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
 .section-joy { background: #7A05EF; color: #F3F3F3; padding: 0 0 50px; }
 .joy--title { margin: 20px auto 0; text-align: center; }
+.joy--sub-title { margin-top: 20px; margin-bottom: 30px; text-align: center; font-size: 1.5em; }
+.joy--desc-sub.joy--desc { margin-bottom: 24px; font-size: 1em; border-left: 2px solid; padding-left: 24px; width: auto; font-weight: 500; }
 .joy--desc { line-height: 1.35em; font-weight: 200; width: 90%; margin-left: 5%; text-align: left; }
 .joy--desc-top { margin-bottom: 24px; }
 .joy--desc-em { font-weight: 600; }
@@ -338,13 +340,13 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
 
     .team--ul { width: 90%; margin: 0 auto; }
-    .team--li { position: relative; float: left; width: calc(25% - 15px); margin-right: 20px; margin-bottom: 20px; min-height: 306px; padding-bottom: 0; }
+    .team--li { position: relative; float: left; width: calc(25% - 15px); margin-right: 20px; margin-bottom: 20px; min-height: 310px; padding-bottom: 0; }
     .team--li:nth-child(2n) { margin-right: 20px; }
     .team--li:nth-child(4n) { margin-right: 0; }
     .team--profile { width: 80px; height: 80px; margin: 20px; }
     .team--name { padding-left: 20px; font-size: 1.2em; }
     .team--roll { padding-left: 20px; margin-top: 10px; font-size: 1em; }
-    .team--desc { display: block; margin: 30px 20px; line-height: 1.5em; }
+    .team--desc { display: block; margin: 24px 20px 0; line-height: 1.7em; font-size: 0.75em; }
 
 
     .section-dist--left { text-align: right; }
