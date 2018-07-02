@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,13 @@
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/images/open-graph.png" />
     <meta property="og:description" content="Beauty Content Social Media. Connect & Share your Billions of Grooming knowledge." />
-    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale" content="ko_KR" />
 
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
     <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/font.ko.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 </head>
@@ -39,9 +40,9 @@
                     <li><a href="#section-community">Community</a></li>
                 </ul>
                 <div class="header--lang">
-                    <a class="lang--current" href="javascript://">English</a>
+                    <a class="lang--current" href="javascript://">Korean</a>
                     <ul class="lang--ul">
-                        <li><a href="/ko.php">Korean</a></li>
+                        <li><a href="/">English</a></li>
                     </ul>
                 </div>
             </nav>
@@ -68,13 +69,19 @@
     <section class="section-two row">
         <div class="section-two--left d-w-50 m-w-100">
             <h3 class="section-two--label">Connect & Share<br/>Your Billions of Grooming<br/>Knowledge</h3>
-            <a class="btn btn--black mr-30" id="downloadPaper">White Paper</a>
+            <div class="mr-30">
+                <a class="btn btn--black btn--sm">White Paper</a>
+                <div class="section-two--papers">
+                    <a class="btn btn--white btn--sm mr-5" id="downloadPaper">English</a>
+                    <a class="btn btn--white btn--sm" id="downloadPaperKor">한국어</a>
+                </div>
+            </div>
         </div>
         <div class="section-two--right d-w-50 m-w-100">
-            <h3 class="section-two--label center">Join Our Mailing List</h3>
+            <h3 class="section-two--label center">Groocoin의 최신 뉴스를 구독하세요!</h3>
             <div class="input-btn">
-                <input id="subscribeValue" type="text" placeholder="Your Email Address" class="input-btn--input" />
-                <a class="btn btn--black input-btn--btn" id="btnSubscribe">Subscribe</a>
+                <input id="subscribeValue" type="text" placeholder="이메일 주소 입력" class="input-btn--input" />
+                <a class="btn btn--black input-btn--btn" id="btnSubscribe">구독하기</a>
             </div>
         </div>
     </section>
@@ -86,21 +93,21 @@
                 <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
+                    <p class="section-about--cont">Groocoin 프로젝트는 여러 소셜 미디어와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 뷰티 컨텐츠 소셜 미디어 플랫폼의 제작을 목표로 하고 있습니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">Why Groo?</h1>
-                    <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
+                    <p class="section-about--cont">소비자들은 광고 미디어의 홍수 속에서 자신에게 맞는 화장품, 메이크업 방법을 찾기 위한 노력을 하고 있으나, 소셜 미디어를 포함한 대부분의 플랫폼들에 올라오는 컨텐츠들은 소비자의 성향, 선호도, 연령 등에 비추어 객관적인 data를 제공하기 보다는 자사 제품의 우수성에만 초점을 맞추고 있습니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">How Groo?</h1>
-                    <p class="section-about--cont">The Groo.io Platform is allow to the consumers to autonomously create and share the contents to have the diversified evaluation feedback from different consumers</p>
+                    <p class="section-about--cont">Groo.io 플랫폼은 소비자들 스스로 컨텐츠를 생성, 공유하며 각 소비자들에 의한 다각적인 평가를 받을 수 있는 플랫폼입니다. </p>
                 </div>
             </div>
         </div>
@@ -113,23 +120,23 @@
             <h1 class="title center">What We Can Do?</h1>
             <ul class="slider">
                 <li class="slider--li">
-                    <h3 class="slider--h3">Mobile Ecosystem</h3>
-                    <p class="slider--p">Easy and Rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people. </p>
+                    <h3 class="slider--h3">모바일 생태계</h3>
+                    <p class="slider--p">다양한 사람들이 각자 보유하고 있는 메이크업, 화장품 정보를 쉽고 빠르게 공유할 수 있는 모바일 기반의 새로운 소셜 미디어 플랫폼입니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_0.png" alt="">
                 </li>
                 <li class="slider--li">
-                    <h3 class="slider--h3">Activity Rewards</h3>
-                    <p class="slider--p">The Activity Point is determined on the basis of the activities for posting of the contents, comments, up/down votes, participation in reporting, follow and others</p>
+                    <h3 class="slider--h3">플랫폼 활동 보상</h3>
+                    <p class="slider--p">Activity Point(Groo Point)는 소비자가 개인에 의한 특정 컨텐츠의 제작 혹은 해당 컨텐츠의 투표 및 reply를 통해 지급 받을 수 있습니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_1.png" alt="">
                 </li>
                 <li class="slider--li">
-                    <h3 class="slider--h3">Self-Advertisement</h3>
-                    <p class="slider--p">Groo.io Platform comes with the platform for Self-Advertisement. The individuals and companies can be allowed to carry the advertisement for specific products.</p>
+                    <h3 class="slider--h3">셀프 - 광고 서비스</h3>
+                    <p class="slider--p">Groo.io 플랫폼은 셀프 광고 플랫폼을 포함합니다. 개인 혹은 기업은 일정량의 Groocoin을 지불함으로써 특정제품에 관한 광고가 가능하게 된다.</p>
                     <img class="slider--img" src="assets/img/section_slide_2.png" alt="">
                 </li>
                 <li class="slider--li">
-                    <h3 class="slider--h3">Marketing Analytics</h3>
-                    <p class="slider--p">The data which can be utilized is planned to be extracted and supplied to the partnership companies in a safe way through the Private API based on the analysis of big data for user preferences</p>
+                    <h3 class="slider--h3">마케팅 분석</h3>
+                    <p class="slider--p">익명화된 사용자들의 메이크업, 선호 화장품의 Big data 분석을 통해 활용 가능한 데이터로 변환 및 추출하여 파트너 사들이 마케팅 참조 데이터로 활용이 가능한 Private API를 제작하여 제공할 예정입니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_3.png" alt="">
                 </li>
             </ul>
@@ -137,7 +144,7 @@
 
 
         <div class="section-roadmap appear" id="section-roadmap">
-            <h1 class="title center white">Roadmap</h1>
+            <h1 class="title center white">로드 맵</h1>
             
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
@@ -179,7 +186,7 @@
 
 
         <div class="section-dist appear" id="section-dist">
-            <h1 class="title center white">Token Distribution</h1>
+            <h1 class="title center white">토큰 분배</h1>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
                     <img src="assets/img/section_dist_graph.png" alt="Token Distribution Graph">
@@ -229,15 +236,15 @@
             <span class="joy--img-copyright2">Copyright© NCSOFT Corporation. <br> All Rights Reserved</span>
         </div>
         <div class="appear">
-            <h1 class="title white joy--title">The Joy of Activity</h1>
+            <h1 class="title white joy--title">플랫폼 활동의 즐거움!</h1>
             <h3 class="joy--sub-title add-mg-b ">Who We Are?</h3>
             <p class="joy--desc joy--desc-sub">
                 With 20 Milions+ of Users<br>
                 Over 60+ Countries<br>
                 No.1 Influencer on Music Arcade Game
             </p>
-            <p class="joy--desc joy--desc-top">Groo.io is a Multi Entertainment Platform that includes plenty of joyful contents for go beyond traditional social media platform activities that focused on creating and sharing content only, and that improve platform activity experience with pleasure.</p>
-            <p class="joy--desc">The main customers of the Groo.io platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
+            <p class="joy--desc joy--desc-top">Groo.io 는 컨텐츠 작성 및 공유에만 치중되어 있는 기존 플랫폼 활동에서 나아가, 플랫폼 활동 자체를 즐겁게 할 수 있는 여러 가지 요소들을 포함한 Multi Entertainment 플랫폼입니다.</p>
+            <p class="joy--desc">Groo.io 플랫폼의 주 고객은 여성들입니다. Groocoin 팀원들은 온라인 커뮤니티 기반 뮤직 아케이드 게임인 Audition, Love Beat의 핵심 개발진들로 구성되어 있으며, 기존 비즈니스 모델의 사례를 통해 주 고객층을 세심하게 배려하는 플랫폼 제작을 우선순위로 하고 있습니다.</p>
         </div>
     </section>
 
@@ -489,7 +496,19 @@
             $('#downloadPaper').click(function(){
                 window.open('/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf');
             });
-            
+
+            $('#downloadPaperKor').click(function(){
+                window.open('/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf');
+            });
+
+            $('.section-two--left').on('mouseenter', function(){
+                !$('.section-two--papers').hasClass('show') && $('.section-two--papers').addClass('show');
+            });
+
+            $('.section-two--left').on('mouseleave', function(){
+                $('.section-two--papers').hasClass('show') && $('.section-two--papers').removeClass('show');
+            });
+
         });
 
     </script>
