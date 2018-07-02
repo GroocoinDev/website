@@ -487,7 +487,7 @@
 
             /* 화이트페이퍼 다운 */
             $('#downloadPaper').click(function(){
-                window.open('/assets/whitepaper/180512_Groo Coin_Whitepaper_v1.0.pdf');
+                window.open('/assets/whitepaper/180627_Groo Coin_Whitepaper_EN.pdf');
             });
             
         });
