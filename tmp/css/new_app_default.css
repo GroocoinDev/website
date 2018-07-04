@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body { font-family: 'Noto Sans KR', sans-serif; }
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.gwatop-navbar_new {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	border-width: 0 0 1px;
+	z-index: 99;
+	min-height: 50px;
+	background:#fff;
+    box-sizing: border-box;
+}
+
+.gwatop-logo {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	text-align: center;
+	margin:0 auto;
+}
+
+.gwatop-alarm {
+	float:right;
+    width:40px;
+	height:50px;
+	z-index: 999;
+	background:#fff;
+}
+
+.gwatop-alarm:active {
+	background:#f5f5f5;
+}
+
+.gwatop-chat {
+	float:right;
+    width:40px;
+	height:50px;
+	z-index: 999;
+	background:#fff;
+}
+
+.gwatop-chat:active {
+	background:#f5f5f5;
+}
+
+.unread_chat_count {
+	position: absolute;
+	background: #3288ea;
+	color: #ffff00;
+	font-size: 7px;
+	border-radius: 10px;
+	padding: 3px;
+	min-width: 18px;
+	text-align: center;
+	top: 9px;
+	right: 46px;
+}
+
+.myfrofile-picture {
+    float:right;
+	width:40px;
+	height:50px;
+	z-index: 999;
+	margin-right:5px;
+}
+
+.Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.gwatop-subnavbar {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	width:100%;
+	height:40px;
+	padding-left:25px;
+	padding-right:25px;
+	background:#000;
+	opacity: 0;
+}
+
+.nav_title {
+	font-size:20px;
+	color:#444444;
+	font-weight: 500;
+	text-align:center;
+	line-height: 50px;
+	position: absolute !important;
+	width: 100%;
+}
+
+.gwatop-backbtn {
+	width:50px;
+	height:50px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+
+.gwatop-backbtn:active {
+	background:#f5f5f5;
+}
+
+.marked {
+	display:inline;
+	font-weight:400; 
+	background:url('../img/highlight_skyblue.png'); 
+	background-size:100% 80%; 
+	background-position:5px 13px; 
+	background-repeat:no-repeat;
+}
+
+.class-section {
+	width:25%;
+	border-right:1px solid #484848;
+	color:#fff;
+	font-size:13px;
+	opacity: 1;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+}
+
+.center {
+	position: relative;
+	top: 50%; 
+	transform: translateY(-50%);
+}
+
+.center_h {
+	position: relative;
+	left: 50%; 
+	transform: translateX(-50%);
+}
+
+.center_vh {
+	position: relative;
+	left: 50%;
+	top: 50%; 
+	transform: translate(-50%, -50%);
+}
