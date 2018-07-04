@@ -186,7 +186,7 @@
 				</div>
 			</div>
 			
-			<div class="btn" style="margin-top:25px; background:#f64789; width:calc(100% - 50px); margin-left:25px; margin-right:25px; height:50px; border-radius:5px; color:#fff; font-size:15px; line-height:30px; text-align:center;">
+			<div class="btn" style="margin-top:25px; margin-bottom:50px; background:#f64789; width:calc(100% - 50px); margin-left:25px; margin-right:25px; height:50px; border-radius:5px; color:#fff; font-size:15px; line-height:30px; text-align:center;">
 				후원하기 >
 			</div>
 		</div>
