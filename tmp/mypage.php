@@ -11,13 +11,14 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 		<script src="js/swipe.js"></script>
 		<script src="js/ripple.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
 
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 		<link rel="stylesheet" href="css/new_app_default.css">
 		<link rel="stylesheet" href="css/ripple.css">
-
+	
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -159,79 +160,60 @@
 	</head>
 	
 	<body>
-
-		<!-- leftbar -->
-		<div style="background:#f64789; width:80px; position:fixed; top:0; bottom:0; left:0;">
-			<img src="left_menu.png" style="width:80px; " onclick="location.href='mypage.php';" />
+		<div style=" position:fixed; width:100%;">
+			<img src="mypage_top.png" style="width:100%;"/>
 		</div>
 		
-		<div style=" margin-left:80px;">
-			<div class="topbar" style="position:fixed; top:0; height:150px; width:calc(100% - 80px); padding-top:20px; color:#fff; text-align:center; background:url('top.png'); background-size:100% 150px;">
-				<span style="font-size:20px;">BTS 공식 팬채널</span>
-				<div class="center_h" style="margin-top:10px; width:120px; border:1px solid #fff; border-radius:50px;">#BTS_Forever</div>
-				
-				<div id="banner" style="margin-top:20px; color:#b0b0b0;" onclick="location.href='donation.php';">
-					지하철역 광고 모금 시작<br>
-					압구정로데오역 전광판 광고 주간입니다.
-				</div>
-			</div>
-			<div class="subtopbar" style="width:calc(100% - 80px); font-size:20px; position:fixed; top:0; height:50px; line-height:50px; color:#fff; text-align:center; background:url('top.png'); background-size:100% 150px;">BTS 공식 팬채널</div>
-			<div style="margin-top:180px; margint-left:15px; ">
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-				<img class="post" src="1.png" style="width:100%;" />
-				<img class="post" src="2.png" style="width:100%;" />
-				<img class="post" src="3.png" style="width:100%;" />
-			</div>
+		<div style="height:45px; top:140px; background:#f64789; color:#fff; font-size:25px; padding-left:25px; position:fixed; width:100%;">
+			<div style="float:left; margin-left:5px; margin-top:9px; font-size:10px;">보유<br>GROO</div>
+			<div id="coin" style="float:left; margin-left:25px; line-height:45px;">0</div>
+			<div id="coin" style="float:left; margin-left:5px; line-height:45px; opacity:0.5; font-size:10px;">=</div>
+			<div style="float:left; margin-left:5px; margin-top:9px; font-size:10px; opacity:0.5;">KRW<br>120,486</div>
 			
-			<img id="hh" src="icon.png" style="position:absolute; top:300px; width:150px;"/>
+			<img class="center" src="mypage_btn.png" style="width:75px; height:27px; float:right; margin-right:15px;"/>
+		</div>
+		
+		<div style="padding-top:190px;">
+			<img src="mypage_1.png" style="width:100%;"/>
+			<img src="mypage_2.png" style="width:100%;" onclick="location.href='donation.php'" />
+			<img src="mypage_1.png" style="width:100%;"/>
+			<img src="mypage_2.png" style="width:100%;" onclick="location.href='donation.php'"/>
 		</div>
 
 		<script>
-            // 스크롤 처리
-            var navbar = 50;
-
-            $(window).scroll(function (event) {
-                var st = $(this).scrollTop();
-                if (st < 100) {
-                    $(".topbar").css({"opacity":1-(st/100)}).show();
-					$(".subtopbar").css({"opacity":0}).hide();
-                } else {
-                    $(".topbar").css({"opacity":"0"}).hide();
-
-					st = (st - 100) / 100 * 2;
-					if(st > 0.7) st = 1;
-					$(".subtopbar").css({"opacity":st}).show();
-                }
-            });
-
+			var mycoin = 310.0;
+            
 			$(document).ready(function(){
-				// 탑 nav 숨김
-				$(".subtopbar").hide();
-				$("#hh").hide();
-
-				// ripple setting
-				$("#banner").ripple();
+				$(".btn").ripple();
 				
-				$(".post").click(function(event){
-					x = event.pageX;
-					y = event.pageY;
-					$("#hh").css({"top": y-80, "left":x-80}).fadeIn().fadeOut();
+				$("#graph").animate({width: '77%'}, 700);
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+
+				// how many decimal places allows
+				var decimal_places = 2;
+				var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+
+				$('#coin').delay(600).animateNumber({ number: 310.00 * decimal_factor, numberStep: function(now, tween) {
+				  var floored_number = Math.floor(now) / decimal_factor,
+				  target = $(tween.elem);
+
+				  if (decimal_places > 0) {
+					  floored_number = floored_number.toFixed(decimal_places);
+				  }
+
+				  target.text(floored_number);
+				}}, 1500);
+				$("#persent").hide().delay(600).fadeIn();
+				
+				$("#cointxt").keyup(function(){
+					$("#before").text(Number($(this).val()).toFixed(2) + " GROO");
+					$("#after").text(Number(mycoin  - $(this).val()).toFixed(2) + " GROO");
 				});
 				
+				$(".btn").click(function(){
+					alert($("#cointxt").val() + " GROO를 후원했습니다!");
+					location.href='new_home.php';
+				});
 			});
 		</script>
 	</body>
