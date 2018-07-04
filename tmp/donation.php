@@ -160,9 +160,9 @@
 	</head>
 	
 	<body>
-		<div style="background:url('donation_bg.png'); height:325px; background-size:100% 100%;">
-			<div style="position:absolute; top:255px; left:25px; color:#b0b0b0; font-size:10px;">130 GROO / 15일 남음</div>
-			<div style="position:absolute; top:280px; width:100%; height:45px; background:#00000033">
+		<div style="background:url('donation_bg.png'); height:285px; background-size:100% 100%;">
+			<div style="position:absolute; top:215px; left:25px; color:#b0b0b0; font-size:10px;">130 GROO / 15일 남음</div>
+			<div style="position:absolute; top:240px; width:100%; height:45px; background:#00000033">
 				<div id="graph" style="width:0%; color:#fff; font-size:25px; background:#f64789; height:45px;">
 					<div id="coin" style="float:left; margin-left:25px; line-height:45px;">0 </div>
 					<div style="float:left; margin-left:5px; margin-top:9px; font-size:10px;">GROO<br>후원</div>
