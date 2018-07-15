@@ -108,6 +108,17 @@
 
 
 
+    <section class="section section-influencers" id="section-influencers">
+        <div class="contents appear">
+            <h1 class="title center white">Top <span class="pink">Influencers</span> <span class="mobile-only"><br/></span>Of This Week!</h1>
+            <div class="influencers--wrap">
+                <img src="assets/img/section_influncers_content.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="section section-slide">
         <div class="appear contents">
             <h1 class="title center">What We Can Do?</h1>
@@ -141,12 +152,8 @@
             
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
-                    <h3 class="roadmap-title">2018 1Q</h3>
+                    <h3 class="roadmap-title">2018 ~ 2Q</h3>
                     <p class="roadmap-body">Project Development</p>
-                </li>
-                <li class="roadmap-li">
-                    <h3 class="roadmap-title">2Q</h3>
-                    <p class="roadmap-body">&nbsp;</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
@@ -273,7 +280,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p10.png" alt="J.M Choi">
                 </div>
-                <div class="team--name">J.M Choi</div>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/underboychoi/">J.M Choi</a>
                 <div class="team--roll">Executive Project Manager</div>
                 <div class="team--desc">
                     Executive PM, Golfzone&Entertainment<br>
@@ -293,6 +300,19 @@
                     Senior Developer, JOYCITY<br>
                     Senior Developer, NEOWIZGAMES<br>
                     Senior Developer, JCE Entertainment
+                </div>
+            </li>
+            <li class="team--li">
+                <div class="team--profile">
+                    <img src="assets/img/p12.png" alt="Y.H Kim">
+                </div>
+                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/yang-whan-kim-49a953167">Y.H Kim</a>
+                <div class="team--roll">Business Development</div>
+                <div class="team--desc">
+                    Director, Captains<br>
+                    Project Manager, T3 Entertainment<br>
+                    Project Manager, BattleGame<br>
+                    Project Manager, HanbitSoft
                 </div>
             </li>
             <li class="team--li">
@@ -407,6 +427,7 @@
     <script src="assets/lib/typeit.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
     <script src="assets/lib/slick.min.js"></script>
+    <script src="assets/lib/lodash.min.js"></script>
     <script>
 
         $(document).ready(function () {
@@ -451,21 +472,31 @@
             });
             
             /* 슬라이더 */
+            var moveSlider = 0;
             $('.slider').slick({
                 dots: true,
             });
 
             /* 스크롤 위치에 따른 헤더 처리 */
             window.pageYOffset > 0 && $header.addClass('scroll');
-            $(window).on('scroll', function(){
+
+            $(window).on('scroll', _.throttle(function(){
                 var scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-            
+
                 if (scrollTop && scrollTop > 100 ) {
                     $header.addClass('scroll');
                 } else {
                     $header.hasClass('scroll') && $header.removeClass('scroll');
                 }
-            })
+
+                // 스크롤 이동 시 슬라이드 이동
+                if ($('.slider').offset().top > document.documentElement.scrollTop && document.documentElement.scrollTop > $('.slider').offset().top - 200) {
+                    if (moveSlider < 2) {
+                        moveSlider++;
+                        $('.slick-next').trigger('click');
+                    }
+                }
+            }, 100));
 
             /* 모바일 메뉴 */
             $('.header--mobile-menu').on('click', function(){
