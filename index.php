@@ -9,7 +9,7 @@
     <meta property="og:title" content="GROO Coin" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/images/open-graph.png" />
+    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png" />
     <meta property="og:description" content="Beauty Content Social Media. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="en_GB" />
 
