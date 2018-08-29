@@ -1,12 +1,17 @@
+<?
+	if(!isset($_GET['accesscode'])) {
+		header("Location: comingsoon/index.html");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GROO Coin</title>
+    <title>Groocoin</title>
     
-    <meta property="og:title" content="GROO Coin" />
+    <meta property="og:title" content="Groocoin" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png" />
