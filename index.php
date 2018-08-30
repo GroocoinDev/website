@@ -163,7 +163,7 @@
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">ICO Stage</p>
+                    <p class="roadmap-body">Demo Dapp Development</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
-                        <span class="section-dist--value"><span class="section-dist--total">Total</span>900,000,000</span>
+                        <span class="section-dist--value"><span class="section-dist--total">Total</span>30,000,000,000</span>
                         <span class="section-dist--unit">GROO</span>
                     </div>
                     <div class="section-dist--dist">

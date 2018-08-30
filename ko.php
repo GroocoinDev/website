@@ -162,7 +162,7 @@
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">ICO Stage</p>
+                    <p class="roadmap-body">Demo Dapp Development</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
@@ -198,7 +198,7 @@
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
-                        <span class="section-dist--value"><span class="section-dist--total">Total</span>900,000,000</span>
+                        <span class="section-dist--value"><span class="section-dist--total">Total</span>30,000,000,000</span>
                         <span class="section-dist--unit">GROO</span>
                     </div>
                     <div class="section-dist--dist">
@@ -408,7 +408,7 @@
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
                     <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
-                    <li><a href="#" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
+                    <li><a href="https://t.me/groocoin_announcement" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
                     <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
                 </ul>
             </div>
