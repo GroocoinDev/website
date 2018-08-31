@@ -1,3 +1,9 @@
+<?
+	if(!isset($_GET['accesscode'])) {
+		header("Location: comingsoon/index.html");
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
