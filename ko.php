@@ -164,32 +164,46 @@
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
                     <h3 class="roadmap-title">2018 ~ 2Q</h3>
-                    <p class="roadmap-body">Project Development</p>
+                    <p class="roadmap-body">프로젝트 개발</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">Demo Dapp Development</p>
+                    <p class="roadmap-body">
+						Groocoin 백서 1.0 출시<br>
+						스마트계약 개발
+					</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Alpha Test</p>
+                    <p class="roadmap-body">
+						첫 번째 Dapp(ViVi Screen) 데모 알파버전 출시<br>
+						API 스펙 공개 및 파트너십 확대<br>
+						&nbsp;
+					</p>
                 </li>
 
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2019 1Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Beta Test</p>
+                    <p class="roadmap-body">첫 번째 Dapp(ViVi Screen) 데모 베타버전 출시</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Officlal Launch</p>
+                    <p class="roadmap-body">첫 번째 Dapp(ViVi Screen) 공식 출시</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Mobile Application Launch</p>
+                    <p class="roadmap-body">두 번째 Dapp 개발 (추후 공지 예정)</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">Groo Analytics Closed Beta</p>
+                    <p class="roadmap-body">글로벌 버전 확장 출시 - 아시아권 국가<br>&nbsp;</p>
+                </li>
+				
+				<li class="roadmap-li year">
+                    <h3 class="roadmap-title">2020 2Q</h3>
+                    <p class="roadmap-body">
+						글로벌 버전 확장 출시 - 비 아시아권 국가
+					</p>
                 </li>
             </ul>
         </div>

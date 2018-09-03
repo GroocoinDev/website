@@ -159,32 +159,48 @@
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
                     <h3 class="roadmap-title">2018 ~ 2Q</h3>
-                    <p class="roadmap-body">Project Development</p>
+                    <p class="roadmap-body">
+						Project Development
+					</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">Demo Dapp Development</p>
+                    <p class="roadmap-body">
+						Groocoin White Paper 1.0<br>
+						Developing Smart Contract
+					</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Alpha Test</p>
+                    <p class="roadmap-body">
+						1st Dapp(ViVi Screen) Demo Alpha Launch<br>
+						Open API Spec and Partnership cooperation<br>
+						&nbsp;
+					</p>
                 </li>
 
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2019 1Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Beta Test</p>
+                    <p class="roadmap-body">1st Dapp(ViVi Screen) Beta Launch</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Officlal Launch</p>
+                    <p class="roadmap-body">1st Dapp(ViVi Screen) Officlal Launch</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">Groo.io Platform Mobile Application Launch</p>
+                    <p class="roadmap-body">2nd Dapp Development (To be announced)</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">Groo Analytics Closed Beta</p>
+                    <p class="roadmap-body">Global Launch - China, Japan and East Asia<br>&nbsp;</p>
+                </li>
+				
+				<li class="roadmap-li year">
+                    <h3 class="roadmap-title">2020 2Q</h3>
+                    <p class="roadmap-body">
+						Global Launch Phase 2 - Beyond Asia
+					</p>
                 </li>
             </ul>
         </div>
