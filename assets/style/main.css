@@ -317,7 +317,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
     .section-about--item { height: 350px; margin-bottom: 60px; width: 70%; margin-left: 15%; }
     .section-about--item > img { width: auto; height: 100%; float: left;}
-    .section-about--text { width: 40%; float: right; text-align: right; margin-top: 50px; }
+    .section-about--text { width: 40%; float: right; text-align: left; margin-top: 50px; }
     .section-about--item:nth-of-type(2n) > img { float: right; }
     .section-about--item:nth-of-type(2n) .section-about--text { float: left; text-align: left; }
 

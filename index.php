@@ -57,11 +57,11 @@
 
     <section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="1st Pre-Sale starts on July">1st Pre-Sale starts on July</h1>
+            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
         </div>
         <div id="clock" class="clock"></div>
         <div class="center">
-            <div class="btn btn--white">Upcoming!</div>
+            <div class="btn btn--white scrollbtn" href="#section-about">Read More</div>
         </div>
     </section>
 
@@ -92,21 +92,21 @@
                 <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">The Groocoin project aims to creation of the social media platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
+                    <p class="section-about--cont">The Groocoin project aims to creation of the advertising platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">Why Groo?</h1>
-                    <p class="section-about--cont">The consumers are starving to find out the cosmetics and makeup suitable for themselves but the contents presented in most of the platforms including the social media exhibit the features of corporate sponsorship</p>
+                    <p class="section-about--cont">The contents creators are starving to find out suitable advertising platform but contents presented in most of the advertising platforms including social media, they request very high cost for using their efficient product.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">How Groo?</h1>
-                    <p class="section-about--cont">The Groo.io Platform is allow to the consumers to autonomously create and share the contents to have the diversified evaluation feedback from different consumers</p>
+                    <p class="section-about--cont">The Groo Dapp Platform is provide equivalent cost of service to the contents creators, but their contents to have the diversified evaluation feedback from different consumers and get advantage in a impression.<br>Evaluated data is automatically recorded on the blockchain network anonymously and forward to contents creators for their contents feedback purpose.</p>
                 </div>
             </div>
         </div>
@@ -249,16 +249,18 @@
                 Over 60+ Countries<br>
                 No.1 Influencer on Music Arcade Game
             </p>
-            <p class="joy--desc joy--desc-top">Groo.io is a Multi Entertainment Platform that includes plenty of joyful contents for go beyond traditional social media platform activities that focused on creating and sharing content only, and that improve platform activity experience with pleasure.</p>
-            <p class="joy--desc">The main customers of the Groo.io platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
+            <p class="joy--desc joy--desc-top">Groo Dapps are Multi Entertainment Platforms that includes plenty of joyful contents for go beyond traditional advertising platform activities and that improve platform activity experience with pleasure.</p>
+            <p class="joy--desc">The main customers of the Groo Dapp platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
         </div>
     </section>
 
 
 
-    <!-- <section class="section section-partners">
+<!--
+     <section class="section section-partners">
         <h1 class="title center add-mg-b">Strategic Partners</h1>
-    </section> -->
+    </section> 
+-->
     <!--  -->
     <!--  -->
     <!-- partners 채우고 아래 inline-style 삭제 -->
@@ -373,7 +375,8 @@
                     KookMin Univ.
                 </div>
             </li>
-            <!-- <li class="team--li">
+<!--
+             <li class="team--li">
                 <div class="team--profile">
                     <img src="assets/img/p8.png" alt="Y.H Kong">
                 </div>
@@ -381,24 +384,29 @@
                 <div class="team--roll">Marketing Strategy</div>
                 <div class="team--desc">
                 </div>
-            </li> -->
+            </li> 
+-->
         </ul>
     </section>
 
 
 
-    <!-- <section class="section section-adviser appear">
+<!--
+     <section class="section section-adviser appear">
         <h1 class="title center white add-mg-b">Advisers</h1>
         <div class="adviser--outer center">
             <div class="adviser--inner"></div>
         </div>
-    </section> -->
+    </section> 
+-->
 
 
 
-    <!-- <section class="section section-creators bg-gray" id="section-creators">
+<!--
+     <section class="section section-creators bg-gray" id="section-creators">
         <h1 class="title center add-mg-b">Beauty Contents Creators</h1>
-    </section> -->
+    </section> 
+-->
     
     
     
@@ -408,7 +416,7 @@
             <div class="community--wrapper">
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
+                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
                     <li><a href="https://t.me/groocoin_info" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
                     <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
                 </ul>
@@ -457,13 +465,13 @@
 
 
             /* 메인 상단 타이머 */
-            $('#clock').countdown('2018/07/04 00:00:00', function (event) {
-                $(this).html(event.strftime(''
-                    + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
-                    + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
-                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
-                    + '<span>%S</span>'));
-            });
+//            $('#clock').countdown('2018/07/04 00:00:00', function (event) {
+//                $(this).html(event.strftime(''
+//                    + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
+//                    + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
+//                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
+//                    + '<span>%S</span>'));
+//            });
 
 
             /* typing effect */
@@ -508,7 +516,7 @@
             $('.header--mobile-menu').on('click', function(){
                 $('.header').toggleClass('header--nav-show');
             });
-            $('.header--nav--ul > li > a').on('click', function(){
+            $('.header--nav--ul > li > a, .scrollbtn').on('click', function(){
                 $root.animate({
                     scrollTop: $($(this).attr('href')).offset().top
                 }, 400);

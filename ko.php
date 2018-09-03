@@ -58,11 +58,11 @@
 
     <section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="1st Pre-Sale starts on July">1st Pre-Sale starts on July</h1>
+            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
         </div>
         <div id="clock" class="clock"></div>
         <div class="center">
-            <div class="btn btn--white">Upcoming!</div>
+            <div class="btn btn--white scrollbtn" href="#section-about">더 알아보기</div>
         </div>
     </section>
 
@@ -99,21 +99,21 @@
                 <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">Groocoin 프로젝트는 여러 소셜 미디어와 블로그에서 활동하는 Private Makeup Creator들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 육성 및 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 뷰티 컨텐츠 소셜 미디어 플랫폼의 제작을 목표로 하고 있습니다.</p>
+                    <p class="section-about--cont">Groocoin 프로젝트는 기업, 여러 소셜 미디어와 블로그에서 활동하는 콘텐츠 제작자 들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 뷰티 컨텐츠 광고 미디어 플랫폼의 제작을 목표로 하고 있습니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">Why Groo?</h1>
-                    <p class="section-about--cont">소비자들은 광고 미디어의 홍수 속에서 자신에게 맞는 화장품, 메이크업 방법을 찾기 위한 노력을 하고 있으나, 소셜 미디어를 포함한 대부분의 플랫폼들에 올라오는 컨텐츠들은 소비자의 성향, 선호도, 연령 등에 비추어 객관적인 data를 제공하기 보다는 자사 제품의 우수성에만 초점을 맞추고 있습니다.</p>
+                    <p class="section-about--cont">콘텐츠 제작자들은 본인에게 적절한 광고플랫폼을 찾기 위해 항상 노력을 하고 있으나, 소셜미디어를 포함한 대부분의 광고 플랫폼들은 그들의 효과적인 서비스를 이용하는데 많은 비용을 요구 합니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
                 <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">How Groo?</h1>
-                    <p class="section-about--cont">Groo.io 플랫폼은 소비자들 스스로 컨텐츠를 생성, 공유하며 각 소비자들에 의한 다각적인 평가를 받을 수 있는 플랫폼입니다. </p>
+                    <p class="section-about--cont">Groo Dapp 플랫폼은 콘텐츠 제작자에게 동일한 서비스 비용을 제공하지만, 해당 콘텐츠들은 소비자 들로부터 다양한 평가 및 피드백 등을 통해 콘텐츠의 광고 노출에서 이점을 얻게 됩니다.<br>소비자들의 평가 데이터들은 익명화된 상태로 블록체인 네트워크에 기록이 되며 콘텐츠 제작자들의 신규 콘텐츠 제작을 위한 피드백 용도로 전달이 됩니다.</p>
                 </div>
             </div>
         </div>
@@ -254,8 +254,8 @@
                 Over 60+ Countries<br>
                 No.1 Influencer on Music Arcade Game
             </p>
-            <p class="joy--desc joy--desc-top">Groo.io 는 컨텐츠 작성 및 공유에만 치중되어 있는 기존 플랫폼 활동에서 나아가, 플랫폼 활동 자체를 즐겁게 할 수 있는 여러 가지 요소들을 포함한 Multi Entertainment 플랫폼입니다.</p>
-            <p class="joy--desc">Groo.io 플랫폼의 주 고객은 여성들입니다. Groocoin 팀원들은 온라인 커뮤니티 기반 뮤직 아케이드 게임인 Audition, Love Beat의 핵심 개발진들로 구성되어 있으며, 기존 비즈니스 모델의 사례를 통해 주 고객층을 세심하게 배려하는 플랫폼 제작을 우선순위로 하고 있습니다.</p>
+            <p class="joy--desc joy--desc-top">Groo Dapp 은 전통적인 광고 플랫폼 활동에서 나아가, 플랫폼 활동 자체를 즐겁게 할 수 있는 여러 가지 요소들을 포함한 Multi Entertainment 플랫폼입니다.</p>
+            <p class="joy--desc">Groo Dapp 플랫폼의 주 고객은 여성들입니다. Groocoin 팀원들은 온라인 커뮤니티 기반 뮤직 아케이드 게임인 Audition, Love Beat의 핵심 개발진들로 구성되어 있으며, 기존 비즈니스 모델의 사례를 통해 주 고객층을 세심하게 배려하는 플랫폼 제작을 우선순위로 하고 있습니다.</p>
         </div>
     </section>
 
@@ -413,7 +413,7 @@
             <div class="community--wrapper">
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="https://discord.gg/Sfz7QVZ" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
+                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
                     <li><a href="https://t.me/groocoin_info" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
                     <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
                 </ul>
@@ -462,13 +462,13 @@
 
 
             /* 메인 상단 타이머 */
-            $('#clock').countdown('2018/07/04 00:00:00', function (event) {
-                $(this).html(event.strftime(''
-                    + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
-                    + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
-                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
-                    + '<span>%S</span>'));
-            });
+//            $('#clock').countdown('2018/07/04 00:00:00', function (event) {
+//                $(this).html(event.strftime(''
+//                    + '<span class="clock--bold">%d</span><span class="clock--days">DAYS</span>'
+//                    + '<span class="clock--bold">%H</span><span class="clock--dot">:</span>'
+//                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
+//                    + '<span>%S</span>'));
+//            });
 
 
             /* typing effect */
@@ -512,7 +512,7 @@
             $('.header--mobile-menu').on('click', function(){
                 $('.header').toggleClass('header--nav-show');
             });
-            $('.header--nav--ul > li > a').on('click', function(){
+            $('.header--nav--ul > li > a, .scrollbtn').on('click', function(){
                 $root.animate({
                     scrollTop: $($(this).attr('href')).offset().top
                 }, 400);
