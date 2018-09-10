@@ -40,8 +40,12 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 .title.add-mg-b { margin-bottom: 34px; }
 
 
-.section-main { height: 350px; position: relative; z-index: 2; color: #fff; width: 100%; overflow: hidden; -webkit-transform: translate3d(0,0,0); }
-.section-main:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -2;
+.section-main { 
+	height: 350px; position: relative; z-index: 2; color: #fff; width: 100%; overflow: hidden; -webkit-transform: translate3d(0,0,0); 
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/main_bg_2.jpg');  
+	background-position: center; background-size: cover; background-repeat: no-repeat;
+}
+.section-main.bg0:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -2;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url('../img/main_bg_2.jpg');  
     background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url('../img/main_bg_2.jpg');  
     background-position: center; background-size: auto 120%; background-repeat: no-repeat;
@@ -74,7 +78,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 .section-main .section-main--title { font-size: 2em; font-style: italic; font-weight: 400; width: 70%; position: relative; margin-top: 74px; margin-bottom: 24px; line-height: 1.3em; }
 .section-main--title:before { content: ''; position: absolute; height: 34px; top: 30%; left: 0; border-left: 1px solid #fff; margin-left: -20px; }
 .section-main--title:after { content: ''; position: absolute; height: 34px; top: 30%; right: 0; border-left: 1px solid #fff; margin-right: -20px; }
-.clock { font-style: italic; font-weight: 300; min-height: 68px; width: 100%; text-align: center; }
+.clock { font-style: italic; font-weight: 300; min-height: 40px; width: 100%; text-align: center; }
 .clock > span { font-size: 2.3em; margin: auto 2px; }
 .clock--bold { font-weight: bold; }
 .clock .clock--days { font-size: 1.1em; margin-right: 8px; margin-left: 4px; }
@@ -249,6 +253,51 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
 .m-w-100 { width: 100%; }
 
+/* 시계 */
+.clock {padding:30px 0px 30px 0px; color:#fff; }
+.clock > ul { width:100%; margin:0 auto; padding:0px; list-style:none; text-align:center; }
+.clock > ul > li { display:inline; font-size:3em; text-align:center; }
+#Date { font-size:16px; margin-top:15px; text-align:center; }
+#point { position:relative; -moz-animation:mymove 1s ease infinite; -webkit-animation:mymove 1s ease infinite; padding-left:10px; padding-right:10px; }
+
+/* Simple <a href="https://www.jqueryscript.net/animation/">Animation</a> */
+@-webkit-keyframes mymove {
+	0% {opacity:1.0;}
+	50% {opacity:0; text-shadow:none; }
+	100% {opacity:1.0;}	
+}
+
+@-moz-keyframes mymove {
+	0% {opacity:1.0;}
+	50% {opacity:0; text-shadow:none; }
+	100% {opacity:1.0;}	
+}
+
+.Lock-Section {
+	position:absolute;
+	width:100%;
+}
+
+/* 뷰티 콘텐츠 (Lock Screen) */
+.beauty-content1 {
+	width:80%; height:200px; 
+	margin-left:10%; margin-right:10%; 
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.06)), url('../img/main_bg_5.jpg');  
+	background-size: cover;
+	border-radius: 20px;
+	position:relative;
+}
+
+.beauty-content1 .title {
+	font-size:23px;
+	color:#fff;
+	position: absolute;
+    bottom: 0;
+	margin:30px;
+}
+
+.unlock_msg {text-align: center; font-size:18px; margin-top:15px; }
+
 /* desktop */
 @media (min-width: 800px) {
     .d-w-50 { width: 50%; flex: 0 0 50%; }
@@ -276,8 +325,12 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
     .footer { padding: 30px 20px; }
     .footer--copyright { float: right; }
 
-    .section-main { height: 500px; }
-    .section-main:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;  
+    .section-main {
+		height: 500px;
+		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/main_bg_2.jpg');  
+		background-position: center; background-size: cover; background-repeat: no-repeat;
+	}
+    .section-main.bg0:before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: -1;  
         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url('../img/main_bg_2.jpg');  
         background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), url('../img/main_bg_2.jpg');  
         background-position: center; background-size: cover; background-repeat: no-repeat;
@@ -324,7 +377,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
     .section-influencers { padding-top: 80px; }
     .influencers--wrap { padding: 30px 0 40px; }
-    .influencers--wrap > img { max-width: 50%; }
+    .influencers--wrap > img { max-width: 80%; }
 
 
     .section-slide { padding: 100px 0; }
@@ -393,9 +446,6 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
     .input-btn { max-width: 400px; }
 
-
-
-
-
+	.beauty-content1 {height:340px; }
 
 }

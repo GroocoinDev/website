@@ -226,15 +226,15 @@
                             <tbody>
                                 <tr>
                                     <td>Token sale</td>
-                                    <td>60%</td>
+                                    <td>50%</td>
                                 </tr>
                                 <tr>
                                     <td>Marketing</td>
-                                    <td>10%</td>
+                                    <td>15%</td>
                                 </tr>
                                 <tr>
                                     <td>Platform Rewards</td>
-                                    <td>10%</td>
+                                    <td>15%</td>
                                 </tr>
                                 <tr>
                                     <td>Team</td>

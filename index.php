@@ -56,13 +56,34 @@
 
 
     <section class="section section-main">
-        <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
-        </div>
-        <div id="clock" class="clock"></div>
-        <div class="center">
-            <div class="btn btn--white scrollbtn" href="#section-about">Read More</div>
-        </div>
+		<div class="Main-Section" style="display:none;">
+			<div class="section-main--title-wrap Aligner-item--top">
+				<h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
+			</div>
+			<div id="clock" class="clock"></div>
+			<div class="center">
+				<div class="btn btn--white scrollbtn" href="#section-about">Read More</div>
+			</div>
+		</div>
+		
+		<div class="Lock-Section">
+			<div class="clock">
+				<ul>
+					<li id="hours">00</li>
+					<li id="point">:</li>
+					<li id="min">00</li>
+				</ul>
+				<div id="Date"></div>
+			</div>
+			
+			<div class="beauty-content1" style="visibility:hidden;">
+				<div class="title">
+					How To Make Up Yourself Simple By Health Tips 24
+				</div>
+			</div>
+			
+			<div class="unlock_msg"> 〉&nbsp;&nbsp;slide to unlock</div>
+		</div>
     </section>
 
     <img src="assets/img/main_bg_1.jpg" alt="" style="display: none;">
@@ -116,14 +137,17 @@
 
     <section class="section section-influencers" id="section-influencers">
         <div class="contents appear">
-            <h1 class="title center white">Top <span class="pink">Influencers</span> <span class="mobile-only"><br/></span>Of This Week!</h1>
+            <h1 class="title center white">
+				The First Groo Dapp
+				<span class="mobile-only"><br/></span>
+				<span class="pink">"ViVi Screen"</span>
+			</h1>
             <div class="influencers--wrap">
                 <img src="assets/img/section_influncers_content.png" alt="">
             </div>
         </div>
     </section>
-
-
+	
 
     <section class="section section-slide">
         <div class="appear contents">
@@ -131,17 +155,17 @@
             <ul class="slider">
                 <li class="slider--li">
                     <h3 class="slider--h3">Mobile Ecosystem</h3>
-                    <p class="slider--p">Easy and Rapid sharing of the makeup cosmetic information retained respectively by the diverse types of people. </p>
+                    <p class="slider--p">Easy and Rapid checking of the Beauty Contents Trend information retained respectively by the diverse types of Companies / Influencers.</p>
                     <img class="slider--img" src="assets/img/section_slide_0.png" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">Activity Rewards</h3>
-                    <p class="slider--p">The Activity Point is determined on the basis of the activities for posting of the contents, comments, up/down votes, participation in reporting, follow and others</p>
+                    <p class="slider--p">The Activity rewards is determined on the basis of the activities for watching of advertising, up votes and subscribe content creator.</p>
                     <img class="slider--img" src="assets/img/section_slide_1.png" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">Self-Advertisement</h3>
-                    <p class="slider--p">Groo.io Platform comes with the platform for Self-Advertisement. The individuals and companies can be allowed to carry the advertisement for specific products.</p>
+                    <p class="slider--p">Groo Dapp comes with the platform for Self-Advertisement. The Each contents creators and companies can be allowed to carry their advertising on Self-Advertisement platform for subscribed by Dapp users.</p>
                     <img class="slider--img" src="assets/img/section_slide_2.png" alt="">
                 </li>
                 <li class="slider--li">
@@ -223,15 +247,15 @@
                             <tbody>
                                 <tr>
                                     <td>Token sale</td>
-                                    <td>60%</td>
+                                    <td>50%</td>
                                 </tr>
                                 <tr>
                                     <td>Marketing</td>
-                                    <td>10%</td>
+                                    <td>15%</td>
                                 </tr>
                                 <tr>
                                     <td>Platform Rewards</td>
-                                    <td>10%</td>
+                                    <td>15%</td>
                                 </tr>
                                 <tr>
                                     <td>Team</td>
@@ -477,7 +501,7 @@
                     }
                     $('.section-main').addClass('bg' + currentBg[currentBgIndex]);
                 }).fadeTo(2000, 1);
-            }, 10000);
+            }, 4500);
 
 
             /* 메인 상단 타이머 */
@@ -489,13 +513,39 @@
 //                    + '<span>%S</span>'));
 //            });
 
+			// 시계
+			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+			var newDate = new Date();
+			newDate.setDate(newDate.getDate());
+			$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
 
-            /* typing effect */
-            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
-            $('#typingEffect').typeIt({
-                typeSpeed: 80
-            });
+			setInterval( function() {
+				var minutes = new Date().getMinutes();
+				$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+				}, 1000);
 
+			setInterval( function() {
+				var hours = new Date().getHours();
+				$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+				}, 1000);
+
+			$(".beauty-content1").css("visibility", "visible").fadeIn(1000);
+			setTimeout(function(){
+				$(".Lock-Section").animate({
+					left: '-' + $(this).width() + 'px'
+				}, 500, function() {
+					// Animation complete.
+					$(".Main-Section").css("display", "block").fadeIn();
+					
+					/* typing effect */
+					// https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
+					$('#typingEffect').typeIt({
+						typeSpeed: 80
+					});
+				});
+			}, 4000);
+			
             /* oppear effect */
             $('.appear').Oppear({
                 transition : '1s',
