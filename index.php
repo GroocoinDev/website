@@ -54,38 +54,16 @@
         </div>
     </header>
 
-
-    <section class="section section-main">
-		<div class="Main-Section" style="display:none;">
-			<div class="section-main--title-wrap Aligner-item--top">
-				<h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
-			</div>
-			<div id="clock" class="clock"></div>
-			<div class="center">
-				<div class="btn btn--white scrollbtn" href="#section-about">Read More</div>
-			</div>
-		</div>
-		
-		<div class="Lock-Section">
-			<div class="clock">
-				<ul>
-					<li id="hours">00</li>
-					<li id="point">:</li>
-					<li id="min">00</li>
-				</ul>
-				<div id="Date"></div>
-			</div>
-			
-			<div class="beauty-content1" style="visibility:hidden;">
-				<div class="title">
-					How To Make Up Yourself Simple By Health Tips 24
-				</div>
-			</div>
-			
-			<div class="unlock_msg"> 〉&nbsp;&nbsp;slide to unlock</div>
-		</div>
+	<section class="section section-main">
+        <div class="section-main--title-wrap Aligner-item--top">
+            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
+        </div>
+        <div id="clock" class="clock"></div>
+        <div class="center">
+            <div class="btn btn--white scrollbtn" href="#section-about">Read More</div>
+        </div>
     </section>
-
+	
     <img src="assets/img/main_bg_1.jpg" alt="" style="display: none;">
     <img src="assets/img/main_bg_2.jpg" alt="" style="display: none;">
     <img src="assets/img/main_bg_3.jpg" alt="" style="display: none;">
@@ -138,12 +116,17 @@
     <section class="section section-influencers" id="section-influencers">
         <div class="contents appear">
             <h1 class="title center white">
-				The First Groo Dapp
+				The First
 				<span class="mobile-only"><br/></span>
-				<span class="pink">"ViVi Screen"</span>
+				Groo Platform
 			</h1>
             <div class="influencers--wrap">
-                <img src="assets/img/section_influncers_content.png" alt="">
+				<span class="pc-only">
+                	<img src="assets/img/section_viviscreen_content_pc.png" alt="" style="max-width:90%;">
+				</span>
+				<span class="mobile-only">
+					<img src="assets/img/section_viviscreen_content_mobile.png" alt=""  style="width:90%;">
+				</span>
             </div>
         </div>
     </section>
@@ -512,39 +495,12 @@
 //                    + '<span class="clock--bold">%M</span><span class="clock--dot">:</span>'
 //                    + '<span>%S</span>'));
 //            });
-
-			// 시계
-			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
-			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-			var newDate = new Date();
-			newDate.setDate(newDate.getDate());
-			$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-
-			setInterval( function() {
-				var minutes = new Date().getMinutes();
-				$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
-				}, 1000);
-
-			setInterval( function() {
-				var hours = new Date().getHours();
-				$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
-				}, 1000);
-
-			$(".beauty-content1").css("visibility", "visible").fadeIn(1000);
-			setTimeout(function(){
-				$(".Lock-Section").animate({
-					left: '-' + $(this).width() + 'px'
-				}, 500, function() {
-					// Animation complete.
-					$(".Main-Section").css("display", "block").fadeIn();
-					
-					/* typing effect */
-					// https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
-					$('#typingEffect').typeIt({
-						typeSpeed: 80
-					});
-				});
-			}, 4000);
+			
+			/* typing effect */
+            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
+            $('#typingEffect').typeIt({
+                typeSpeed: 80
+            });
 			
             /* oppear effect */
             $('.appear').Oppear({

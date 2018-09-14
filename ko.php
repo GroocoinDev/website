@@ -120,16 +120,24 @@
     </section>
 
 
-    <section class="section section-influencers" id="section-influencers">
+	<section class="section section-influencers" id="section-influencers">
         <div class="contents appear">
-            <h1 class="title center white">Top <span class="pink">Influencers</span> <span class="mobile-only"><br/></span>Of This Week!</h1>
+            <h1 class="title center white">
+				The First
+				<span class="mobile-only"><br/></span>
+				Groo Platform
+			</h1>
             <div class="influencers--wrap">
-                <img src="assets/img/section_influncers_content.png" alt="">
+				<span class="pc-only">
+                	<img src="assets/img/section_viviscreen_content_pc_ko.png" alt="" style="max-width:90%;">
+				</span>
+				<span class="mobile-only">
+					<img src="assets/img/section_viviscreen_content_mobile_ko.png" alt=""  style="width:90%;">
+				</span>
             </div>
         </div>
     </section>
-
-
+	
     <section class="section section-slide">
         <div class="appear contents">
             <h1 class="title center">What We Can Do?</h1>
