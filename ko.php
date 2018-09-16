@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="assets/style/font.ko.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 
@@ -605,6 +606,12 @@
             $('.section-two--left').on('mouseleave', function(){
                 $('.section-two--papers').hasClass('show') && $('.section-two--papers').removeClass('show');
             });
+			
+			$('input[type="text"]').keydown(function() {
+				if (event.keyCode === 13) {
+					event.preventDefault();
+				}
+			});
 
         });
 
@@ -612,13 +619,13 @@
 			var inputValue = $('#subscribeValue').val();
 			if(inputValue == '') {
 				alert('이메일 주소를 입력해주세요.');
-				return false;
+				return;
 			}
 			
 			var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 			if(exptext.test(inputValue) == false){
 				alert("유효하지 않은 이메일 주소입니다.");
-				return false;
+				return;
 			}
 			document.subscribe.submit();
 		}
