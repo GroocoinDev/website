@@ -1,4 +1,27 @@
 <?php
+	if(isset($_POST['subscribe_Email'])) {
+		
+		if(isset($_POST['g-recaptcha-response'])){
+			$captcha=$_POST['g-recaptcha-response'];
+		}
+
+		if(!$captcha) {
+			echo '<script>alert("Sorry, No Captcha Data");</script>';
+		}
+
+		$secretKey = "6LeNfHAUAAAAANq4kPbK9uuUua9RjSVwSzjhPwtV";
+		$ip = $_SERVER['REMOTE_ADDR'];
+
+		$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+		$responseKeys = json_decode($response,true);
+
+		if(intval($responseKeys["success"]) !== 1) {
+			echo '<script>alert("Sorry, Captcha Test Fail");</script>';
+		} else {
+			echo '<script>alert("Thank you for subscribe");</script>';
+		}
+	}
+	
     if(!isset($_GET['accesscode'])) {
         header("Location: comingsoon/index.html");
         exit;
@@ -27,6 +50,7 @@
     <link rel="stylesheet" href="assets/style/main.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 
@@ -85,8 +109,15 @@
         <div class="section-two--right d-w-50 m-w-100">
             <h3 class="section-two--label center">Join Our Mailing List</h3>
             <div class="input-btn">
-                <input id="subscribeValue" type="text" placeholder="Your Email Address" class="input-btn--input" />
-                <a class="btn btn--black input-btn--btn" id="btnSubscribe">Subscribe</a>
+				<form name="subscribe" method="post" style="margin:0px; padding:0px;">
+                	<input id="subscribeValue" name="subscribe_Email" type="text" placeholder="Your Email Address" class="input-btn--input" />
+					<button class="g-recaptcha"
+						data-sitekey="6LeNfHAUAAAAAGzFXgS3b0Ypz2aATlbgjJR0wTJe"
+						data-callback="formSubmit">
+					</button>
+				
+                	<a class="btn btn--black input-btn--btn" id="btnSubscribe">Subscribe</a>
+				</form>
             </div>
         </div>
     </section>
@@ -555,9 +586,7 @@
             
             /* 구독 버튼 */
             $('#btnSubscribe').click(function(){
-                var inputValue = $('#subscribeValue').val();
-                alert(inputValue);
-                $('#subscribeValue').val('');
+				formSubmit();
             });
 
             /* 화이트페이퍼 다운 */
@@ -567,6 +596,21 @@
             });
             
         });
+		
+		function formSubmit() {
+			var inputValue = $('#subscribeValue').val();
+			if(inputValue == '') {
+				alert('Please input Email address.');
+				return false;
+			}
+			
+			var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+			if(exptext.test(inputValue) == false){
+				alert("Invaild Email address");
+				return false;
+			}
+			document.subscribe.submit();
+		}
 
     </script>
 

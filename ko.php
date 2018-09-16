@@ -92,8 +92,15 @@
         <div class="section-two--right d-w-50 m-w-100">
             <h3 class="section-two--label center">Groocoin의 최신 뉴스를 구독하세요!</h3>
             <div class="input-btn">
-                <input id="subscribeValue" type="text" placeholder="이메일 주소 입력" class="input-btn--input" />
-                <a class="btn btn--black input-btn--btn" id="btnSubscribe">구독하기</a>
+				<form name="subscribe" method="post" style="margin:0px; padding:0px;">
+                	<input id="subscribeValue" name="subscribe_Email" type="text" placeholder="이메일 주소 입력" class="input-btn--input" />
+					<button class="g-recaptcha"
+						data-sitekey="6LeNfHAUAAAAAGzFXgS3b0Ypz2aATlbgjJR0wTJe"
+						data-callback="formSubmit">
+					</button>
+				
+                	<a class="btn btn--black input-btn--btn" id="btnSubscribe">구독하기</a>
+				</form>
             </div>
         </div>
     </section>
@@ -550,9 +557,7 @@
             
             /* 구독 버튼 */
             $('#btnSubscribe').click(function(){
-                var inputValue = $('#subscribeValue').val();
-                alert(inputValue);
-                $('#subscribeValue').val('');
+                formSubmit();
             });
 
             /* 화이트페이퍼 다운 */
@@ -575,6 +580,21 @@
             });
 
         });
+
+		function formSubmit() {
+			var inputValue = $('#subscribeValue').val();
+			if(inputValue == '') {
+				alert('이메일 주소를 입력해주세요.');
+				return false;
+			}
+			
+			var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+			if(exptext.test(inputValue) == false){
+				alert("유효하지 않은 이메일 주소입니다.");
+				return false;
+			}
+			document.subscribe.submit();
+		}
 
     </script>
 
