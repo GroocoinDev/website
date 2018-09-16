@@ -1,8 +1,10 @@
-<?
-	if(!isset($_GET['accesscode'])) {
-		header("Location: comingsoon/index.html");
-		exit;
-	}
+<?php
+    if(!isset($_GET['accesscode'])) {
+        header("Location: comingsoon/index.html");
+        exit;
+    }
+
+	include_once("device_check.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +17,8 @@
     <meta property="og:title" content="Groocoin" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png" />
-    <meta property="og:description" content="Beauty Content Social Media. Connect & Share your Billions of Grooming knowledge." />
+    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
+    <meta property="og:description" content="Beauty Advertising Meets Blockchain. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="en_GB" />
 
     <link rel="stylesheet" href="assets/style/reset.css">
@@ -56,7 +58,12 @@
 
 	<section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
+            <h1 class="section-main--title center" id="typingEffect">
+				<? if(!is_Mobile()) { ?>
+					<img id="logo" src="assets/img/logo.png" alt="GROO Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Groocoin</span><br>
+				<? } ?>
+				Beauty Advertising Meets Blockchain
+			</h1>
         </div>
         <div id="clock" class="clock"></div>
         <div class="center">
@@ -139,7 +146,7 @@
                 <li class="slider--li">
                     <h3 class="slider--h3">Mobile Ecosystem</h3>
                     <p class="slider--p">Easy and Rapid checking of the Beauty Contents Trend information retained respectively by the diverse types of Companies / Influencers.</p>
-                    <img class="slider--img" src="assets/img/section_slide_0.png" alt="">
+                    <img class="slider--img" src="assets/img/section_slide_0.png?v=1" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">Activity Rewards</h3>
@@ -218,7 +225,7 @@
             <h1 class="title center white">Token Distribution</h1>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
-                    <img src="assets/img/section_dist_graph.png" alt="Token Distribution Graph">
+                    <img src="assets/img/section_dist_graph.png?v=1" alt="Token Distribution Graph">
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
@@ -299,7 +306,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/wonmoon-sim-5637875a/">W.M Sim</a>
                 <div class="team--roll">CEO</div>
                 <div class="team--desc">
-                    Dev Director, NURIDA (present)<br>
+                    Dev Director, NURIDA<br>
                     CEO, BEATRAIN<br>
                     Dev Director, Crazy Diamond<br>
                     Design Director, T3 Entertainment<br>
@@ -353,7 +360,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/jangjungkyu">J.K Jang</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
-                    System Engineer, eBay Korea (present)<br>
+                    System Engineer, eBay Korea<br>
                     Software Developer, Samsung<br>
                     Android Developer, Vital Hint<br>
                     <!-- Software Developer, APPKNOT<br> -->
@@ -367,7 +374,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/sean-jo-18156a6a">Sean Jo</a>
                 <div class="team--roll">Operations Manager</div>
                 <div class="team--desc">
-                    CSO, HSM (present)<br>
+                    CSO, HSM<br>
                     B2B Coordinator, EC21<br>
                     B2B Coordinator, KITA<br>
                     Dankook Univ.
@@ -380,7 +387,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112">H.C Kim</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
-                    Web Developer, ANYFIVE (present)<br>
+                    Web Developer, ANYFIVE<br>
                     Web Developer, LG CNS<br>
                     Cloud Architect, Oracle<br>
                     IT Security Engineer, KISA
@@ -439,7 +446,7 @@
             <div class="community--wrapper">
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
+<!--                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>-->
                     <li><a href="https://t.me/groocoin_info" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
                     <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
                 </ul>
@@ -453,14 +460,17 @@
     <footer class="footer">
         <div class="contents">
             <div class="footer--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin logo"></a></div>
-            <div class="footer--copyright">Copyright © 2018 All Rights Reserved</div>
+            <div class="footer--copyright">
+				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
+				Copyright © 2018 All Rights Reserved
+			</div>
         </div>
     </footer>    
 
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="assets/lib/jquery.countdown.min.js"></script>
+<!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
     <script src="assets/lib/typeit.min.js"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
     <script src="assets/lib/slick.min.js"></script>
@@ -497,10 +507,8 @@
 //            });
 			
 			/* typing effect */
-            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
-            $('#typingEffect').typeIt({
-                typeSpeed: 80
-            });
+			$("#logo").show()
+			new TypeIt('#typingEffect');
 			
             /* oppear effect */
             $('.appear').Oppear({

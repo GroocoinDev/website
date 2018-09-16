@@ -1,8 +1,10 @@
-<?
+<?php
 	if(!isset($_GET['accesscode'])) {
-		header("Location: comingsoon/index.html");
-		exit;
-	}
+        header("Location: comingsoon/index.html");
+        exit;
+    }
+
+	include_once("device_check.php");
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,13 +12,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GROO Coin</title>
+    <title>Groocoin</title>
     
-    <meta property="og:title" content="GROO Coin" />
+    <meta property="og:title" content="Groocoin" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png" />
-    <meta property="og:description" content="Beauty Content Social Media. Connect & Share your Billions of Grooming knowledge." />
+    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
+    <meta property="og:description" content="Beauty Advertising Meets Blockchain. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="ko_KR" />
 
     <link rel="stylesheet" href="assets/style/reset.css">
@@ -55,10 +57,14 @@
         </div>
     </header>
 
-
     <section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
-            <h1 class="section-main--title center" id="typingEffect" data-typeit-whattotype="GROO COIN Beauty Advertising Meets Blockchain">GROO COIN<br/>Beauty Advertising Meets Blockchain</h1>
+            <h1 class="section-main--title center" id="typingEffect">
+				<? if(!is_Mobile()) { ?>
+					<img id="logo" src="assets/img/logo.png" alt="GROO Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Groocoin</span><br>
+				<? } ?>
+				Beauty Advertising Meets Blockchain
+			</h1>
         </div>
         <div id="clock" class="clock"></div>
         <div class="center">
@@ -123,9 +129,9 @@
 	<section class="section section-influencers" id="section-influencers">
         <div class="contents appear">
             <h1 class="title center white">
-				The First
+				첫 번째
 				<span class="mobile-only"><br/></span>
-				Groo Platform
+				Groo 플랫폼
 			</h1>
             <div class="influencers--wrap">
 				<span class="pc-only">
@@ -144,17 +150,17 @@
             <ul class="slider">
                 <li class="slider--li">
                     <h3 class="slider--h3">모바일 생태계</h3>
-                    <p class="slider--p">다양한 사람들이 각자 보유하고 있는 메이크업, 화장품 정보를 쉽고 빠르게 공유할 수 있는 모바일 기반의 새로운 소셜 미디어 플랫폼입니다.</p>
-                    <img class="slider--img" src="assets/img/section_slide_0.png" alt="">
+                    <p class="slider--p">다양한 기업, 개인 광고주들이 희망하는 뷰티 컨텐츠 트렌드 정보를 쉽고 빠르게 신청/시청 할 수 있는 신개념 광고 플랫폼 입니다.</p>
+                    <img class="slider--img" src="assets/img/section_slide_0.png?v=1" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">플랫폼 활동 보상</h3>
-                    <p class="slider--p">Activity Point(Groo Point)는 소비자가 개인에 의한 특정 컨텐츠의 제작 혹은 해당 컨텐츠의 투표 및 reply를 통해 지급 받을 수 있습니다.</p>
+                    <p class="slider--p">활동 보상은 각각의 앱 사용자가 특정 광고 컨텐츠의 시청, up  votes 혹은 해당 광고주의 채널을 구독함으로써 산정됩니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_1.png" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">셀프 - 광고 서비스</h3>
-                    <p class="slider--p">Groo.io 플랫폼은 셀프 광고 플랫폼을 포함합니다. 개인 혹은 기업은 일정량의 Groocoin을 지불함으로써 특정제품에 관한 광고가 가능하게 된다.</p>
+                    <p class="slider--p">Groo Dapp 서비스는 기업, 개인 광고주들의 광고 컨텐츠를 모아서 관리할 수 있는 Self-Advertisement 플랫폼을 제공 합니다. 해당 플랫폼은 앱 사용자들에 의해 구독이 가능하며 광고 컨텐츠 뿐만이 아니라 개인의 플랫폼에 의한 광고 효과를 기대할 수 있습니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_2.png" alt="">
                 </li>
                 <li class="slider--li">
@@ -222,34 +228,34 @@
             <h1 class="title center white">토큰 분배</h1>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
-                    <img src="assets/img/section_dist_graph.png" alt="Token Distribution Graph">
+                    <img src="assets/img/section_dist_graph.png?v=1" alt="Token Distribution Graph">
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
-                        <span class="section-dist--value"><span class="section-dist--total">Total</span>30,000,000,000</span>
+                        <span class="section-dist--value"><span class="section-dist--total">총 발행량</span>30,000,000,000</span>
                         <span class="section-dist--unit">GROO</span>
                     </div>
                     <div class="section-dist--dist">
                         <table class="section-dist--dist-table">
                             <tbody>
                                 <tr>
-                                    <td>Token sale</td>
+                                    <td>토큰 판매</td>
                                     <td>50%</td>
                                 </tr>
                                 <tr>
-                                    <td>Marketing</td>
+                                    <td>마케팅</td>
                                     <td>15%</td>
                                 </tr>
                                 <tr>
-                                    <td>Platform Rewards</td>
+                                    <td>플랫폼 보상</td>
                                     <td>15%</td>
                                 </tr>
                                 <tr>
-                                    <td>Team</td>
+                                    <td>개발팀</td>
                                     <td>15%</td>
                                 </tr>
                                 <tr>
-                                    <td>Advisors</td>
+                                    <td>어드바이저</td>
                                     <td>5%</td>
                                 </tr>
                             </tbody>
@@ -301,7 +307,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/wonmoon-sim-5637875a/">W.M Sim</a>
                 <div class="team--roll">CEO</div>
                 <div class="team--desc">
-                    Dev Director, NURIDA (present)<br>
+                    Dev Director, NURIDA<br>
                     CEO, BEATRAIN<br>
                     Dev Director, Crazy Diamond<br>
                     Design Director, T3 Entertainment<br>
@@ -355,7 +361,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/jangjungkyu">J.K Jang</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
-                    System Engineer, eBay Korea (present)<br>
+                    System Engineer, eBay Korea<br>
                     Software Developer, Samsung<br>
                     Android Developer, Vital Hint<br>
                     <!-- Software Developer, APPKNOT<br> -->
@@ -369,7 +375,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/sean-jo-18156a6a">Sean Jo</a>
                 <div class="team--roll">Operations Manager</div>
                 <div class="team--desc">
-                    CSO, HSM (present)<br>
+                    CSO, HSM<br>
                     B2B Coordinator, EC21<br>
                     B2B Coordinator, KITA<br>
                     Dankook Univ.
@@ -382,7 +388,7 @@
                 <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112">H.C Kim</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
-                    Web Developer, ANYFIVE (present)<br>
+                    Web Developer, ANYFIVE<br>
                     Web Developer, LG CNS<br>
                     Cloud Architect, Oracle<br>
                     IT Security Engineer, KISA
@@ -435,7 +441,7 @@
             <div class="community--wrapper">
                 <ul>
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
-                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>
+<!--                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>-->
                     <li><a href="https://t.me/groocoin_info" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
                     <li><a href="https://open.kakao.com/o/gsb5nyM" target="_blank"><h3>KakaoTalk</h3><img class="hover-scale" src="assets/img/icon-kakaotalk.svg" alt="KakaoTalk"></a></li>
                 </ul>
@@ -449,7 +455,10 @@
     <footer class="footer">
         <div class="contents">
             <div class="footer--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin logo"></a></div>
-            <div class="footer--copyright">Copyright © 2018 All Rights Reserved</div>
+            <div class="footer--copyright">
+				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
+				Copyright © 2018 All Rights Reserved
+			</div>
         </div>
     </footer>    
 
@@ -494,10 +503,8 @@
 
 
             /* typing effect */
-            // https://www.jqueryscript.net/demo/jQuery-Plugin-For-Customizable-Terminal-Text-Effect-TypeIt/
-            $('#typingEffect').typeIt({
-                typeSpeed: 80
-            });
+			$("#logo").show()
+			new TypeIt('#typingEffect');
 
             /* oppear effect */
             $('.appear').Oppear({
