@@ -1,10 +1,38 @@
 <?php
-	if(!isset($_GET['accesscode'])) {
-        header("Location: comingsoon/index.html");
-        exit;
-    }
+	include_once("inc/db_conn.php");
+	include_once("inc/device_check.php");
 
-	include_once("device_check.php");
+	if(isset($_POST['subscribe_Email'])) {
+		
+		if(isset($_POST['g-recaptcha-response'])){
+			$captcha=$_POST['g-recaptcha-response'];
+		}
+
+		$secretKey = "6LeNfHAUAAAAANq4kPbK9uuUua9RjSVwSzjhPwtV";
+		$ip = $_SERVER['REMOTE_ADDR'];
+
+		$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+		$responseKeys = json_decode($response,true);
+
+		if(intval($responseKeys["success"]) !== 1) {
+			echo '<script>alert("Sorry, Captcha Test Fail");</script>';
+		} else {
+			$email = addslashes($_POST['subscribe_Email']);
+
+			$sql="INSERT INTO subscribe (
+							ID
+							, EMAIL
+						)
+						VALUES (
+							NULL
+							, '". $email ."'
+						)";
+
+			$result = mysqli_query($db,$sql);
+			
+			echo '<script>alert("Thank you for subscribe");</script>';
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -190,14 +218,13 @@
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
                     <p class="roadmap-body">
-						Groocoin 백서 1.0 출시<br>
 						스마트계약 개발
 					</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
                     <p class="roadmap-body">
-						첫 번째 Dapp(ViVi Screen) 데모 알파버전 출시<br>
+						Groocoin 백서 1.0 출시<br>
 						API 스펙 공개 및 파트너십 확대<br>
 						&nbsp;
 					</p>

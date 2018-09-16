@@ -1,12 +1,11 @@
 <?php
+	include_once("inc/db_conn.php");
+	include_once("inc/device_check.php");
+
 	if(isset($_POST['subscribe_Email'])) {
 		
 		if(isset($_POST['g-recaptcha-response'])){
 			$captcha=$_POST['g-recaptcha-response'];
-		}
-
-		if(!$captcha) {
-			echo '<script>alert("Sorry, No Captcha Data");</script>';
 		}
 
 		$secretKey = "6LeNfHAUAAAAANq4kPbK9uuUua9RjSVwSzjhPwtV";
@@ -18,16 +17,22 @@
 		if(intval($responseKeys["success"]) !== 1) {
 			echo '<script>alert("Sorry, Captcha Test Fail");</script>';
 		} else {
+			$email = addslashes($_POST['subscribe_Email']);
+
+			$sql="INSERT INTO subscribe (
+							ID
+							, EMAIL
+						)
+						VALUES (
+							NULL
+							, '". $email ."'
+						)";
+
+			$result = mysqli_query($db,$sql);
+			
 			echo '<script>alert("Thank you for subscribe");</script>';
 		}
 	}
-	
-    if(!isset($_GET['accesscode'])) {
-        header("Location: comingsoon/index.html");
-        exit;
-    }
-
-	include_once("device_check.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +116,7 @@
             <div class="input-btn">
 				<form name="subscribe" method="post" style="margin:0px; padding:0px;">
                 	<input id="subscribeValue" name="subscribe_Email" type="text" placeholder="Your Email Address" class="input-btn--input" />
-					<button class="g-recaptcha"
+					<button id="submitbtn" class="g-recaptcha"
 						data-sitekey="6LeNfHAUAAAAAGzFXgS3b0Ypz2aATlbgjJR0wTJe"
 						data-callback="formSubmit">
 					</button>
@@ -211,14 +216,13 @@
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">3Q</h3>
                     <p class="roadmap-body">
-						Groocoin White Paper 1.0<br>
 						Developing Smart Contract
 					</p>
                 </li>
                 <li class="roadmap-li last">
                     <h3 class="roadmap-title">4Q</h3>
                     <p class="roadmap-body">
-						1st Dapp(ViVi Screen) Demo Alpha Launch<br>
+						Groocoin White Paper 1.0<br>
 						Open API Spec and Partnership cooperation<br>
 						&nbsp;
 					</p>
@@ -226,7 +230,9 @@
 
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2019 1Q</h3>
-                    <p class="roadmap-body">1st Dapp(ViVi Screen) Beta Launch</p>
+                    <p class="roadmap-body">
+						1st Dapp(ViVi Screen) Beta Launch
+					</p>
                 </li>
                 <li class="roadmap-li">
                     <h3 class="roadmap-title">2Q</h3>
@@ -586,7 +592,7 @@
             
             /* 구독 버튼 */
             $('#btnSubscribe').click(function(){
-				formSubmit();
+				$("#submitbtn").click();
             });
 
             /* 화이트페이퍼 다운 */
@@ -594,6 +600,12 @@
 				alert('Coming Soon');
                 //window.open('/assets/whitepaper/180627_Groo Coin_Whitepaper_EN.pdf');
             });
+			
+			$('input[type="text"]').keydown(function() {
+				if (event.keyCode === 13) {
+					event.preventDefault();
+				}
+			});
             
         });
 		
@@ -601,13 +613,13 @@
 			var inputValue = $('#subscribeValue').val();
 			if(inputValue == '') {
 				alert('Please input Email address.');
-				return false;
+				return;
 			}
 			
 			var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 			if(exptext.test(inputValue) == false){
 				alert("Invaild Email address");
-				return false;
+				return;
 			}
 			document.subscribe.submit();
 		}
