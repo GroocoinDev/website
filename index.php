@@ -508,7 +508,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
-    <script src="assets/lib/typeit.min.js"></script>
+    <script src="assets/lib/typeit.min.js?v=1"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
     <script src="assets/lib/slick.min.js"></script>
     <script src="assets/lib/lodash.min.js"></script>
