@@ -52,7 +52,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- 부트스트랩 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -64,7 +64,7 @@
         <div class="container">
             <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center;">
                 <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block;"></div>
-                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="document.form.submit();">Continue</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="javascript:FormSubmit();">Continue</button>
             </form>
         </div>
         <script>
@@ -73,7 +73,7 @@
                     alert("Please click 'I am not a robot' to vaild.");
                     return false;
                 } else {
-                    return true;
+                    $("form").submit();
                 }
             }
         </script>
