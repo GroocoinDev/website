@@ -52,7 +52,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- 부트스트랩 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -62,9 +62,9 @@
 
   <body>
         <div class="container">
-            <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();">
-                <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-"></div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Continue</button>
+            <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center;">
+                <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block;"></div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
             </form>
         </div>
         <script>
