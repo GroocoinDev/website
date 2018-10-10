@@ -34,6 +34,9 @@
                 $t_uid = addslashes($_POST['t_uid']);
                 $t_ref_uid = addslashes($_POST['t_ref_uid']);
                 
+                $sql="UPDATE groocoin SET BOT = 1, BOT_VALIDDATE = NOW() WHERE TELE_UID = ".$t_uid;
+                $result = mysqli_query($db, $sql);
+                
 				echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
                 echo '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">';
                 echo '<div class="alert alert-success"><strong>Validation Success!</strong></div>';
