@@ -1,6 +1,7 @@
 <?php
 	include("inc/db_conn.php");
     $tele_uid = addslashes($_GET['tele_uid']);
+    $access_token = addslashes($_GET['access_token']);
 
 	switch ($_SERVER['REQUEST_METHOD']) {
 		case "POST":
@@ -37,6 +38,11 @@
 				echo "<script>alert('Captcha Error'); history.back();</script>";
 				exit();
 			}
+        case "GET":
+            if( md5($tele_uid."GROOCOIN!") != $access_token ) {
+                echo "<script>alert('Access Token is not valid'); history.back();</script>";
+				exit();
+            }
 	}
 
 ?>
