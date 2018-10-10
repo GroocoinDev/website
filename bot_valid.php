@@ -62,7 +62,7 @@
 
   <body>
         <div class="container">
-            <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center;">
+            <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center; margin-top:20px;">
                 <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block;"></div>
                 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="javascript:FormSubmit();">Continue</button>
             </form>
