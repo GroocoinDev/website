@@ -40,7 +40,7 @@
 				echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
                 echo '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">';
                 echo '<div class="alert alert-success"><strong>Validation Success!</strong></div>';
-                echo '<button class="btn btn-primary btn-lg btn-block" onclick=\'javascript:location.href=\"https://t.me/groocoinbot?start='. $t_ref_uid .'\";\'>Please click this to continue</button>';
+                echo '<button class="btn btn-primary btn-lg btn-block" onclick=\'javascript:location.href="https://t.me/groocoinbot?start='. $t_ref_uid .'";\'>Click to continue</button>';
                 exit();
 			} else {
 				echo "<script>alert('Captcha Error'); history.back();</script>";
