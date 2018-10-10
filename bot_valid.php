@@ -1,5 +1,6 @@
 <?php
 	include("inc/db_conn.php");
+    $tele_uid = addslashes($_GET['tele_uid']);
 
 	switch ($_SERVER['REQUEST_METHOD']) {
 		case "POST":
@@ -28,8 +29,9 @@
 
 			if(strpos($response, 'true') > 1 || $dev) {
 				// 캡차 검증 성공
+                $t_uid = addslashes($_POST['t_uid']);
 				echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-                echo "<a href='https://t.me/groocoinbot'>Please click here to continue</a>";
+                echo "<a href='https://t.me/groocoinbot'>".$t_uid." Valid. Please click this to continue</a>";
                 exit();
 			} else {
 				echo "<script>alert('Captcha Error'); history.back();</script>";
@@ -61,16 +63,27 @@
   </head>
 
   <body>
-        <div class="container">
+        <div class="container" style="max-width:375px;">
+            <div class="jumbotron">
+                <h3>Groocoin</h3>
+                <p>Please click below checkbox for validation.</p> 
+            </div>
+            
+            <div class="form-group">
+                <label for="usr">Telegram UID :</label>
+                <input type="text" class="form-control" id="usr" text="<?=$tele_uid?>" disabled>
+            </div>
+                        
             <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center; margin-top:20px;">
-                <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block;"></div>
-                <button type="button" class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
+                <input type="hidden" class="form-control" name="t_uid" text="<?=$tele_uid?>">
+                <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block; margin-bottom:20px;"></div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
             </form>
         </div>
         <script>
             function FormSubmit() {
                 if (grecaptcha.getResponse() == ""){
-                    alert("Please click 'I am not a robot' to vaild.");
+                    alert("Please click 'I am not a robot' to valid.");
                     return false;
                 } else {
                     return true;
