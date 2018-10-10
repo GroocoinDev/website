@@ -1,6 +1,7 @@
 <?php
 	include("inc/db_conn.php");
     $tele_uid = addslashes($_GET['tele_uid']);
+    $tele_ref_uid = addslashes($_GET['tele_ref_uid']);
     $access_token = addslashes($_GET['access_token']);
 
 	switch ($_SERVER['REQUEST_METHOD']) {
@@ -31,10 +32,12 @@
 			if(strpos($response, 'true') > 1 || $dev) {
 				// 캡차 검증 성공
                 $t_uid = addslashes($_POST['t_uid']);
+                $t_ref_uid = addslashes($_POST['t_ref_uid']);
+                
 				echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
                 echo '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">';
                 echo '<div class="alert alert-success"><strong>Validation Success!</strong></div>';
-                echo '<button class="btn btn-primary btn-lg btn-block" onclick=\'javascript:location.href=\"https://t.me/groocoinbot\";\'>Please click this to continue</button>';
+                echo '<button class="btn btn-primary btn-lg btn-block" onclick=\'javascript:location.href=\"https://t.me/groocoinbot?start='. $t_ref_uid .'\";\'>Please click this to continue</button>';
                 exit();
 			} else {
 				echo "<script>alert('Captcha Error'); history.back();</script>";
@@ -84,6 +87,7 @@
                         
             <form class="form-signin" action="bot_valid.php" method="post" onsubmit="return FormSubmit();" style="width:100%; text-align: center; margin-top:20px;">
                 <input type="hidden" class="form-control" name="t_uid" value="<?=$tele_uid?>">
+                <input type="hidden" class="form-control" name="t_ref_uid" value="<?=$tele_ref_uid?>">
                 <div class="g-recaptcha" data-sitekey="6LeKSnQUAAAAAOc7qiMg1D6P2Wh4CwKlF9vGYYX-" style="display: inline-block; margin-bottom:20px;"></div>
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
             </form>

@@ -134,7 +134,7 @@
                 <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
                 <div class="section-about--text">
                     <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">The Groocoin project aims to creation of the advertising platform of beauty contents to consolidate the relevant contents dispersed throughout the whole world</p>
+                    <p class="section-about--cont">The Groocoin project aims to creation of the advertising platform of beauty contents to consolidate the relevant contents diversified throughout the whole world</p>
                 </div>
             </div>
             <div class="section-about--item appear">
