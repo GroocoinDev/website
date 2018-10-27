@@ -200,7 +200,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 .section-community .title { font-size: 1.5em; margin-bottom: 14px; margin-left: 5%; }
 .community--wrapper { display: inline-block; width: 90%; background: #FFFFFF; box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.18); border-radius: 4px; height: auto; padding: 0 0 8px; margin-left: 5%; }
 .community--wrapper > ul { width: 90%; margin: 0 auto; padding: 20px 0; }
-.community--wrapper > ul > li { width: calc(25% - 40px); padding:0px 20px 10px 20px; float: left; text-align: center; }
+.community--wrapper > ul > li { width: calc(25% - 20px); padding:0px 10px 10px 10px; float: left; text-align: center; }
 .community--wrapper > ul > li:nth-child(4) { margin-right: 0; }
 .community--wrapper > ul > li > a { margin-bottom: 10px; }
 .community--wrapper > ul > li > a > img { width: 80%; }
