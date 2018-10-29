@@ -73,11 +73,11 @@
                     <li><a href="#section-roadmap">Roadmap</a></li>
                     <li><a href="#section-dist">Distribution</a></li>
                     <li><a href="#section-team">Team</a></li>
-                    <li><a href="#section-creators">Creators</a></li>
+                    <li><a href="#section-partners">Partners</a></li>
                     <li><a href="#section-community">Community</a></li>
                 </ul>
                 <div class="header--lang">
-                    <a class="lang--current" href="javascript://">Korean</a>
+                    <a class="lang--current" href="javascript://">한국어</a>
                     <ul class="lang--ul">
                         <li><a href="/">English</a></li>
                     </ul>
@@ -112,7 +112,7 @@
             <h3 class="section-two--label">Connect & Share<br/>Your Billions of Grooming<br/>Knowledge</h3>
             <div class="mr-30">
                 <a class="btn btn--black btn--sm">White Paper</a>
-                <div class="section-two--papers">
+                <div class="section-two--papers show">
                     <a class="btn btn--white btn--sm mr-5" id="downloadPaper">English</a>
                     <a class="btn btn--white btn--sm" id="downloadPaperKor">한국어</a>
                 </div>
@@ -464,8 +464,8 @@
 
 
 
-    <!-- <section class="section section-creators bg-gray" id="section-creators">
-        <h1 class="title center add-mg-b">Beauty Contents Creators</h1>
+    <!-- <section class="section section-partners bg-gray" id="section-partners">
+        <h1 class="title center add-mg-b">파트너사</h1>
     </section> -->
     
     
@@ -475,7 +475,7 @@
             <h1 class="title">Community</h1>
             <div class="community--wrapper">
                 <ul>
-					<li><a href="mailto:support@groo.io" target="_blank"><h3>Email</h3><img class="hover-scale" src="assets/img/icon-email.png" alt="Email"></a></li>
+<!--					<li><a href="mailto:support@groo.io" target="_blank"><h3>Email</h3><img class="hover-scale" src="assets/img/icon-email.png" alt="Email"></a></li>-->
                     <li><a href="https://twitter.com/Groocoinio" target="_blank"><h3>Twitter</h3><img class="hover-scale" src="assets/img/icon-twitter.svg" alt="Twitter"></a></li>
 <!--                    <li><a href="javascript:alert('Coming Soon');" target="_blank"><h3>Discord</h3><img class="hover-scale" src="assets/img/icon-discord.svg" alt="discord"></a></li>-->
                     <li><a href="https://t.me/groocoin_official_en" target="_blank"><h3>Telegram</h3><img class="hover-scale" src="assets/img/icon-telegram.svg" alt="telegram"></a></li>
@@ -600,13 +600,13 @@
                 //window.open('/assets/whitepaper/180627_Groo Coin_Whitepaper_KO.pdf');
             });
 
-            $('.section-two--left').on('mouseenter', function(){
-                !$('.section-two--papers').hasClass('show') && $('.section-two--papers').addClass('show');
-            });
-
-            $('.section-two--left').on('mouseleave', function(){
-                $('.section-two--papers').hasClass('show') && $('.section-two--papers').removeClass('show');
-            });
+//            $('.section-two--left').on('mouseenter', function(){
+//                !$('.section-two--papers').hasClass('show') && $('.section-two--papers').addClass('show');
+//            });
+//
+//            $('.section-two--left').on('mouseleave', function(){
+//                $('.section-two--papers').hasClass('show') && $('.section-two--papers').removeClass('show');
+//            });
 			
 			$('input[type="text"]').keydown(function() {
 				if (event.keyCode === 13) {
