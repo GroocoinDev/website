@@ -110,11 +110,13 @@
         <div class="section-two--left d-w-50 m-w-100">
             <h3 class="section-two--label">Connect & Share<br/>Your Billions of Grooming<br/>Knowledge</h3>
 <!--            <a class="btn btn--black mr-30" id="downloadPaper">White Paper</a>-->
-            <a class="btn btn--black btn--sm">White Paper</a>
-            <div class="section-two--papers show">
-                <a class="btn btn--white btn--sm mr-5" id="downloadPaper">English</a>
-                <a class="btn btn--white btn--sm" id="downloadPaperKor">한국어</a>
-            </div>
+			<div class="mr-30">
+				<a class="btn btn--black btn--sm">White Paper</a>
+				<div class="section-two--papers show">
+					<a class="btn btn--white btn--sm mr-5" id="downloadPaper">English</a>
+					<a class="btn btn--white btn--sm" id="downloadPaperKor">한국어</a>
+            	</div>
+			</div>
         </div>
         <div class="section-two--right d-w-50 m-w-100">
             <h3 class="section-two--label center">Join Our Mailing List</h3>
