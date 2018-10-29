@@ -591,13 +591,13 @@
 
             /* 화이트페이퍼 다운 */
             $('#downloadPaper').click(function(){
-				alert('Coming Soon');
-                //window.open('/assets/whitepaper/180627_Groo Coin_Whitepaper_EN.pdf');
+				//alert('Coming Soon');
+                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf');
             });
 
             $('#downloadPaperKor').click(function(){
-				alert('Coming Soon');
-                //window.open('/assets/whitepaper/180627_Groo Coin_Whitepaper_KO.pdf');
+				//alert('Coming Soon');
+                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_KO.pdf');
             });
 
 //            $('.section-two--left').on('mouseenter', function(){
