@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
-    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/main.css?v=1">
     <link rel="stylesheet" href="assets/style/font.ko.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
@@ -76,7 +76,7 @@
                     <li><a href="#section-partners">Partners</a></li>
                     <li><a href="#section-community">Community</a></li>
                 </ul>
-                <div class="header--lang">
+                <div class="header--lang" style="width: 65px;">
                     <a class="lang--current" href="javascript://">한국어</a>
                     <ul class="lang--ul">
                         <li><a href="/">English</a></li>
@@ -464,9 +464,43 @@
 
 
 
-    <!-- <section class="section section-partners bg-gray" id="section-partners">
-        <h1 class="title center add-mg-b">파트너사</h1>
-    </section> -->
+    <section class="section section-partners bg-gray" id="section-partners">
+        <h1 class="title center white add-mg-b">파트너사</h1>
+		
+		<div class="partners--outer center appear">
+			<div class="partners--inner">
+				<div class="row" style="padding-bottom:50px;">
+					<div class="section--partner-logo d-w-30 m-w-100">
+						<img src="assets/img/logo_momedia.png" class="partner--logo"/>
+					</div>
+					<div class="section--information d-w-70 m-w-100 partners--information">
+						· Distributing Otter-box, Zagg, Mophie, iFrogz, X mini, House of Marely, iWalk, Skech<br/>
+						· Channels: Telecom operators, Duty free, APR, Samsung stores, Best mobile, Dynamica
+					</div>
+				</div>
+
+				<div class="row" style="padding-bottom:50px;">
+					<div class="section--partner-logo d-w-30 m-w-100">
+						<img src="assets/img/logo_onetto.png" class="partner--logo"/>
+					</div>
+					<div class="section--information d-w-70 m-w-100 partners--information">
+						· High-quality accessories for Smart phones.<br/>
+						· Onetto is a leader in the production and approved by partners (Samsung, LG, Philips)
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="section--partner-logo d-w-30 m-w-100">
+						<img src="assets/img/logo_smarttap.png" class="partner--logo"/>
+					</div>
+					<div class="section--information d-w-70 m-w-100 partners--information">
+						· One of the top sellers on Amazon.com for Car accessories<br/>
+						· Customer-focused, and to meet user needs through continual improvement. 
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
     
     
     
