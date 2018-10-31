@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
-    <link rel="stylesheet" href="assets/style/main.css?v=1">
+    <link rel="stylesheet" href="assets/style/main.css?v=2">
     <link rel="stylesheet" href="assets/style/font.ko.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
@@ -76,7 +76,7 @@
                     <li><a href="#section-partners">Partners</a></li>
                     <li><a href="#section-community">Community</a></li>
                 </ul>
-                <div class="header--lang" style="width: 65px;">
+                <div class="header--lang">
                     <a class="lang--current" href="javascript://">한국어</a>
                     <ul class="lang--ul">
                         <li><a href="/">English</a></li>
