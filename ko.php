@@ -261,6 +261,9 @@
 
         <div class="section-dist appear" id="section-dist">
             <h1 class="title center white">토큰 분배</h1>
+			<div style="margin-bottom: 34px; color: #fff; font-weight: 300;">
+				<span class="pc-only">스마트계약 주소 : <a href="https://etherscan.io/token/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1" target="_blank"  style="color:#fff; text-decoration: underline;">0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1</a></span>
+			</div>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
                     <img src="assets/img/section_dist_graph.png?v=1" alt="Token Distribution Graph">
@@ -465,7 +468,15 @@
 
 
     <section class="section section-partners bg-gray" id="section-partners">
-        <h1 class="title center white add-mg-b">파트너사</h1>
+		<h1 class="title center white add-mg-b">블록체인 파트너사</h1>
+		
+		<div class="center" style="width: 80%; max-width: 950px;">
+			<a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+			<a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+			<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+		</div>
+		
+        <h1 class="title center white add-mg-b" style="margin-top:100px;">전략 파트너사</h1>
 		
 		<div class="partners--outer center appear">
 			<div class="partners--inner">
