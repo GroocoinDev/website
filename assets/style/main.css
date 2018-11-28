@@ -148,7 +148,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
 
 .section-dist { display: inline-block; width: 100%; margin-top: 50px; text-align: center; }
-.section-dist .title { margin-bottom: 34px; }
+.section-dist .title { margin-bottom: 10px; }
 .section-dist--left {}
 .section-dist--left img { max-width: 70%; }
 .section-dist--right { color: #fff; font-weight: 200; }
