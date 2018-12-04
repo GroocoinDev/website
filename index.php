@@ -484,6 +484,11 @@
 			<a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
 			<a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
 			<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+			
+			<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+			<a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+<!--			<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
+<!--			<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.svg" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
 		</div>
 		
 		<h1 class="title center white add-mg-b" style="margin-top:100px;">Strategic Partners</h1>
