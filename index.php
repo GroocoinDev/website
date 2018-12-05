@@ -487,6 +487,8 @@
 			
 			<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
 			<a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+            <a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+            
 <!--			<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
 <!--			<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.svg" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
 		</div>
