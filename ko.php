@@ -480,7 +480,7 @@
             <a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
             
 <!--			<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
-<!--			<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.svg" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>-->
+			<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.svg" class="partner--logo" style="width:200px; margin:15px; vertical-align:middle;"></a>
 		</div>
 		
         <h1 class="title center white add-mg-b" style="margin-top:100px;">전략 파트너사</h1>
