@@ -97,7 +97,7 @@
 			<div id="account1" ></div>
         </div>
         <div style="float:left; width:50%;">
-            <iframe class="iframe" src="wallet.php?account=2" width="100%" height="150"></iframe>
+            <iframe class="iframe" src="wallet.php?account=2" width="1" height="1" style="opacity:0;"></iframe>
 			<div id="account2" ></div>
         </div>
         <div style="float:left; width:50%;">
