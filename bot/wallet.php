@@ -36,5 +36,5 @@
 </style>
 
 <script>
-	parent.setWallet($_GET['account'], "<?=$data?>");
+	parent.setWallet(<?=$_GET['account']?>, "<?=$data?>");
 </script>
