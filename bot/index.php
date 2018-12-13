@@ -36,6 +36,17 @@
                 padding: 0;
                 margin: 0;
             }
+			
+			table {
+				border-collapse: collapse;
+				float:left; 
+				font-size:13px;
+			}
+			td {
+				border: 1px solid #444444;
+				padding: 10px;
+				font-size:13px;
+			}
         </style>
     </head>
     
