@@ -1,0 +1,5 @@
+{
+    "require": {
+        "stocks_exchange/php-client": "^1.4"
+    }
+}
