@@ -64,12 +64,7 @@
     $data = $data. "<table width='70%'>";
     $data = $data. "<tr height='50' align='center' style='background:#b0b0b0;'><td width='200'>Time</td><td>Type</td><td width='200'>Quantity</td><td width='200'>Price</td></tr>";
     for ($i = 0; $i < 5; $i++) {
-        $data = $data. "<tr align='center' height='50'>
-                <td align='center'>". date("Y-m-d H:i:s", $data["result"][$i]["timestamp"] + $UTC9) ."</td>
-                <td>".$data["result"][$i]["type"]."</td>
-                <td align='right'>".number_format($data["result"][$i]["quantity"])." ".$coin."</td>
-                <td align='right'>".$data["result"][$i]["price"]. " ETH</td>
-              </tr>";
+        $data = $data. "<tr align='center' height='50'><td align='center'>". date("Y-m-d H:i:s", $data["result"][$i]["timestamp"] + $UTC9) ."</td><td>".$data["result"][$i]["type"]."</td><td align='right'>".number_format($data["result"][$i]["quantity"])." ".$coin."</td><td align='right'>".$data["result"][$i]["price"]. " ETH</td></tr>";
     }
     $data = $data. "</table>";
 ?>
