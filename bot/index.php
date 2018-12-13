@@ -82,10 +82,10 @@
     <div style="float:left; width:40%;">
         
         <div style="float:left; width:50%;">
-            <iframe class="iframe" src="price_flat.php?currencyid=1" width="100%" height="150"></iframe>
+            <iframe class="iframe" src="price_flat.php?currencyid=bitcoin" width="100%" height="150"></iframe>
         </div>
         <div style="float:left; width:50%;">
-            <iframe class="iframe" src="price_flat.php?currencyid=1027" width="100%" height="150"></iframe>
+            <iframe class="iframe" src="price_flat.php?currencyid=ethereum" width="100%" height="150"></iframe>
         </div>
                 
         <div id="account1" style="float:left; width:50%;">

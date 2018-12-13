@@ -1,4 +1,3 @@
-<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
 <style>
     body {
         margin: 0;
@@ -6,4 +5,5 @@
     }
 </style>
 
-<div class="coinmarketcap-currency-widget" data-currencyid="<?=$_GET['currencyid']?>" data-base="KRW" data-secondary="USD" data-ticker="true" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+<script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+<coingecko-coin-price-chart-widget  coin-id="<?=$_GET['currencyid']?>" currency="usd" height="300" locale="en" width="0"></coingecko-coin-price-chart-widget>
