@@ -27,6 +27,10 @@
                   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
                   crossorigin="anonymous"></script>
         <style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
             iframe {
                 border: none;
                 padding: 0;
@@ -102,27 +106,24 @@
         </div>
         <div style="float:left; width:50%;">
             <div style="width:100%; height:50px; line-height:50px; background:#b0b0b0; text-align:center;">Trading History</div>
-            <div id="account1_history" style="height:400px; font-size:13px; overflow-y:scroll; line-height:20px; padding-left:10px;">
-                
-            </div>
+            <div id="account1_history" style="height:400px; font-size:13px; overflow-y:scroll; line-height:20px; padding-left:10px;"></div>
         </div>
         <div style="float:left; width:50%;">
             <div style="width:100%; height:50px; line-height:50px; background:#b0b0b0; text-align:center;">Trading History</div>
-            <div id="account2_history" style="height:400px; font-size:13px; overflow-y:scroll; line-height:20px; padding-left:10px;">
-                
-            </div>
+            <div id="account2_history" style="height:400px; font-size:13px; overflow-y:scroll; line-height:20px; padding-left:10px;"></div>
         </div>
     </div>
     
     <div style="float:left; width:60%;">
         <div id="info" style="float:left; width:100%;">
-            <iframe class="iframe" src="price.php?pair=<?=$target?>_ETH&ethprice=<?=$ETH_PRICE?>" width="100%" height="300" scrolling="no"></iframe>
+            <iframe class="iframe" src="price.php?pair=<?=$target?>_ETH&ethprice=<?=$ETH_PRICE?>" width="1" height="1" style="opacity:0;"></iframe>
+			<div id="realTimeInfo" ></div>
         </div>
-        <div id="tradeView1" style="float:left; width:100%; border:1px solid #b0b0b0;">
+        <div id="tradeView1" style="float:left; width:100%; border-top:1px solid #b0b0b0; border-bottom:1px solid #b0b0b0;">
             <iframe id="tradeFrame1" src="" width="100%" height="150"></iframe>
 <!--            <iframe src="trade.php?account=1&trade_type=cancel&ordernum=28586959" width="100%" height="150"></iframe>-->
         </div>
-        <div id="tradeView2" style="float:left; width:100%; border:1px solid #b0b0b0;">
+        <div id="tradeView2" style="float:left; width:100%; border-top:1px solid #b0b0b0; border-bottom:1px solid #b0b0b0;">
             <iframe id="tradeFrame2" src="" width="100%" height="150"></iframe>
         </div>
     </div>
@@ -227,6 +228,10 @@
 			} else {
 				$("#account2").html("").html(value);
 			}
+		}
+		
+		function setRealTime(value) {
+			$("#realTimeInfo").html("").html(value);
 		}
         
         function setPrice(HP, LP) {
