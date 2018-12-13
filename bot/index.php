@@ -74,6 +74,10 @@
         <div style="float:left; margin-right:50px;">ETH PRICE (KRW) : 
             <?=$ETH_PRICE?> KRW
         </div>
+		
+		<div id="tradingCount" style="float:left; margin-right:50px;">
+			Trading Count : 0
+        </div>
         
         <button id="stopBotBtn" style="float:right; margin-right:25px; color:#fff; background:#ff0000; height:50px;" onclick="botStop();">Bot 중지</button>
         <button id="startBotBtn" style="float:right; margin-right:25px; color:#fff; background:#0000ff; height:50px;" onclick="botStart();">Bot 시작</button>
@@ -82,17 +86,19 @@
     <div style="float:left; width:40%;">
         
         <div style="float:left; width:50%;">
-            <iframe class="" src="price_flat.php?currencyid=bitcoin" width="100%" height="150"></iframe>
+            <iframe class="" src="price_flat.php?currencyid=bitcoin" width="100%" height="300"></iframe>
         </div>
         <div style="float:left; width:50%;">
-            <iframe class="" src="price_flat.php?currencyid=ethereum" width="100%" height="150"></iframe>
+            <iframe class="" src="price_flat.php?currencyid=ethereum" width="100%" height="300"></iframe>
         </div>
                 
-        <div id="account1" style="float:left; width:50%;">
-            <iframe class="iframe" src="wallet.php?account=1" width="100%" height="150"></iframe>
+        <div style="float:left; width:50%;">
+            <iframe class="iframe" src="wallet.php?account=1" width="1" height="1" style="opacity:0;"></iframe>
+			<div id="account1" ></div>
         </div>
-        <div id="account2" style="float:left; width:50%;">
+        <div style="float:left; width:50%;">
             <iframe class="iframe" src="wallet.php?account=2" width="100%" height="150"></iframe>
+			<div id="account2" ></div>
         </div>
         <div style="float:left; width:50%;">
             <div style="width:100%; height:50px; line-height:50px; background:#b0b0b0; text-align:center;">Trading History</div>
@@ -198,6 +204,14 @@
                 
                 // 타이머 초기화
                 waitTimer = $("#interval").val();
+				
+				tradingCount = tradingCount + 1;
+				$("#tradingCount").text("Trading Count : " + tradingCount);
+				
+				if (tradingCount % 50 == 0) {
+					$("#account1_history").html("");
+					$("#account2_history").html("");
+				}
             } else {
                 var hour = parseInt(waitTimer/3600);
                 var min = parseInt((waitTimer%3600)/60);
@@ -206,6 +220,14 @@
                 $("#remain_sec").text(min + "분 " + sec + "초 후 " );
             }
         }
+		
+		function setWallet(id, value) {
+			if (id == 1) {
+				$("#account1").html("").html(value);
+			} else {
+				$("#account2").html("").html(value);
+			}
+		}
         
         function setPrice(HP, LP) {
             highPrice = HP;

@@ -18,15 +18,15 @@
         echo $e;
     }
 
-    echo "<div style='width:100%; height:50px; line-height:50px; text-align:center; background:#b0b0b0;'><B>";
-    echo "[".$_GET['account']."] ".$account->getInfo()->data->email."</B></div><div style='text-align:right; padding:5px; border:1px solid #b0b0b0; height:80px;'>";
+	$data = "<div style='width:100%; height:50px; line-height:50px; text-align:center; background:#b0b0b0;'><B>";
+    $data = $data."[".$_GET['account']."] ".$account->getInfo()->data->email."</B></div><div style='text-align:right; padding:5px; border:1px solid #b0b0b0; height:80px;'>";
 
     foreach ($account->getInfo()->data->funds as $coin => $value) {
         if ($value > 0) {
-            echo number_format($value, 2) ." ". $coin ."<BR>";
+            $data = $data.number_format($value, 2) ." ". $coin ."<BR>";
         }
     }
-    echo "</div>";
+    $data = $data."</div>";
 ?>
 <style>
     body {
@@ -34,3 +34,7 @@
         padding: 0;
     }
 </style>
+
+<script>
+	parent.setWallet($_GET['account'], "<?=$data?>");
+</script>
