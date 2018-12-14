@@ -22,11 +22,11 @@
         echo $e;
     }
 
+	$result = null;
     if ($trade_type == "buy") {
         // BUY
 		$result = $account->setTrade("BUY", $pair, $amount, $price); 
-        var_dump($result);
-		var_dump($result['order_id']);
+		echo $result['order_id'];
 		
     } else if ($trade_type == "sell") {
         // SELL
