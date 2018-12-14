@@ -30,7 +30,7 @@
     $data2 = json_decode($json2, true);
 
     // 상수
-    $UTC9 = 32400;
+    $UTC9 = 0;
     $ETH_PRICE = floatval($_GET['ethprice']);
 
     use Stocks\StocksExchange;

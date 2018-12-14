@@ -24,15 +24,21 @@
 
     if ($trade_type == "buy") {
         // BUY
-        var_dump($account->setTrade("BUY", $pair, $amount, $price));
+		$result = $account->setTrade("BUY", $pair, $amount, $price); 
+        var_dump($result);
+		
     } else if ($trade_type == "sell") {
         // SELL
-        var_dump($account->setTrade("SELL", $pair, $amount, $price));
+		$result = $account->setTrade("SELL", $pair, $amount, $price); 
+        var_dump($result);
+		
     } else {
         // CANCEL
         var_dump($account->setCancelOrder($_GET['ordernum']));
     }
 ?>
+<? if ($trade_type != "cancel") { ?>
 <script>
-    parent.setOrder(<?=$_GET['account']?>, "<?=$trade_type?>", <?=$amount?>, <?=$price?>);
+    parent.setOrder(<?=$_GET['account']?>, "<?=$trade_type?>", <?=$amount?>, <?=$price?>, <?=$result->order_id; ?>);
 </script>
+<? } ?>

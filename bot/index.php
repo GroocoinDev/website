@@ -132,7 +132,6 @@
         </div>
         <div id="tradeView1" style="float:left; width:100%; border-top:1px solid #b0b0b0; border-bottom:1px solid #b0b0b0;">
             <iframe id="tradeFrame1" src="" width="100%" height="150"></iframe>
-<!--            <iframe src="trade.php?account=1&trade_type=cancel&ordernum=28586959" width="100%" height="150"></iframe>-->
         </div>
         <div id="tradeView2" style="float:left; width:100%; border-top:1px solid #b0b0b0; border-bottom:1px solid #b0b0b0;">
             <iframe id="tradeFrame2" src="" width="100%" height="150"></iframe>
@@ -208,10 +207,10 @@
                 // Trade
                 if($("#whosell").val() == "2to1") {
                     $("#tradeFrame1").attr("src", "trade.php?account=1&trade_type=buy&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
-                    $("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
+                    //$("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
                 } else {
                     $("#tradeFrame1").attr("src", "trade.php?account=2&trade_type=buy&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
-                    $("#tradeFrame2").attr("src", "trade.php?account=1&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
+                    //$("#tradeFrame2").attr("src", "trade.php?account=1&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
                 }
                 
                 // 타이머 초기화
@@ -250,7 +249,7 @@
             lowPrice = LP;
         }
         
-        function setOrder(account, type, amount, price) {
+        function setOrder(account, type, amount, price, ordernum) {
             var $history;
             if (account == 1) {
                 $history = $("#account1_history");
@@ -267,8 +266,18 @@
                 $history.append("<span style='color:red;'>[" + type.toUpperCase() + "] " + amount + " " + target + " at " + price + " ETH (₩ " + krwPrice + ")</span><br>");
             }
             
-            
             $history.scrollTop($history[0].scrollHeight);
+			
+			// 10초안에 채결 실패시 취소
+			setTimeout(function(){
+				if (account == 1) {
+					$tradeFrame = $("#tradeFrame1");
+				} else {
+					$tradeFrame = $("#tradeFrame2");
+				}
+
+				$tradeFrame.attr("src", "trade.php?account=" + account + "&trade_type=cancel&ordernum=" + ordernum);
+			}, 10000);
             
         }
     </script>
