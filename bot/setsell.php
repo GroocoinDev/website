@@ -24,10 +24,10 @@
     if ($trade_type == "buy") {
         // BUY
 		
-		for ($i=0; $i<10; $i++) {
+		for ($i=0; $i<100; $i++) {
 			$amount = mt_rand(10, 100);
-			//$price = Math.floor(Math.random() * (503 - 20 + 1)) + 20;
-			//$price = $price * 0.000001;
+			$price = mt_rand(20, 503);
+			$price = $price * 0.000001;
 			echo $amount."<br>".$price;
 			//$result = $account->setTrade("BUY", $pair, $amount, $price); 
 		
