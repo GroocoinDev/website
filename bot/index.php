@@ -207,10 +207,10 @@
                 // Trade
                 if($("#whosell").val() == "2to1") {
                     $("#tradeFrame1").attr("src", "trade.php?account=1&trade_type=buy&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
-                    //$("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
+                    $("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
                 } else {
                     $("#tradeFrame1").attr("src", "trade.php?account=1&trade_type=sell&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
-					//$("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=buy&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
+					$("#tradeFrame2").attr("src", "trade.php?account=2&trade_type=buy&pair=<?=$target?>_ETH&price=" + assumePrice + "&amount=" + assumeVol);
                 }
                 
                 // 타이머 초기화
