@@ -71,5 +71,5 @@
 <meta charset="UTF-8">
 <script>
 	parent.setRealTime("<?=$outputData?>");
-    parent.setPrice(<?=$orderbooks->result->sell[0]->Rate?>, <?=$orderbooks->result->buy[0]->Rate?>);
+    parent.setPrice(<?=$orderbooks->result->sell[0]->Rate + 0?>, <?=$orderbooks->result->buy[0]->Rate + 0?>);
 </script>
