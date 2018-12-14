@@ -27,26 +27,32 @@
         // BUY
 		
 		for ($i=0; $i<$count; $i++) {
-			$amount = mt_rand(10, $amount);
+			$amount = mt_rand($amount/2, $amount);
 			$price = mt_rand(20, 503);
 			$price = $price * 0.000001;
-			//echo $amount.":".number_format($price, 8)."<BR>";
+			echo $amount.":".number_format($price, 8)."<BR>";
 			$result = $account->setTrade("BUY", $pair, $amount, $price); 
 		
 			if( $result->success == 1 ) {
-				echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
+				echo "BUY ORDER 성공 ORDER 번호 : ".$result->data->order_id;
 			} else {
 				echo "BUY ORDER FAIL<br>".var_dump($result);
 			}
 		}
     } else if ($trade_type == "sell") {
         // SELL
-		$result = $account->setTrade("SELL", $pair, $amount, $price); 
+		for ($i=0; $i<$count; $i++) {
+			$amount = mt_rand($amount/2, $amount);
+			$price = mt_rand(20, 503);
+			$price = $price * 0.000001;
+			echo $amount.":".number_format($price, 8)."<BR>";
+			$result = $account->setTrade("SELL", $pair, $amount, $price); 
 		
-		if( $result->success == 1 ) {
-			echo "SELL ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
-		} else {
-			echo "SELL ORDER FAIL<br>".var_dump($result);
+			if( $result->success == 1 ) {
+				echo "SELL ORDER 성공 ORDER 번호 : ".$result->data->order_id;
+			} else {
+				echo "SELL ORDER FAIL<br>".var_dump($result);
+			}
 		}
     } else {
         echo "Nothing to do";
