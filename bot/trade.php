@@ -31,6 +31,7 @@
     } else if ($trade_type == "sell") {
         // SELL
 		$result = $account->setTrade("SELL", $pair, $amount, $price); 
+		var_dump($result);
 		echo $result->order_id;
     } else {
         // CANCEL
