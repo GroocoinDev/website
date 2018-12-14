@@ -5,6 +5,8 @@
     $account = $_GET['account'];
     $trade_type = $_GET['trade_type'];
 	$pair = $_GET['pair'];
+	$amount = $_GET['amount'];
+	$count = $_GET['count'];
 
     try {
         if ($account == "1") {
@@ -24,18 +26,18 @@
     if ($trade_type == "buy") {
         // BUY
 		
-		for ($i=0; $i<100; $i++) {
-			$amount = mt_rand(10, 100);
+		for ($i=0; $i<$count; $i++) {
+			$amount = mt_rand(10, $amount);
 			$price = mt_rand(20, 503);
 			$price = $price * 0.000001;
-			echo $amount.":".number_format($price, 8)."<BR>";
-			//$result = $account->setTrade("BUY", $pair, $amount, $price); 
+			//echo $amount.":".number_format($price, 8)."<BR>";
+			$result = $account->setTrade("BUY", $pair, $amount, $price); 
 		
-//			if( $result->success == 1 ) {
-//				echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
-//			} else {
-//				echo "BUY ORDER FAIL<br>".var_dump($result);
-//			}
+			if( $result->success == 1 ) {
+				echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
+			} else {
+				echo "BUY ORDER FAIL<br>".var_dump($result);
+			}
 		}
     } else if ($trade_type == "sell") {
         // SELL
