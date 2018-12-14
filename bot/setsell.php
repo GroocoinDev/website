@@ -28,7 +28,7 @@
 			$amount = mt_rand(10, 100);
 			$price = mt_rand(20, 503);
 			$price = $price * 0.000001;
-			echo $amount.":".$price;
+			echo $amount.":".$price."<BR>";
 			//$result = $account->setTrade("BUY", $pair, $amount, $price); 
 		
 //			if( $result->success == 1 ) {
