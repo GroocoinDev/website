@@ -24,17 +24,18 @@
     if ($trade_type == "buy") {
         // BUY
 		
-		for ($i=2; $i<10; $i++) {
+		for ($i=0; $i<10; $i++) {
 			$amount = mt_rand(10, 100);
 			$price = Math.floor(Math.random() * (503 - 20 + 1)) + 20;
 			$price = $price * 0.000001;
-			$result = $account->setTrade("BUY", $pair, $amount, $price); 
+			echo $amount."<br>".$price;
+			//$result = $account->setTrade("BUY", $pair, $amount, $price); 
 		
-			if( $result->success == 1 ) {
-				echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
-			} else {
-				echo "BUY ORDER FAIL<br>".var_dump($result);
-			}
+//			if( $result->success == 1 ) {
+//				echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
+//			} else {
+//				echo "BUY ORDER FAIL<br>".var_dump($result);
+//			}
 		}
     } else if ($trade_type == "sell") {
         // SELL
