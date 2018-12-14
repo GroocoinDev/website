@@ -26,12 +26,28 @@
     if ($trade_type == "buy") {
         // BUY
 		$result = $account->setTrade("BUY", $pair, $amount, $price); 
+		
+		if( $result->success == 1 ) {
+			echo "BUY ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
+		} else {
+			echo "BUY ORDER FAIL<br>".var_dump($result);
+		}
     } else if ($trade_type == "sell") {
         // SELL
 		$result = $account->setTrade("SELL", $pair, $amount, $price); 
+		
+		if( $result->success == 1 ) {
+			echo "SELL ORDER 성공<br>ORDER 번호 : ".$result->data->order_id;
+		} else {
+			echo "SELL ORDER FAIL<br>".var_dump($result);
+		}
     } else {
         // CANCEL
-        var_dump($account->setCancelOrder($_GET['ordernum']));
+        $result = $account->setCancelOrder($_GET['ordernum']);
+		
+		if( $result->success == 1 ) {
+			echo "채결 실패로 ORDER 취소 성공<br>ORDER 번호 : ".$result->data->order_id;
+		}
     }
 ?>
 <? if ($trade_type != "cancel") { ?>
