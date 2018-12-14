@@ -26,7 +26,7 @@
         // BUY
 		$result = $account->setTrade("BUY", $pair, $amount, $price); 
         var_dump($result);
-		var_dump($result->order_id);
+		var_dump($result['order_id']);
 		
     } else if ($trade_type == "sell") {
         // SELL
@@ -40,6 +40,6 @@
 ?>
 <? if ($trade_type != "cancel") { ?>
 <script>
-    parent.setOrder(<?=$_GET['account']?>, "<?=$trade_type?>", <?=$amount?>, <?=$price?>, <?=$result->order_id; ?>);
+    parent.setOrder(<?=$_GET['account']?>, "<?=$trade_type?>", <?=$amount?>, <?=$price?>, <?=$result['order_id']; ?>);
 </script>
 <? } ?>
