@@ -492,6 +492,8 @@
             <a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
             <a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
             <a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+            
+            <a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
 		</div>
 		
 		<h1 class="title center white add-mg-b" style="margin-top:100px;">Strategic Partners</h1>
