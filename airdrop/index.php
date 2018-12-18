@@ -82,6 +82,7 @@
 
 			<div style="width:100%;">
 				<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
+				<?=$_SERVER['HTTP_USER_AGENT']?>
 			</div>
 
 			<div id='loading_bg'></div>
