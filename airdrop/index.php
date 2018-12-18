@@ -96,7 +96,7 @@
 				
 				<div class="not_login" style="color:#fff; text-align:center; padding-left:15px; padding-right:15px;">
 					카카오 계정 로그인 후 참여 가능합니다.
-					<button type="button" class="btn btn-warning btn-lg btn-block" style="margin-top:10px;">카카오 계정 로그인</button>
+					<button type="button" class="btn btn-warning btn-lg btn-block" style="margin-top:10px;" onclick="loginWithKakao();">카카오 계정 로그인</button>
 				</div>
 				
 				<div class="login" style="width:100%; color:#fff; margin-top:25px; margin-bottom:25px; font-size:18px; text-align:center; text-weight:bold;">
