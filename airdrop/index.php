@@ -52,28 +52,6 @@
                 min-height: 50px;
                 background:rgba(0,0,0,0.85);
             }
-            
-            #loading {
-                width: 300px;
-                height:50px;
-                line-height:50px;
-                border:1px solid #d2d2d2;
-                background: #ffffff;
-                border-radius: 5px;
-                color:#444444;
-                text-align: center;
-            }
-			
-            #loading_bg {
-/*
-                width:100%;
-                background:#000000;
-                opacity:0.5;
-                position:absolute;
-                top:0;
-                bottom:0;
-*/
-            }
 		</style>
 	<body>
 		<? if(is_Kakao()) { ?>
@@ -105,37 +83,76 @@
 			</div>
 		<? } else { ?>
 			<!-- navbar -->
-			<div class="gwatop-navbar-white">
-				<div class="gwatop-logo">
-					<div style="font-size:18px; font-weight:bold; color:#ffffff; margin-top:12px;">Groo Roulette</div>
+			<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
+				<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
+			</div>
+		
+			<div id="game" style="width:100%; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E6498F 100%), #7A05EF; padding: 40px 0 35px;">
+				<div style="width:100%; color:#fff; font-size:24px; text-align:center; text-weight:bold;">
+					GROO ROULETTE GAME
+				</div>
+				
+				<img src="../assets/img/roulette_tmp.png" style="width:80%; margin-top:40px; margin-bottom:25px;" class="center_h" />
+				
+				<div class="not_login" style="color:#fff; text-align:center; padding-left:15px; padding-right:15px;">
+					카카오 계정 로그인 후 참여 가능합니다.
+					<button type="button" class="btn btn-warning btn-lg btn-block" style="margin-top:10px;">카카오 계정 로그인</button>
+				</div>
+				
+				<div class="login" style="width:100%; color:#fff; margin-top:25px; margin-bottom:25px; font-size:18px; text-align:center; text-weight:bold;">
+					받을 그루코인수 : <span style="color:#ffff88; font-weight:bold;">9999 GROO</span><br>
+					재도전 가능 횟수 : 0회
+				</div>
+				
+				<div class="login " style="color:#fff; text-align:center; font-size:12px; padding-left:15px; padding-right:15px;">
+					코인을 받을 이더리움(ETH) 지갑 주소를 입력해주세요.<br>
+					(MEW, MetaMask, ImToken, Trust Wallet, Ledger, Trezor 등)
+					<input type="text" class="form-control" placeholder="이더리움 개인지갑 주소를 입력해주세요. (거래소 X)" style="margin-top:10px;">
+				</div>
+				
+				<div class="login hide" style="color:#fff; text-align:center; font-size:12px;">
+					내 지갑 주소 : 0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1
+				</div>
+				
+				<div class="login" style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
+					<button type="button" class="btn btn-success btn-lg btn-block">9999 GROO 에어드랍 신청하기</button>
+					<button type="button" class="btn btn-info btn-lg btn-block">친구초대하고 재도전 기회 얻기!</button>
 				</div>
 			</div>
-
-			<div style="width:100%; height:243px; background:#20cbef;">
-				<div style="width:100%; height:1px; border-top:1px solid #37d0f1; margin-top:50px;"></div>
-				<img class="center_h" src="../../img/app_invitation_content.png" widht="266.5" height="187.5" style="margin-top:25px;" />
+		
+			<div style="width:100%; background: #7A05EF; padding: 20px 0 35px; padding-left:15px; padding-right:15px;">
+				<div style="width:100%; color:#fff; font-size:24px; text-align:center; text-weight:bold;">
+					이벤트 규칙
+				</div>
+				<div style="background:#fff; padding:15px; border-radius:10px; margin-top:20px; font-size:12px;">
+					<div style="margin-bottom:10px;">- 이벤트 기간 : 2018년 12월 21일 오전 9시 - 2018년 12월 31일 23시 59초 KST (UTC+9)</div>
+					<div style="margin-bottom:10px;">- 룰렛 게임으로 최대 <b>2000 GROO</b>까지 지급 됩니다.</div>
+					<div style="margin-bottom:10px;">- 룰렛 게임 참여후 반드시 <b>이더리움 지갑주소</b>를 기입해주셔야 합니다.</div>
+					<div style="margin-bottom:10px;">- 룰렛 이벤트 <b>종료 후 2주 이내 GROO 지급</b> 예정입니다.</div>
+					<div style="margin-bottom:10px;">- 지갑 주소 오기입으로 인한 불이익은 책임지지 않습니다.</div>
+					<div>- Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
+				</div>
 			</div>
-
-			<div style="width:100%;">
-				<a id="custom-login-btn" href="javascript:loginWithKakao()">카카오 계정으로 시작하기</a>
-				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../assets/img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
-				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../assets/img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
-				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../assets/img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
-				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">4. 친구가 탑 결제시 10탑 지급<img class="center" src="../assets/img/app_invitation_icon4.png" width="12.5" height="17.5" style="float:right;" /></div>
-			</div>
-
-			<div style="width:100%;">
-				<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
-			</div>
-
-			<div id='loading_bg'></div>
-			<div id='loading' class="Absolute-Center"><img src="../assets/img/loading-icon.gif" style="width:20px; height:20px;"/>&nbsp;&nbsp;Loading...</div>
+		
+			<footer style="background: #1C1C1C; padding: 30px 30px 40px; text-align: center; overflow: hidden;">
+				<div class="contents">
+					<div style="float: left; opacity: .7;"><img src="../assets/img/logo.svg" alt="GROO Coin logo"></div>
+					<div style="float: left; color: #f2f2f2; font-size: 0.85em; margin-top: 10px; text-align: left; line-height: 20px;">
+						Contact : <a href="mailto:support@groo.io" style="color: #f2f2f2;">support@groo.io</a><br>
+						Copyright © 2018 All Rights Reserved
+					</div>
+				</div>
+			</footer>
 		<? } ?>
 		
 		<script>
 			//<![CDATA[
             $(document).ready(function(){
 				Kakao.init('52084ca1d0ecefc89205a8cb188da198');
+				
+				$(".login").hide();
+//				$(".not_login").hide();
+//				$(".login").show();
             });
             
             function loginWithKakao() {
@@ -143,51 +160,21 @@
                 Kakao.Auth.login({
 					throughTalk: true,
                     success: function(authObj) {
-                        $('#loading, #loading_bg').removeClass("hide");
-                        
                         alert(JSON.stringify(authObj));
+						Kakao.API.request({
+							url: '/v1/user/me',
+							always: function(res) {
+								var kakaoInfo = res;
+								alert(kakaoInfo.id);
+								$(".not_login").hide();
+								$(".login").show();
+                            }
+                        });
                     },
                     fail: function(err) {
-                        alert(JSON.stringify(err));
+						alert("카카오톡 로그인에 실패하였습니다.\n다시 접속해주세요.\nErr_Msg : " + JSON.stringify(err));
                     }
                 });
-                
-//                Kakao.Auth.login({
-//                    success: function(authObj) {
-//                        
-//
-//                        Kakao.API.request({
-//                            url: '/v1/user/me',
-//                            always: function(res) {
-//                                var kakaoInfo = res;
-//                                alert(kakaoInfo.id);                                
-//
-////                            $.post("../app/api/user_api.php", {
-////                              "action":"CHECK_REGISTERED_USER",
-////                              "email":res.kaccount_email
-////                            }, function(data, status) {
-////                              var kakao_id = res.id;
-////                              var access_token = hex_md5(kakao_id.toString());
-////                              var kakao_email = res.kaccount_email;
-////                              // alert(hex_md5(res.id));
-////                              // console.log(data);
-////                              // console.log(res);
-////                              var kNickname = "이름없음";
-////                              var kProfileImage = "default-profile-pic.jpg";
-////                              var kThumbnailImage = "default-profile-pic-thumb.jpg";
-////                              if(typeof res.properties != "undefined") {
-////                                kNickname = res.properties.nickname;
-////                                kProfileImage = res.properties.profile_image;
-////                                kThumbnailImage = res.properties.thumbnail_image;
-////                              }
-//                                
-//                            }
-//                        });
-//                    },
-//                    fail: function(err) {
-//                        alert("카카오톡 로그인에 실패하였습니다.\n다시 접속해주세요.");
-//                    }
-//                });
             }
             
 			// 카카오링크 - 친구 초대하기
