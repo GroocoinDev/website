@@ -77,7 +77,7 @@
 		</style>
 	<body>
 		<? if(is_Kakao() || true ) { ?>
-			<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-30; top:5; width:100px; height:80px;" />
+			<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-10; top:5; width:100px; height:80px;" />
 			<div style="padding:10px;" class="center">
 				<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
 					<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
