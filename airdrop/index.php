@@ -59,7 +59,8 @@
 	<body>
 		<? if(is_Kakao()) { ?>
 			카카오톡 브라우저로 접속하셨습니다.<br>
-			우측 상단 메뉴를 눌러서 '외부 브라우저로 열기' 메뉴를 이용해주세요.
+			우측 상단 메뉴를 눌러서 '외부 브라우저로 열기' 메뉴를 이용해주세요.<br>
+			<a id="custom-login-btn" href="javascript:loginWithKakao()">카카오 계정으로 시작하기</a>
 		<? } else { ?>
 			<!-- navbar -->
 			<div class="gwatop-navbar-white">
@@ -93,9 +94,7 @@
 		<script>
 			//<![CDATA[
             $(document).ready(function(){
-				<? if(!is_Kakao()) { ?>
-					Kakao.init('52084ca1d0ecefc89205a8cb188da198');
-				<? } ?>
+				Kakao.init('52084ca1d0ecefc89205a8cb188da198');
             });
             
             function loginWithKakao() {
