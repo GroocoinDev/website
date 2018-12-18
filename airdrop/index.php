@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>Groo Roulette</title>
+		<title>Groocoin</title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -24,6 +24,24 @@
         <![endif]-->
 		</head>
 		<style>
+			.center {
+				position: relative;
+				top: 50%; 
+				transform: translateY(-50%);
+			}
+
+			.center_h {
+				position: relative;
+				left: 50%; 
+				transform: translateX(-50%);
+			}
+			
+			.Absolute-Center {
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+			}
+			
             .gwatop-navbar-white {
                 position: fixed;
                 right: 0;
@@ -45,6 +63,7 @@
                 color:#444444;
                 text-align: center;
             }
+			
             #loading_bg {
 /*
                 width:100%;
@@ -57,10 +76,32 @@
             }
 		</style>
 	<body>
-		<? if(is_Kakao()) { ?>
-			카카오톡 브라우저로 접속하셨습니다.<br>
-			우측 상단 메뉴를 눌러서 '외부 브라우저로 열기' 메뉴를 이용해주세요.<br>
-			<a id="custom-login-btn" href="javascript:loginWithKakao()">카카오 계정으로 시작하기</a>
+		<? if(is_Kakao() || true ) { ?>
+			<div style="padding:10px;" class="center">
+				<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
+					<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
+				</div>
+				<div style="width:100%; padding:15px; background:#e0e0e0; color:#444444; text-align:left; font-size:12px;">
+					<span style="font-size:13px;">
+						카카오톡 인앱브라우저로 접속하셨습니다.<br><br>
+						룰렛 이벤트에 참여하기 위해서 <b>우측 상단 메뉴( ፧ )</b>에서 <b><u>'다른 브라우저로 열기'</u></b> 를 이용해 주세요.<br>
+					</span>
+					
+					<div style="height:1px; background:#c0c0c0; margin-top:15px; margin-bottom:15px;"></div>
+					
+					<b>[그루코인 커뮤니티]</b><br>
+					Groocoin의 공식 채널을 열람하세요<br><br>
+					<b>[Groocoin 커뮤니티]</b><br>
+					* 공식 영문 텔레그램 : <a href="https://t.me/groocoin_official_en" target="_blank">https://t.me/groocoin_official_en</a><br>
+					* 공식 영문 텔레그램 인포 : <a href="https://t.me/groocoin_info" target="_blank">https://t.me/groocoin_info</a><br>
+					* 공식 카카오톡 : <a href="http://bit.ly/groocoin_kakao" target="_blank">http://bit.ly/groocoin_kakao</a><br><br>
+					
+					<b>[Groocoin 공식 채널]</b><br>
+					* 홈페이지 : <a href="https://groo.io" target="_blank">https://groo.io</a><br>
+					* 트위터 : <a href="https://twitter.com/groocoinio" target="_blank">https://twitter.com/groocoinio</a><br>
+					* 이메일 : <a href="mailto:support@groo.io" target="_blank">support@groo.io</a><br>
+				</div>
+			</div>
 		<? } else { ?>
 			<!-- navbar -->
 			<div class="gwatop-navbar-white">
@@ -84,7 +125,6 @@
 
 			<div style="width:100%;">
 				<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
-				<?=$_SERVER['HTTP_USER_AGENT']?>
 			</div>
 
 			<div id='loading_bg'></div>
