@@ -104,19 +104,20 @@
 					재도전 가능 횟수 : 0회
 				</div>
 				
-				<div class="login " style="color:#fff; text-align:center; font-size:12px; padding-left:15px; padding-right:15px;">
+				<div id="beforeinfo" class="login " style="color:#fff; text-align:center; font-size:12px; padding-left:15px; padding-right:15px;">
 					코인을 받을 이더리움(ETH) 지갑 주소를 입력해주세요.<br>
 					(MEW, MetaMask, ImToken, Trust Wallet, Ledger, Trezor 등)
-					<input type="text" class="form-control" placeholder="이더리움 개인지갑 주소를 입력해주세요. (거래소 X)" style="margin-top:10px;">
+					<input id="ethAddress" type="text" class="form-control" maxlength="42" placeholder="이더리움 개인지갑 주소를 입력해주세요. (거래소 X)" style="margin-top:10px;">
 				</div>
 				
-				<div class="login hide" style="color:#fff; text-align:center; font-size:12px;">
+				<div id="dropinfo" class="login hide" style="color:#fff; text-align:center; font-size:12px;">
 					내 지갑 주소 : 0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1
 				</div>
 				
 				<div class="login" style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
-					<button type="button" class="btn btn-success btn-lg btn-block">9999 GROO 에어드랍 신청하기</button>
-					<button type="button" class="btn btn-info btn-lg btn-block">친구초대하고 재도전 기회 얻기!</button>
+					<button id="sendBtn" type="button" class="btn btn-success btn-lg btn-block" onclick="requestGROO();">9999 GROO 에어드랍 신청하기</button>
+					<button type="button" class="btn btn-info btn-lg btn-block" onclick="sendLink();">친구초대하고 재도전 기회 얻기!</button>
+					<button id="joinBtn" type="button" class="hide btn btn-success btn-lg btn-block" onclick="requestGROO();">공식 GROO 카톡방입장(필수)</button>
 				</div>
 			</div>
 		
@@ -129,6 +130,7 @@
 					<div style="margin-bottom:10px;">- 룰렛 게임으로 최대 <b>2000 GROO</b>까지 지급 됩니다.</div>
 					<div style="margin-bottom:10px;">- 룰렛 게임 참여후 반드시 <b>이더리움 지갑주소</b>를 기입해주셔야 합니다.</div>
 					<div style="margin-bottom:10px;">- 룰렛 이벤트 <b>종료 후 2주 이내 GROO 지급</b> 예정입니다.</div>
+					<div style="margin-bottom:10px;">- 코인 지급 시점에 <b>공식 그루코인 채널</b>에 입장되어 있지 않은 계정은 무효처리 됩니다.</div>
 					<div style="margin-bottom:10px;">- 지갑 주소 오기입으로 인한 불이익은 책임지지 않습니다.</div>
 					<div>- Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
 				</div>
@@ -176,6 +178,20 @@
                     }
                 });
             }
+			
+			function requestGROO() {
+				var ethAddr = $("#ethAddress").val();
+				
+				if (ethAddr == "") {
+					alert('이더리움 주소를 입력해주세요.');
+				} else if (ethAddr.length != 42) {
+					alert('올바른 이더리움 주소를 입력해주세요.');
+				} else {
+					alert('에어드랍 신청 완료되었습니다.');
+					$("#beforeinfo, #sendBtn").hide();
+					$("#joinBtn, #dropinfo").removeClass("hide");
+				}
+			}
             
 			// 카카오링크 - 친구 초대하기
 			function sendLink() {
@@ -183,7 +199,7 @@
 					objectType: 'feed',
 					content: {
 					  title: 'Groocoin (그루코인)',
-					  description: '그루코인 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
+					  description: '그루코인 룰렛 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
 					  imageUrl: 'https://pbs.twimg.com/media/Doy2_yNUYAAY5ao.jpg',
 					  link: {
 						mobileWebUrl: 'https://open.kakao.com/o/gsb5nyM',
