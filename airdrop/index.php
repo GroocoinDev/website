@@ -1,5 +1,6 @@
 <?php
 	include_once("../inc/device_check.php");
+	$join = $_GET['join'];
 ?>
 
 <html>
@@ -54,6 +55,19 @@
             }
 		</style>
 	<body>
+		<?
+			if($join == "1") {
+				echo '<div style="padding:10px;" class="center">
+						<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
+							<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
+						</div>
+						<div style="width:100%; padding:15px; background:#e0e0e0; color:#444444; text-align:left; font-size:12px;">
+							<button id="joinBtn" type="button" class="btn btn-success btn-lg btn-block" onclick="joinKakao();">공식 GROO 카톡방 입장하기</button>
+						</div>
+					</div>';
+			} else {
+		?>
+		
 		<? if(is_Kakao()) { ?>
 			<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-14; top:5; width:100px; height:80px;" />
 			<div style="padding:10px;" class="center">
@@ -117,7 +131,7 @@
 				<div class="login" style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
 					<button id="sendBtn" type="button" class="btn btn-success btn-lg btn-block" onclick="requestGROO();">9999 GROO 에어드랍 신청하기</button>
 					<button type="button" class="btn btn-info btn-lg btn-block" onclick="sendLink();">친구초대하고 재도전 기회 얻기!</button>
-					<button id="joinBtn" type="button" class="hide btn btn-success btn-lg btn-block" onclick="requestGROO();">공식 GROO 카톡방입장(필수)</button>
+					<button id="joinBtn" type="button" class="hide btn btn-success btn-lg btn-block" onclick="joinKakao();">공식 GROO 카톡방입장(필수)</button>
 				</div>
 			</div>
 		
@@ -145,7 +159,7 @@
 					</div>
 				</div>
 			</footer>
-		<? } ?>
+		<? }} ?>
 		
 		<script>
 			//<![CDATA[
@@ -192,6 +206,10 @@
 					$("#joinBtn, #dropinfo").removeClass("hide");
 				}
 			}
+			
+			function joinKakao() {
+				location.href='https://open.kakao.com/o/gsb5nyM';
+			}
             
 			// 카카오링크 - 친구 초대하기
 			function sendLink() {
@@ -217,8 +235,8 @@
 					  {
 						title: '공식채널입장',
 						link: {
-						  mobileWebUrl: 'https://groo.io/airdrop/',
-						  webUrl: 'https://groo.io/airdrop/'
+						  mobileWebUrl: 'https://groo.io/airdrop/?join=1',
+						  webUrl: 'https://groo.io/airdrop/?join=1'
 						}
 					  }
 					]
