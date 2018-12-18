@@ -30,6 +30,25 @@
                 min-height: 50px;
                 background:rgba(0,0,0,0.85);
             }
+            
+            #loading {
+                width: 300px;
+                height:50px;
+                line-height:50px;
+                border:1px solid #d2d2d2;
+                background: #ffffff;
+                border-radius: 5px;
+                color:#444444;
+                text-align: center;
+            }
+            #loading_bg {
+                width:100%;
+                background:#000000;
+                opacity:0.5;
+                position:absolute;
+                top:0;
+                bottom:0;
+            }
 		</style>
 	<body>
 
@@ -46,15 +65,18 @@
 		</div>
 
 		<div style="width:100%;">
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../../img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../../img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../../img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">4. 친구가 탑 결제시 10탑 지급<img class="center" src="../../img/app_invitation_icon4.png" width="12.5" height="17.5" style="float:right;" /></div>
+			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../assets/img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
+			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../assets/img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
+			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../assets/img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
+			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">4. 친구가 탑 결제시 10탑 지급<img class="center" src="../assets/img/app_invitation_icon4.png" width="12.5" height="17.5" style="float:right;" /></div>
 		</div>
 
 		<div style="width:100%;">
-			<img class="center_h" src="../../img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
+			<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
 		</div>
+        
+        <div id='loading_bg'></div>
+        <div id='loading' class="Absolute-Center"><img src="../assets/img/loading-icon.gif" style="width:20px; height:20px;"/>&nbsp;&nbsp;Loading...</div>
 
 		<script>
 			//<![CDATA[
@@ -73,7 +95,7 @@
                             url: '/v1/user/me',
                             always: function(res) {
                                 var kakaoInfo = res;
-                                alert(kakaoInfo.id);
+                                alert(kakaoInfo.id);                                
 
 //                            $.post("../app/api/user_api.php", {
 //                              "action":"CHECK_REGISTERED_USER",
@@ -93,53 +115,8 @@
 //                                kProfileImage = res.properties.profile_image;
 //                                kThumbnailImage = res.properties.thumbnail_image;
 //                              }
-//
-//                              if(!data.registered) { //등록안된 아이디 일경우
-//                                $.post("../app/api/user_api.php", {
-//                                  "action":"REGISTER_USER_FROM_KAKAO",
-//                                  "kaccount_id":kakao_id,
-//                                  "kaccount_email":kakao_email,
-//                                  "kaccount_email_verified":res.kaccount_email_verified,
-//                                  "nickname":kNickname,
-//                                  "profile_image":kProfileImage,
-//                                  "thumbnail_image":kThumbnailImage,
-//                                  "access_token":access_token
-//                                        }, function(data, status) {
-//                                            if(status == "success") {
-//                                                // refresh
-//                                                // alert("정보 저장 성공");
-//                                            } else {
-//                                                alert("카카오톡 로그인 실패");
-//                                                $('#loading, #loading_bg').addClass("hide");
-//                                            }
-//                                        });
-//                              } else { //등록된 아이디 일경우
-//                                $.post("../app/api/user_api.php", {
-//                                  "action":"UPDATE_USER_FROM_KAKAO",
-//                                  "kaccount_email":kakao_email,
-//                                  "kaccount_email_verified":res.kaccount_email_verified,
-//                                  "access_token":access_token
-//                                  }, function(data, status) {
-//                                      if(status == "success") {
-//                                          // refresh
-//                                          if(navigator.userAgent.match("AndroidAPP")) {
-//                                              window.AndroidInterface.moveToHome();
-//                                          } else if(navigator.userAgent.match("iphoneAPP")) {
-//                                              webkit.messageHandlers.iOSInterface.postMessage("moveToHome");
-//                                          } else {
-//                                              window.location.href="../app/ios/ios_home.php?EMAIL="+kakao_email+"&USER_TOKEN="+access_token;
-//                                          }
-//                                          // alert("정보 저장 성공");
-//                                      } else {
-//                                          alert("카카오톡 로그인 실패");
-//                                          $('#loading, #loading_bg').addClass("hide");
-//                                      }
-//                                  });
-//                              }
-
-                            });
-
-                          }
+                                
+                            }
                         });
                     },
                     fail: function(err) {
