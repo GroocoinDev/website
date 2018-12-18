@@ -127,7 +127,9 @@ function what_device() {
 
 	$iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
 
-	if (stripos($_SERVER['HTTP_USER_AGENT'], "AndroidAPP")) {
+	if (stripos(strtolower($_SERVER['HTTP_USER_AGENT']), "kakao")) {
+        $Kakao = true;
+    } else if (stripos($_SERVER['HTTP_USER_AGENT'], "AndroidAPP")) {
 		$AndroidAPP = true;
         $iphoneAPP = false;
 	} else if (stripos($_SERVER['HTTP_USER_AGENT'], "Android") && stripos($_SERVER['HTTP_USER_AGENT'], "Mobile")) {
@@ -145,8 +147,6 @@ function what_device() {
         $Android = false;
 		$AndroidTablet = false;
         $iphoneAPP = true;
-    } else if (stripos(strtolower($_SERVER['HTTP_USER_AGENT']), "kakao")) {
-        $Kakao = true;
     } else {
 		$Android = false;
 		$AndroidTablet = false;
