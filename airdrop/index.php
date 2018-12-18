@@ -77,20 +77,21 @@
 		</style>
 	<body>
 		<? if(is_Kakao() || true ) { ?>
+			<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-30; top:5; width:100px; height:80px;" />
 			<div style="padding:10px;" class="center">
 				<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
 					<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
 				</div>
 				<div style="width:100%; padding:15px; background:#e0e0e0; color:#444444; text-align:left; font-size:12px;">
 					<span style="font-size:13px;">
-						카카오톡 인앱브라우저로 접속하셨습니다.<br><br>
+						<b>※ 카카오톡 인앱브라우저로 접속하셨습니다.</b><br><br>
 						룰렛 이벤트에 참여하기 위해서 <b>우측 상단 메뉴( ፧ )</b>에서 <b><u>'다른 브라우저로 열기'</u></b> 를 이용해 주세요.<br>
 					</span>
 					
 					<div style="height:1px; background:#c0c0c0; margin-top:15px; margin-bottom:15px;"></div>
 					
 					<b>[그루코인 커뮤니티]</b><br>
-					Groocoin의 공식 채널을 열람하세요<br><br>
+					Groocoin의 공식 채널을 열람하세요.<br><br>
 					<b>[Groocoin 커뮤니티]</b><br>
 					* 공식 영문 텔레그램 : <a href="https://t.me/groocoin_official_en" target="_blank">https://t.me/groocoin_official_en</a><br>
 					* 공식 영문 텔레그램 인포 : <a href="https://t.me/groocoin_info" target="_blank">https://t.me/groocoin_info</a><br>
