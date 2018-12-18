@@ -162,12 +162,12 @@
                 Kakao.Auth.login({
 					throughTalk: true,
                     success: function(authObj) {
-                        alert(JSON.stringify(authObj));
 						Kakao.API.request({
 							url: '/v1/user/me',
 							always: function(res) {
 								var kakaoInfo = res;
-								alert(kakaoInfo.id);
+								//alert(kakaoInfo.id);
+								
 								$(".not_login").hide();
 								$(".login").show();
                             }
@@ -217,8 +217,8 @@
 					  {
 						title: '공식채널입장',
 						link: {
-						  mobileWebUrl: 'http://pf.kakao.com/_rAxbwj/31138151',
-						  webUrl: 'http://pf.kakao.com/_rAxbwj/31138151'
+						  mobileWebUrl: 'https://groo.io/airdrop/',
+						  webUrl: 'https://groo.io/airdrop/'
 						}
 					  }
 					]
