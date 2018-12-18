@@ -1,3 +1,7 @@
+<?php
+	include_once("inc/device_check.php");
+?>
+
 <html>
 	<head>
 		<title>Groo Roulette</title>
@@ -53,38 +57,44 @@
             }
 		</style>
 	<body>
-
-		<!-- navbar -->
-		<div class="gwatop-navbar-white">
-			<div class="gwatop-logo">
-				<div style="font-size:18px; font-weight:bold; color:#ffffff; margin-top:12px;">Groo Roulette</div>
+		<? if(is_Kakao()) { ?>
+			카카오톡 브라우저로 접속하셨습니다.<br>
+			우측 상단 메뉴를 눌러서 '외부 브라우저로 열기' 메뉴를 이용해주세요.
+		<? } else { ?>
+			<!-- navbar -->
+			<div class="gwatop-navbar-white">
+				<div class="gwatop-logo">
+					<div style="font-size:18px; font-weight:bold; color:#ffffff; margin-top:12px;">Groo Roulette</div>
+				</div>
 			</div>
-		</div>
 
-		<div style="width:100%; height:243px; background:#20cbef;">
-			<div style="width:100%; height:1px; border-top:1px solid #37d0f1; margin-top:50px;"></div>
-			<img class="center_h" src="../../img/app_invitation_content.png" widht="266.5" height="187.5" style="margin-top:25px;" />
-		</div>
+			<div style="width:100%; height:243px; background:#20cbef;">
+				<div style="width:100%; height:1px; border-top:1px solid #37d0f1; margin-top:50px;"></div>
+				<img class="center_h" src="../../img/app_invitation_content.png" widht="266.5" height="187.5" style="margin-top:25px;" />
+			</div>
 
-		<div style="width:100%;">
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../assets/img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../assets/img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../assets/img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
-			<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">4. 친구가 탑 결제시 10탑 지급<img class="center" src="../assets/img/app_invitation_icon4.png" width="12.5" height="17.5" style="float:right;" /></div>
-		</div>
+			<div style="width:100%;">
+				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../assets/img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
+				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../assets/img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
+				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../assets/img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
+				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">4. 친구가 탑 결제시 10탑 지급<img class="center" src="../assets/img/app_invitation_icon4.png" width="12.5" height="17.5" style="float:right;" /></div>
+			</div>
 
-		<div style="width:100%;">
-			<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
-		</div>
-        
-        <div id='loading_bg'></div>
-        <div id='loading' class="Absolute-Center"><img src="../assets/img/loading-icon.gif" style="width:20px; height:20px;"/>&nbsp;&nbsp;Loading...</div>
+			<div style="width:100%;">
+				<img class="center_h" src="../assets/img/app_invitation_kakao_btn.png" width="325" height="50" onclick="javascript:sendLink();" style="margin-top:15px; margin-bottom:15px;" />
+			</div>
 
+			<div id='loading_bg'></div>
+			<div id='loading' class="Absolute-Center"><img src="../assets/img/loading-icon.gif" style="width:20px; height:20px;"/>&nbsp;&nbsp;Loading...</div>
+		<? } ?>
+		
 		<script>
 			//<![CDATA[
             $(document).ready(function(){
-                Kakao.init('52084ca1d0ecefc89205a8cb188da198');
-                loginWithKakao();
+				<? if(!is_Kakao()) { ?>
+					Kakao.init('52084ca1d0ecefc89205a8cb188da198');
+					loginWithKakao();
+				<? } ?>
             });
             
             function loginWithKakao() {

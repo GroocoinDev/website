@@ -101,6 +101,23 @@ function is_Chrome() {
 }
 
 
+function is_Kakao() {
+
+	$dev_txt = what_device();
+
+	if($dev_txt == "kakao"){
+
+		return true;
+
+	}else{
+
+		return false;
+
+	}
+
+}
+
+
 
 function what_device() {
 
@@ -128,6 +145,8 @@ function what_device() {
         $Android = false;
 		$AndroidTablet = false;
         $iphoneAPP = true;
+    } else if (stripos(strtolower($_SERVER['HTTP_USER_AGENT']), "kakao")) {
+        $Kakao = true;
     } else {
 		$Android = false;
 		$AndroidTablet = false;
@@ -192,6 +211,10 @@ function what_device() {
 	} else if ($RimTablet) {
 
 		$device_txt = "rimtablet";
+
+	} else if ($Kakao) {
+
+		$device_txt = "kakao";
 
 	} else {
 
