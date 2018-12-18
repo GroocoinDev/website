@@ -92,40 +92,51 @@
                 Kakao.Auth.login({
                     success: function(authObj) {
                         $('#loading, #loading_bg').removeClass("hide");
-
-                        Kakao.API.request({
-                            url: '/v1/user/me',
-                            always: function(res) {
-                                var kakaoInfo = res;
-                                alert(kakaoInfo.id);                                
-
-//                            $.post("../app/api/user_api.php", {
-//                              "action":"CHECK_REGISTERED_USER",
-//                              "email":res.kaccount_email
-//                            }, function(data, status) {
-//                              var kakao_id = res.id;
-//                              var access_token = hex_md5(kakao_id.toString());
-//                              var kakao_email = res.kaccount_email;
-//                              // alert(hex_md5(res.id));
-//                              // console.log(data);
-//                              // console.log(res);
-//                              var kNickname = "이름없음";
-//                              var kProfileImage = "default-profile-pic.jpg";
-//                              var kThumbnailImage = "default-profile-pic-thumb.jpg";
-//                              if(typeof res.properties != "undefined") {
-//                                kNickname = res.properties.nickname;
-//                                kProfileImage = res.properties.profile_image;
-//                                kThumbnailImage = res.properties.thumbnail_image;
-//                              }
-                                
-                            }
-                        });
+                        
+                        alert(JSON.stringify(authObj));
                     },
                     fail: function(err) {
-                        alert("카카오톡 로그인에 실패하였습니다.\n다시 접속해주세요.");
+                        alert(JSON.stringify(err));
                     }
                 });
-            };
+                
+//                Kakao.Auth.login({
+//                    success: function(authObj) {
+//                        
+//
+//                        Kakao.API.request({
+//                            url: '/v1/user/me',
+//                            always: function(res) {
+//                                var kakaoInfo = res;
+//                                alert(kakaoInfo.id);                                
+//
+////                            $.post("../app/api/user_api.php", {
+////                              "action":"CHECK_REGISTERED_USER",
+////                              "email":res.kaccount_email
+////                            }, function(data, status) {
+////                              var kakao_id = res.id;
+////                              var access_token = hex_md5(kakao_id.toString());
+////                              var kakao_email = res.kaccount_email;
+////                              // alert(hex_md5(res.id));
+////                              // console.log(data);
+////                              // console.log(res);
+////                              var kNickname = "이름없음";
+////                              var kProfileImage = "default-profile-pic.jpg";
+////                              var kThumbnailImage = "default-profile-pic-thumb.jpg";
+////                              if(typeof res.properties != "undefined") {
+////                                kNickname = res.properties.nickname;
+////                                kProfileImage = res.properties.profile_image;
+////                                kThumbnailImage = res.properties.thumbnail_image;
+////                              }
+//                                
+//                            }
+//                        });
+//                    },
+//                    fail: function(err) {
+//                        alert("카카오톡 로그인에 실패하였습니다.\n다시 접속해주세요.");
+//                    }
+//                });
+            }
             
 			// 카카오링크 - 친구 초대하기
 			function sendLink() {
@@ -133,11 +144,11 @@
 					objectType: 'feed',
 					content: {
 					  title: 'Groocoin (그루코인)',
-					  description: '그루 룰렛 받으세요!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
-					  imageUrl: 'https://pbs.twimg.com/media/Doy2_yNUYAAY5ao.jpg?t=<?=time()?>',
+					  description: '그루코인 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
+					  imageUrl: 'https://pbs.twimg.com/media/Doy2_yNUYAAY5ao.jpg',
 					  link: {
-						mobileWebUrl: 'https://groo.io',
-				        webUrl: 'https://groo.io'
+						mobileWebUrl: 'https://open.kakao.com/o/gsb5nyM',
+				        webUrl: 'https://open.kakao.com/o/gsb5nyM'
 					  }
 					},
 					buttons: [
