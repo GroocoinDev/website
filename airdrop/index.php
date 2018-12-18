@@ -101,6 +101,7 @@
             function loginWithKakao() {
                 // 로그인 창을 띄웁니다.
                 Kakao.Auth.login({
+					throughTalk: true,
                     success: function(authObj) {
                         $('#loading, #loading_bg').removeClass("hide");
                         
