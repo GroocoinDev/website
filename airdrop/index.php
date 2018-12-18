@@ -1,5 +1,5 @@
 <?php
-	include_once("inc/device_check.php");
+	include_once("../inc/device_check.php");
 ?>
 
 <html>
