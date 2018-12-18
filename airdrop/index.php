@@ -74,6 +74,7 @@
 			</div>
 
 			<div style="width:100%;">
+				<a id="custom-login-btn" href="javascript:loginWithKakao()">카카오 계정으로 시작하기</a>
 				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:25px; border-bottom:1px solid #f5f5f5;">1. 친구에게 과탑 추천<img class="center" src="../assets/img/app_invitation_icon1.png" width="14" height="17.5" style="float:right;" /></div>
 				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:23px; border-bottom:1px solid #f5f5f5;">2. 친구가 과탑 앱설치<img class="center" src="../assets/img/app_invitation_icon2.png" width="17.5" height="17.5" style="float:right;" /></div>
 				<div style="width:100%; height:50px; line-height:50px; padding-left:25px; padding-right:26px; border-bottom:1px solid #f5f5f5;">3. 가입시 추천인 이메일 주소입력<img class="center" src="../assets/img/app_invitation_icon3.png" width="11.5" height="17.5" style="float:right;" /></div>
@@ -94,7 +95,6 @@
             $(document).ready(function(){
 				<? if(!is_Kakao()) { ?>
 					Kakao.init('52084ca1d0ecefc89205a8cb188da198');
-					loginWithKakao();
 				<? } ?>
             });
             
