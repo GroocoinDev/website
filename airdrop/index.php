@@ -42,12 +42,14 @@
                 text-align: center;
             }
             #loading_bg {
+/*
                 width:100%;
                 background:#000000;
                 opacity:0.5;
                 position:absolute;
                 top:0;
                 bottom:0;
+*/
             }
 		</style>
 	<body>
