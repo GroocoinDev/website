@@ -162,8 +162,8 @@
 					  {
 						title: '공식채널입장',
 						link: {
-						  mobileWebUrl: 'https://open.kakao.com/o/gsb5nyM',
-						  webUrl: 'https://open.kakao.com/o/gsb5nyM'
+						  mobileWebUrl: 'http://pf.kakao.com/_rAxbwj/31138151',
+						  webUrl: 'http://pf.kakao.com/_rAxbwj/31138151'
 						}
 					  }
 					]
