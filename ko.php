@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
-    <link rel="stylesheet" href="assets/style/main.css?v=2">
+    <link rel="stylesheet" href="assets/style/main.css?v=3">
     <link rel="stylesheet" href="assets/style/font.ko.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
@@ -472,51 +472,51 @@
 		
 		<div class="center" style="max-width: 1200px; padding-left:20px; padding-right:20px;">
 			<div class="partner-box">
-				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png" class="center" style="width:70%;"></a>
+				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-            	<a href="https://www.bitc3.com" target="_blank"><img src="assets/img/bitc3.png" class="center" style="width:70%;"></a>
+            	<a href="https://www.bitc3.com" target="_blank"><img src="assets/img/bitc3.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png"  class="center" style="width:70%;"></a>
+				<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png?v=1"  class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png" class="center" style="width:70%;"></a>
+				<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png?v=1" class="center" style="width:70%;"></a>
 			</div>
             
             
 			<div class="partner-box">
-            	<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png" class="center" style="width:70%;"></a>
+            	<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png" class="center" style="width:70%;"></a>
+				<a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png" class="center" style="width:70%;"></a>
+				<a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png" class="center" style="width:70%;"></a>
+				<a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			
 			<div class="partner-box">
-            	<a href="https://www.ledger.com/" target="_blank"><img src="assets/img/ledger.png" class="center" style="width:70%;"></a>
+            	<a href="https://www.ledger.com/" target="_blank"><img src="assets/img/ledger.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://trezor.io/" target="_blank"><img src="assets/img/trezor.png" class="center" style="width:70%;"></a>
+				<a href="https://trezor.io/" target="_blank"><img src="assets/img/trezor.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://www.coingecko.com/en/coins/groocoin" target="_blank"><img src="assets/img/coingecko.png" class="center" style="width:70%;"></a>
+				<a href="https://www.coingecko.com/en/coins/groocoin" target="_blank"><img src="assets/img/coingecko.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png" class="center" style="width:70%;"></a>
+				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			
 			<div class="center_h partner-box5">
 				<div class="partner-box4">
-					<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png" class="center" style="width:70%;"></a>
+					<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png?v=1" class="center" style="width:70%;"></a>
 				</div>
 				<div class="partner-box4">
-					<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png" class="center" style="width:70%;"></a>
+					<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
 				</div>
 			</div>
 		</div>
