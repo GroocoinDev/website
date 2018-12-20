@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
-    <link rel="stylesheet" href="assets/style/main.css?v=2">
+    <link rel="stylesheet" href="assets/style/main.css?v=3">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -477,59 +477,117 @@
     </section> 
 -->
 
-	<section class="section section-partners bg-gray" id="section-partners">
+	<section class="section section-blockchain-partners" id="section-partners">
 		<h1 class="title center white add-mg-b">Blockchain partners</h1>
 		
-		<div class="center" style="width: 80%; max-width: 950px;">
-			<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.svg" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+		<div class="center" style="max-width: 1200px; padding-left:20px; padding-right:20px;">
+			<div class="partner-box">
+				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+            	<a href="https://www.bitc3.com" target="_blank"><img src="assets/img/bitc3.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png?v=1"  class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png?v=1" class="center" style="width:70%;"></a>
+			</div>
             
-            <a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://www.ledger.com/" target="_blank"><img src="assets/img/ledger.svg" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
             
-            <a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            
-            <a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
-            <a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png" class="partner--logo" style="width:200px; margin:25px; vertical-align:middle;"></a>
+			<div class="partner-box">
+            	<a href="https://metamask.io/" target="_blank"><img src="assets/img/metamask.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://www.myetherwallet.com/" target="_blank"><img src="assets/img/myetherwallet-logo.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://token.im/" target="_blank"><img src="assets/img/imTokenLogo.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://trustwallet.com/" target="_blank"><img src="assets/img/trustwallet.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			
+			<div class="partner-box">
+            	<a href="https://www.ledger.com/" target="_blank"><img src="assets/img/ledger.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://trezor.io/" target="_blank"><img src="assets/img/trezor.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://www.coingecko.com/en/coins/groocoin" target="_blank"><img src="assets/img/coingecko.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			
+			<div class="center_h partner-box5">
+				<div class="partner-box4">
+					<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png?v=1" class="center" style="width:70%;"></a>
+				</div>
+				<div class="partner-box4">
+					<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
+				</div>
+			</div>
 		</div>
+	</section>
+	
+	<section class="section section-strategic-partners" id="section-partners">
+		<h1 class="title center white add-mg-b" style="margin-bottom:50px;">Strategic Partners</h1>
 		
-		<h1 class="title center white add-mg-b" style="margin-top:100px;">Strategic Partners</h1>
-		
-		<div class="partners--outer center appear">
-			<div class="partners--inner">
-				<div class="row" style="padding-bottom:50px;">
-					<div class="section--partner-logo d-w-30 m-w-100">
-						<img src="assets/img/logo_momedia.png" class="partner--logo"/>
-					</div>
-					<div class="section--information d-w-70 m-w-100 partners--information">
-						· Distributing Otter-box, Zagg, Mophie, iFrogz, X mini, House of Marely, iWalk, Skech<br/>
-						· Channels: Telecom operators, Duty free, APR, Samsung stores, Best mobile, Dynamica
-					</div>
-				</div>
-
-				<div class="row" style="padding-bottom:50px;">
-					<div class="section--partner-logo d-w-30 m-w-100">
-						<img src="assets/img/logo_onetto.png" class="partner--logo"/>
-					</div>
-					<div class="section--information d-w-70 m-w-100 partners--information">
-						· High-quality accessories for Smart phones.<br/>
-						· Onetto is a leader in the production and approved by partners (Samsung, LG, Philips)
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="section--partner-logo d-w-30 m-w-100">
-						<img src="assets/img/logo_smarttap.png" class="partner--logo"/>
-					</div>
-					<div class="section--information d-w-70 m-w-100 partners--information">
-						· One of the top sellers on Amazon.com for Car accessories<br/>
-						· Customer-focused, and to meet user needs through continual improvement. 
-					</div>
-				</div>
+		<div class="center" style="max-width: 1200px; padding-left:20px; padding-right:20px;">
+			<div class="partner-box">
+				<img src="assets/img/partner-polar.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-teeki.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-bigelow.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-ucf.png" class="center" style="width:100%;">
+			</div>
+			
+			<div class="partner-box">
+				<img src="assets/img/partner-greenapple.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-tazo.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-lakme.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box">
+				<img src="assets/img/partner-satoshi-capital.png" class="center" style="width:100%;">
+			</div>
+			
+			<!-- 3 -->
+			<div class="partner-box2">
+				<img src="assets/img/partner-society.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box2">
+				<img src="assets/img/partner-greengarden.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box2">
+				<img src="assets/img/partner-kao.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box2">
+				<img src="assets/img/partner-duncans.png" class="center" style="width:100%;">
+			</div>
+			
+			<!-- 4 -->
+			<div class="partner-box3">
+				<img src="assets/img/partner-alphacoin.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box3">
+				<img src="assets/img/partner-skinna.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box3">
+				<img src="assets/img/partner-naunau.png" class="center" style="width:100%;">
+			</div>
+			<div class="partner-box3">
+				<img src="assets/img/partner-prana.png" class="center" style="width:100%;">
 			</div>
 		</div>
 	</section> 
