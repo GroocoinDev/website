@@ -218,7 +218,7 @@
 					content: {
 					  title: 'Groocoin (그루코인)',
 					  description: '그루코인 룰렛 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
-					  imageUrl: 'https://pbs.twimg.com/media/Doy2_yNUYAAY5ao.jpg',
+					  imageUrl: 'https://groo.io/assets/img/event_kakao_1.png',
 					  link: {
 						mobileWebUrl: 'https://open.kakao.com/o/gsb5nyM',
 				        webUrl: 'https://open.kakao.com/o/gsb5nyM'
