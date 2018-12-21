@@ -19,10 +19,9 @@ function is_Mobile() {
 
 
 function is_ios() {
-
-	$dev_txt = what_device();
-
-	if($dev_txt == "iPhone" || $dev_txt == "iphoneAPP" || $dev_txt == "iPad"){
+	$iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iphone");
+	
+	if($iPhone > 1){
 
 		return true;
 

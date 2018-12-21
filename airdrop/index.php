@@ -11,6 +11,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+		<meta property="og:title" content="Groocoin Airdrop" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://groo.io/airdrop" />
+		<meta property="og:image" content="https://groo.io/assets/img/event_kakao_1.png" />
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
@@ -71,7 +76,11 @@
 		?>
 		
 		<? if(is_Kakao()) { ?>
-			<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-14; top:5; width:100px; height:80px;" />
+			<? if (is_ios()) { ?>
+				<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-25; bottom:5; width:100px; height:80px; transform: rotateX(180deg);" />
+			<? } else { ?>
+				<img src="../assets/img/pointer_up_right.png" style="position:fixed; right:-14; top:5; width:100px; height:80px;" />
+			<? } ?>
 			<div style="padding:10px;" class="center">
 				<div style="width:100%; height: 50px; background:rgba(0,0,0,0.85); text-align:center;">
 					<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
@@ -79,7 +88,11 @@
 				<div style="width:100%; padding:15px; background:#e0e0e0; color:#444444; text-align:left; font-size:12px;">
 					<span style="font-size:13px;">
 						<b>※ 카카오톡 인앱브라우저로 접속하셨습니다.</b><br><br>
-						룰렛 이벤트에 참여하기 위해서 <b>우측 상단 메뉴( ፧ )</b>에서 <b><u>'다른 브라우저로 열기'</u></b> 를 이용해 주세요.<br>
+						<? if (is_ios()) { ?>
+							룰렛 이벤트에 참여하기 위해서 <b>우측 하단 메뉴</b>에서 <b><u>'Safari로 열기'</u></b> 를 이용해 주세요.<br>
+						<? } else { ?>
+							룰렛 이벤트에 참여하기 위해서 <b>우측 상단 메뉴( ፧ )</b>에서 <b><u>'다른 브라우저로 열기'</u></b> 를 이용해 주세요.<br>
+						<? } ?>
 					</span>
 					
 					<div style="height:1px; background:#c0c0c0; margin-top:15px; margin-bottom:15px;"></div>
@@ -154,9 +167,9 @@
 					<div style="margin-bottom:10px;">1. 코인 수령을 위해 <b><u>반드시 공식채널에 입장해 주세요.</u></b></div>
 					<div style="margin-bottom:10px;">2. 룰렛 게임만 참여하는 경우 코인이 지급 되지 않습니다.</div>
 					<div style="margin-bottom:10px;">3. 룰렛 이벤트 종료 후 2주 이내 코인 지급 예정입니다.</div>
-					<div style="margin-bottom:10px;">4. 거래소의 이더리움(ETH) 주소는 코인 수령이 불가능합니다.</div>
-					<div style="margin-bottom:10px;">5. 이벤트 : 2018년 12월 21일 9AM - 2018년 12월 31일 11PM</div>
-					<div>Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
+					<div style="margin-bottom:10px;">4. 거래소의 이더리움(ETH) 주소는 코인 수령이 <b>불가능</b>합니다.</div>
+					<div style="margin-bottom:10px;">5. 이벤트 : 2018년 12월 21일 9AM - 2018년 12월 31일 11PM <u>(2000명 참여시 조기 마감)</u></div>
+					<div>* Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
 				</div>
 			</div>
 		
@@ -224,12 +237,41 @@
 			function startBtn() {
 				$("#roulette").rotate({
 					angle:0,
-					animateTo:350,
+					animateTo:2082,
 					center: ["50%", "50%"],
 					easing: $.easing.easeInOutElastic,
 					callback: function(){
 						var n = $(this).getRotateAngle();
 						// 회전 완료
+						
+						var result = n % 360;
+						
+						if(result > 0 && result < 45) {
+							// 100
+							alert('100 GROO 당첨!');
+							
+						} else if(result > 45 && result < 90) {
+							// 1,000
+							alert('1,000 GROO 당첨!');
+						} else if(result > 90 && result < 135) {
+							// 500
+							alert('500 GROO 당첨!');
+						} else if(result > 135 && result < 180) {
+							// 10,000
+							alert('10,000 GROO 당첨!');
+						} else if(result > 180 && result < 225) {
+							// 500
+							alert('500 GROO 당첨!');
+						} else if(result > 225 && result < 270) {
+							// 1,000
+							alert('1,000 GROO 당첨!');
+						} else if(result > 270 && result < 315) {
+							// 500
+							alert('500 GROO 당첨!');
+						} else if(result > 315 && result < 360) {
+							// 20,000
+							alert('20,000 GROO 당첨!');
+						}
 					},
 					duration:5000
 				});
@@ -259,11 +301,11 @@
 					objectType: 'feed',
 					content: {
 					  title: 'Groocoin (그루코인)',
-					  description: '그루코인 룰렛 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 1000명).',
+					  description: '그루코인 룰렛 에어드랍 이벤트!\n룰렛 돌리고 그루코인 무료로 받아가세요 (선착순 2000명).',
 					  imageUrl: 'https://groo.io/assets/img/event_kakao_1.png',
 					  link: {
-						mobileWebUrl: 'https://open.kakao.com/o/gsb5nyM',
-				        webUrl: 'https://open.kakao.com/o/gsb5nyM'
+						mobileWebUrl: 'https://groo.io/airdrop/?r=' + mykakaoID,
+				        webUrl: 'https://groo.io/airdrop/?r=' + mykakaoID
 					  }
 					},
 					buttons: [
