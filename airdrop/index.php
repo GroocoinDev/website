@@ -1,6 +1,7 @@
 <?php
 	include_once("../inc/device_check.php");
 	$join = $_GET['join'];
+	$r = $_GET['r'];
 ?>
 
 <html>
@@ -13,6 +14,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+		<script src="../assets/lib/jQueryRotate.js"></script>
 		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -101,12 +103,17 @@
 				<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
 			</div>
 		
-			<div id="game" style="width:100%; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E6498F 100%), #7A05EF; padding: 40px 0 35px;">
+			<div id="game" style="width:100%; background: url('../assets/img/event_kakao_bg.png'); background-size:100%; padding: 40px 0 35px;">
 				<div style="width:100%; color:#fff; font-size:24px; text-align:center; text-weight:bold;">
-					GROO ROULETTE GAME
+					<img src="../assets/img/event_kakao_title.png" style="max-width:80%;" />
 				</div>
 				
-				<img src="../assets/img/roulette_tmp.png" style="width:80%; margin-top:40px; margin-bottom:25px;" class="center_h" />
+				
+				<div style="width:80%; margin-top:40px; margin-bottom:25px;" class="center_h" >
+					<img id="roulette" src="../assets/img/event_kakao_roulette.png" style="width:100%;" />
+					<img class="center_h" src="../assets/img/event_kakao_point.png" style="width:12%; height:18%; top:-4%; position:absolute;" />
+					<img onclick="startBtn();" class="Absolute-Center" src="../assets/img/event_kakao_startbtn.png" style="width:34%; height:34%; position:absolute;" />
+				</div>
 				
 				<div class="not_login" style="color:#fff; text-align:center; padding-left:15px; padding-right:15px;">
 					카카오 계정 로그인 후 참여 가능합니다.
@@ -114,24 +121,28 @@
 				</div>
 				
 				<div class="login" style="width:100%; color:#fff; margin-top:25px; margin-bottom:25px; font-size:18px; text-align:center; text-weight:bold;">
-					받을 그루코인수 : <span style="color:#ffff88; font-weight:bold;">9999 GROO</span><br>
-					재도전 가능 횟수 : 0회
+					받을 그루코인수 : <span id="groocoin_count" style="color:#ffff88; font-weight:bold;">0 GROO</span><br>
+					재도전 가능 횟수 : <span id="retry_count" style="color:#ffff88; font-weight:bold;">0 회</span>
 				</div>
 				
-				<div id="beforeinfo" class="login " style="color:#fff; text-align:center; font-size:12px; padding-left:15px; padding-right:15px;">
-					코인을 받을 이더리움(ETH) 지갑 주소를 입력해주세요.<br>
-					(MEW, MetaMask, ImToken, Trust Wallet, Ledger, Trezor 등)
-					<input id="ethAddress" type="text" class="form-control" maxlength="42" placeholder="이더리움 개인지갑 주소를 입력해주세요. (거래소 X)" style="margin-top:10px;">
-				</div>
-				
-				<div id="dropinfo" class="login hide" style="color:#fff; text-align:center; font-size:12px;">
-					내 지갑 주소 : 0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1
-				</div>
-				
-				<div class="login" style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
-					<button id="sendBtn" type="button" class="btn btn-success btn-lg btn-block" onclick="requestGROO();">9999 GROO 에어드랍 신청하기</button>
-					<button type="button" class="btn btn-info btn-lg btn-block" onclick="sendLink();">친구초대하고 재도전 기회 얻기!</button>
-					<button id="joinBtn" type="button" class="hide btn btn-success btn-lg btn-block" onclick="joinKakao();">공식 GROO 카톡방입장(필수)</button>
+				<div class="login " style="background:#fff; padding:10px; border-radius:10px; margin-top:20px; font-size:12px; margin-left:15px; margin-right:15px;">
+					<div id="beforeinfo" style="color:#444444; text-align:center; font-size:12px; padding-left:0px; padding-right:0px;">
+						코인 수령을 위한 이더리움(ETH) 지갑주소를 입력하세요.<br>
+						<b>(거래소 지갑을 제외한 개인 ETH 지갑주소 모두 가능!)</b>
+						<input id="ethAddress" type="text" class="form-control" maxlength="42" placeholder=" 개인 이더리움 지갑주소를 입력해주세요." style="margin-top:10px;">
+					</div>
+
+					<div style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
+						<button id="sendBtn" type="button" class="btn btn-success btn-lg btn-block" onclick="requestGROO();">에어드랍 신청하기</button>
+						<button type="button" class="btn btn-info btn-lg btn-block" onclick="sendLink();">친구초대하고 재도전 기회 얻기!</button>
+						<button id="joinBtn" type="button" class="hide btn btn-success btn-lg btn-block" onclick="joinKakao();">공식 GROO 카톡방입장(필수)</button>
+						
+						<div style="color:#444444; text-align:center; font-size:12px; margin-top:15px;">
+							내 레퍼럴 주소<br>
+							<a href="javascript:copy();">https://groo.io/airdrop/?r=<span id="refferalID"></span></a><br>
+							친구 초대시 1회 재도전가능 (최대 5회)
+						</div>
+					</div>
 				</div>
 			</div>
 		
@@ -140,13 +151,12 @@
 					이벤트 규칙
 				</div>
 				<div style="background:#fff; padding:15px; border-radius:10px; margin-top:20px; font-size:12px;">
-					<div style="margin-bottom:10px;">- 이벤트 기간 : 2018년 12월 21일 오전 9시 - 2018년 12월 31일 23시 59초 KST (UTC+9)</div>
-					<div style="margin-bottom:10px;">- 룰렛 게임으로 최대 <b>2000 GROO</b>까지 지급 됩니다.</div>
-					<div style="margin-bottom:10px;">- 룰렛 게임 참여후 반드시 <b>이더리움 지갑주소</b>를 기입해주셔야 합니다.</div>
-					<div style="margin-bottom:10px;">- 룰렛 이벤트 <b>종료 후 2주 이내 GROO 지급</b> 예정입니다.</div>
-					<div style="margin-bottom:10px;">- 코인 지급 시점에 <b>공식 그루코인 채널</b>에 입장되어 있지 않은 계정은 무효처리 됩니다.</div>
-					<div style="margin-bottom:10px;">- 지갑 주소 오기입으로 인한 불이익은 책임지지 않습니다.</div>
-					<div>- Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
+					<div style="margin-bottom:10px;">1. 코인 수령을 위해 <b><u>반드시 공식채널에 입장해 주세요.</u></b></div>
+					<div style="margin-bottom:10px;">2. 룰렛 게임만 참여하는 경우 코인이 지급 되지 않습니다.</div>
+					<div style="margin-bottom:10px;">3. 룰렛 이벤트 종료 후 2주 이내 코인 지급 예정입니다.</div>
+					<div style="margin-bottom:10px;">4. 거래소의 이더리움(ETH) 주소는 코인 수령이 불가능합니다.</div>
+					<div style="margin-bottom:10px;">5. 이벤트 : 2018년 12월 21일 9AM - 2018년 12월 31일 11PM</div>
+					<div>Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
 				</div>
 			</div>
 		
@@ -163,13 +173,30 @@
 		
 		<script>
 			//<![CDATA[
+			
+			var mykakaoID = 0;
+			
             $(document).ready(function(){
 				Kakao.init('52084ca1d0ecefc89205a8cb188da198');
 				
 				$(".login").hide();
 //				$(".not_login").hide();
-//				$(".login").show();
+//								$(".login").show();
             });
+			
+			function copyToClipboard(val) {
+				var t = document.createElement("textarea");
+				document.body.appendChild(t);
+				t.value = val;
+				t.select();
+				document.execCommand('copy');
+				document.body.removeChild(t);
+			}
+			
+			function copy() {
+				copyToClipboard('https://groo.io/airdrop/?r=' + mykakaoID);
+				alert('복사 되었습니다!');
+			}
             
             function loginWithKakao() {
                 // 로그인 창을 띄웁니다.
@@ -180,8 +207,9 @@
 							url: '/v1/user/me',
 							always: function(res) {
 								var kakaoInfo = res;
-								//alert(kakaoInfo.id);
+								mykakaoID = kakaoInfo.id;
 								
+								$("#refferalID").text(mykakaoID);
 								$(".not_login").hide();
 								$(".login").show();
                             }
@@ -192,6 +220,20 @@
                     }
                 });
             }
+			
+			function startBtn() {
+				$("#roulette").rotate({
+					angle:0,
+					animateTo:350,
+					center: ["50%", "50%"],
+					easing: $.easing.easeInOutElastic,
+					callback: function(){
+						var n = $(this).getRotateAngle();
+						// 회전 완료
+					},
+					duration:5000
+				});
+			}
 			
 			function requestGROO() {
 				var ethAddr = $("#ethAddress").val();
@@ -228,8 +270,8 @@
 					  {
 						title: '룰렛 돌리기',
 						link: {
-						  mobileWebUrl: 'https://groo.io/airdrop/',
-						  webUrl: 'https://groo.io/airdrop/'
+						  mobileWebUrl: 'https://groo.io/airdrop/?r=' + mykakaoID,
+						  webUrl: 'https://groo.io/airdrop/?r=' + mykakaoID
 						}
 					  },
 					  {
