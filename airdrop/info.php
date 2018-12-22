@@ -104,7 +104,7 @@
 				echo $jsonData;
 				exit;
 				
-			} else if($user['TRYCOUNT'] > 0 && $user['FRIEND']+1 <= $user['TRYCOUNT']) {
+			} else if($user['TRYCOUNT'] > 0 && $user['FRIEND'] <= $user['TRYCOUNT']-1) {
 				// 초대자보다 참여횟수가 적어야함 (ERR)
 				$rootObj->isSuccess = false;
 				$rootObj->reason = "친구 초대시 추가로 1회 참여 가능합니다.";
