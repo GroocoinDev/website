@@ -210,6 +210,11 @@
 				Kakao.init('52084ca1d0ecefc89205a8cb188da198');
 				
 				$(".login").hide();
+				
+				<? if(!is_Mobile()) { ?>
+				alert('모바일로 접속하시기 바랍니다.');
+				history.back(-1);
+				<? } ?>
             });
 			
 			function copyToClipboard(val) {

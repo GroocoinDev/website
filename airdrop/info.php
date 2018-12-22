@@ -43,11 +43,13 @@
 				$result=mysqli_query($db,$sql);
 				if($result == 0) $success = false;
 				
-				$sql="UPDATE event_roulette_kakao SET
-							FRIEND = FRIEND + 1
-							WHERE KAKAO_ID = '". $refferal ."'";
-				$result=mysqli_query($db,$sql);
-				if($result == 0) $success = false;
+				if($refferal != $kakao_id) {
+					$sql="UPDATE event_roulette_kakao SET
+								FRIEND = FRIEND + 1
+								WHERE KAKAO_ID = '". $refferal ."'";
+					$result=mysqli_query($db,$sql);
+					if($result == 0) $success = false;
+				}
 				
 				// 트렌젝션 끝
 				if($success) {
