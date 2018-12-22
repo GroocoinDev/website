@@ -2,6 +2,10 @@
 	include_once("../inc/device_check.php");
 	$join = $_GET['join'];
 	$r = $_GET['r'];
+	$dev = $_GET['dev'];
+
+	if(!isset($r))
+		$r = 0;
 ?>
 
 <html>
@@ -116,6 +120,10 @@
 				<img class="center" src="../assets/img/logo.svg" alt="GROO Coin Logo">
 			</div>
 		
+			<? if(isset($dev)) { ?>
+				<button onclick="loginTEST();">LOGIN</button>
+			<? } ?>
+		
 			<div id="game" style="width:100%; background: url('../assets/img/event_kakao_bg.png'); background-size:100%; padding: 40px 0 35px;">
 				<div style="width:100%; color:#fff; font-size:24px; text-align:center; text-weight:bold;">
 					<img src="../assets/img/event_kakao_title.png" style="max-width:80%;" />
@@ -134,15 +142,21 @@
 				</div>
 				
 				<div class="login" style="width:100%; color:#fff; margin-top:25px; margin-bottom:25px; font-size:18px; text-align:center; text-weight:bold;">
-					받을 그루코인수 : <span id="groocoin_count" style="color:#ffff88; font-weight:bold;">0 GROO</span><br>
-					재도전 가능 횟수 : <span id="retry_count" style="color:#ffff88; font-weight:bold;">0 회</span>
+					획득한 그루코인 : <span id="groocoin_count" style="color:#ffff88; font-weight:bold;">0 GROO</span><br>
+					참여 횟수 : <span id="retry_count" style="color:#ffff88; font-weight:bold;">0 회</span><br>
+					초대한 친구 : <span id="friend_count" style="color:#ffff88; font-weight:bold;">0 명</span>
 				</div>
 				
 				<div class="login " style="background:#fff; padding:10px; border-radius:10px; margin-top:20px; font-size:12px; margin-left:15px; margin-right:15px;">
 					<div id="beforeinfo" style="color:#444444; text-align:center; font-size:12px; padding-left:0px; padding-right:0px;">
 						코인 수령을 위한 이더리움(ETH) 지갑주소를 입력하세요.<br>
-						<b>(거래소 지갑을 제외한 개인 ETH 지갑주소 모두 가능!)</b>
+						<b>(거래소 지갑은 절대로 입력하지 마세요!)</b>
 						<input id="ethAddress" type="text" class="form-control" maxlength="42" placeholder=" 개인 이더리움 지갑주소를 입력해주세요." style="margin-top:10px;">
+					</div>
+					
+					<div id="dropinfo" style="color:#444444; text-align:center; font-size:12px; margin-top:15px;">
+						내 이더리움 주소<br>
+						<span id="ethaddress_info"></span>
 					</div>
 
 					<div style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
@@ -168,7 +182,8 @@
 					<div style="margin-bottom:10px;">2. 룰렛 게임만 참여하는 경우 코인이 지급 되지 않습니다.</div>
 					<div style="margin-bottom:10px;">3. 룰렛 이벤트 종료 후 2주 이내 코인 지급 예정입니다.</div>
 					<div style="margin-bottom:10px;">4. 거래소의 이더리움(ETH) 주소는 코인 수령이 <b>불가능</b>합니다.</div>
-					<div style="margin-bottom:10px;">5. 이벤트 : 2018년 12월 21일 9AM - 2018년 12월 31일 11PM <u>(2000명 참여시 조기 마감)</u></div>
+					<div style="margin-bottom:10px;">5. 부정 참여는 예고없이 무효처리 됩니다.</div>
+					<div style="margin-bottom:10px;">6. 이벤트 : 2018년 12월 21일 9AM - 2018년 12월 31일 11PM <u>(2000명 참여시 조기 마감)</u></div>
 					<div>* Groo Corporation은 본 이벤트에 관한 모든 권한을 갖습니다.</div>
 				</div>
 			</div>
@@ -187,14 +202,14 @@
 		<script>
 			//<![CDATA[
 			
+			var spining = false;
 			var mykakaoID = 0;
+			var r = <?=$r?>;
 			
             $(document).ready(function(){
 				Kakao.init('52084ca1d0ecefc89205a8cb188da198');
 				
 				$(".login").hide();
-//				$(".not_login").hide();
-//								$(".login").show();
             });
 			
 			function copyToClipboard(val) {
@@ -210,6 +225,47 @@
 				copyToClipboard('https://groo.io/airdrop/?r=' + mykakaoID);
 				alert('복사 되었습니다!');
 			}
+			
+			<? if(isset($dev)) { ?>
+			function loginTEST() {
+				mykakaoID = 1234;
+				r = 5555;
+				
+				// 로그인 처리
+				$.ajax({
+					type : "GET",
+					url : "info.php",
+					dataType : "json",
+					data : "action=login&kakao_id=" + mykakaoID + "&refferal=" + r,
+					success : function(json) {
+						if(json.isSuccess) {
+							$("#refferalID").text(mykakaoID);
+							$(".not_login").hide();
+							$(".login").show();
+
+							$("#friend_count").text(json.friend + " 명");
+							$("#groocoin_count").text(json.groocoin + " GROO");
+							$("#retry_count").text(json.trycount + " 회");
+
+							if(json.ethaddress != null) {
+								// 이더 주소가 세팅되어있다면
+								$("#beforeinfo, #sendBtn").hide();
+								$("#joinBtn").removeClass("hide");
+								$("#ethaddress_info").text(json.ethaddress);
+							} else {
+								// 이더 주소가 없으면
+								$("#dropinfo").hide();
+							}
+						} else {
+							alert(json.reason);
+						}
+					},
+					error : function(e) {
+						alert("처리중 장애가 발생하였습니다.");
+					}
+				});
+			}
+			<? } ?>
             
             function loginWithKakao() {
                 // 로그인 창을 띄웁니다.
@@ -225,6 +281,37 @@
 								$("#refferalID").text(mykakaoID);
 								$(".not_login").hide();
 								$(".login").show();
+								
+								// 로그인 처리
+								$.ajax({
+									type : "GET",
+									url : "info.php",
+									dataType : "json",
+									data : "action=login&kakao_id=" + mykakaoID + "&refferal=" + r,
+									success : function(json) {
+										if(json.isSuccess) {
+											$("#friend_count").text(json.friend + " 명");
+											$("#groocoin_count").text(json.groocoin + " GROO");
+											$("#retry_count").text(json.trycount + " 회");
+											
+											if(json.ethaddress != null) {
+												// 이더 주소가 세팅되어있다면
+												$("#beforeinfo, #sendBtn").hide();
+												$("#joinBtn").removeClass("hide");
+												$("#ethaddress_info").text(json.ethaddress);
+											} else {
+												// 이더 주소가 없으면
+												$("#dropinfo").hide();
+											}
+											
+										} else {
+											alert(json.reason);
+										}
+									},
+									error : function(e) {
+										alert("처리중 장애가 발생하였습니다.");
+									}
+								});
                             }
                         });
                     },
@@ -235,45 +322,78 @@
             }
 			
 			function startBtn() {
-				$("#roulette").rotate({
-					angle:0,
-					animateTo:2082,
-					center: ["50%", "50%"],
-					easing: $.easing.easeInOutElastic,
-					callback: function(){
-						var n = $(this).getRotateAngle();
-						// 회전 완료
-						
-						var result = n % 360;
-						
-						if(result > 0 && result < 45) {
-							// 100
-							alert('100 GROO 당첨!');
+				if (spining)
+					return;
+				
+				if(mykakaoID == 0) {
+					alert("카카오 계정 로그인후 이벤트 참여가능합니다.");
+					return;
+				}
+				
+				spining = true;
+				
+				// 게임 참여 처리
+				$.ajax({
+					type : "GET",
+					url : "info.php",
+					dataType : "json",
+					data : "action=spin&kakao_id=" + mykakaoID,
+					success : function(json) {
+						if(json.isSuccess) {
 							
-						} else if(result > 45 && result < 90) {
-							// 1,000
-							alert('1,000 GROO 당첨!');
-						} else if(result > 90 && result < 135) {
-							// 500
-							alert('500 GROO 당첨!');
-						} else if(result > 135 && result < 180) {
-							// 10,000
-							alert('10,000 GROO 당첨!');
-						} else if(result > 180 && result < 225) {
-							// 500
-							alert('500 GROO 당첨!');
-						} else if(result > 225 && result < 270) {
-							// 1,000
-							alert('1,000 GROO 당첨!');
-						} else if(result > 270 && result < 315) {
-							// 500
-							alert('500 GROO 당첨!');
-						} else if(result > 315 && result < 360) {
-							// 20,000
-							alert('20,000 GROO 당첨!');
+							$("#roulette").rotate({
+								angle:0,
+								animateTo:json.spin,
+								center: ["50%", "50%"],
+								easing: $.easing.easeInOutElastic,
+								callback: function(){
+									var n = $(this).getRotateAngle();
+									// 회전 완료
+
+									var result = n % 360;
+
+									if(result > 0 && result < 45) {
+										// 100
+										alert('100 GROO 당첨!');
+
+									} else if(result > 45 && result < 90) {
+										// 1,000
+										alert('1,000 GROO 당첨!');
+									} else if(result > 90 && result < 135) {
+										// 500
+										alert('500 GROO 당첨!');
+									} else if(result > 135 && result < 180) {
+										// 10,000
+										alert('10,000 GROO 당첨!');
+									} else if(result > 180 && result < 225) {
+										// 500
+										alert('500 GROO 당첨!');
+									} else if(result > 225 && result < 270) {
+										// 1,000
+										alert('1,000 GROO 당첨!');
+									} else if(result > 270 && result < 315) {
+										// 500
+										alert('500 GROO 당첨!');
+									} else if(result > 315 && result < 360) {
+										// 20,000
+										alert('20,000 GROO 당첨!');
+									}
+									
+									$("#groocoin_count").text(json.groocoin + " GROO");
+									$("#retry_count").text(json.trycount + " 회");
+									spining = false;
+								},
+								duration:5000
+							});
+						} else {
+							alert(json.reason);
+							spining = false;
 						}
 					},
-					duration:5000
+					error : function(e) {
+						alert("처리중 장애가 발생하였습니다.");
+						spining = false;
+					}
 				});
 			}
 			
@@ -285,9 +405,27 @@
 				} else if (ethAddr.length != 42) {
 					alert('올바른 이더리움 주소를 입력해주세요.');
 				} else {
-					alert('에어드랍 신청 완료되었습니다.');
-					$("#beforeinfo, #sendBtn").hide();
-					$("#joinBtn, #dropinfo").removeClass("hide");
+					$.ajax({
+						type : "GET",
+						url : "info.php",
+						dataType : "json",
+						data : "action=setAddress&kakao_id=" + mykakaoID + "&ethaddress=" + ethAddr,
+						success : function(json) {
+							if(json.isSuccess) {
+								alert('에어드랍 신청 완료되었습니다.\n\n공식 채널은 반드시 입장해주세요.');
+								$("#beforeinfo, #sendBtn").hide();
+								$("#joinBtn").removeClass("hide");
+								$("#dropinfo").show();
+								$("#ethaddress_info").text(ethAddr);
+							} else {
+								alert(json.reason);
+							}
+						},
+						error : function(e) {
+							alert("처리중 장애가 발생하였습니다.");
+							spining = false;
+						}
+					});
 				}
 			}
 			
