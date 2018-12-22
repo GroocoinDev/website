@@ -521,13 +521,14 @@
 				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			
-			<div class="center_h partner-box5">
-				<div class="partner-box4">
-					<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png?v=1" class="center" style="width:70%;"></a>
-				</div>
-				<div class="partner-box4">
-					<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
-				</div>
+			<div class="partner-box">
+				<a href="https://exchange.inerex.io/" target="_blank"><img src="assets/img/inerex.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 		</div>
 	</section>
