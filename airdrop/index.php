@@ -211,7 +211,7 @@
 				
 				$(".login").hide();
 				
-				<? if(!is_Mobile()) { ?>
+				<? if(!is_Mobile() && !is_Kakao()) { ?>
 				alert('모바일로 접속하시기 바랍니다.');
 				history.back(-1);
 				<? } ?>
