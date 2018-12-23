@@ -154,9 +154,10 @@
 						<input id="ethAddress" type="text" class="form-control" maxlength="42" placeholder=" 개인 이더리움 지갑주소를 입력해주세요." style="margin-top:10px;">
 					</div>
 					
-					<div id="dropinfo" style="color:#444444; text-align:center; font-size:12px; margin-top:15px;">
+					<div id="dropinfo" style="color:#444444; text-align:center; font-size:12px; margin-top:15px; padding-left:15px; padding-right:15px;">
 						내 이더리움 주소<br>
 						<span id="ethaddress_info"></span>
+						<button id="editBtn" type="button" class="btn btn-warning btn-lg btn-block" onclick="editETHAddress();">이더리움 주소 수정하기</button>
 					</div>
 
 					<div style="width:100%; padding-left:15px; padding-right:15px; margin-top:20px; margin-bottom:15px;">
@@ -400,6 +401,11 @@
 						spining = false;
 					}
 				});
+			}
+			
+			function editETHAddress() {
+				$("#beforeinfo, #sendBtn").show();
+				$("#dropinfo").hide();
 			}
 			
 			function requestGROO() {
