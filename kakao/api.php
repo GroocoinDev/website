@@ -8,7 +8,7 @@
 	$json2 = file_get_contents('http://app.stex.com/api2/trades?pair=GROO_ETH');
     $data2 = json_decode($json2, true);
 	$groo_price = $data2['result'][0]['price'];
-    $groo_price_krw = $groo_price * $eth_price;
+    $groo_price_krw = number_format($groo_price * $eth_price, 2);
 ?>
 
 {
