@@ -18,7 +18,6 @@
 			"basicCard": {
 				"title": "그루코인 실시간 가격",
 				"description": "1 GROO = <?=$groo_price?> ETH\n1 GROO = <?=$groo_price_krw?> 원",
-				
 				"buttons": [
 					{
 						"action": "webLink",
