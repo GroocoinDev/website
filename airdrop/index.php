@@ -212,6 +212,8 @@
 				
 				$(".login").hide();
 				
+				alert('룰렛 이벤트는 종료되었습니다.');
+				
 				<? if(!is_Mobile() && !is_Kakao()) { ?>
 				alert('모바일로 접속하시기 바랍니다.');
 				history.back(-1);

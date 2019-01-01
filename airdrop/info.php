@@ -89,6 +89,13 @@
 					WHERE KAKAO_ID = ". $kakao_id;
 			$result=mysqli_query($db,$sql);
 			$user = mysqli_fetch_array($result);
+			
+			// 가입전 유저(ERR)
+			$rootObj->isSuccess = false;
+			$rootObj->reason = "룰렛 이벤트는 종료되었습니다.";
+			$jsonData = json_encode($rootObj);
+			echo $jsonData;
+			exit;
 
 			if(mysqli_num_rows($result) == 0) {
 				// 가입전 유저(ERR)
