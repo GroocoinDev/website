@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/style/main.css?v=3">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
@@ -638,6 +639,7 @@
     </div>
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
 <!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
     <script src="assets/lib/typeit.min.js?v=1"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
