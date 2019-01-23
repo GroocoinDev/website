@@ -3,7 +3,7 @@ html, body { font-family: 'Lato', 'Avenir', Arial, Helvetica, sans-serif; }
 
 
 /* header */
-.header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; width: auto; height: 70px; transition: background-color 0.2s; padding-bottom: 22px;}
+.header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; width: auto; height: 50px; transition: background-color 0.2s; padding-bottom: 22px; -webkit-overflow-scrolling: touch; overflow: auto; }
 .header.scroll { background: rgba(0,0,0,0.85); }
 .header.header--nav-show.scroll { background: none; }
 .header--logo { float: left; padding: 20px; }

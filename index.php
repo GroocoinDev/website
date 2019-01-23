@@ -52,9 +52,7 @@
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/style/main.css?v=4">
+    <link rel="stylesheet" href="assets/style/main.css?v=3">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -622,28 +620,10 @@
 			</div>
         </div>
     </footer>    
-    
-    <!-- Modal -->
-    <div class="modal fade" id="IEOBanner" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img src="assets/img/ieo_banner_en.jpg" style="width:90%;"/>
-                </div>
-                <div class="modal-footer">
-<!--
-                    <a href="https://exchange.inerex.io" target="_blank"><button type="button" class="btn btn-primary">Go to INEREX</button></a>
-                    <a href="http://sharex.co.kr" target="_blank"><button type="button" class="btn btn-primary">Go to ShareX</button></a>
--->
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
+
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
 <!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
     <script src="assets/lib/typeit.min.js?v=1"></script>
     <script src="assets/lib/Oppear_1.1.2.min.js"></script>
@@ -694,9 +674,6 @@
             $('.slider').slick({
                 dots: true,
             });
-            
-            // 팝업 추가
-            $('#IEOBanner').modal('show');
 
             /* 스크롤 위치에 따른 헤더 처리 */
             window.pageYOffset > 0 && $header.addClass('scroll');
