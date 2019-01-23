@@ -655,7 +655,7 @@
 
     <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
         <div class="center" style="margin-top:10%;">
-            <img src="assets/img/ieo_banner_en.jpg" style="width:90%; max-width: 600px;" />
+            <img src="assets/img/ieo_banner_kr.jpg" style="width:90%; max-width: 600px;" />
         </div>
         <div class="center" style="padding-bottom:11px; padding-top: 11px; background: #ffffff; width: 90%; max-width: 600px;">
             <a href="https://exchange.inerex.io" target="_blank"><button class="btn2 btn-danger">GO TO INEREX</button></a>
