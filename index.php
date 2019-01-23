@@ -626,7 +626,7 @@
     <div class="modal fade" id="IEOBanner" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-body" style="height:400px; background:url('assets/img/ieo_banner_en.png'); background-size:cover; background-position:center center;">
+                <div class="modal-body" style="height:400px; background:url('assets/img/ieo_banner_en.jpg'); background-size:cover; background-position:center center;">
                     
                 </div>
                 <div class="modal-footer">
@@ -693,7 +693,7 @@
             });
             
             // 팝업 추가
-            $('#IEOBanner').modal('show')
+            $('#IEOBanner').modal('show');
 
             /* 스크롤 위치에 따른 헤더 처리 */
             window.pageYOffset > 0 && $header.addClass('scroll');
