@@ -625,14 +625,16 @@
     
     <!-- Modal -->
     <div class="modal fade" id="IEOBanner" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-body" style="height:400px; background:url('assets/img/ieo_banner_en.jpg'); background-size:cover; background-position:center center;">
-                    
+                <div class="modal-body">
+                    <img src="assets/img/ieo_banner_en.jpg'); width:100%;"/>
                 </div>
                 <div class="modal-footer">
+<!--
                     <a href="https://exchange.inerex.io" target="_blank"><button type="button" class="btn btn-primary">Go to INEREX</button></a>
                     <a href="http://sharex.co.kr" target="_blank"><button type="button" class="btn btn-primary">Go to ShareX</button></a>
+-->
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
