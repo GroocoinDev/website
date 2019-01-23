@@ -628,7 +628,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="assets/img/ieo_banner_en.jpg'); width:100%;"/>
+                    <img src="assets/img/ieo_banner_en.jpg" style="width:100%;"/>
                 </div>
                 <div class="modal-footer">
 <!--
