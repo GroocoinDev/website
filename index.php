@@ -665,7 +665,7 @@
         <div class="center" style="margin-top:10%;">
             <img src="assets/img/ieo_banner_en.jpg" style="width:90%; max-width: 600px;" />
         </div>
-        <div class="center" style="height:50px; padding-top: 11px; background: #ffffff; width: 90%; max-width: 600px;">
+        <div class="center" style="padding-bottom:11px; padding-top: 11px; background: #ffffff; width: 90%; max-width: 600px;">
             <a href="https://exchange.inerex.io" target="_blank"><button class="btn2 btn-danger">GO TO INEREX</button></a>
             <a href="http://sharex.co.kr" target="_blank"><button class="btn2 btn-primary">GO TO ShareX</button></a>
             <button class="btn2 btn-dark" onclick="javascript:$('#banner').fadeOut();">Close</button>
