@@ -626,7 +626,7 @@
     <div class="modal fade" id="IEOBanner" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-body" style="height:400px; background:url(asset/img/ieo_banner_en.png); background-size:cover; background-position:center center;">
+                <div class="modal-body" style="height:400px; background:url('assets/img/ieo_banner_en.png'); background-size:cover; background-position:center center;">
                     
                 </div>
                 <div class="modal-footer">
@@ -639,6 +639,7 @@
     </div>
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/js/bootstrap-dialog.min.js"></script>
 <!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
     <script src="assets/lib/typeit.min.js?v=1"></script>
