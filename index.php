@@ -620,9 +620,23 @@
 			</div>
         </div>
     </footer>    
-
-
-
+    
+    <!-- Modal -->
+    <div class="modal fade" id="IEOBanner" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="height:400px; background:url(asset/img/ieo_banner_en.png); background-size:cover; background-position:center center;">
+                    
+                </div>
+                <div class="modal-footer">
+                    <a href="https://exchange.inerex.io" target="_blank"><button type="button" class="btn btn-primary">Go to INEREX</button></a>
+                    <a href="http://sharex.co.kr" target="_blank"><button type="button" class="btn btn-primary">Go to ShareX</button></a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!--    <script src="assets/lib/jquery.countdown.min.js"></script>-->
     <script src="assets/lib/typeit.min.js?v=1"></script>
@@ -674,6 +688,9 @@
             $('.slider').slick({
                 dots: true,
             });
+            
+            // 팝업 추가
+            $('#IEOBanner').modal('show')
 
             /* 스크롤 위치에 따른 헤더 처리 */
             window.pageYOffset > 0 && $header.addClass('scroll');
