@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.9/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/style/main.css?v=3">
+    <link rel="stylesheet" href="assets/style/main.css?v=4">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -628,7 +628,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="assets/img/ieo_banner_en.jpg" style="width:100%;"/>
+                    <img src="assets/img/ieo_banner_en.jpg" style="width:90%;"/>
                 </div>
                 <div class="modal-footer">
 <!--
