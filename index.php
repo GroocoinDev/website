@@ -56,6 +56,46 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
+    <style>
+        .btn2 {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        
+        .btn-danger {
+            color: #dc3545;
+            background-color: transparent;
+            background-image: none;
+            border-color: #dc3545;
+        }
+        
+        .btn-primary {
+            color: #007bff;
+            background-color: transparent;
+            background-image: none;
+            border-color: #007bff;
+        }
+        
+        .btn-dark {
+            color: #343a40;
+            background-color: transparent;
+            background-image: none;
+            border-color: #343a40;
+        }
+    </style>
 </head>
 <body>
 
@@ -621,6 +661,16 @@
         </div>
     </footer>    
 
+    <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
+        <div class="center" style="margin-top:10%;">
+            <img src="assets/img/ieo_banner_en.jpg" style="width:90%; max-width: 600px;" />
+        </div>
+        <div class="center" style="height:50px; padding-top: 11px; background: #ffffff; width: 90%; max-width: 600px;">
+            <a href="https://exchange.inerex.io" target="_blank"><button class="btn2 btn-danger">GO TO INEREX</button></a>
+            <a href="http://sharex.co.kr" target="_blank"><button class="btn2 btn-primary">GO TO ShareX</button></a>
+            <button class="btn2 btn-dark" onclick="javascript:$('#banner').fadeOut();">Close</button>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
