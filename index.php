@@ -565,10 +565,13 @@
 				<a href="https://exchange.inerex.io/" target="_blank"><img src="assets/img/inerex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
-				<a href="https://www.encrypth.com/" target="_blank"><img src="assets/img/encrypth.png?v=1" class="center" style="width:70%;"></a>
+				<a href="http://sharex.co.kr/" target="_blank"><img src="assets/img/sharex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
 				<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="http://beebit.co.kr" target="_blank"><img src="assets/img/beebit.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 		</div>
 	</section>
