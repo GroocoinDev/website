@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>test eth network</title>
+		<script src="web3.min.js"></script>
+		<script>
+			if (typeof web3 !== 'undefined') {
+				web3 = new Web3(web3.currentProvider);
+			} else {
+				web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/3560dfade47f4f49b94d726af9f10ee5"));
+			}
+		</script>
+	</head>
+	<body>
+		<form method="GET">
+		<input type="text" size="50" name="account"><input type="submit">
+		</form>
+		<br>
+		<div id="output"></div>
+		<p>Lastest Block:
+		<script>
+			document.write(web3.eth.blockNumber + "<br><br>");
+
+web3.version.getNetwork((err, netId) => {
+  switch (netId) {
+    case "1":
+      console.log('This is mainnet')
+      break
+    case "2":
+      console.log('This is the deprecated Morden test network.')
+      break
+    case "3":
+      console.log('This is the ropsten test network.')
+      break
+    case "4":
+      console.log('This is the Rinkeby test network.')
+      break
+    case "42":
+      console.log('This is the Kovan test network.')
+      break
+    default:
+      console.log('This is an unknown network.')
+  }
+})
+
+var account = web3.eth.accounts[0];
+console.log(account);
+
+		</script>
+		</p>
+		<p>Account Balance:
+		</p>
+	</body>
+</html>
