@@ -514,8 +514,13 @@
 			<div class="partner-box">
 				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+<!--
 			<div class="partner-box">
             	<a href="https://www.bitc3.com" target="_blank"><img src="assets/img/bitc3.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+-->
+			<div class="partner-box">
+				<a href="https://exchange.inerex.io/" target="_blank"><img src="assets/img/inerex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			<div class="partner-box">
 				<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png?v=1"  class="center" style="width:70%;"></a>
@@ -551,9 +556,6 @@
 				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			
-			<div class="partner-box">
-				<a href="https://exchange.inerex.io/" target="_blank"><img src="assets/img/inerex.png?v=1" class="center" style="width:70%;"></a>
-			</div>
 			<div class="partner-box">
 				<a href="http://sharex.co.kr/" target="_blank"><img src="assets/img/sharex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
@@ -656,6 +658,7 @@
         </div>
     </footer>    
 
+<!--
     <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
         <div class="center" style="margin-top:10%;">
             <img src="assets/img/ieo_banner_kr.jpg" style="width:90%; max-width: 600px;" />
@@ -666,6 +669,7 @@
             <button class="btn2 btn-dark" onclick="javascript:$('#banner').fadeOut();">창닫기</button>
         </div>
     </div>
+-->
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
