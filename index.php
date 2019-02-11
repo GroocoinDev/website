@@ -48,7 +48,7 @@
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
     <meta property="og:description" content="Beauty Advertising Meets Blockchain. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="en_GB" />
-
+    
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
@@ -665,6 +665,16 @@
 			</div>
         </div>
     </footer>    
+    
+    <span itemscope="" itemtype="http://schema.org/Organization">
+        <link itemprop="url" href="http://groo.io">
+        <a itemprop="sameAs" href="https://twitter.com/Groocoinio"></a>
+        <a itemprop="sameAs" href="https://medium.com/@groocoinio"></a>
+        <a itemprop="sameAs" href="https://t.me/groocoin_official_en"></a>
+        <a itemprop="sameAs" href="https://github.com/GroocoinDev"></a>
+        <a itemprop="sameAs" href="https://bitcointalk.org/index.php?topic=5072274"></a>
+        <a itemprop="sameAs" href="https://groo.io/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf"></a>        
+    </span>
 
 <!--
     <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
