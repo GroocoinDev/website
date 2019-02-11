@@ -42,11 +42,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Groocoin</title>
     
+    <meta name="description" content="Beauty Advertising Meets Blockchain.">
     <meta property="og:title" content="Groocoin" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
-    <meta property="og:description" content="Beauty Advertising Meets Blockchain. Connect & Share your Billions of Grooming knowledge." />
+    <meta property="og:description" content="Beauty Advertising Meets Blockchain." />
     <meta property="og:locale" content="ko_KR" />
     
     <link rel="canonical" href="https://groo.io/ko.php">
