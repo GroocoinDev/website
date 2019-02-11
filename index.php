@@ -49,6 +49,7 @@
     <meta property="og:description" content="Beauty Advertising Meets Blockchain. Connect & Share your Billions of Grooming knowledge." />
     <meta property="og:locale" content="en_GB" />
     
+    <link rel="canonical" href="https://groo.io/index.php">
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
