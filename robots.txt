@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /airdrop/
+Disallow: /api/
+Disallow: /assets/
+Disallow: /backup/
+Disallow: /bot/
+Disallow: /comingsoon/
+Disallow: /inc/
+Disallow: /kakao/
+Disallow: /tmp/
+Disallow: /vivicenter/
+Allow: /
