@@ -40,10 +40,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>그루코인</title>
+    <title>그루코인 (Groocoin)</title>
     
     <meta name="description" content="블록체인 기반 뷰티 광고 서비스">
-    <meta property="og:title" content="그루코인" />
+    <meta property="og:title" content="그루코인 (Groocoin)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
