@@ -446,7 +446,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p2.png" alt="J.K Jang">
                 </div>
-                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/jangjungkyu">J.K Jang</a>
+                <a class="team--name" target="_blank" href="#">J.K Jang</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
                     System Engineer, eBay Korea<br>
@@ -525,20 +525,6 @@
 		<div class="center" style="max-width: 1200px; padding-left:20px; padding-right:20px;">
 			<div class="partner-box">
 				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png?v=1" class="center" style="width:70%;"></a>
-			</div>
-<!--
-			<div class="partner-box">
-            	<a href="https://www.bitc3.com" target="_blank"><img src="assets/img/bitc3.png?v=1" class="center" style="width:70%;"></a>
-			</div>
--->
-			<div class="partner-box">
-				<a href="https://exchange.inerex.io/" target="_blank"><img src="assets/img/inerex.png?v=1" class="center" style="width:70%;"></a>
-			</div>
-			<div class="partner-box">
-				<a href="https://forkdelta.app/#!/trade/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1-ETH" target="_blank"><img src="assets/img/Forkdelta.png?v=1"  class="center" style="width:70%;"></a>
-			</div>
-			<div class="partner-box">
-				<a href="https://tokenjar.io/GROO" target="_blank"><img src="assets/img/tokenjar.png?v=1" class="center" style="width:70%;"></a>
 			</div>
             
             
