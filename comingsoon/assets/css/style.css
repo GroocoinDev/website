@@ -2,7 +2,7 @@
 @import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
 
 body {
-	background: #6ac0bd;
+	background: #fff;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -123,7 +123,7 @@ form.signup input.form-control:focus {
 
 #wrapper {
 	text-align: center;
-	background: url(../img/main-bg-compressor.jpg) no-repeat center top;
+	background: url(../img/background2.jpg) no-repeat center top;
 	background-attachment: relative;
 	background-position: center center;
   box-sizing:border;

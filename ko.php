@@ -1,4 +1,5 @@
 <?php
+    header("Location: comingsoon/index.html");
 	include_once("inc/db_conn.php");
 	include_once("inc/device_check.php");
 
