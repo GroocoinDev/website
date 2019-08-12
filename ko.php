@@ -1,7 +1,7 @@
 <?php
-    if($_GET['pass'] != "adward") {
-        header("Location: comingsoon/index.html");
-    }
+//    if($_GET['pass'] != "adward") {
+//        header("Location: comingsoon/index.html");
+//    }
 
 	include_once("inc/db_conn.php");
 	include_once("inc/device_check.php");
@@ -44,14 +44,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>그루코인 (Groocoin)</title>
+    <title>애드워드 (Adward)</title>
     
-    <meta name="description" content="블록체인 기반 뷰티 광고 서비스">
-    <meta property="og:title" content="그루코인 (Groocoin)" />
+    <meta name="description" content="블록체인 기반 광고 서비스">
+    <meta property="og:title" content="애드워드 (Adward)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
-    <meta property="og:description" content="블록체인 기반 뷰티 광고 서비스" />
+    <meta property="og:description" content="블록체인 기반 광고 서비스" />
     <meta property="og:locale" content="ko_KR" />
     
     <link rel="canonical" href="https://groo.io/ko.php">
@@ -61,7 +61,7 @@
     <link rel="stylesheet" href="assets/style/main.css?v=3">
     <link rel="stylesheet" href="assets/style/font.ko.css">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png?v=1">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
     <style>
         .btn2 {
@@ -108,7 +108,7 @@
 
     <header class="header">
         <div class="contents no-select">
-            <div class="header--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin Logo"></a></div>
+            <div class="header--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin Logo"></a></div>
             <div class="header--mobile-menu pointer">
                 <img class="menu-open" src="assets/img/icon-menu.svg" alt="menu open">
                 <img class="menu-close" src="assets/img/icon-close.svg" alt="menu close">
@@ -136,9 +136,9 @@
         <div class="section-main--title-wrap Aligner-item--top">
             <h1 class="section-main--title center" id="typingEffect">
 				<? if(!is_Mobile()) { ?>
-					<img id="logo" src="assets/img/logo.png" alt="GROO Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Groocoin</span><br>
+					<img id="logo" src="assets/img/logo.png" alt="ADWD Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Adward</span><br>
 				<? } ?>
-				Beauty Advertising Meets Blockchain
+				Advertising Meets Blockchain
 			</h1>
         </div>
         <div id="clock" class="clock"></div>
@@ -155,7 +155,11 @@
 
     <section class="section-two row">
         <div class="section-two--left d-w-50 m-w-100">
-            <h3 class="section-two--label">Connect & Share<br/>Your Billions of Grooming<br/>Knowledge</h3>
+            <h3 class="section-two--label">
+				The most transparent<br/>
+				Advertisement platform<br/>
+				with Genuine report</h3>
+			</h3>
             <div class="mr-30">
                 <a class="btn btn--black btn--sm">White Paper</a>
                 <div class="section-two--papers show">
@@ -165,7 +169,7 @@
             </div>
         </div>
         <div class="section-two--right d-w-50 m-w-100">
-            <h3 class="section-two--label center">Groocoin의 최신 뉴스를 구독하세요!</h3>
+            <h3 class="section-two--label center">Adward의 최신 뉴스를 구독하세요!</h3>
             <div class="input-btn">
 				<form name="subscribe" method="post" style="margin:0px; padding:0px;">
                 	<input id="subscribeValue" name="subscribe_Email" type="text" placeholder="이메일 주소 입력" class="input-btn--input" />
@@ -184,24 +188,24 @@
     <section class="section section-about" id="section-about">
         <div class="contents">
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
+                <img src="assets/img/section_about_1.png" alt="Image for What is ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">Groocoin 프로젝트는 기업, 여러 소셜 미디어와 블로그에서 활동하는 콘텐츠 제작자 들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 축적, 전세계에 흩어져 있는 해당 컨텐츠 들을 통합하는 뷰티 컨텐츠 광고 미디어 플랫폼의 제작을 목표로 하고 있습니다.</p>
+                    <h1 class="title section-about--title">What is ADWD?</h1>
+                    <p class="section-about--cont">ADWARD 프로젝트는 기업, 여러 소셜 미디어와 블로그에서 활동하는 콘텐츠 제작자 들과의 적극적인 파트너쉽을 통한 양질의 컨텐츠 축적, 전세계에 흩어져 있는 해당 컨텐츠들을 통합하는 컨텐츠 광고 미디어 플랫폼의 제작을 목표로 하고 있습니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
+                <img src="assets/img/section_about_2.png" alt="Image for Why ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">Why Groo?</h1>
-                    <p class="section-about--cont">콘텐츠 제작자들은 본인에게 적절한 광고플랫폼을 찾기 위해 항상 노력을 하고 있으나, 소셜미디어를 포함한 대부분의 광고 플랫폼들은 그들의 효과적인 서비스를 이용하는데 많은 비용을 요구 합니다.</p>
+                    <h1 class="title section-about--title">Why ADWD?</h1>
+                    <p class="section-about--cont">콘텐츠 제작자들은 본인에게 적절한 광고플랫폼을 찾기 위해 항상 노력을 하고 있으나 소셜미디어를 포함한 대부분의 광고 플랫폼들은 그들의 효과적인 서비 스를 이용하는데 많은 비용을 요구 합니다.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
+                <img src="assets/img/section_about_3.png" alt="Image for How ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">How Groo?</h1>
-                    <p class="section-about--cont">Groo Dapp 플랫폼은 콘텐츠 제작자에게 동일한 서비스 비용을 제공하지만, 해당 콘텐츠들은 소비자 들로부터 다양한 평가 및 피드백 등을 통해 콘텐츠의 광고 노출에서 이점을 얻게 됩니다.<br>소비자들의 평가 데이터들은 익명화된 상태로 블록체인 네트워크에 기록이 되며 콘텐츠 제작자들의 신규 콘텐츠 제작을 위한 피드백 용도로 전달이 됩니다.</p>
+                    <h1 class="title section-about--title">How ADWD?</h1>
+                    <p class="section-about--cont">ADWD Dapp 플랫폼은 콘텐츠 제작자에게 동일한 서비스 비용을 제공 하지만, 해당 콘텐츠들은 소비자 들로부터 다양한 평가 및 피드백 등 을 통해 콘텐츠의 광고 노출에서 이점을 얻게 됩니다.</p>
                 </div>
             </div>
         </div>
@@ -213,14 +217,14 @@
             <h1 class="title center white">
 				첫 번째
 				<span class="mobile-only"><br/></span>
-				Groo 플랫폼
+				ADWD 플랫폼
 			</h1>
             <div class="influencers--wrap">
 				<span class="pc-only">
-                	<img src="assets/img/section_viviscreen_content_pc_ko.png" alt="" style="max-width:90%;">
+                	<img src="assets/img/section_viviscreen_content_pc.png" alt="" style="max-width:90%;">
 				</span>
 				<span class="mobile-only">
-					<img src="assets/img/section_viviscreen_content_mobile_ko.png" alt=""  style="width:90%;">
+					<img src="assets/img/section_viviscreen_content_mobile.png" alt=""  style="width:90%;">
 				</span>
             </div>
         </div>
@@ -232,22 +236,22 @@
             <ul class="slider">
                 <li class="slider--li">
                     <h3 class="slider--h3">모바일 생태계</h3>
-                    <p class="slider--p">다양한 기업, 개인 광고주들이 희망하는 뷰티 컨텐츠 트렌드 정보를 쉽고 빠르게 신청/시청 할 수 있는 신개념 광고 플랫폼 입니다.</p>
+                    <p class="slider--p">광고주들이 희망하는 컨텐츠 트렌드 정보를 쉽고 빠르게 신청/시청 할 수 있는 신개념 광고 플랫폼</p>
                     <img class="slider--img" src="assets/img/section_slide_0.png?v=1" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">플랫폼 활동 보상</h3>
-                    <p class="slider--p">활동 보상은 각각의 앱 사용자가 특정 광고 컨텐츠의 시청, up  votes 혹은 해당 광고주의 채널을 구독함으로써 산정됩니다.</p>
+                    <p class="slider--p">활동 보상은 각각의 앱 사용자가 특정 광고 컨텐츠의 시청, Up votes 혹은 해당 광고주의 채널을 구독함으로써 산정됩니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_1.png" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">셀프 - 광고 서비스</h3>
-                    <p class="slider--p">Groo Dapp 서비스는 기업, 개인 광고주들의 광고 컨텐츠를 모아서 관리할 수 있는 Self-Advertisement 플랫폼을 제공 합니다. 해당 플랫폼은 앱 사용자들에 의해 구독이 가능하며 광고 컨텐츠 뿐만이 아니라 개인의 플랫폼에 의한 광고 효과를 기대할 수 있습니다.</p>
+                    <p class="slider--p">광고들을 모아서 관리할 수 있는 Self-Advertisement 플랫폼은 앱 사용자들에 의해 구독이 가능하며 광고 컨텐츠 뿐만 아니라 개인의 플랫폼에 의한 광고 효과를 기대할 수 있습니다.</p>
                     <img class="slider--img" src="assets/img/section_slide_2.png" alt="">
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">마케팅 분석</h3>
-                    <p class="slider--p">익명화된 사용자들의 메이크업, 선호 화장품의 Big data 분석을 통해 활용 가능한 데이터로 변환 및 추출하여 파트너 사들이 마케팅 참조 데이터로 활용이 가능한 Private API를 제작하여 제공할 예정입니다.</p>
+                    <p class="slider--p">익명화된 사용자들의 선호 빅데이터 분석을 통해 활용 가능한 데이터로 변환 및 추출하여 파트너사들이 데이터로 활용 가능한 Private API를 제작하여 제공할 예정</p>
                     <img class="slider--img" src="assets/img/section_slide_3.png" alt="">
                 </li>
             </ul>
@@ -259,45 +263,39 @@
             
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
-                    <h3 class="roadmap-title">2018 ~ 2Q</h3>
-                    <p class="roadmap-body">프로젝트 개발</p>
+                    <h3 class="roadmap-title">2019 3Q</h3>
+                    <p class="roadmap-body">프로젝트 리브랜딩 완료 (ADWARD)</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">3Q</h3>
+                    <h3 class="roadmap-title">&nbsp;</h3>
                     <p class="roadmap-body">
-						스마트계약 개발
+						IEO 판매 및 거래소 상장
 					</p>
                 </li>
                 <li class="roadmap-li last">
-                    <h3 class="roadmap-title">4Q</h3>
+                    <h3 class="roadmap-title">&nbsp;</h3>
                     <p class="roadmap-body">
-						Groocoin 백서 1.0 출시<br>
-						API 스펙 공개 및 파트너십 확대<br>
-						&nbsp;
+						리브랜딩에 따른 비즈니스 모델 수정&확장 및 데모버전 공개<br>&nbsp;
 					</p>
                 </li>
 
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">2019 1Q</h3>
-                    <p class="roadmap-body">첫 번째 Dapp(ViVi Screen) 데모 베타버전 출시</p>
+                    <h3 class="roadmap-title">2019 4Q</h3>
+                    <p class="roadmap-body">추가 거래소 상장</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">2Q</h3>
-                    <p class="roadmap-body">첫 번째 Dapp(ViVi Screen) 공식 출시</p>
+                    <h3 class="roadmap-title">&nbsp;</h3>
+                    <p class="roadmap-body">디앱 ViVi Screen 마켓 등재 및 런칭</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">두 번째 Dapp 개발 (추후 공지 예정)</p>
-                </li>
-                <li class="roadmap-li">
-                    <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">글로벌 버전 확장 출시 - 아시아권 국가<br>&nbsp;</p>
+                    <h3 class="roadmap-title">&nbsp;</h3>
+                    <p class="roadmap-body">전략 제휴 마케팅, 파트너사 확대, 디앱 생태계 조성<br>&nbsp;</p>
                 </li>
 				
 				<li class="roadmap-li year">
-                    <h3 class="roadmap-title">2020 2Q</h3>
+                    <h3 class="roadmap-title">2020 1Q</h3>
                     <p class="roadmap-body">
-						글로벌 버전 확장 출시 - 비 아시아권 국가
+						글로벌 런칭 및 글로벌 커뮤니티 활성화
 					</p>
                 </li>
             </ul>
@@ -308,7 +306,7 @@
         <div class="section-dist appear" id="section-dist">
             <h1 class="title center white">토큰 분배</h1>
 			<div style="margin-bottom: 34px; color: #fff; font-weight: 300;">
-				<span class="pc-only">스마트계약 주소 : <a href="https://etherscan.io/token/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1" target="_blank"  style="color:#fff; text-decoration: underline;">0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1</a></span>
+				<span class="pc-only">스마트계약 주소 : <a href="https://etherscan.io/token/0x365845f52cae20676e7b86ecffe1afa91e45fb9a" target="_blank"  style="color:#fff; text-decoration: underline;">0x365845f52cae20676e7b86ecffe1afa91e45fb9a</a></span>
 			</div>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
@@ -317,29 +315,29 @@
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
                         <span class="section-dist--value"><span class="section-dist--total">총 발행량</span>30,000,000,000</span>
-                        <span class="section-dist--unit">GROO</span>
+                        <span class="section-dist--unit">ADWD</span>
                     </div>
                     <div class="section-dist--dist">
                         <table class="section-dist--dist-table">
                             <tbody>
                                 <tr>
                                     <td>토큰 판매</td>
-                                    <td>50%</td>
+                                    <td>25%</td>
                                 </tr>
                                 <tr>
                                     <td>마케팅</td>
-                                    <td>15%</td>
+                                    <td>20%</td>
                                 </tr>
                                 <tr>
-                                    <td>플랫폼 보상</td>
-                                    <td>15%</td>
+                                    <td>플랫폼 채굴</td>
+                                    <td>40%</td>
                                 </tr>
                                 <tr>
                                     <td>개발팀</td>
-                                    <td>15%</td>
+                                    <td>10%</td>
                                 </tr>
                                 <tr>
-                                    <td>어드바이저</td>
+                                    <td>유동자금</td>
                                     <td>5%</td>
                                 </tr>
                             </tbody>
@@ -366,8 +364,8 @@
                 Over 60+ Countries<br>
                 No.1 Influencer on Music Arcade Game
             </p>
-            <p class="joy--desc joy--desc-top">Groo Dapp 은 전통적인 광고 플랫폼 활동에서 나아가, 플랫폼 활동 자체를 즐겁게 할 수 있는 여러 가지 요소들을 포함한 Multi Entertainment 플랫폼입니다.</p>
-            <p class="joy--desc">Groo Dapp 플랫폼의 주 고객은 여성들입니다. Groocoin 팀원들은 온라인 커뮤니티 기반 뮤직 아케이드 게임인 Audition, Love Beat의 핵심 개발진들로 구성되어 있으며, 기존 비즈니스 모델의 사례를 통해 주 고객층을 세심하게 배려하는 플랫폼 제작을 우선순위로 하고 있습니다.</p>
+            <p class="joy--desc joy--desc-top">ADWD Dapp 은 전통적인 광고 플랫폼 활동에서 나아가, 플랫폼 활동 자체를 즐겁게 할 수 있는 여러 가지 요소들을 포함한 Multi Entertainment 플랫폼입니다.</p>
+            <p class="joy--desc">ADWD 팀원들은 온라인 커뮤니티 기반 뮤직아케이드 게임인 오디션, 러브비트 등의 핵심 개발진들로 구성되어 있으며, 기존 비즈니스 모델의 사례를 통해 주 고객층을 세심하게 배려하는 플랫폼 제작을 우선순위로 하고 있습니다.</p>
         </div>
     </section>
 
@@ -550,11 +548,16 @@
 			<div class="partner-box">
 				<a href="http://sharex.co.kr/" target="_blank"><img src="assets/img/sharex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+<!--
 			<div class="partner-box">
 				<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+-->
 			<div class="partner-box">
 				<a href="http://beebit.co.kr" target="_blank"><img src="assets/img/beebit.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="http://www.amkorgreenholdings.com/" target="_blank"><img src="assets/img/AmkorGreenLogo.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 		</div>
 	</section>
@@ -600,8 +603,13 @@
 				<img src="assets/img/partner-kao.png" class="center" style="width:100%;">
 			</div>
 			<div class="partner-box2">
+				<img src="assets/img/partner-minho.png" class="center" style="width:100%;">
+			</div>
+<!--
+			<div class="partner-box2">
 				<img src="assets/img/partner-duncans.png" class="center" style="width:100%;">
 			</div>
+-->
 			
 			<!-- 4 -->
 			<div class="partner-box3">
@@ -641,7 +649,7 @@
 
     <footer class="footer">
         <div class="contents">
-            <div class="footer--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin logo"></a></div>
+            <div class="footer--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin logo"></a></div>
             <div class="footer--copyright">
 				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
 				Copyright © 2018 All Rights Reserved
@@ -649,16 +657,6 @@
         </div>
     </footer>    
     
-    <span itemscope="" itemtype="http://schema.org/Organization">
-        <link itemprop="url" href="http://groo.io">
-        <a itemprop="sameAs" href="https://twitter.com/Groocoinio"></a>
-        <a itemprop="sameAs" href="https://medium.com/@groocoinio"></a>
-        <a itemprop="sameAs" href="https://t.me/groocoin_official_en"></a>
-        <a itemprop="sameAs" href="https://github.com/GroocoinDev"></a>
-        <a itemprop="sameAs" href="https://bitcointalk.org/index.php?topic=5072274"></a>
-        <a itemprop="sameAs" href="https://groo.io/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf"></a>        
-    </span>
-
 <!--
     <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
         <div class="center" style="margin-top:10%;">
@@ -765,12 +763,12 @@
             /* 화이트페이퍼 다운 */
             $('#downloadPaper').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf');
+                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(EN).pdf');
             });
 
             $('#downloadPaperKor').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_KO.pdf');
+                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(KO).pdf');
             });
 
 //            $('.section-two--left').on('mouseenter', function(){

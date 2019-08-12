@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.media.query.css">
     
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3"> -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.png?v=1"> -->
 </head>
 
 <body>

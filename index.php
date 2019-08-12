@@ -1,7 +1,7 @@
 <?php
-    if($_GET['pass'] != "adward") {
-        header("Location: comingsoon/index.html");
-    }
+//    if($_GET['pass'] != "adward") {
+//        header("Location: comingsoon/index.html");
+//    }
 
 	include_once("inc/db_conn.php");
 	include_once("inc/device_check.php");
@@ -44,14 +44,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Groocoin</title>
+    <title>Adward</title>
     
-    <meta name="description" content="Beauty Advertising Meets Blockchain.">
-    <meta property="og:title" content="Groocoin" />
+    <meta name="description" content="Advertising Meets Blockchain.">
+    <meta property="og:title" content="Adward" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
     <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
-    <meta property="og:description" content="Beauty Advertising Meets Blockchain." />
+    <meta property="og:description" content="Advertising Meets Blockchain." />
     <meta property="og:locale" content="en_GB" />
     
     <link rel="canonical" href="https://groo.io/index.php">
@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
     <link rel="stylesheet" href="assets/style/main.css?v=3">
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png?v=1">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
     <style>
         .btn2 {
@@ -107,7 +107,7 @@
 
     <header class="header">
         <div class="contents no-select">
-            <div class="header--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin Logo"></a></div>
+            <div class="header--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin Logo"></a></div>
             <div class="header--mobile-menu pointer">
                 <img class="menu-open" src="assets/img/icon-menu.svg" alt="menu open">
                 <img class="menu-close" src="assets/img/icon-close.svg" alt="menu close">
@@ -135,9 +135,9 @@
         <div class="section-main--title-wrap Aligner-item--top">
             <h1 class="section-main--title center" id="typingEffect">
 				<? if(!is_Mobile()) { ?>
-					<img id="logo" src="assets/img/logo.png" alt="GROO Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Groocoin</span><br>
+					<img id="logo" src="assets/img/logo.png" alt="ADWD Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Adward</span><br>
 				<? } ?>
-				Beauty Advertising Meets Blockchain
+				Advertisement Meets Blockchain
 			</h1>
         </div>
         <div id="clock" class="clock"></div>
@@ -154,7 +154,10 @@
 
     <section class="section-two row">
         <div class="section-two--left d-w-50 m-w-100">
-            <h3 class="section-two--label">Connect & Share<br/>Your Billions of Grooming<br/>Knowledge</h3>
+            <h3 class="section-two--label">
+				The most transparent<br/>
+				Advertisement platform<br/>
+				with Genuine report</h3>
 <!--            <a class="btn btn--black mr-30" id="downloadPaper">White Paper</a>-->
 			<div class="mr-30">
 				<a class="btn btn--black btn--sm">White Paper</a>
@@ -184,24 +187,24 @@
     <section class="section section-about" id="section-about">
         <div class="contents">
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_1.png" alt="Image for What is Groo?">
+                <img src="assets/img/section_about_1.png" alt="Image for What is ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">What is Groo?</h1>
-                    <p class="section-about--cont">The Groocoin project aims to creation of the advertising platform of beauty contents to consolidate the relevant contents diversified throughout the whole world</p>
+                    <h1 class="title section-about--title">What is ADWD?</h1>
+                    <p class="section-about--cont">The ADWARD project aims to creation of the advertising platform of individuals contents to consolidate the relevant contents diversified throughout the whole world</p>
                 </div>
             </div>
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_2.png" alt="Image for Why Groo?">
+                <img src="assets/img/section_about_2.png" alt="Image for Why ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">Why Groo?</h1>
+                    <h1 class="title section-about--title">Why ADWD?</h1>
                     <p class="section-about--cont">The contents creators are starving to find out suitable advertising platform but contents presented in most of the advertising platforms including social media, they request very high cost for using their efficient product.</p>
                 </div>
             </div>
             <div class="section-about--item appear">
-                <img src="assets/img/section_about_3.png" alt="Image for How Groo?">
+                <img src="assets/img/section_about_3.png" alt="Image for How ADWD?">
                 <div class="section-about--text">
-                    <h1 class="title section-about--title">How Groo?</h1>
-                    <p class="section-about--cont">The Groo Dapp Platform is provide equivalent cost of service to the contents creators, but their contents to have the diversified evaluation feedback from different consumers and get advantage in a impression.<br>Evaluated data is automatically recorded on the blockchain network anonymously and forward to contents creators for their contents feedback purpose.</p>
+                    <h1 class="title section-about--title">How ADWD?</h1>
+                    <p class="section-about--cont">The ADWD Dapp Platform is provide equivalent cost of service to the contents creators, but their contents to have the diversified evaluation feedback from different consumers and get advantage in a impression. Evaluated data is automatically recorded on the blockchain network anonymously and forward to contents creators for their contents feedback purpose.</p>
                 </div>
             </div>
         </div>
@@ -214,7 +217,7 @@
             <h1 class="title center white">
 				The First
 				<span class="mobile-only"><br/></span>
-				Groo Platform
+				ADWD Platform
 			</h1>
             <div class="influencers--wrap">
 				<span class="pc-only">
@@ -234,7 +237,7 @@
             <ul class="slider">
                 <li class="slider--li">
                     <h3 class="slider--h3">Mobile Ecosystem</h3>
-                    <p class="slider--p">Easy and Rapid checking of the Beauty Contents Trend information retained respectively by the diverse types of Companies / Influencers.</p>
+                    <p class="slider--p">Easy and Rapid checking of the contents trend information retained respectively by the diverse types of companies / influencers.</p>
                     <img class="slider--img" src="assets/img/section_slide_0.png?v=1" alt="">
                 </li>
                 <li class="slider--li">
@@ -244,7 +247,7 @@
                 </li>
                 <li class="slider--li">
                     <h3 class="slider--h3">Self-Advertisement</h3>
-                    <p class="slider--p">Groo Dapp comes with the platform for Self-Advertisement. The Each contents creators and companies can be allowed to carry their advertising on Self-Advertisement platform for subscribed by Dapp users.</p>
+                    <p class="slider--p">ADWD Dapp comes with the platform for Self-Advertisement. The Each contents creators and companies can be allowed to carry their advertising on Self-Advertisement platform for subscribed by Dapp users.</p>
                     <img class="slider--img" src="assets/img/section_slide_2.png" alt="">
                 </li>
                 <li class="slider--li">
@@ -261,49 +264,39 @@
             
             <ul class="roadmap-ul">
                 <li class="roadmap-li year">
-                    <h3 class="roadmap-title">2018 ~ 2Q</h3>
-                    <p class="roadmap-body">
-						Project Development
-					</p>
+                    <h3 class="roadmap-title">2019 3Q</h3>
+                    <p class="roadmap-body">Project Rebrand completed (ADWARD)</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">3Q</h3>
+                    <h3 class="roadmap-title">&nbsp;</h3>
                     <p class="roadmap-body">
-						Developing Smart Contract
+						IEO(Initial exchange offering) & listed on exchange
 					</p>
                 </li>
                 <li class="roadmap-li last">
-                    <h3 class="roadmap-title">4Q</h3>
+                    <h3 class="roadmap-title">&nbsp;</h3>
                     <p class="roadmap-body">
-						Groocoin White Paper 1.0<br>
-						Open API Spec and Partnership cooperation<br>
-						&nbsp;
+						Improved business model announcement with demo DApp<br>&nbsp;
 					</p>
                 </li>
 
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">2019 1Q</h3>
-                    <p class="roadmap-body">
-						1st Dapp(ViVi Screen) Beta Launch
-					</p>
+                    <h3 class="roadmap-title">2019 4Q</h3>
+                    <p class="roadmap-body">Listed on larger exchange</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">2Q</h3>
-                    <p class="roadmap-body">1st Dapp(ViVi Screen) Officlal Launch</p>
+                    <h3 class="roadmap-title">&nbsp;</h3>
+                    <p class="roadmap-body">DApp ViVi Screen launching on markets</p>
                 </li>
                 <li class="roadmap-li">
-                    <h3 class="roadmap-title">3Q</h3>
-                    <p class="roadmap-body">2nd Dapp Development (To be announced)</p>
-                </li>
-                <li class="roadmap-li">
-                    <h3 class="roadmap-title">4Q</h3>
-                    <p class="roadmap-body">Global Launch - China, Japan and East Asia<br>&nbsp;</p>
+                    <h3 class="roadmap-title">&nbsp;</h3>
+                    <p class="roadmap-body">Proceed strategic marketing & Partnership, Build Dapp ecosystem<br>&nbsp;</p>
                 </li>
 				
 				<li class="roadmap-li year">
-                    <h3 class="roadmap-title">2020 2Q</h3>
+                    <h3 class="roadmap-title">2020 1Q</h3>
                     <p class="roadmap-body">
-						Global Launch Phase 2 - Beyond Asia
+						Global launching with global community expansion
 					</p>
                 </li>
             </ul>
@@ -314,7 +307,7 @@
         <div class="section-dist appear" id="section-dist">
             <h1 class="title center white">Token Distribution</h1>
 			<div style="margin-bottom: 34px; color: #fff; font-weight: 300;">
-				<span class="pc-only">Contract Address : <a href="https://etherscan.io/token/0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1" target="_blank"  style="color:#fff; text-decoration: underline;">0xc17195bde49d70cefcf8a9f2ee1759ffc27bf0b1</a></span>
+				<span class="pc-only">Contract Address : <a href="https://etherscan.io/token/0x365845f52cae20676e7b86ecffe1afa91e45fb9a" target="_blank"  style="color:#fff; text-decoration: underline;">0x365845f52cae20676e7b86ecffe1afa91e45fb9a</a></span>
 			</div>
             <div class="row">
                 <div class="section-dist--left d-w-50 m-w-100">
@@ -323,29 +316,29 @@
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
                         <span class="section-dist--value"><span class="section-dist--total">Total</span>30,000,000,000</span>
-                        <span class="section-dist--unit">GROO</span>
+                        <span class="section-dist--unit">ADWD</span>
                     </div>
                     <div class="section-dist--dist">
                         <table class="section-dist--dist-table">
                             <tbody>
                                 <tr>
                                     <td>Token sale</td>
-                                    <td>50%</td>
+                                    <td>25%</td>
                                 </tr>
                                 <tr>
                                     <td>Marketing</td>
-                                    <td>15%</td>
+                                    <td>20%</td>
                                 </tr>
                                 <tr>
-                                    <td>Platform Rewards</td>
-                                    <td>15%</td>
+                                    <td>Platform Mining</td>
+                                    <td>40%</td>
                                 </tr>
                                 <tr>
                                     <td>Team</td>
-                                    <td>15%</td>
+                                    <td>10%</td>
                                 </tr>
                                 <tr>
-                                    <td>Advisors</td>
+                                    <td>Liquidity</td>
                                     <td>5%</td>
                                 </tr>
                             </tbody>
@@ -372,8 +365,8 @@
                 Over 60+ Countries<br>
                 No.1 Influencer on Music Arcade Game
             </p>
-            <p class="joy--desc joy--desc-top">Groo Dapps are Multi Entertainment Platforms that includes plenty of joyful contents for go beyond traditional advertising platform activities and that improve platform activity experience with pleasure.</p>
-            <p class="joy--desc">The main customers of the Groo Dapp platform are women. The Groocoin team include core development members of <span class="joy--desc-em">Audition</span>, <span class="joy--desc-em">Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
+            <p class="joy--desc joy--desc-top">ADWD Dapps are Multi Entertainment Platforms that includes plenty of joyful contents for go beyond traditional advertising platform activities and that improve platform activity experience with pleasure.</p>
+			<p class="joy--desc">The ADWARD team include core development members of <span class="joy--desc-em">Audition, Love Beat</span> that online community based music arcade game, and prioritizing platform development that takes care of our main customers with examples of our existing business models.</p>
         </div>
     </section>
 
@@ -561,11 +554,16 @@
 			<div class="partner-box">
 				<a href="http://sharex.co.kr/" target="_blank"><img src="assets/img/sharex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+<!--
 			<div class="partner-box">
 				<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+-->
 			<div class="partner-box">
 				<a href="http://beebit.co.kr" target="_blank"><img src="assets/img/beebit.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="http://www.amkorgreenholdings.com/" target="_blank"><img src="assets/img/AmkorGreenLogo.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 		</div>
 	</section>
@@ -611,8 +609,13 @@
 				<img src="assets/img/partner-kao.png" class="center" style="width:100%;">
 			</div>
 			<div class="partner-box2">
+				<img src="assets/img/partner-minho.png" class="center" style="width:100%;">
+			</div>
+<!--
+			<div class="partner-box2">
 				<img src="assets/img/partner-duncans.png" class="center" style="width:100%;">
 			</div>
+-->
 			
 			<!-- 4 -->
 			<div class="partner-box3">
@@ -650,23 +653,13 @@
 
     <footer class="footer">
         <div class="contents">
-            <div class="footer--logo"><a href="#"><img src="assets/img/logo.svg" alt="GROO Coin logo"></a></div>
+            <div class="footer--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin logo"></a></div>
             <div class="footer--copyright">
 				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
 				Copyright © 2018 All Rights Reserved
 			</div>
         </div>
     </footer>    
-    
-    <span itemscope="" itemtype="http://schema.org/Organization">
-        <link itemprop="url" href="http://groo.io">
-        <a itemprop="sameAs" href="https://twitter.com/Groocoinio"></a>
-        <a itemprop="sameAs" href="https://medium.com/@groocoinio"></a>
-        <a itemprop="sameAs" href="https://t.me/groocoin_official_en"></a>
-        <a itemprop="sameAs" href="https://github.com/GroocoinDev"></a>
-        <a itemprop="sameAs" href="https://bitcointalk.org/index.php?topic=5072274"></a>
-        <a itemprop="sameAs" href="https://groo.io/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf"></a>        
-    </span>
 
 <!--
     <div id="banner" style="position: fixed; top:0px; bottom:0px; left:0px; right:0px; background: rgba(0,0,0,0.70); z-index: 99;">
@@ -774,12 +767,12 @@
             /* 화이트페이퍼 다운 */
             $('#downloadPaper').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_EN.pdf');
+                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(EN).pdf');
             });
 
             $('#downloadPaperKor').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/Groocoin_Whitepaper_v1.0_KO.pdf');
+                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(KO).pdf');
             });
 			
 			$('input[type="text"]').keydown(function() {
