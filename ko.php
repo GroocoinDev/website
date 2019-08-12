@@ -102,6 +102,8 @@
             background-image: none;
             border-color: #343a40;
         }
+		.grecaptcha-badge { visibility: hidden; }
+
     </style>
 </head>
 <body>
