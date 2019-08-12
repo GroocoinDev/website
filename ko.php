@@ -50,7 +50,7 @@
     <meta property="og:title" content="애드워드 (Adward)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
+    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=2" />
     <meta property="og:description" content="블록체인 기반 광고 서비스" />
     <meta property="og:locale" content="ko_KR" />
     

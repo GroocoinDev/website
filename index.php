@@ -50,7 +50,7 @@
     <meta property="og:title" content="Adward" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=1" />
+    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=2" />
     <meta property="og:description" content="Advertising Meets Blockchain." />
     <meta property="og:locale" content="en_GB" />
     
