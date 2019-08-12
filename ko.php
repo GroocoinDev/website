@@ -767,12 +767,12 @@
             /* 화이트페이퍼 다운 */
             $('#downloadPaper').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(EN).pdf');
+                window.open('/assets/whitepaper/190812_Adward_Whitepaper_(EN).pdf');
             });
 
             $('#downloadPaperKor').click(function(){
 				//alert('Coming Soon');
-                window.open('/assets/whitepaper/190715_Adward_Whitepaper_(KO).pdf');
+                window.open('/assets/whitepaper/190812_Adward_Whitepaper_(KO).pdf');
             });
 
 //            $('.section-two--left').on('mouseenter', function(){
