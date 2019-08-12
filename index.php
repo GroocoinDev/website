@@ -551,17 +551,21 @@
 				<a href="https://coinmarketcal.com/" target="_blank"><img src="assets/img/Coinmarketcal.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 			
+<!--
 			<div class="partner-box">
 				<a href="http://sharex.co.kr/" target="_blank"><img src="assets/img/sharex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+-->
 <!--
 			<div class="partner-box">
 				<a href="http://imblock.network/" target="_blank"><img src="assets/img/imblock.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 -->
+<!--
 			<div class="partner-box">
 				<a href="http://beebit.co.kr" target="_blank"><img src="assets/img/beebit.png?v=1" class="center" style="width:70%;"></a>
 			</div>
+-->
 			<div class="partner-box">
 				<a href="http://www.amkorgreenholdings.com/" target="_blank"><img src="assets/img/AmkorGreenLogo.png?v=1" class="center" style="width:70%;"></a>
 			</div>
