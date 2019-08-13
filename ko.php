@@ -316,7 +316,7 @@
                 </div>
                 <div class="section-dist--right d-w-50 m-w-100">
                     <div class="section-dist--values">
-                        <span class="section-dist--value"><span class="section-dist--total">총 발행량</span>30,000,000,000</span>
+                        <span class="section-dist--value"><span class="section-dist--total">총 발행량</span>3,000,000,000</span>
                         <span class="section-dist--unit">ADWD</span>
                     </div>
                     <div class="section-dist--dist">
