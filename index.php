@@ -109,7 +109,7 @@
 
     <header class="header">
         <div class="contents no-select">
-            <div class="header--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin Logo"></a></div>
+            <div class="header--logo"><a href="#"><img src="assets/img/logo_title.png?v=1" alt="ADWD Coin Logo"></a></div>
             <div class="header--mobile-menu pointer">
                 <img class="menu-open" src="assets/img/icon-menu.svg" alt="menu open">
                 <img class="menu-close" src="assets/img/icon-close.svg" alt="menu close">
@@ -659,7 +659,7 @@
 
     <footer class="footer">
         <div class="contents">
-            <div class="footer--logo"><a href="#"><img src="assets/img/logo_title.png" alt="ADWD Coin logo"></a></div>
+            <div class="footer--logo"><a href="#"><img src="assets/img/logo_title.png?v=1" alt="ADWD Coin logo"></a></div>
             <div class="footer--copyright">
 				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
 				Copyright © 2018 All Rights Reserved
