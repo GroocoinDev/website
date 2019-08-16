@@ -104,8 +104,8 @@
 					<b>[그루코인 커뮤니티]</b><br>
 					Groocoin의 공식 채널을 열람하세요.<br><br>
 					<b>[Groocoin 커뮤니티]</b><br>
-					* 공식 영문 텔레그램 : <a href="https://t.me/groocoin_official_en" target="_blank">https://t.me/groocoin_official_en</a><br>
-					* 공식 영문 텔레그램 인포 : <a href="https://t.me/groocoin_info" target="_blank">https://t.me/groocoin_info</a><br>
+					* 공식 영문 텔레그램 : <a href="https://t.me/adward_official_en" target="_blank">https://t.me/adward_official_en</a><br>
+					* 공식 영문 텔레그램 인포 : <a href="https://t.me/adward_info_en" target="_blank">https://t.me/adward_info_en</a><br>
 					* 공식 카카오톡 : <a href="http://bit.ly/groocoin_kakao" target="_blank">http://bit.ly/groocoin_kakao</a><br><br>
 					
 					<b>[Groocoin 공식 채널]</b><br>
