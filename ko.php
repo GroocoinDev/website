@@ -468,7 +468,7 @@
                 <div class="team--profile">
                     <img src="assets/img/p4.jpg?v=1" alt="H.C Kim">
                 </div>
-                <a class="team--name linkedin" target="_blank" href="https://www.linkedin.com/in/hyung-cheol-kim-0391b2112">H.C Kim</a>
+                <a class="team--name" target="_blank" href="#">H.C Kim</a>
                 <div class="team--roll">Intermediate Developer</div>
                 <div class="team--desc">
                     Web Developer, ANYFIVE<br>
