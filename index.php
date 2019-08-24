@@ -493,6 +493,13 @@
                     KookMin Univ.
                 </div>
             </li>
+        </ul>
+    </section>
+
+	<section class="section section-team bg-gray appear" id="section-team">
+		<h1 class="title center add-mg-b">Advisers</h1>
+		
+		<ul class="team--ul contents">
 			<li class="team--li">
                 <div class="team--profile">
                     <img src="assets/img/p13.png" alt="M.K Kim">
@@ -505,10 +512,8 @@
 					Hanyang University Graduate school economics Master's degree.MA
                 </div>
             </li>
-        </ul>
-    </section>
-
-
+		</ul>
+	</section>
 
 <!--
      <section class="section section-adviser appear">
