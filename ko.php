@@ -489,15 +489,18 @@
                     KookMin Univ.
                 </div>
             </li>
-            <!-- <li class="team--li">
+             <li class="team--li">
                 <div class="team--profile">
-                    <img src="assets/img/p8.png" alt="Y.H Kong">
+                    <img src="assets/img/p13.png" alt="M.K Kim">
                 </div>
-                <div class="team--name">Y.H Kong</div>
-                <div class="team--roll">Marketing Strategy</div>
+                <div class="team--name">M.K Kim</div>
+                <div class="team--roll">Adviser</div>
                 <div class="team--desc">
+					Amkor Green Holdings COO<br>
+					1987 Company Franchise CEO<br>
+					Hanyang University Graduate school economics Master's degree.MA
                 </div>
-            </li> -->
+            </li> 
         </ul>
     </section>
 
@@ -516,6 +519,15 @@
 		<h1 class="title center white add-mg-b">블록체인 파트너사</h1>
 		
 		<div class="center" style="max-width: 1200px; padding-left:20px; padding-right:20px;">
+			<div class="partner-box">
+				<a href="https://upxide.com" target="_blank"><img src="assets/img/upxide.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="https://eosdac.io/" target="_blank"><img src="assets/img/eosdac.png?v=1" class="center" style="width:70%;"></a>
+			</div>
+			<div class="partner-box">
+				<a href="http://www.amkorgreenholdings.com/" target="_blank"><img src="assets/img/AmkorGreenLogo.png?v=1" class="center" style="width:70%;"></a>
+			</div>
 			<div class="partner-box">
 				<a href="https://www.stex.com/" target="_blank"><img src="assets/img/stex.png?v=1" class="center" style="width:70%;"></a>
 			</div>
@@ -562,9 +574,6 @@
 				<a href="http://beebit.co.kr" target="_blank"><img src="assets/img/beebit.png?v=1" class="center" style="width:70%;"></a>
 			</div>
 -->
-			<div class="partner-box">
-				<a href="http://www.amkorgreenholdings.com/" target="_blank"><img src="assets/img/AmkorGreenLogo.png?v=1" class="center" style="width:70%;"></a>
-			</div>
 		</div>
 	</section>
 	
