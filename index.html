@@ -1,43 +1,3 @@
-<?php
-//    if($_GET['pass'] != "adward") {
-//        header("Location: comingsoon/index.html");
-//    }
-
-	include_once("inc/db_conn.php");
-	include_once("inc/device_check.php");
-
-	if(isset($_POST['subscribe_Email'])) {
-		
-		if(isset($_POST['g-recaptcha-response'])){
-			$captcha=$_POST['g-recaptcha-response'];
-		}
-
-		$secretKey = "6LeNfHAUAAAAANq4kPbK9uuUua9RjSVwSzjhPwtV";
-		$ip = $_SERVER['REMOTE_ADDR'];
-
-		$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
-		$responseKeys = json_decode($response,true);
-
-		if(intval($responseKeys["success"]) !== 1) {
-			echo '<script>alert("Sorry, Captcha Test Fail");</script>';
-		} else {
-			$email = addslashes($_POST['subscribe_Email']);
-
-			$sql="INSERT INTO subscribe (
-							ID
-							, EMAIL
-						)
-						VALUES (
-							NULL
-							, '". $email ."'
-						)";
-
-			$result = mysqli_query($db,$sql);
-			
-			echo '<script>alert("Thank you for subscribe");</script>';
-		}
-	}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,12 +9,12 @@
     <meta name="description" content="Advertising Meets Blockchain.">
     <meta property="og:title" content="Adward" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://groo.io/" />
-    <meta property="og:image" content="https://groo.io/assets/img/open-graph.png?v=2" />
+    <meta property="og:url" content="https://adwd.io/" />
+    <meta property="og:image" content="https://adwd.io/assets/img/open-graph.png?v=2" />
     <meta property="og:description" content="Advertising Meets Blockchain." />
     <meta property="og:locale" content="en_GB" />
     
-    <link rel="canonical" href="https://groo.io/index.php">
+    <link rel="canonical" href="https://adwd.io/index.html">
     <link rel="stylesheet" href="assets/style/reset.css">
     <link rel="stylesheet" href="assets/lib/slick.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
@@ -126,7 +86,7 @@
                 <div class="header--lang">
                     <a class="lang--current" href="javascript://">English</a>
                     <ul class="lang--ul">
-                        <li><a href="/ko.php">한국어</a></li>
+                        <li><a href="/ko.html">한국어</a></li>
                     </ul>
                 </div>
             </nav>
@@ -136,9 +96,6 @@
 	<section class="section section-main">
         <div class="section-main--title-wrap Aligner-item--top">
             <h1 class="section-main--title center" id="typingEffect">
-				<? if(!is_Mobile()) { ?>
-					<img id="logo" src="assets/img/logo.png" alt="ADWD Coin Logo" style="width:40px; margin-right:10px; vertical-align:-5px; display:none;"><span style="">Adward</span><br>
-				<? } ?>
 				Advertisement Meets Blockchain
 			</h1>
         </div>
@@ -674,7 +631,7 @@
             <div class="footer--logo"><a href="#"><img src="assets/img/logo_title.png?v=1" alt="ADWD Coin logo"></a></div>
             <div class="footer--copyright">
 				Contact : <a href="mailto:support@groo.io">support@groo.io</a><br>
-				Copyright © 2018 All Rights Reserved
+				Copyright © 2020 All Rights Reserved
 			</div>
         </div>
     </footer>    
@@ -779,7 +736,7 @@
             
             /* 구독 버튼 */
             $('#btnSubscribe').click(function(){
-				$("#submitbtn").click();
+				alert("System Maintenance");
             });
 
             /* 화이트페이퍼 다운 */
